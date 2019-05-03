@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Medium.otf">
+            <string>SFCompactRounded-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Registration View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RegistrationView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-2Z-hnS" customClass="WaveGradientView" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="219.33333333333334"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" red="0.12941176470588234" green="0.9137254901960784" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.074509803921568626" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tb8-oQ-P2u" customClass="WaveGradientView" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="341" height="238.66666666666666"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" red="0.12941176469999999" green="0.91372549020000005" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.074509803920000006" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vg-se-tgt" customClass="WaveGradientView" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="49" y="592.66666666666663" width="326" height="219.33333333333337"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" red="0.29803921568627451" green="0.67450980392156867" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.015686274509803921" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDQ-s8-0kt" customClass="WaveGradientView" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="34" y="573.33333333333337" width="341" height="238.66666666666663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" red="0.29803921568627451" green="0.67450980392156867" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.015686274509803921" green="0.92549019607843142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-hs-RGc" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="-150" y="278.66666666666663" width="455" height="294.66666666666663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-8U-AQQ">
+                                <rect key="frame" x="79" y="188.66666666666666" width="217" height="43"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="36"/>
+                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv4-lV-Clc" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="-150" y="389.33333333333331" width="73.666666666666671" height="73.333333333333314"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qv4-lV-Clc" secondAttribute="height" multiplier="1:1" id="2ra-Tc-VPT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="Стрелка вправо"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O3S-hs-RGc" secondAttribute="trailing" constant="70" id="1ti-Mo-rxg"/>
+                            <constraint firstItem="xL1-8U-AQQ" firstAttribute="top" secondItem="Tb8-oQ-P2u" secondAttribute="bottom" constant="-50" id="5LW-aO-qs8"/>
+                            <constraint firstItem="uJf-2Z-hnS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:1.15" id="AGD-hi-6yc"/>
+                            <constraint firstItem="O3S-hs-RGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-150" id="C87-ea-jrm"/>
+                            <constraint firstItem="Qv4-lV-Clc" firstAttribute="height" secondItem="O3S-hs-RGc" secondAttribute="height" multiplier="0.25" id="Ise-Dc-GET"/>
+                            <constraint firstItem="Tb8-oQ-P2u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:1.1" id="JAf-YS-Gj2"/>
+                            <constraint firstItem="Tb8-oQ-P2u" firstAttribute="width" secondItem="sDQ-s8-0kt" secondAttribute="width" id="JN3-WL-bSR"/>
+                            <constraint firstAttribute="bottom" secondItem="sDQ-s8-0kt" secondAttribute="bottom" id="Oj7-S9-TOq"/>
+                            <constraint firstItem="O3S-hs-RGc" firstAttribute="top" secondItem="Tb8-oQ-P2u" secondAttribute="bottom" constant="40" id="Okh-aH-fk9"/>
+                            <constraint firstItem="uJf-2Z-hnS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pse-tU-y2c"/>
+                            <constraint firstItem="sDQ-s8-0kt" firstAttribute="height" secondItem="Tb8-oQ-P2u" secondAttribute="height" id="VzD-Pb-6nH"/>
+                            <constraint firstItem="O3S-hs-RGc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="bt4-Yw-LYP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDQ-s8-0kt" secondAttribute="trailing" id="d60-HJ-z8U"/>
+                            <constraint firstItem="uJf-2Z-hnS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dI5-uS-Aqe"/>
+                            <constraint firstItem="Qv4-lV-Clc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-150" id="eGg-iu-IcK"/>
+                            <constraint firstItem="0Vg-se-tgt" firstAttribute="height" secondItem="uJf-2Z-hnS" secondAttribute="height" id="frK-6L-L6z"/>
+                            <constraint firstItem="Tb8-oQ-P2u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rsV-5e-K1r"/>
+                            <constraint firstItem="Qv4-lV-Clc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="s3m-EU-aoI"/>
+                            <constraint firstItem="Tb8-oQ-P2u" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3.4" id="tpE-IV-kDl"/>
+                            <constraint firstAttribute="bottom" secondItem="0Vg-se-tgt" secondAttribute="bottom" id="u0V-dN-cDL"/>
+                            <constraint firstItem="uJf-2Z-hnS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3.7" id="usW-vi-kdl"/>
+                            <constraint firstItem="Tb8-oQ-P2u" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wD6-Fl-eNQ"/>
+                            <constraint firstItem="xL1-8U-AQQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wK6-jn-VV8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Vg-se-tgt" secondAttribute="trailing" id="xe8-Tz-kKS"/>
+                            <constraint firstItem="0Vg-se-tgt" firstAttribute="width" secondItem="uJf-2Z-hnS" secondAttribute="width" id="xhN-95-lXd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="butGo" destination="Qv4-lV-Clc" id="ubr-B2-nPb"/>
+                        <outlet property="viewUnderTextFields" destination="O3S-hs-RGc" id="U1A-C5-rUh"/>
+                        <outletCollection property="viewWaveBottomMas" destination="0Vg-se-tgt" collectionClass="NSMutableArray" id="fXq-s1-ga9"/>
+                        <outletCollection property="viewWaveBottomMas" destination="sDQ-s8-0kt" collectionClass="NSMutableArray" id="zPB-6a-Bhs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Стрелка вправо" width="30" height="16"/>
+    </resources>
+</document>
