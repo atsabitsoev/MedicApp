@@ -11,8 +11,13 @@ import UIKit
 @IBDesignable
 class ViewUnderTextFields: UIView {
     
-    
-    lazy var cornerRadius: CGFloat = bounds.height / 3
+    @IBInspectable var isSmall: Bool = false
+    var cornerRadius: CGFloat {
+        if isSmall {
+            return bounds.height / 2
+        }
+        return bounds.height / 3
+    }
     @IBInspectable var shadowOpacity: Float = 0.15
     @IBInspectable var shadowColor: UIColor = .black
     @IBInspectable var shadowRadius: CGFloat = 15
