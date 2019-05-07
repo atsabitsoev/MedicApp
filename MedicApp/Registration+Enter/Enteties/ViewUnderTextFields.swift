@@ -24,12 +24,14 @@ class ViewUnderTextFields: UIView {
     var shadowOffset = CGSize(width: 0, height: 2)
     
     @IBInspectable var lineColor: UIColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
+    @IBInspectable var lineCount: Int = 0
     
     let shadowView = UIView()
-
     
     override func draw(_ rect: CGRect) {
         setupShadow()
+        guard lineCount > 0 else { return }
+        drawLines(lineCount)
     }
     
     
@@ -42,6 +44,22 @@ class ViewUnderTextFields: UIView {
         shadowView.layer.shadowRadius = shadowRadius
         shadowView.backgroundColor = UIColor.white
         superview!.insertSubview(shadowView, belowSubview: self)
+    }
+    
+    private func drawLines(_ count: Int) {
+        
+        let linesInset = bounds.height / CGFloat(count + 1)
+        
+        for i in 1...count {
+            let line = UIBezierPath()
+            line.move(to: CGPoint(x: 0,
+                                  y: CGFloat(i) * linesInset))
+            line.addLine(to: CGPoint(x: bounds.width - cornerRadius / 2,
+                                     y: CGFloat(i) * linesInset))
+            line.lineWidth = 1
+            lineColor.setStroke()
+            line.stroke()
+        }
     }
 
 }

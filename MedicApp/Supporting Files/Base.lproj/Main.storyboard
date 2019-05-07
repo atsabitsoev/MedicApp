@@ -73,15 +73,54 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-hs-RGc" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="-150" y="278.66666666666663" width="455" height="294.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-Sz-N0T">
+                                        <rect key="frame" x="150" y="19.999999999999986" width="255" height="254.66666666666663"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="youremail@mail.ru" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvz-Mh-Dw7">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="58.333333333333336"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-Es-rs1">
+                                                <rect key="frame" x="0.0" y="98.333333333333314" width="255" height="58"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Подтвердите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3X-fW-Rec">
+                                                <rect key="frame" x="0.0" y="196.33333333333331" width="255" height="58.333333333333343"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="h6d-Es-rs1" firstAttribute="width" secondItem="wvz-Mh-Dw7" secondAttribute="width" id="KRg-AK-Ucf"/>
+                                            <constraint firstItem="X3X-fW-Rec" firstAttribute="height" secondItem="wvz-Mh-Dw7" secondAttribute="height" id="QCm-g5-dqB"/>
+                                            <constraint firstItem="wvz-Mh-Dw7" firstAttribute="height" secondItem="h6d-Es-rs1" secondAttribute="height" id="S1X-ZE-nbt"/>
+                                            <constraint firstItem="X3X-fW-Rec" firstAttribute="width" secondItem="wvz-Mh-Dw7" secondAttribute="width" id="mdT-Uw-vaK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8Ch-Sz-N0T" secondAttribute="trailing" constant="50" id="9sp-ZH-JIW"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Ch-Sz-N0T" secondAttribute="bottom" constant="20" id="OJf-5G-lDs"/>
+                                    <constraint firstItem="8Ch-Sz-N0T" firstAttribute="top" secondItem="O3S-hs-RGc" secondAttribute="top" constant="20" id="fwa-1H-qeX"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="90"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineCount">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-8U-AQQ">
-                                <rect key="frame" x="79" y="188.66666666666666" width="217" height="43"/>
+                                <rect key="frame" x="79.333333333333329" y="188.66666666666666" width="216.66666666666669" height="43"/>
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="36"/>
                                 <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -129,6 +168,7 @@
                             <constraint firstItem="1OH-r2-OeL" firstAttribute="top" secondItem="O3S-hs-RGc" secondAttribute="bottom" constant="36" id="HRn-FA-9DM"/>
                             <constraint firstItem="Qv4-lV-Clc" firstAttribute="height" secondItem="O3S-hs-RGc" secondAttribute="height" multiplier="0.25" id="Ise-Dc-GET"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:1.1" id="JAf-YS-Gj2"/>
+                            <constraint firstItem="8Ch-Sz-N0T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JKp-xc-ier"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="width" secondItem="sDQ-s8-0kt" secondAttribute="width" id="JN3-WL-bSR"/>
                             <constraint firstAttribute="bottom" secondItem="sDQ-s8-0kt" secondAttribute="bottom" id="Oj7-S9-TOq"/>
                             <constraint firstItem="O3S-hs-RGc" firstAttribute="top" secondItem="Tb8-oQ-P2u" secondAttribute="bottom" constant="40" id="Okh-aH-fk9"/>
@@ -162,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.200000000000003" y="20.689655172413794"/>
+            <point key="canvasLocation" x="101.59999999999999" y="-24.384236453201972"/>
         </scene>
     </scenes>
     <resources>
