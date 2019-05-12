@@ -75,22 +75,22 @@
                                 <rect key="frame" x="-150" y="278.66666666666663" width="455" height="294.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8Ch-Sz-N0T">
-                                        <rect key="frame" x="150" y="19.999999999999986" width="255" height="254.66666666666663"/>
+                                        <rect key="frame" x="200" y="19.999999999999986" width="205" height="254.66666666666663"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="youremail@mail.ru" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvz-Mh-Dw7">
-                                                <rect key="frame" x="0.0" y="0.0" width="255" height="58.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="58.333333333333336"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-Es-rs1">
-                                                <rect key="frame" x="0.0" y="98.333333333333314" width="255" height="58"/>
+                                                <rect key="frame" x="0.0" y="98.333333333333314" width="205" height="58"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Подтвердите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3X-fW-Rec">
-                                                <rect key="frame" x="0.0" y="196.33333333333331" width="255" height="58.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="196.33333333333331" width="205" height="58.333333333333343"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -103,10 +103,33 @@
                                             <constraint firstItem="X3X-fW-Rec" firstAttribute="width" secondItem="wvz-Mh-Dw7" secondAttribute="width" id="mdT-Uw-vaK"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="CRE-9T-dAP">
+                                        <rect key="frame" x="166" y="19.999999999999986" width="18" height="254.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Конверт" translatesAutoresizingMaskIntoConstraints="NO" id="rQf-gB-nZd">
+                                                <rect key="frame" x="0.0" y="0.0" width="18" height="58.333333333333336"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Замок" translatesAutoresizingMaskIntoConstraints="NO" id="zUf-30-U4P">
+                                                <rect key="frame" x="0.0" y="98.333333333333314" width="18" height="58"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Замок" translatesAutoresizingMaskIntoConstraints="NO" id="MPc-ra-pxx">
+                                                <rect key="frame" x="0.0" y="196.33333333333331" width="18" height="58.333333333333343"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zUf-30-U4P" firstAttribute="width" secondItem="rQf-gB-nZd" secondAttribute="width" id="Lfu-CA-ovy"/>
+                                            <constraint firstItem="MPc-ra-pxx" firstAttribute="width" secondItem="rQf-gB-nZd" secondAttribute="width" id="YMV-sH-Mcb"/>
+                                            <constraint firstItem="MPc-ra-pxx" firstAttribute="height" secondItem="rQf-gB-nZd" secondAttribute="height" id="d9y-qi-hbW"/>
+                                            <constraint firstItem="zUf-30-U4P" firstAttribute="height" secondItem="rQf-gB-nZd" secondAttribute="height" id="vhd-wZ-YXA"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="CRE-9T-dAP" firstAttribute="top" secondItem="8Ch-Sz-N0T" secondAttribute="top" id="1Sd-Bq-thy"/>
+                                    <constraint firstItem="CRE-9T-dAP" firstAttribute="bottom" secondItem="8Ch-Sz-N0T" secondAttribute="bottom" id="8vM-Xi-bo3"/>
                                     <constraint firstAttribute="trailing" secondItem="8Ch-Sz-N0T" secondAttribute="trailing" constant="50" id="9sp-ZH-JIW"/>
+                                    <constraint firstItem="8Ch-Sz-N0T" firstAttribute="leading" secondItem="CRE-9T-dAP" secondAttribute="trailing" constant="16" id="JHd-gk-Pvh"/>
                                     <constraint firstAttribute="bottom" secondItem="8Ch-Sz-N0T" secondAttribute="bottom" constant="20" id="OJf-5G-lDs"/>
                                     <constraint firstItem="8Ch-Sz-N0T" firstAttribute="top" secondItem="O3S-hs-RGc" secondAttribute="top" constant="20" id="fwa-1H-qeX"/>
                                 </constraints>
@@ -164,11 +187,11 @@
                             <constraint firstItem="xL1-8U-AQQ" firstAttribute="top" secondItem="Tb8-oQ-P2u" secondAttribute="bottom" constant="-50" id="5LW-aO-qs8"/>
                             <constraint firstItem="1OH-r2-OeL" firstAttribute="leading" secondItem="O3S-hs-RGc" secondAttribute="leading" id="6Y5-SF-Yfb"/>
                             <constraint firstItem="uJf-2Z-hnS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:1.15" id="AGD-hi-6yc"/>
-                            <constraint firstItem="O3S-hs-RGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-150" id="C87-ea-jrm"/>
+                            <constraint firstItem="O3S-hs-RGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-150" id="EtK-5U-8LX"/>
                             <constraint firstItem="1OH-r2-OeL" firstAttribute="top" secondItem="O3S-hs-RGc" secondAttribute="bottom" constant="36" id="HRn-FA-9DM"/>
                             <constraint firstItem="Qv4-lV-Clc" firstAttribute="height" secondItem="O3S-hs-RGc" secondAttribute="height" multiplier="0.25" id="Ise-Dc-GET"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:1.1" id="JAf-YS-Gj2"/>
-                            <constraint firstItem="8Ch-Sz-N0T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JKp-xc-ier"/>
+                            <constraint firstItem="8Ch-Sz-N0T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="JKp-xc-ier"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="width" secondItem="sDQ-s8-0kt" secondAttribute="width" id="JN3-WL-bSR"/>
                             <constraint firstAttribute="bottom" secondItem="sDQ-s8-0kt" secondAttribute="bottom" id="Oj7-S9-TOq"/>
                             <constraint firstItem="O3S-hs-RGc" firstAttribute="top" secondItem="Tb8-oQ-P2u" secondAttribute="bottom" constant="40" id="Okh-aH-fk9"/>
@@ -180,6 +203,7 @@
                             <constraint firstItem="Qv4-lV-Clc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-150" id="eGg-iu-IcK"/>
                             <constraint firstItem="0Vg-se-tgt" firstAttribute="height" secondItem="uJf-2Z-hnS" secondAttribute="height" id="frK-6L-L6z"/>
                             <constraint firstItem="1OH-r2-OeL" firstAttribute="height" secondItem="O3S-hs-RGc" secondAttribute="height" multiplier="1:4.5" id="gMM-5d-0Qf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="CRE-9T-dAP" secondAttribute="leading" constant="-16" id="iDZ-bJ-3nc"/>
                             <constraint firstItem="8nu-jU-EIO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oWQ-dx-xpe"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rsV-5e-K1r"/>
                             <constraint firstItem="Qv4-lV-Clc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="s3m-EU-aoI"/>
@@ -206,6 +230,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Замок" width="485" height="365"/>
+        <image name="Конверт" width="485" height="365"/>
         <image name="Стрелка вправо" width="30" height="16"/>
     </resources>
 </document>
