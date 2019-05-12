@@ -155,7 +155,6 @@
                                     <constraint firstAttribute="width" secondItem="Qv4-lV-Clc" secondAttribute="height" multiplier="1:1" id="2ra-Tc-VPT"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="Стрелка вправо"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OH-r2-OeL" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="-150" y="609.33333333333337" width="267.66666666666669" height="65.333333333333371"/>
@@ -232,6 +231,5 @@
     <resources>
         <image name="Замок" width="485" height="365"/>
         <image name="Конверт" width="485" height="365"/>
-        <image name="Стрелка вправо" width="30" height="16"/>
     </resources>
 </document>

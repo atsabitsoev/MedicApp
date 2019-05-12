@@ -15,11 +15,14 @@ class ButtonGradient: UIButton {
     @IBInspectable var color2: UIColor = #colorLiteral(red: 0.9843137255, green: 0.6862745098, blue: 0.3764705882, alpha: 1)
     
     let shadowView = UIView()
+    let myImageView = UIImageView()
+    
+    var imageSet = false
     
     override var frame: CGRect {
         didSet {
             shadowView.frame = frame
-            setNeedsDisplay()
+            setMyImage(bounds)
         }
     }
     
@@ -28,41 +31,45 @@ class ButtonGradient: UIButton {
         setRounded()
         addGradient(color1: color1, color2: color2)
         setupShadow()
+        
+        if !imageSet {
+            setMyImage(bounds)
+        }
     }
     
     
     private func addGradient(color1: UIColor, color2: UIColor) {
         
-        let context = UIGraphicsGetCurrentContext()!
-
-        let colors = [color1.cgColor, color2.cgColor]
-
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-
-        let colorLocations: [CGFloat] = [0, 1]
-
-        let gradient = CGGradient(colorsSpace: colorSpace,
-                                  colors: colors as CFArray,
-                                  locations: colorLocations)!
-
-        let startPoint = CGPoint(x: 0, y: 0)
-        let endPoint = CGPoint(x: bounds.width, y: 0)
-        context.drawLinearGradient(gradient,
-                                   start: startPoint,
-                                   end: endPoint,
-                                   options: [])
-        
-//        let gradient = CAGradientLayer()
-//        gradient.colors = [color1.cgColor, color2.cgColor]
-//        let colorLocations: [NSNumber] = [0, 1]
+//        let context = UIGraphicsGetCurrentContext()!
+//
+//        let colors = [color1.cgColor, color2.cgColor]
+//
+//        let colorSpace = CGColorSpaceCreateDeviceRGB()
+//
+//        let colorLocations: [CGFloat] = [0, 1]
+//
+//        let gradient = CGGradient(colorsSpace: colorSpace,
+//                                  colors: colors as CFArray,
+//                                  locations: colorLocations)!
+//
 //        let startPoint = CGPoint(x: 0, y: 0)
 //        let endPoint = CGPoint(x: bounds.width, y: 0)
-//        gradient.startPoint = startPoint
-//        gradient.endPoint = endPoint
-//        gradient.locations = colorLocations
-//        gradient.frame = bounds
-//        layer.insertSublayer(gradient, below: layer)
-//        print("Добавил градиент")
+//        context.drawLinearGradient(gradient,
+//                                   start: startPoint,
+//                                   end: endPoint,
+//                                   options: [])
+        
+        let gradient = CAGradientLayer()
+        gradient.colors = [color1.cgColor, color2.cgColor]
+        let colorLocations: [NSNumber] = [0, 1]
+        let startPoint = CGPoint(x: 0, y: 0)
+        let endPoint = CGPoint(x: 1, y: 0)
+        gradient.startPoint = startPoint
+        gradient.endPoint = endPoint
+        gradient.locations = colorLocations
+        gradient.frame = bounds
+        layer.insertSublayer(gradient, below: layer)
+        print("Добавил градиент")
     }
     
     private func setRounded() {
@@ -82,4 +89,17 @@ class ButtonGradient: UIButton {
         print("Добавил тень кнопке")
     }
 
+    private func setMyImage(_ rect: CGRect) {
+        
+        let inset = bounds.width / 5
+        myImageView.frame = rect.inset(by: UIEdgeInsets(top: inset,
+                                                        left: inset,
+                                                        bottom: inset,
+                                                        right: inset))
+        myImageView.image = UIImage(named: "Стрелка вправо")
+        myImageView.contentMode = .scaleAspectFit
+        addSubview(myImageView)
+        
+        imageSet = true
+    }
 }
