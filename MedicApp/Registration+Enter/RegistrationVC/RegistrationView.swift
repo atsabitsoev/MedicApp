@@ -39,12 +39,11 @@ class RegistrationView: UIViewController {
         
         let radius = butGo.bounds.height / 2
         
-        UIView.animate(withDuration: 0.3) {
-            self.butGo.frame = CGRect(x: self.viewUnderTextFields.frame.maxX - radius,
-                                       y: self.viewUnderTextFields.center.y - radius,
-                                       width: self.butGo.frame.width,
-                                       height: self.butGo.frame.height)
-        }
+        self.butGo.frame = CGRect(x: self.viewUnderTextFields.frame.maxX - radius,
+                                  y: self.viewUnderTextFields.center.y - radius,
+                                  width: self.butGo.frame.width,
+                                  height: self.butGo.frame.height)
+        
     }
 
     
