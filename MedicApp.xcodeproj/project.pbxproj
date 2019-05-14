@@ -14,6 +14,7 @@
 		AC7F4CAB227CAEF0002A42AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */; };
 		AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */; };
 		AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */; };
+		ACD64734228AF11C0091257E /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64733228AF11C0091257E /* Gradient.swift */; };
 		ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */; };
 		ACF76AD5227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */; };
 		ACF76AD6227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */; };
@@ -36,6 +37,7 @@
 		AC7F4CAC227CAEF0002A42AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveGradientView.swift; sourceTree = "<group>"; };
 		AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUnderTextFields.swift; sourceTree = "<group>"; };
+		ACD64733228AF11C0091257E /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Thin.otf"; sourceTree = "<group>"; };
 		ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Black.otf"; sourceTree = "<group>"; };
 		ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		AC7F4C9F227CAEEE002A42AF /* MedicApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACD64732228AF1090091257E /* GlobalEntities */,
 				ACF76ADD227CD39C00FE7648 /* Registration+Enter */,
 				AC7F4CAC227CAEF0002A42AF /* Info.plist */,
 				AC5B540D227CFB8600C2001A /* Supporting Files */,
@@ -111,6 +114,14 @@
 				ACF76AD0227CCE7D00FE7648 /* SF-Compact-Rounded-Ultralight.otf */,
 			);
 			path = "Шрифты";
+			sourceTree = "<group>";
+		};
+		ACD64732228AF1090091257E /* GlobalEntities */ = {
+			isa = PBXGroup;
+			children = (
+				ACD64733228AF11C0091257E /* Gradient.swift */,
+			);
+			path = GlobalEntities;
 			sourceTree = "<group>";
 		};
 		ACF76ADD227CD39C00FE7648 /* Registration+Enter */ = {
@@ -241,6 +252,7 @@
 				AC7F4CA1227CAEEE002A42AF /* AppDelegate.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
 				AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */,
+				ACD64734228AF11C0091257E /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
