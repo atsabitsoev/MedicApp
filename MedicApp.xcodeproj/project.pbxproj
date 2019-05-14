@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		AC7F4CA1227CAEEE002A42AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CA0227CAEEE002A42AF /* AppDelegate.swift */; };
 		AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CA2227CAEEE002A42AF /* RegistrationView.swift */; };
-		AC7F4CA6227CAEEE002A42AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F4CA4227CAEEE002A42AF /* Main.storyboard */; };
+		AC7F4CA6227CAEEE002A42AF /* Registration+Enter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F4CA4227CAEEE002A42AF /* Registration+Enter.storyboard */; };
 		AC7F4CA8227CAEF0002A42AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC7F4CA7227CAEF0002A42AF /* Assets.xcassets */; };
 		AC7F4CAB227CAEF0002A42AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */; };
 		AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */; };
 		AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */; };
 		ACD64734228AF11C0091257E /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64733228AF11C0091257E /* Gradient.swift */; };
+		ACD64736228B016C0091257E /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64735228B016C0091257E /* EnterView.swift */; };
 		ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */; };
 		ACF76AD5227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */; };
 		ACF76AD6227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */; };
@@ -31,13 +32,14 @@
 		AC7F4C9D227CAEEE002A42AF /* MedicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7F4CA0227CAEEE002A42AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC7F4CA2227CAEEE002A42AF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
-		AC7F4CA5227CAEEE002A42AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC7F4CA5227CAEEE002A42AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Registration+Enter.storyboard"; sourceTree = "<group>"; };
 		AC7F4CA7227CAEF0002A42AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC7F4CAA227CAEF0002A42AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC7F4CAC227CAEF0002A42AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveGradientView.swift; sourceTree = "<group>"; };
 		AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUnderTextFields.swift; sourceTree = "<group>"; };
 		ACD64733228AF11C0091257E /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		ACD64735228B016C0091257E /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterView.swift; path = MedicApp/GlobalEntities/EnterView.swift; sourceTree = SOURCE_ROOT; };
 		ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Thin.otf"; sourceTree = "<group>"; };
 		ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Black.otf"; sourceTree = "<group>"; };
 		ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7F4CA0227CAEEE002A42AF /* AppDelegate.swift */,
-				AC7F4CA4227CAEEE002A42AF /* Main.storyboard */,
+				AC7F4CA4227CAEEE002A42AF /* Registration+Enter.storyboard */,
 				AC7F4CA7227CAEF0002A42AF /* Assets.xcassets */,
 				AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */,
 			);
@@ -146,6 +148,7 @@
 		ACF76ADF227CD3B500FE7648 /* EnterVC */ = {
 			isa = PBXGroup;
 			children = (
+				ACD64735228B016C0091257E /* EnterView.swift */,
 			);
 			path = EnterVC;
 			sourceTree = "<group>";
@@ -236,7 +239,7 @@
 				ACF76AD8227CCE7D00FE7648 /* SF-Compact-Rounded-Medium.otf in Resources */,
 				ACF76ADA227CCE7D00FE7648 /* SF-Compact-Rounded-Semibold.otf in Resources */,
 				ACF76AD5227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf in Resources */,
-				AC7F4CA6227CAEEE002A42AF /* Main.storyboard in Resources */,
+				AC7F4CA6227CAEEE002A42AF /* Registration+Enter.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +253,7 @@
 				AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */,
 				AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */,
 				AC7F4CA1227CAEEE002A42AF /* AppDelegate.swift in Sources */,
+				ACD64736228B016C0091257E /* EnterView.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
 				AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */,
 				ACD64734228AF11C0091257E /* Gradient.swift in Sources */,
@@ -259,12 +263,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC7F4CA4227CAEEE002A42AF /* Main.storyboard */ = {
+		AC7F4CA4227CAEEE002A42AF /* Registration+Enter.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC7F4CA5227CAEEE002A42AF /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Registration+Enter.storyboard";
 			sourceTree = "<group>";
 		};
 		AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */ = {
@@ -401,6 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89WB9E7UEU;
 				INFOPLIST_FILE = MedicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 89WB9E7UEU;
 				INFOPLIST_FILE = MedicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

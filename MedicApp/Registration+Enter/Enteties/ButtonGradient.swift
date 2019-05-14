@@ -19,12 +19,14 @@ class ButtonGradient: UIButton {
 //
     var imageSet = false
 //
-//    override var frame: CGRect {
-//        didSet {
+    override var frame: CGRect {
+        didSet {
 //            shadowView.frame = frame
 //            setMyImage(bounds)
-//        }
-//    }
+            
+            setNeedsDisplay()
+        }
+    }
     
     override func draw(_ rect: CGRect) {
         print("рисую")
@@ -49,13 +51,14 @@ class ButtonGradient: UIButton {
                     coordinatesY: [0,0],
                     cornerRadius: layer.cornerRadius)
         
-        layer.shadowColor = #colorLiteral(red: 0.2509803922, green: 0.6980392157, blue: 0.9529411765, alpha: 1)
-        layer.shadowOpacity = 0.64
-        layer.shadowRadius = 10
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowRadius = 4
         let bounds = self.bounds
-        let insetedBounds = bounds.inset(by: UIEdgeInsets(top: 20, left: 10, bottom: -10, right: 10))
+        let insetedBounds = bounds.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0))
         
-        layer.shadowPath = CGPath(rect: insetedBounds, transform: nil)
+        let shadowPath = CGPath(ellipseIn: insetedBounds, transform: nil)
+        layer.shadowPath = shadowPath
     }
     
     
