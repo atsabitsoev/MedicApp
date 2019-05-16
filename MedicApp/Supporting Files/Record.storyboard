@@ -24,16 +24,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-9c-tmF">
-                                <rect key="frame" x="0.0" y="101" width="414" height="795"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="820"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6em-v3-HYr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="795"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="565"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-s8-Qpd" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="-210" y="18" width="574" height="265"/>
+                                                <rect key="frame" x="-210" y="24" width="574" height="198"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CX5-ga-ySb">
+                                                        <rect key="frame" x="228" y="8" width="280" height="182"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yfs-SA-OhN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pze-Op-psA">
+                                                                <rect key="frame" x="0.0" y="66" width="280" height="50"/>
+                                                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Отчество" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beC-zx-WdV">
+                                                                <rect key="frame" x="0.0" y="132" width="280" height="50"/>
+                                                                <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="265" id="zze-cq-oDB"/>
+                                                    <constraint firstItem="CX5-ga-ySb" firstAttribute="top" secondItem="SWH-s8-Qpd" secondAttribute="top" constant="8" id="5lp-E1-5xg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="CX5-ga-ySb" secondAttribute="bottom" constant="8" id="LTD-0L-BZC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CX5-ga-ySb" secondAttribute="trailing" constant="66" id="vhA-4j-d54"/>
+                                                    <constraint firstAttribute="height" constant="198" id="zze-cq-oDB"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="lineCount">
@@ -42,9 +70,20 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-2H-E7X" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="301" width="464" height="66"/>
+                                                <rect key="frame" x="50" y="238" width="464" height="66"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDT-Bn-gXN">
+                                                        <rect key="frame" x="66" y="8" width="280" height="50"/>
+                                                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="dDT-Bn-gXN" secondAttribute="bottom" constant="8" id="G1m-DF-fiM"/>
+                                                    <constraint firstItem="dDT-Bn-gXN" firstAttribute="leading" secondItem="SBx-2H-E7X" secondAttribute="leading" constant="66" id="Omw-cQ-P40"/>
+                                                    <constraint firstItem="dDT-Bn-gXN" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="top" constant="8" id="kLk-iw-l2m"/>
                                                     <constraint firstAttribute="height" constant="66" id="zed-pV-lkE"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -52,7 +91,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gU-gZ-PFE" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="-100" y="385" width="464" height="66"/>
+                                                <rect key="frame" x="-100" y="320" width="464" height="66"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="66" id="zfg-u9-w53"/>
@@ -62,10 +101,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-er-vf6" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="117" y="469" width="180" height="66"/>
+                                                <rect key="frame" x="50" y="402" width="314" height="66"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-Rh-mut">
-                                                        <rect key="frame" x="22" y="0.0" width="136" height="66"/>
+                                                        <rect key="frame" x="22" y="0.0" width="270" height="66"/>
                                                         <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
                                                         <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -74,7 +113,6 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="VUo-Rh-mut" firstAttribute="leading" secondItem="1qE-er-vf6" secondAttribute="leading" constant="22" id="1tO-d5-tNR"/>
-                                                    <constraint firstAttribute="width" constant="180" id="H2x-h8-arb"/>
                                                     <constraint firstAttribute="height" constant="66" id="Hjr-YO-C6P"/>
                                                     <constraint firstAttribute="bottom" secondItem="VUo-Rh-mut" secondAttribute="bottom" id="dYO-Xf-xTi"/>
                                                     <constraint firstAttribute="trailing" secondItem="VUo-Rh-mut" secondAttribute="trailing" constant="22" id="rFk-tN-REt"/>
@@ -84,29 +122,39 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8b-qT-J72" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="28" y="648" width="359" height="54"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8b-qT-J72" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="486" width="366" height="66"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="66" id="ZKU-q7-XRM"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
                                                 <state key="normal" title="Записаться">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needImage" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="SWH-s8-Qpd" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-210" id="0ef-yK-AWk"/>
-                                            <constraint firstAttribute="height" constant="795" id="3b0-d6-F45"/>
+                                            <constraint firstAttribute="height" constant="565" id="3b0-d6-F45"/>
                                             <constraint firstAttribute="trailing" secondItem="2gU-gZ-PFE" secondAttribute="trailing" constant="50" id="Bsj-3E-Sl1"/>
-                                            <constraint firstItem="2gU-gZ-PFE" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="bottom" constant="18" id="NE2-K5-Gtt"/>
+                                            <constraint firstAttribute="trailing" secondItem="1qE-er-vf6" secondAttribute="trailing" constant="50" id="DmL-tN-3h2"/>
+                                            <constraint firstItem="r8b-qT-J72" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="24" id="N9R-2i-8a6"/>
+                                            <constraint firstItem="2gU-gZ-PFE" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="bottom" constant="16" id="NE2-K5-Gtt"/>
                                             <constraint firstItem="1qE-er-vf6" firstAttribute="centerX" secondItem="6em-v3-HYr" secondAttribute="centerX" id="NKg-vY-wOF"/>
-                                            <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="2gU-gZ-PFE" secondAttribute="bottom" constant="18" id="Ob0-5n-F6H"/>
-                                            <constraint firstItem="SWH-s8-Qpd" firstAttribute="top" secondItem="6em-v3-HYr" secondAttribute="top" constant="18" id="Qhp-no-aSb"/>
+                                            <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="2gU-gZ-PFE" secondAttribute="bottom" constant="16" id="Ob0-5n-F6H"/>
+                                            <constraint firstItem="SWH-s8-Qpd" firstAttribute="top" secondItem="6em-v3-HYr" secondAttribute="top" constant="24" id="Qhp-no-aSb"/>
+                                            <constraint firstItem="1qE-er-vf6" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ZJx-eR-zfB"/>
                                             <constraint firstAttribute="trailing" secondItem="SBx-2H-E7X" secondAttribute="trailing" constant="-100" id="aqi-BG-GCW"/>
                                             <constraint firstAttribute="trailing" secondItem="SWH-s8-Qpd" secondAttribute="trailing" constant="50" id="hny-zg-X5O"/>
                                             <constraint firstItem="SBx-2H-E7X" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ukl-PE-I2m"/>
+                                            <constraint firstItem="r8b-qT-J72" firstAttribute="top" secondItem="1qE-er-vf6" secondAttribute="bottom" constant="18" id="vco-tv-bLz"/>
                                             <constraint firstItem="2gU-gZ-PFE" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-100" id="wuw-BQ-eWY"/>
-                                            <constraint firstItem="SBx-2H-E7X" firstAttribute="top" secondItem="SWH-s8-Qpd" secondAttribute="bottom" constant="18" id="y4W-LF-RRf"/>
+                                            <constraint firstItem="SBx-2H-E7X" firstAttribute="top" secondItem="SWH-s8-Qpd" secondAttribute="bottom" constant="16" id="y4W-LF-RRf"/>
+                                            <constraint firstAttribute="trailing" secondItem="r8b-qT-J72" secondAttribute="trailing" constant="24" id="yr1-OU-LDZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -119,22 +167,26 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запись" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-fZ-plR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="57"/>
-                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="36"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="fNl-OR-j79"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="gAl-AQ-ofO" secondAttribute="top" constant="57" id="0Cp-dh-lbL"/>
                             <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="7Kz-fZ-plR" secondAttribute="trailing" id="ExB-oe-WRo"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="trailing" secondItem="gAl-AQ-ofO" secondAttribute="trailing" id="J44-uz-FVA"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="centerX" secondItem="oFa-3e-RrU" secondAttribute="centerX" id="JkO-kn-NjQ"/>
-                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="at7-m9-WBB"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="dFn-Jv-tlV"/>
                             <constraint firstItem="7Kz-fZ-plR" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="eWd-Rr-gbp"/>
                             <constraint firstAttribute="bottom" secondItem="0ZL-9c-tmF" secondAttribute="bottom" id="g9I-gN-eUl"/>
+                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="jea-u5-xy4"/>
+                            <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="dDT-Bn-gXN" secondAttribute="trailing" constant="18" id="rAr-S8-rz3"/>
+                            <constraint firstItem="CX5-ga-ySb" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" constant="18" id="rBX-Ey-O48"/>
                             <constraint firstItem="7Kz-fZ-plR" firstAttribute="top" secondItem="oFa-3e-RrU" secondAttribute="topMargin" id="sro-Zv-sIG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gAl-AQ-ofO"/>

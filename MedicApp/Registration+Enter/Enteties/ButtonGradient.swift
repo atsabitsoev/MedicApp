@@ -17,6 +17,8 @@ class ButtonGradient: UIButton {
     let myImageView = UIImageView()
 
     var imageSet = false
+    
+    @IBInspectable var needImage: Bool = true
 
     override var frame: CGRect {
         didSet {
@@ -26,7 +28,7 @@ class ButtonGradient: UIButton {
     
     override func draw(_ rect: CGRect) {
 
-        if !imageSet {
+        if !imageSet && needImage {
             setMyImage(bounds)
         }
         configureButNext()
