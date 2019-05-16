@@ -487,6 +487,16 @@
             </objects>
             <point key="canvasLocation" x="-1004" y="1448"/>
         </scene>
+        <!--ExcercisesVC-->
+        <scene sceneID="DcY-P1-N0V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Excercises" referencedIdentifier="ExcercisesVC" id="G0m-qK-oza" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FBi-qJ-hXM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViK-sL-x9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533" y="1866"/>
+        </scene>
         <!--RecordVC-->
         <scene sceneID="hgZ-3D-nKm">
             <objects>
@@ -495,7 +505,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFU-bM-uK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1004" y="2015"/>
+            <point key="canvasLocation" x="-1005" y="1866"/>
         </scene>
         <!--Анализы-->
         <scene sceneID="dmA-Iz-9hM">
@@ -534,6 +544,9 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="G0m-qK-oza" kind="relationship" relationship="rootViewController" id="HbO-OR-e3k"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83t-Mt-KHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
