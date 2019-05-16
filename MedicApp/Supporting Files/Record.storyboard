@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qWw-wQ-jbq">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Medium.otf">
+            <string>SFCompactRounded-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="X8l-Jf-v0W">
+            <objects>
+                <viewController storyboardIdentifier="RecordVC" id="qWw-wQ-jbq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFa-3e-RrU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-9c-tmF">
+                                <rect key="frame" x="0.0" y="101" width="414" height="795"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6em-v3-HYr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="795"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-s8-Qpd" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <rect key="frame" x="-210" y="18" width="574" height="265"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="265" id="zze-cq-oDB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineCount">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-2H-E7X" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="301" width="464" height="66"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="66" id="zed-pV-lkE"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gU-gZ-PFE" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <rect key="frame" x="-100" y="385" width="464" height="66"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="66" id="zfg-u9-w53"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-er-vf6" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <rect key="frame" x="117" y="469" width="180" height="66"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-Rh-mut">
+                                                        <rect key="frame" x="22" y="0.0" width="136" height="66"/>
+                                                        <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
+                                                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="VUo-Rh-mut" firstAttribute="leading" secondItem="1qE-er-vf6" secondAttribute="leading" constant="22" id="1tO-d5-tNR"/>
+                                                    <constraint firstAttribute="width" constant="180" id="H2x-h8-arb"/>
+                                                    <constraint firstAttribute="height" constant="66" id="Hjr-YO-C6P"/>
+                                                    <constraint firstAttribute="bottom" secondItem="VUo-Rh-mut" secondAttribute="bottom" id="dYO-Xf-xTi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VUo-Rh-mut" secondAttribute="trailing" constant="22" id="rFk-tN-REt"/>
+                                                    <constraint firstItem="VUo-Rh-mut" firstAttribute="top" secondItem="1qE-er-vf6" secondAttribute="top" id="sGE-mz-WaM"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8b-qT-J72" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
+                                                <rect key="frame" x="28" y="648" width="359" height="54"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
+                                                <state key="normal" title="Записаться">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SWH-s8-Qpd" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-210" id="0ef-yK-AWk"/>
+                                            <constraint firstAttribute="height" constant="795" id="3b0-d6-F45"/>
+                                            <constraint firstAttribute="trailing" secondItem="2gU-gZ-PFE" secondAttribute="trailing" constant="50" id="Bsj-3E-Sl1"/>
+                                            <constraint firstItem="2gU-gZ-PFE" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="bottom" constant="18" id="NE2-K5-Gtt"/>
+                                            <constraint firstItem="1qE-er-vf6" firstAttribute="centerX" secondItem="6em-v3-HYr" secondAttribute="centerX" id="NKg-vY-wOF"/>
+                                            <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="2gU-gZ-PFE" secondAttribute="bottom" constant="18" id="Ob0-5n-F6H"/>
+                                            <constraint firstItem="SWH-s8-Qpd" firstAttribute="top" secondItem="6em-v3-HYr" secondAttribute="top" constant="18" id="Qhp-no-aSb"/>
+                                            <constraint firstAttribute="trailing" secondItem="SBx-2H-E7X" secondAttribute="trailing" constant="-100" id="aqi-BG-GCW"/>
+                                            <constraint firstAttribute="trailing" secondItem="SWH-s8-Qpd" secondAttribute="trailing" constant="50" id="hny-zg-X5O"/>
+                                            <constraint firstItem="SBx-2H-E7X" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ukl-PE-I2m"/>
+                                            <constraint firstItem="2gU-gZ-PFE" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-100" id="wuw-BQ-eWY"/>
+                                            <constraint firstItem="SBx-2H-E7X" firstAttribute="top" secondItem="SWH-s8-Qpd" secondAttribute="bottom" constant="18" id="y4W-LF-RRf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6em-v3-HYr" firstAttribute="centerX" secondItem="0ZL-9c-tmF" secondAttribute="centerX" id="5UQ-Jr-TZQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="6em-v3-HYr" secondAttribute="bottom" id="7OZ-ki-Y0R"/>
+                                    <constraint firstAttribute="trailing" secondItem="6em-v3-HYr" secondAttribute="trailing" id="Pma-VD-mmn"/>
+                                    <constraint firstItem="6em-v3-HYr" firstAttribute="top" secondItem="0ZL-9c-tmF" secondAttribute="top" id="UAf-or-p3U"/>
+                                    <constraint firstItem="6em-v3-HYr" firstAttribute="leading" secondItem="0ZL-9c-tmF" secondAttribute="leading" id="vz5-E7-ex4"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запись" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-fZ-plR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="57"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="36"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="gAl-AQ-ofO" secondAttribute="top" constant="57" id="0Cp-dh-lbL"/>
+                            <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="7Kz-fZ-plR" secondAttribute="trailing" id="ExB-oe-WRo"/>
+                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="trailing" secondItem="gAl-AQ-ofO" secondAttribute="trailing" id="J44-uz-FVA"/>
+                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="centerX" secondItem="oFa-3e-RrU" secondAttribute="centerX" id="JkO-kn-NjQ"/>
+                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="at7-m9-WBB"/>
+                            <constraint firstItem="0ZL-9c-tmF" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="dFn-Jv-tlV"/>
+                            <constraint firstItem="7Kz-fZ-plR" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="eWd-Rr-gbp"/>
+                            <constraint firstAttribute="bottom" secondItem="0ZL-9c-tmF" secondAttribute="bottom" id="g9I-gN-eUl"/>
+                            <constraint firstItem="7Kz-fZ-plR" firstAttribute="top" secondItem="oFa-3e-RrU" secondAttribute="topMargin" id="sro-Zv-sIG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gAl-AQ-ofO"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="896"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSf-wo-V5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="143.97321428571428"/>
+        </scene>
+    </scenes>
+</document>

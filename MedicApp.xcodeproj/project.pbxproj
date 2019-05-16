@@ -26,6 +26,7 @@
 		ACF76ADB227CCE7D00FE7648 /* SF-Compact-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76AD2227CCE7D00FE7648 /* SF-Compact-Rounded-Regular.otf */; };
 		ACF76ADC227CCE7D00FE7648 /* SF-Compact-Rounded-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76AD3227CCE7D00FE7648 /* SF-Compact-Rounded-Heavy.otf */; };
 		ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF76AE2227CD50000FE7648 /* ButtonGradient.swift */; };
+		ACFC9B85228D8ECD009F5798 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFC9B84228D8ECD009F5798 /* Record.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		ACF76AD2227CCE7D00FE7648 /* SF-Compact-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Regular.otf"; sourceTree = "<group>"; };
 		ACF76AD3227CCE7D00FE7648 /* SF-Compact-Rounded-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Heavy.otf"; sourceTree = "<group>"; };
 		ACF76AE2227CD50000FE7648 /* ButtonGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradient.swift; sourceTree = "<group>"; };
+		ACFC9B84228D8ECD009F5798 /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				AC7F4CA0227CAEEE002A42AF /* AppDelegate.swift */,
 				AC7F4CA4227CAEEE002A42AF /* Registration+Enter.storyboard */,
+				ACFC9B84228D8ECD009F5798 /* Record.storyboard */,
 				AC7F4CA7227CAEF0002A42AF /* Assets.xcassets */,
 				AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */,
 			);
@@ -232,6 +235,7 @@
 				AC7F4CAB227CAEF0002A42AF /* LaunchScreen.storyboard in Resources */,
 				ACF76ADB227CCE7D00FE7648 /* SF-Compact-Rounded-Regular.otf in Resources */,
 				ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */,
+				ACFC9B85228D8ECD009F5798 /* Record.storyboard in Resources */,
 				ACF76AD9227CCE7D00FE7648 /* SF-Compact-Rounded-Ultralight.otf in Resources */,
 				AC7F4CA8227CAEF0002A42AF /* Assets.xcassets in Resources */,
 				ACF76AD6227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf in Resources */,
