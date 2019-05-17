@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-9c-tmF">
-                                <rect key="frame" x="0.0" y="76" width="414" height="820"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6em-v3-HYr">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="565"/>
@@ -167,7 +167,7 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запись" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-fZ-plR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="32"/>
+                                <rect key="frame" x="0.0" y="62" width="414" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="fNl-OR-j79"/>
                                 </constraints>
@@ -187,7 +187,7 @@
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="jea-u5-xy4"/>
                             <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="dDT-Bn-gXN" secondAttribute="trailing" constant="18" id="rAr-S8-rz3"/>
                             <constraint firstItem="CX5-ga-ySb" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" constant="18" id="rBX-Ey-O48"/>
-                            <constraint firstItem="7Kz-fZ-plR" firstAttribute="top" secondItem="oFa-3e-RrU" secondAttribute="topMargin" id="sro-Zv-sIG"/>
+                            <constraint firstItem="7Kz-fZ-plR" firstAttribute="top" secondItem="oFa-3e-RrU" secondAttribute="topMargin" constant="18" id="sro-Zv-sIG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gAl-AQ-ofO"/>
                     </view>

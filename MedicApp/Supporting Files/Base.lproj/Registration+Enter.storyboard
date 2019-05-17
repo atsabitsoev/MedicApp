@@ -540,7 +540,7 @@
             <objects>
                 <navigationController id="cAm-Ao-mRa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Упражнения" image="Упражнения иконка" id="gAy-Ri-kGG"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5eb-LR-61Q">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5eb-LR-61Q">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

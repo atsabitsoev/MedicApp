@@ -12,7 +12,7 @@ class ExcercisesVC: UIViewController {
     
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    let segmentedControlShadow: UIView = UIView()
+    var segmentedControlShadow: UIView = UIView()
     
 
     override func viewDidLoad() {
@@ -23,6 +23,7 @@ class ExcercisesVC: UIViewController {
     
     override func viewWillLayoutSubviews() {
         
+        self.view.layoutIfNeeded()
         configureSegmentedControl()
     }
     
@@ -34,8 +35,14 @@ class ExcercisesVC: UIViewController {
         segmentedControl.layer.borderWidth = 1.0
         segmentedControl.layer.masksToBounds = true
         
-        segmentedControlShadow.frame = segmentedControl.bounds
-        segmentedControlShadow.backgroundColor = segmentedControl.tintColor
+//        segmentedControlShadow.frame = segmentedControl.frame
+//        segmentedControlShadow.layer.cornerRadius = segmentedControl.layer.cornerRadius
+//        segmentedControlShadow.backgroundColor = segmentedControl.tintColor
+//        segmentedControlShadow.layer.shadowColor = UIColor.black.cgColor
+//        segmentedControlShadow.layer.shadowOpacity = 0.2
+//        segmentedControlShadow.layer.shadowRadius = 2
+//        segmentedControlShadow.layer.shadowOffset = CGSize(width: 0, height: 4)
+//        self.view.insertSubview(segmentedControlShadow, at: 0)
     }
     
     
