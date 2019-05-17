@@ -461,7 +461,7 @@
             <objects>
                 <navigationController id="0r1-wA-bfR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Чат" image="Чат иконка" id="olz-CN-v99"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEV-k4-C2M">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEV-k4-C2M">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -486,6 +486,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ky2-nb-IeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1004" y="1448"/>
+        </scene>
+        <!--DiagnosticResultsVC-->
+        <scene sceneID="dlu-c4-kQY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DiagnosticResults" referencedIdentifier="DiagnosticResultsVC" id="A5K-hI-S43" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JtN-Xj-Z3f"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvA-bf-gPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="1866"/>
         </scene>
         <!--ExcercisesVC-->
         <scene sceneID="DcY-P1-N0V">
@@ -512,10 +522,13 @@
             <objects>
                 <navigationController id="bJs-TU-ROh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Анализы" image="Анализы иконка" id="tPq-Y5-ht2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ylS-oq-rrH">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ylS-oq-rrH">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="A5K-hI-S43" kind="relationship" relationship="rootViewController" id="rT6-YH-ZbG"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmw-ax-XgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Diagnostic ResultsVC-->
+        <scene sceneID="hnV-2y-Fbs">
+            <objects>
+                <viewController storyboardIdentifier="DiagnosticResultsVC" id="inj-eR-xnr" customClass="DiagnosticResultsVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGy-g2-zlR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результаты диагностики" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aam-uQ-eZW">
+                                <rect key="frame" x="62.5" y="52" width="289.5" height="29"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="24"/>
+                                <color key="textColor" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="202" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-en-iae">
+                                <rect key="frame" x="0.0" y="93" width="414" height="803"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticResultsCell" rowHeight="202" id="WDj-h1-72C" customClass="DiagnosticResultsCell" customModule="MedicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="202"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WDj-h1-72C" id="YlF-34-Ltr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-fl-pkH">
+                                                    <rect key="frame" x="18" y="0.0" width="378" height="190"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-Fy-rRg" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="45"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" id="aOj-bm-i0Y"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="top" secondItem="NhR-fl-pkH" secondAttribute="top" id="atP-a2-jjK"/>
+                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="height" secondItem="NhR-fl-pkH" secondAttribute="height" multiplier="45:190" id="mGM-kK-M5V"/>
+                                                        <constraint firstAttribute="trailing" secondItem="aUL-Fy-rRg" secondAttribute="trailing" id="qbR-G5-c5h"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NhR-fl-pkH" firstAttribute="top" secondItem="YlF-34-Ltr" secondAttribute="top" id="7Fd-kb-h08"/>
+                                                <constraint firstItem="NhR-fl-pkH" firstAttribute="leading" secondItem="YlF-34-Ltr" secondAttribute="leading" constant="18" id="Ajc-Uu-fE0"/>
+                                                <constraint firstAttribute="trailing" secondItem="NhR-fl-pkH" secondAttribute="trailing" constant="18" id="OOL-g1-fYr"/>
+                                                <constraint firstAttribute="bottom" secondItem="NhR-fl-pkH" secondAttribute="bottom" constant="12" id="fzA-pL-rUh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="viewGradientHeader" destination="aUL-Fy-rRg" id="Wdk-yF-gBh"/>
+                                            <outlet property="viewMainCard" destination="NhR-fl-pkH" id="Ze3-Px-t8H"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="inj-eR-xnr" id="UD8-zH-100"/>
+                                    <outlet property="delegate" destination="inj-eR-xnr" id="ndT-2x-yP9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aam-uQ-eZW" firstAttribute="centerX" secondItem="cGy-g2-zlR" secondAttribute="centerX" id="5Po-mE-wPz"/>
+                            <constraint firstItem="bZA-WI-sbE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aam-uQ-eZW" secondAttribute="trailing" constant="18" id="Hci-1x-0df"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="leading" secondItem="bZA-WI-sbE" secondAttribute="leading" id="KHw-rS-nkw"/>
+                            <constraint firstItem="aam-uQ-eZW" firstAttribute="top" secondItem="bZA-WI-sbE" secondAttribute="top" constant="8" id="ZhB-5A-yTQ"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="top" secondItem="aam-uQ-eZW" secondAttribute="bottom" constant="12" id="av4-Pu-bNl"/>
+                            <constraint firstAttribute="bottom" secondItem="VmU-en-iae" secondAttribute="bottom" id="bEs-Kr-LCD"/>
+                            <constraint firstItem="aam-uQ-eZW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bZA-WI-sbE" secondAttribute="leading" constant="18" id="pTc-Dy-b4W"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="trailing" secondItem="bZA-WI-sbE" secondAttribute="trailing" id="u8M-wo-czV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bZA-WI-sbE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhb-AX-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="148.66071428571428"/>
+        </scene>
+    </scenes>
+</document>
