@@ -134,6 +134,7 @@
                     <connections>
                         <outlet property="tfMessage" destination="BJf-H4-BHY" id="waz-eC-x3U"/>
                         <outlet property="viewBottom" destination="mvp-0Y-HTy" id="Ggp-Bx-V69"/>
+                        <outlet property="viewUnderTF" destination="0v7-6a-shU" id="u7E-Mm-0Vk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ja5-N1-Yxs" userLabel="First Responder" sceneMemberID="firstResponder"/>

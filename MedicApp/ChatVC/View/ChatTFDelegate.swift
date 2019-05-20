@@ -11,12 +11,6 @@ import UIKit
 
 extension ChatVC: UITextFieldDelegate {
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        
-        self.putUpTFMessage()
-        
-        return true
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -24,5 +18,6 @@ extension ChatVC: UITextFieldDelegate {
         
         return true
     }
+    
     
 }
