@@ -43,7 +43,11 @@ class ViewUnderTextFields: UIView {
         if myCornerRadius < 0 {
             shadowView.layer.cornerRadius = cornerRadius
         } else {
-            shadowView.layer.cornerRadius = myCornerRadius
+            if myCornerRadius == 1000 {
+                shadowView.layer.cornerRadius = bounds.height / 2
+            } else {
+                shadowView.layer.cornerRadius = myCornerRadius
+            }
         }
         shadowView.layer.shadowOffset = shadowOffset
         shadowView.layer.shadowOpacity = shadowOpacity

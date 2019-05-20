@@ -461,10 +461,13 @@
             <objects>
                 <navigationController id="0r1-wA-bfR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Чат" image="Чат иконка" id="olz-CN-v99"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEV-k4-C2M">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fEV-k4-C2M">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="HMP-PS-wc0" kind="relationship" relationship="rootViewController" id="DAp-Bi-zxz"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfJ-a8-qjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -496,6 +499,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvA-bf-gPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1256" y="1866"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="JRl-WR-Czt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="ChatVC" id="HMP-PS-wc0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bk2-Su-a26"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TV-An-4sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215" y="1866"/>
         </scene>
         <!--ExcercisesVC-->
         <scene sceneID="DcY-P1-N0V">
