@@ -149,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD64733228AF11C0091257E /* Gradient.swift */,
+				AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */,
 			);
 			path = GlobalEntities;
 			sourceTree = "<group>";
@@ -231,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */,
-				AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */,
 				ACF76AE2227CD50000FE7648 /* ButtonGradient.swift */,
 			);
 			path = Enteties;

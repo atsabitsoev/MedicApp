@@ -19,6 +19,8 @@ class ViewUnderTextFields: UIView {
         }
         return bounds.height / 3
     }
+    
+    @IBInspectable var myCornerRadius: CGFloat = -1
     @IBInspectable var shadowOpacity: Float = 0.15
     @IBInspectable var shadowColor: UIColor = .black
     @IBInspectable var shadowRadius: CGFloat = 15
@@ -38,7 +40,11 @@ class ViewUnderTextFields: UIView {
     
     private func setupShadow() {
         shadowView.frame = frame
-        shadowView.layer.cornerRadius = cornerRadius
+        if myCornerRadius < 0 {
+            shadowView.layer.cornerRadius = cornerRadius
+        } else {
+            shadowView.layer.cornerRadius = myCornerRadius
+        }
         shadowView.layer.shadowOffset = shadowOffset
         shadowView.layer.shadowOpacity = shadowOpacity
         shadowView.layer.shadowColor = shadowColor.cgColor
