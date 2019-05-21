@@ -18,6 +18,7 @@ class ChatVC: UIViewController {
     @IBOutlet weak var constrHeaderTop: NSLayoutConstraint!
     @IBOutlet weak var constrLabTitleTop: NSLayoutConstraint!
     @IBOutlet weak var viewSend: ViewUnderTextFields!
+    @IBOutlet weak var tableView: UITableView!
     
     
     private var rxFirstCircle = true
@@ -29,12 +30,16 @@ class ChatVC: UIViewController {
         super.viewDidLoad()
         
         configureTFMessage()
+        tableView.rowHeight = UITableView.automaticDimension
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         observeKeyboard()
     }
     
+    
+    //MARK: Клавиатура
     
     private func observeKeyboard() {
         
@@ -92,6 +97,9 @@ class ChatVC: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
+    // MARK: Конец работы с клавиатурой
+    
     
     private func configureTFMessage() {
         
