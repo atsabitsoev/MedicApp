@@ -12,8 +12,9 @@ class ChatVC: UIViewController {
     
 
     @IBOutlet weak var tfMessage: UITextField!
-    @IBOutlet weak var viewUnderTF: ViewUnderTextFields!
-    @IBOutlet weak var viewBottom: SimpleGradientView!
+    @IBOutlet weak var viewUnderTF: SimpleGradientView!
+    @IBOutlet weak var constrHeaderTop: NSLayoutConstraint!
+    @IBOutlet weak var constrLabTitleTop: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -39,15 +40,31 @@ class ChatVC: UIViewController {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.origin.y == 0 {
-                view.frame.origin.y -= keyboardSize.height
+            
+            var topSafeArea: CGFloat
+            
+            if #available(iOS 11.0, *) {
+                topSafeArea = view.safeAreaInsets.top
+            } else {
+                topSafeArea = topLayoutGuide.length
+            }
+            
+            self.view.frame.origin.y -= keyboardSize.height
+            constrHeaderTop.constant += keyboardSize.height
+            constrLabTitleTop.constant += keyboardSize.height + topSafeArea
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
             }
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if view.frame.origin.y != 0 {
-            view.frame.origin.y = 0
+        
+        self.view.frame.origin.y = 0
+        constrHeaderTop.constant = 0
+        constrLabTitleTop.constant = 8
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
         }
     }
     
