@@ -22,6 +22,14 @@
 		ACC41D362292EAED0042B200 /* ChatTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D352292EAED0042B200 /* ChatTFDelegate.swift */; };
 		ACCE27502294168A00E3126E /* ChatTableviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE274F2294168A00E3126E /* ChatTableviewDelegate.swift */; };
 		ACCE275222941BC800E3126E /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE275122941BC800E3126E /* MessageLabel.swift */; };
+		ACCE27562294245D00E3126E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE27552294245D00E3126E /* Message.swift */; };
+		ACCE2758229424EE00E3126E /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE2757229424EE00E3126E /* Sender.swift */; };
+		ACCE275A229425ED00E3126E /* MessageContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE2759229425ED00E3126E /* MessageContentType.swift */; };
+		ACCE275C2294270700E3126E /* UserMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE275B2294270700E3126E /* UserMessageCell.swift */; };
+		ACCE275E2294271A00E3126E /* PenPalMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE275D2294271A00E3126E /* PenPalMessageCell.swift */; };
+		ACCE27602294309E00E3126E /* UserImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE275F2294309E00E3126E /* UserImageCell.swift */; };
+		ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE2761229430AE00E3126E /* PenPalImageCell.swift */; };
+		ACCE276422943DFB00E3126E /* Вход.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE276322943DFB00E3126E /* Вход.png */; };
 		ACD64734228AF11C0091257E /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64733228AF11C0091257E /* Gradient.swift */; };
 		ACD64736228B016C0091257E /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64735228B016C0091257E /* EnterView.swift */; };
 		ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */; };
@@ -66,6 +74,14 @@
 		ACC41D352292EAED0042B200 /* ChatTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTFDelegate.swift; sourceTree = "<group>"; };
 		ACCE274F2294168A00E3126E /* ChatTableviewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableviewDelegate.swift; sourceTree = "<group>"; };
 		ACCE275122941BC800E3126E /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
+		ACCE27552294245D00E3126E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ACCE2757229424EE00E3126E /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
+		ACCE2759229425ED00E3126E /* MessageContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContentType.swift; sourceTree = "<group>"; };
+		ACCE275B2294270700E3126E /* UserMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageCell.swift; sourceTree = "<group>"; };
+		ACCE275D2294271A00E3126E /* PenPalMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenPalMessageCell.swift; sourceTree = "<group>"; };
+		ACCE275F2294309E00E3126E /* UserImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageCell.swift; sourceTree = "<group>"; };
+		ACCE2761229430AE00E3126E /* PenPalImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenPalImageCell.swift; sourceTree = "<group>"; };
+		ACCE276322943DFB00E3126E /* Вход.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Вход.png"; sourceTree = "<group>"; };
 		ACD64733228AF11C0091257E /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		ACD64735228B016C0091257E /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterView.swift; path = MedicApp/GlobalEntities/EnterView.swift; sourceTree = SOURCE_ROOT; };
 		ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesTableVIew.swift; sourceTree = "<group>"; };
@@ -132,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7F4C9F227CAEEE002A42AF /* MedicApp */,
+				ACCE276322943DFB00E3126E /* Вход.png */,
 				AC7F4C9E227CAEEE002A42AF /* Products */,
 				563114D714D325A6651976AE /* Pods */,
 				E4739D2809D0826D0474B1B4 /* Frameworks */,
@@ -181,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC41D2B2292D3450042B200 /* View */,
+				ACCE27532294231D00E3126E /* Model */,
 			);
 			path = ChatVC;
 			sourceTree = "<group>";
@@ -191,6 +209,7 @@
 				ACC41D2E2292D3DB0042B200 /* Entities */,
 				ACC41D2C2292D35B0042B200 /* ChatVC.swift */,
 				ACCE274F2294168A00E3126E /* ChatTableviewDelegate.swift */,
+				ACCE27652294423800E3126E /* ChatCells */,
 				ACC41D352292EAED0042B200 /* ChatTFDelegate.swift */,
 			);
 			path = View;
@@ -204,6 +223,35 @@
 				ACCE275122941BC800E3126E /* MessageLabel.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		ACCE27532294231D00E3126E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACCE27542294244C00E3126E /* Entities */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACCE27542294244C00E3126E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ACCE27552294245D00E3126E /* Message.swift */,
+				ACCE2757229424EE00E3126E /* Sender.swift */,
+				ACCE2759229425ED00E3126E /* MessageContentType.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		ACCE27652294423800E3126E /* ChatCells */ = {
+			isa = PBXGroup;
+			children = (
+				ACCE275B2294270700E3126E /* UserMessageCell.swift */,
+				ACCE275F2294309E00E3126E /* UserImageCell.swift */,
+				ACCE275D2294271A00E3126E /* PenPalMessageCell.swift */,
+				ACCE2761229430AE00E3126E /* PenPalImageCell.swift */,
+			);
+			path = ChatCells;
 			sourceTree = "<group>";
 		};
 		ACD64732228AF1090091257E /* GlobalEntities */ = {
@@ -386,6 +434,7 @@
 				ACF76ADB227CCE7D00FE7648 /* SF-Compact-Rounded-Regular.otf in Resources */,
 				ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */,
 				ACFC9B87228DABBD009F5798 /* Excercises.storyboard in Resources */,
+				ACCE276422943DFB00E3126E /* Вход.png in Resources */,
 				ACFC9B85228D8ECD009F5798 /* Record.storyboard in Resources */,
 				ACC41D292292D2DF0042B200 /* Chat.storyboard in Resources */,
 				ACE43F35228EEB1B007BCBC0 /* DiagnosticResults.storyboard in Resources */,
@@ -463,22 +512,29 @@
 				ACCE27502294168A00E3126E /* ChatTableviewDelegate.swift in Sources */,
 				ACC41D362292EAED0042B200 /* ChatTFDelegate.swift in Sources */,
 				ACC41D322292D8C10042B200 /* SimpleGradientView.swift in Sources */,
+				ACCE275C2294270700E3126E /* UserMessageCell.swift in Sources */,
 				ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */,
 				ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */,
+				ACCE27602294309E00E3126E /* UserImageCell.swift in Sources */,
+				ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */,
 				AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */,
 				ACE43F39228EED8C007BCBC0 /* ViewGradientHeader.swift in Sources */,
 				ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */,
+				ACCE2758229424EE00E3126E /* Sender.swift in Sources */,
 				ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */,
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
 				AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */,
+				ACCE275E2294271A00E3126E /* PenPalMessageCell.swift in Sources */,
 				AC7F4CA1227CAEEE002A42AF /* AppDelegate.swift in Sources */,
 				ACCE275222941BC800E3126E /* MessageLabel.swift in Sources */,
 				ACE43F33228EEAC2007BCBC0 /* DiagnosticResultsVC.swift in Sources */,
 				ACD64736228B016C0091257E /* EnterView.swift in Sources */,
 				ACFC9B8D228DAE33009F5798 /* ExcercisesVC.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
+				ACCE27562294245D00E3126E /* Message.swift in Sources */,
 				AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */,
 				ACD64734228AF11C0091257E /* Gradient.swift in Sources */,
+				ACCE275A229425ED00E3126E /* MessageContentType.swift in Sources */,
 				ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */,
 				ACE43F2F228EDFCC007BCBC0 /* ViewPlay.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxKeyboard
 
-class ChatVC: UIViewController {
+class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 
     @IBOutlet weak var tfMessage: UITextField!
@@ -26,6 +26,11 @@ class ChatVC: UIViewController {
     private var bottomSafeArea: CGFloat = 0
     
     
+    var messageArr: [Message] = [Message(text: "Привет!", sender: .penPal, time: Date(), contentType: .text),
+                                 Message(text: "И тебе привет собака!", sender: .user, time: Date(), contentType: .text),
+                                 Message(text: "fsd", sender: .user, time: Date(), contentType: .photo, image: UIImage(named: "Вход"))]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,30 +41,41 @@ class ChatVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         observeKeyboard()
+        scrollToBottom()
+    }
+    
+    
+    func scrollToBottom() {
+        let indexPath = IndexPath(row: messageArr.count - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     
     //MARK: Клавиатура
     
     private func observeKeyboard() {
+        if rxFirstCircle {
+            
+            RxKeyboard.instance.visibleHeight
+                .drive(onNext: { (height) in
+                    if self.rxFirstCircle {
+                        self.rxFirstCircle = false
+                        return
+                    }
+                    if height == 0 {
+                        self.keyboardHide()
+                        print("Опустил клавиатуру")
+                    } else {
+                        self.keyboardUp(height: height)
+                        print("Поднял клавиатуру")
+                    }
+                },
+                       onCompleted: {
+                        print("Готово")
+                })
+            
+        } 
         
-        RxKeyboard.instance.visibleHeight
-            .drive(onNext: { (height) in
-                if self.rxFirstCircle {
-                    self.rxFirstCircle = false
-                    return
-                }
-                if height == 0 {
-                    self.keyboardHide()
-                    print("Опустил клавиатуру")
-                } else {
-                    self.keyboardUp(height: height)
-                    print("Поднял клавиатуру")
-                }
-            },
-                   onCompleted: {
-                    print("Готово")
-            })
         
     }
     
@@ -83,7 +99,7 @@ class ChatVC: UIViewController {
             self.view.layoutIfNeeded()
         }
         
-        
+        scrollToBottom()
         
     }
     
@@ -109,6 +125,48 @@ class ChatVC: UIViewController {
         let spacerView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: 0))
         tfMessage.leftViewMode = .always
         tfMessage.leftView = spacerView
+    }
+    
+    
+    private func visualiseSendingMessage(text: String, time: Date, contentType: MessageContentType, image: UIImage? = nil) {
+        
+            messageArr.append(Message(text: text, sender: .user, time: time, contentType: contentType, image: image))
+            tfMessage.text = ""
+            tableView.reloadData()
+            scrollToBottom()
+        
+    }
+    
+    
+    //MARK: UIImagePickerControllerDelegate
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            visualiseSendingMessage(text: "", time: Date(), contentType: .photo, image: pickedImage)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    //MARK: IBActions
+    @IBAction func butSentTapped(_ sender: UIButton) {
+        
+        guard let text = tfMessage.text else { return }
+        
+        visualiseSendingMessage(text: text, time: Date(), contentType: .text)
+        
+    }
+    
+    @IBAction func butAddImageTapped(_ sender: UIButton) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true, completion: nil)
+        
     }
     
     

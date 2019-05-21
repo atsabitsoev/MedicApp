@@ -13,12 +13,41 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return messageArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell")
-        return cell!
+        
+        let message = messageArr[indexPath.row]
+        
+        switch (message.sender, message.contentType) {
+            
+        case (.user, .text):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UserMessageCell") as! UserMessageCell
+            cell.labText.text = message.text
+            return cell
+            
+        case (.penPal, .text):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PenPalMessageCell") as! PenPalMessageCell
+            cell.labText.text = message.text
+            return cell
+            
+        case (.user, .photo):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UserImageCell") as! UserImageCell
+            let image = messageArr[indexPath.row].image
+            cell.imageMain.image = image
+            cell.set(image: image!)
+            return cell
+        
+        default:
+        
+            return UITableViewCell()
+            
+        }
+        
     }
     
     
