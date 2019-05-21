@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxKeyboard
 
 class ChatVC: UIViewController {
     
@@ -15,54 +17,77 @@ class ChatVC: UIViewController {
     @IBOutlet weak var viewUnderTF: SimpleGradientView!
     @IBOutlet weak var constrHeaderTop: NSLayoutConstraint!
     @IBOutlet weak var constrLabTitleTop: NSLayoutConstraint!
+    @IBOutlet weak var viewSend: ViewUnderTextFields!
+    
+    
+    private var rxFirstCircle = true
+    private var topSafeArea: CGFloat = 0
+    private var bottomSafeArea: CGFloat = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addObservers()
         configureTFMessage()
     }
     
-    
-    private func addObservers() {
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        observeKeyboard()
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            
-            var topSafeArea: CGFloat
-            
-            if #available(iOS 11.0, *) {
-                topSafeArea = view.safeAreaInsets.top
-            } else {
-                topSafeArea = topLayoutGuide.length
-            }
-            
-            self.view.frame.origin.y -= keyboardSize.height
-            constrHeaderTop.constant += keyboardSize.height
-            constrLabTitleTop.constant += keyboardSize.height + topSafeArea
-            UIView.animate(withDuration: 0.3) {
-                self.view.layoutIfNeeded()
-            }
+    
+    private func observeKeyboard() {
+        
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { (height) in
+                if self.rxFirstCircle {
+                    self.rxFirstCircle = false
+                    return
+                }
+                if height == 0 {
+                    self.keyboardHide()
+                    print("Опустил клавиатуру")
+                } else {
+                    self.keyboardUp(height: height)
+                    print("Поднял клавиатуру")
+                }
+            },
+                   onCompleted: {
+                    print("Готово")
+            })
+        
+    }
+    
+    private func keyboardUp(height: CGFloat) {
+        
+        if #available(iOS 11.0, *) {
+            topSafeArea = view.safeAreaInsets.top
+            bottomSafeArea = view.safeAreaInsets.bottom
+        } else {
+            topSafeArea = topLayoutGuide.length
+            bottomSafeArea = bottomLayoutGuide.length
         }
+        
+        print(bottomSafeArea)
+        
+        self.view.frame.origin.y -= height
+        constrHeaderTop.constant += height
+        constrLabTitleTop.constant += height + topSafeArea
+        viewSend.shadowView.frame.origin.y += bottomSafeArea
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
+        
+        
     }
     
-    @objc func keyboardWillHide(notification: NSNotification) {
+    private func keyboardHide() {
         
         self.view.frame.origin.y = 0
         constrHeaderTop.constant = 0
         constrLabTitleTop.constant = 8
+        viewSend.shadowView.frame.origin.y -= bottomSafeArea
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
@@ -71,12 +96,14 @@ class ChatVC: UIViewController {
     private func configureTFMessage() {
         
         tfMessage.delegate = self
-        
         tfMessage.layer.cornerRadius = 8
         
         let spacerView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: 0))
         tfMessage.leftViewMode = .always
         tfMessage.leftView = spacerView
     }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
 }

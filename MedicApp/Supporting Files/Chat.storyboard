@@ -31,7 +31,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чат с терапевтом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-gB-YD5">
-                                <rect key="frame" x="108" y="52" width="198" height="29"/>
+                                <rect key="frame" x="106.5" y="52" width="201.5" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="XyU-my-FoV"/>
                                 </constraints>
@@ -60,14 +60,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwG-Gs-rO8">
-                                <rect key="frame" x="0.0" y="807.5" width="34" height="54"/>
+                                <rect key="frame" x="0.0" y="807" width="34" height="55"/>
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="36"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvp-0Y-HTy" userLabel="Bottom View" customClass="SimpleGradientView" customModule="MedicApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="862" width="414" height="534"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0v7-6a-shU" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
@@ -101,22 +101,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0v7-6a-shU" firstAttribute="centerY" secondItem="yKo-Tq-Bf1" secondAttribute="centerY" id="0JD-LH-eoq"/>
                             <constraint firstAttribute="trailing" secondItem="mvp-0Y-HTy" secondAttribute="trailing" id="0UB-zY-sxl"/>
                             <constraint firstItem="Xkq-gB-YD5" firstAttribute="centerX" secondItem="KOp-Fc-EJx" secondAttribute="centerX" id="0YR-En-TeB"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="top" secondItem="yKo-Tq-Bf1" secondAttribute="top" constant="6" id="3Jn-vH-GyR"/>
                             <constraint firstItem="SwG-Gs-rO8" firstAttribute="centerY" secondItem="yKo-Tq-Bf1" secondAttribute="centerY" constant="-3" id="6HZ-6T-Rnf"/>
                             <constraint firstItem="Xdl-PB-siz" firstAttribute="bottom" secondItem="KOp-Fc-EJx" secondAttribute="bottom" constant="8" id="8j7-jN-PcJ"/>
-                            <constraint firstItem="yKo-Tq-Bf1" firstAttribute="top" secondItem="0v7-6a-shU" secondAttribute="bottom" constant="-42" id="9pz-Qd-sXU"/>
                             <constraint firstItem="Xdl-PB-siz" firstAttribute="top" secondItem="Xkq-gB-YD5" secondAttribute="bottom" constant="8" id="B6s-tQ-fKj"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="bottom" secondItem="yKo-Tq-Bf1" secondAttribute="bottom" constant="-6" id="Bz0-81-e3w"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="trailing" secondItem="rbT-7E-R5A" secondAttribute="trailing" id="CUG-I2-TOc"/>
                             <constraint firstItem="KOp-Fc-EJx" firstAttribute="top" secondItem="JFO-Ts-wXc" secondAttribute="top" id="F8c-D9-GuA"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" constant="34" id="InJ-nH-W8p"/>
                             <constraint firstItem="rbT-7E-R5A" firstAttribute="trailing" secondItem="BJf-H4-BHY" secondAttribute="trailing" constant="51" id="K4L-gK-FBw"/>
+                            <constraint firstAttribute="bottom" secondItem="mvp-0Y-HTy" secondAttribute="bottom" constant="-500" id="K6E-8r-Zg5"/>
                             <constraint firstItem="KOp-Fc-EJx" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="Knv-BL-vfu"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="leading" secondItem="SwG-Gs-rO8" secondAttribute="trailing" id="LXk-sE-uYM"/>
-                            <constraint firstAttribute="bottom" secondItem="mvp-0Y-HTy" secondAttribute="bottom" id="Pkr-X0-YfG"/>
+                            <constraint firstItem="mvp-0Y-HTy" firstAttribute="top" secondItem="0v7-6a-shU" secondAttribute="bottom" constant="7" id="Mk6-t5-pci"/>
                             <constraint firstItem="SwG-Gs-rO8" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="Q9e-m4-X5M"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="bottom" secondItem="rbT-7E-R5A" secondAttribute="bottom" id="UNF-bb-wLL"/>
                             <constraint firstItem="Xdl-PB-siz" firstAttribute="centerX" secondItem="JFO-Ts-wXc" secondAttribute="centerX" id="Vtd-nb-oda"/>
@@ -135,6 +134,7 @@
                         <outlet property="constrHeaderTop" destination="F8c-D9-GuA" id="bAf-Kn-StE"/>
                         <outlet property="constrLabTitleTop" destination="kQl-6g-wXo" id="AKG-1A-ZFl"/>
                         <outlet property="tfMessage" destination="BJf-H4-BHY" id="m9h-DZ-Pbo"/>
+                        <outlet property="viewSend" destination="0v7-6a-shU" id="sZp-1z-pAy"/>
                         <outlet property="viewUnderTF" destination="yKo-Tq-Bf1" id="sJU-3F-dbA"/>
                     </connections>
                 </viewController>
