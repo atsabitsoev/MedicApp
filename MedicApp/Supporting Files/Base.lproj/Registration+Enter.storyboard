@@ -429,10 +429,10 @@
             </objects>
             <point key="canvasLocation" x="978" y="-24"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="She-kK-l3N">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="26N-m6-lpr" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="26N-m6-lpr" customClass="MainTabBarController" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="w2r-dE-aS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -445,33 +445,16 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="7Nv-hG-9eP" kind="relationship" relationship="viewControllers" id="84b-mX-HuG"/>
-                        <segue destination="0r1-wA-bfR" kind="relationship" relationship="viewControllers" id="yz2-DI-ebc"/>
                         <segue destination="cAm-Ao-mRa" kind="relationship" relationship="viewControllers" id="9sw-Mx-ifx"/>
                         <segue destination="bJs-TU-ROh" kind="relationship" relationship="viewControllers" id="ycH-M4-nrO"/>
+                        <segue destination="Faw-PY-kva" kind="relationship" relationship="viewControllers" id="dz1-lC-wi7"/>
+                        <segue destination="7Nv-hG-9eP" kind="relationship" relationship="viewControllers" id="84b-mX-HuG"/>
                         <segue destination="jLb-Wc-gc7" kind="relationship" relationship="viewControllers" id="wf5-Ef-Icn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9Q-2D-VAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="534" y="696"/>
-        </scene>
-        <!--Чат-->
-        <scene sceneID="lA6-Dd-Fmn">
-            <objects>
-                <navigationController id="0r1-wA-bfR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Чат" image="Чат иконка" id="olz-CN-v99"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fEV-k4-C2M">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="HMP-PS-wc0" kind="relationship" relationship="rootViewController" id="DAp-Bi-zxz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tfJ-a8-qjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-214" y="1448"/>
         </scene>
         <!--Запись-->
         <scene sceneID="wPX-6P-Irb">
@@ -499,16 +482,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvA-bf-gPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1256" y="1866"/>
-        </scene>
-        <!--ChatVC-->
-        <scene sceneID="JRl-WR-Czt">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="ChatVC" id="HMP-PS-wc0" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Bk2-Su-a26"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5TV-An-4sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-215" y="1866"/>
         </scene>
         <!--ExcercisesVC-->
         <scene sceneID="DcY-P1-N0V">
@@ -559,7 +532,23 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlv-54-YmL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="1448"/>
+            <point key="canvasLocation" x="1962" y="1448"/>
+        </scene>
+        <!--Чат-->
+        <scene sceneID="xCq-TC-cai">
+            <objects>
+                <viewController id="Faw-PY-kva" customClass="OpeningChatVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OBb-D6-dlV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zbW-U6-1PN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Чат" image="Чат иконка" id="jdh-m9-0VY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6VG-tj-tX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="1448"/>
         </scene>
         <!--Упражнения-->
         <scene sceneID="XGI-8d-jrF">

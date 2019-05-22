@@ -170,6 +170,13 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
     
     
+    @IBAction func butCloseTapped(_ sender: UIButton) {
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "chatClosed"), object: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
 }
