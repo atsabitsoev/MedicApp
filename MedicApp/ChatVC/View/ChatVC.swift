@@ -38,7 +38,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         addObservers()
         
         chatService.startConnection()
-        
         fetchPastMessages()
         
         configureTFMessage()
@@ -221,10 +220,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        chatService.stopConnection()
-    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
