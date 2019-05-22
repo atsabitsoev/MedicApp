@@ -12,7 +12,11 @@ class PenPalImageCell: UITableViewCell {
 
     @IBOutlet weak var constrImageHeight: NSLayoutConstraint!
     @IBOutlet weak var constrImageWidth: NSLayoutConstraint!
-    @IBOutlet weak var imageMain: UIImageView!
+    @IBOutlet weak var imageMain: UIImageView! {
+        didSet {
+            imageMain.layer.cornerRadius = 8
+        }
+    }
     @IBOutlet weak var labTime: UILabel!
     
     
@@ -38,4 +42,6 @@ class PenPalImageCell: UITableViewCell {
         }
         
     }
+    
+    
 }

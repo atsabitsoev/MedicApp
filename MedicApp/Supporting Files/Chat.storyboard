@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserMessageCell" rowHeight="108" id="CDE-CO-i7N" customClass="UserMessageCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserMessageCell" rowHeight="108" id="CDE-CO-i7N" customClass="UserMessageCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDE-CO-i7N" id="Wic-bI-G5P">
@@ -53,7 +53,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W7-U6-zQB">
-                                                    <rect key="frame" x="253.5" y="83" width="23.5" height="14"/>
+                                                    <rect key="frame" x="253.5" y="84" width="23.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                             <outlet property="labTime" destination="6W7-U6-zQB" id="fm9-tV-zhW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PenPalMessageCell" rowHeight="108" id="19v-0H-fB6" customClass="PenPalMessageCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PenPalMessageCell" rowHeight="108" id="19v-0H-fB6" customClass="PenPalMessageCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="136" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19v-0H-fB6" id="eql-Lr-MwZ">
@@ -81,7 +81,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWA-HN-9u6">
-                                                    <rect key="frame" x="136" y="83" width="23.5" height="14"/>
+                                                    <rect key="frame" x="122" y="84" width="23.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmi-YS-niC" customClass="MessageLabel" customModule="MedicApp" customModuleProvider="target">
-                                                    <rect key="frame" x="55" y="31" width="73" height="66"/>
+                                                    <rect key="frame" x="55" y="31" width="59" height="66"/>
                                                     <color key="backgroundColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,7 +138,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Профиль иконка" translatesAutoresizingMaskIntoConstraints="NO" id="Wxi-tV-GPn">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Профиль иконка" translatesAutoresizingMaskIntoConstraints="NO" id="Wxi-tV-GPn">
                                                     <rect key="frame" x="20" y="11" width="19" height="86"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="86" id="V3r-8e-6uu"/>
@@ -169,7 +169,7 @@
                                             <outlet property="labTime" destination="xoi-Ic-Wpc" id="F2n-A9-a5i"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserImageCell" rowHeight="108" id="xcd-lj-F9u" customClass="UserImageCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserImageCell" rowHeight="108" id="xcd-lj-F9u" customClass="UserImageCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="352" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xcd-lj-F9u" id="jG0-nE-YHB">
@@ -177,7 +177,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UD-uf-CR0">
-                                                    <rect key="frame" x="33" y="83.5" width="24" height="13.5"/>
+                                                    <rect key="frame" x="33.5" y="84" width="23.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -218,7 +218,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чат с терапевтом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-gB-YD5">
-                                <rect key="frame" x="106" y="52" width="202" height="29"/>
+                                <rect key="frame" x="106.5" y="52" width="201.5" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="XyU-my-FoV"/>
                                 </constraints>
@@ -267,7 +267,7 @@
                                         <rect key="frame" x="3" y="0.0" width="32" height="35"/>
                                         <state key="normal" image="Отправить иконка"/>
                                         <connections>
-                                            <action selector="butSentTapped:" destination="h2z-z8-INL" eventType="touchUpInside" id="vaK-7S-xJ1"/>
+                                            <action selector="butSendTapped:" destination="h2z-z8-INL" eventType="touchUpInside" id="vaK-7S-xJ1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -356,6 +356,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ja5-N1-Yxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="158.70535714285714"/>
+        </scene>
+        <!--Chat ImageVC-->
+        <scene sceneID="B60-mY-HRw">
+            <objects>
+                <viewController storyboardIdentifier="ChatImageVC" id="z3B-GG-ZlL" customClass="ChatImageVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7j4-eS-gpR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ix-Na-0px">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5ix-Na-0px" firstAttribute="bottom" secondItem="wem-2X-y2D" secondAttribute="bottom" id="AYS-ok-0yy"/>
+                            <constraint firstItem="5ix-Na-0px" firstAttribute="top" secondItem="wem-2X-y2D" secondAttribute="top" id="CoB-yC-xSN"/>
+                            <constraint firstItem="5ix-Na-0px" firstAttribute="trailing" secondItem="wem-2X-y2D" secondAttribute="trailing" id="NCL-ay-aKf"/>
+                            <constraint firstItem="5ix-Na-0px" firstAttribute="leading" secondItem="wem-2X-y2D" secondAttribute="leading" id="j4Z-Qb-2hK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wem-2X-y2D"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageViewMain" destination="5ix-Na-0px" id="0mv-Ru-CmE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVE-x3-10S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="158.70535714285714"/>
         </scene>
     </scenes>
     <resources>

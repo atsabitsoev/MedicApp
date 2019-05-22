@@ -11,9 +11,6 @@ import RxSwift
 import RxKeyboard
 
 class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    
-    var controller: ChatController?
 
 
     @IBOutlet weak var tfMessage: UITextField!
@@ -29,13 +26,18 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private var bottomSafeArea: CGFloat = 0
     
     
+    private var chatService = ChatService()
+    
+    
     var messageArr: [Message] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        controller = ChatController(view: self)
+        addObservers()
+        
+        chatService.startConnection()
         
         fetchPastMessages()
         
@@ -49,6 +51,17 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
     
     
+    private func addObservers() {
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showHistoryMessages),
+                                               name: NSNotification.Name(rawValue: NotificationNames.messagesFetched.rawValue),
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showRecievedMessage), name: NSNotification.Name(NotificationNames.newMessage.rawValue), object: nil)
+    }
+    
     func scrollToBottom() {
         let indexPath = IndexPath(row: messageArr.count - 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
@@ -56,7 +69,20 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     func fetchPastMessages() {
         
-        messageArr = controller!.fetchMessages()
+        MessageHistoryService.fetchMessages()
+    }
+    
+    @objc private func showHistoryMessages() {
+        
+        messageArr = MessageHistoryService.messages
+        tableView.reloadData()
+        scrollToBottom()
+    }
+    
+    @objc private func showRecievedMessage() {
+        
+        let newMessage = chatService.lastMessage ?? Message(text: "", sender: .user, time: Date(), contentType: .text)
+        visualiseRecievingMessage(text: newMessage.text, time: newMessage.time, contentType: newMessage.contentType, image: newMessage.image)
     }
     
     
@@ -146,10 +172,19 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
     }
     
+    private func visualiseRecievingMessage(text: String, time: Date, contentType: MessageContentType, image: UIImage? = nil) {
+        
+        messageArr.append(Message(text: text, sender: .penPal, time: time, contentType: contentType, image: image))
+        tableView.reloadData()
+        scrollToBottom()
+        
+    }
+    
     
     //MARK: UIImagePickerControllerDelegate
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             visualiseSendingMessage(text: "", time: Date(), contentType: .photo, image: pickedImage)
             self.dismiss(animated: true, completion: nil)
@@ -162,10 +197,11 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     //MARK: IBActions
-    @IBAction func butSentTapped(_ sender: UIButton) {
+    @IBAction func butSendTapped(_ sender: UIButton) {
         
         guard let text = tfMessage.text else { return }
         
+        chatService.sendMessage(Message(text: text, sender: .user, time: Date(), contentType: .text))
         visualiseSendingMessage(text: text, time: Date(), contentType: .text)
         
     }
@@ -185,6 +221,10 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        chatService.stopConnection()
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     

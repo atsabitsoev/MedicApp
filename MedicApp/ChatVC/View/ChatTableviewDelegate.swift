@@ -49,12 +49,29 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
             cell.labTime.text = formatter.string(from: message.time)
             return cell
         
-        default:
+        case (.penPal, .photo):
         
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PenPalImageCell") as! PenPalImageCell
+            let image = messageArr[indexPath.row].image
+            cell.imageMain.image = image
+            cell.set(image: image!)
+            cell.labTime.text = formatter.string(from: message.time)
+            return cell
             
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if messageArr[indexPath.row].contentType == .photo {
+            
+            let messagePhoto = messageArr[indexPath.row]
+            let image = messagePhoto.image
+            let chatImageVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatImageVC") as! ChatImageVC
+            chatImageVC.image = image
+            self.present(chatImageVC, animated: true, completion: nil)
+        }
     }
     
     
