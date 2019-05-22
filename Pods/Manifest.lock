@@ -7,9 +7,15 @@ PODS:
     - RxSwift (>= 4.3.1)
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
+  - Socket.IO-Client-Swift (14.0.0):
+    - Starscream (~> 3.0.6)
+  - Starscream (3.0.6)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - RxKeyboard
+  - Socket.IO-Client-Swift
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -17,13 +23,19 @@ SPEC REPOS:
     - RxCocoa
     - RxKeyboard
     - RxSwift
+    - Socket.IO-Client-Swift
+    - Starscream
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 2e5cc84a7cd50141d9160da86bee6b389f209b70
+PODFILE CHECKSUM: 4f0437c24260803fc1153ac8961277fc4dab03c6
 
 COCOAPODS: 1.6.1

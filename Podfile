@@ -7,6 +7,8 @@ target 'MedicApp' do
 
   # Pods for MedicApp
   pod 'RxKeyboard'
+  pod 'Socket.IO-Client-Swift'
+  pod 'SwiftyJSON'
 
 
 end

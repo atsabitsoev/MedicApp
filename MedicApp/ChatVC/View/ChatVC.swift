@@ -11,7 +11,7 @@ import RxSwift
 import RxKeyboard
 
 class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
 
     @IBOutlet weak var tfMessage: UITextField!
     @IBOutlet weak var viewUnderTF: SimpleGradientView!
@@ -36,7 +36,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
