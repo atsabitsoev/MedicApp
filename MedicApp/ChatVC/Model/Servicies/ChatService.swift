@@ -12,6 +12,13 @@ import SwiftyJSON
 
 class ChatService {
     
+    private init() {
+        print("создал")
+        startConnection()
+    }
+    static let standard = ChatService()
+    
+    
     private var connected = false
     
     var lastMessage: Message? {
@@ -38,21 +45,15 @@ class ChatService {
     
     private func addHandlers() {
         
-        if !connected {
-            socket.on(clientEvent: .connect) { data, ack in
-                
-                self.connected = true
-                
-                self.socket.emit("add user", "Atsamazus") {
-                    print("\n\n\n\n\n\n\n\nlfskjdslkfjdslkfjdslk\n\n\n\n\n")
-                }
-                
+        socket.on(clientEvent: .connect) { data, ack in
+            
+            self.connected = true
+            
+            self.socket.emit("add user", "Atsamazus") {
+                print("\n\n\n\n\n\n\n\nlfskjdslkfjdslkfjdslk\n\n\n\n\n")
             }
+            
         }
-        
-        
-        
-        
         
         socket.on("new message") { (data, ack) in
             

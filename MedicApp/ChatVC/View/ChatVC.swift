@@ -26,7 +26,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private var bottomSafeArea: CGFloat = 0
     
     
-    private var chatService = ChatService()
+    private var chatService = ChatService.standard
     
     
     var messageArr: [Message] = []
@@ -37,7 +37,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         addObservers()
         
-        chatService.startConnection()
         fetchPastMessages()
         
         configureTFMessage()
