@@ -80,7 +80,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @objc private func showRecievedMessage() {
         
-        let newMessage = chatService.lastMessage ?? Message(text: "", sender: .user, time: Date(), contentType: .text)
+        guard let newMessage = chatService.lastMessage else { return }
         visualiseRecievingMessage(text: newMessage.text, time: newMessage.time, contentType: newMessage.contentType, image: newMessage.image)
     }
     

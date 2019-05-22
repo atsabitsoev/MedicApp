@@ -72,7 +72,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-2H-E7X" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="238" width="464" height="66"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDT-Bn-gXN">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-Mail или телефон" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDT-Bn-gXN">
                                                         <rect key="frame" x="66" y="8" width="280" height="50"/>
                                                         <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
@@ -90,18 +90,8 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gU-gZ-PFE" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="-100" y="320" width="464" height="66"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="66" id="zfg-u9-w53"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-er-vf6" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="402" width="314" height="66"/>
+                                                <rect key="frame" x="50" y="320" width="314" height="66"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-Rh-mut">
                                                         <rect key="frame" x="22" y="0.0" width="270" height="66"/>
@@ -123,7 +113,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8b-qT-J72" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="724" width="366" height="66"/>
+                                                <rect key="frame" x="24" y="404" width="366" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="66" id="ZKU-q7-XRM"/>
                                                 </constraints>
@@ -139,20 +129,17 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="SWH-s8-Qpd" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-210" id="0ef-yK-AWk"/>
-                                            <constraint firstAttribute="trailing" secondItem="2gU-gZ-PFE" secondAttribute="trailing" constant="50" id="Bsj-3E-Sl1"/>
+                                            <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="bottom" constant="16" id="9tY-gu-7QU"/>
                                             <constraint firstAttribute="bottom" secondItem="r8b-qT-J72" secondAttribute="bottom" constant="12" id="CcC-EP-WgT"/>
                                             <constraint firstAttribute="trailing" secondItem="1qE-er-vf6" secondAttribute="trailing" constant="50" id="DmL-tN-3h2"/>
                                             <constraint firstItem="r8b-qT-J72" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="24" id="N9R-2i-8a6"/>
-                                            <constraint firstItem="2gU-gZ-PFE" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="bottom" constant="16" id="NE2-K5-Gtt"/>
                                             <constraint firstItem="1qE-er-vf6" firstAttribute="centerX" secondItem="6em-v3-HYr" secondAttribute="centerX" id="NKg-vY-wOF"/>
-                                            <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="2gU-gZ-PFE" secondAttribute="bottom" constant="16" id="Ob0-5n-F6H"/>
                                             <constraint firstItem="SWH-s8-Qpd" firstAttribute="top" secondItem="6em-v3-HYr" secondAttribute="top" constant="24" id="Qhp-no-aSb"/>
                                             <constraint firstItem="1qE-er-vf6" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ZJx-eR-zfB"/>
                                             <constraint firstAttribute="trailing" secondItem="SBx-2H-E7X" secondAttribute="trailing" constant="-100" id="aqi-BG-GCW"/>
                                             <constraint firstAttribute="trailing" secondItem="SWH-s8-Qpd" secondAttribute="trailing" constant="50" id="hny-zg-X5O"/>
                                             <constraint firstItem="SBx-2H-E7X" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ukl-PE-I2m"/>
-                                            <constraint firstItem="r8b-qT-J72" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1qE-er-vf6" secondAttribute="bottom" constant="18" id="vco-tv-bLz"/>
-                                            <constraint firstItem="2gU-gZ-PFE" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-100" id="wuw-BQ-eWY"/>
+                                            <constraint firstItem="r8b-qT-J72" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1qE-er-vf6" secondAttribute="bottom" constant="18" id="y0z-tb-27E"/>
                                             <constraint firstItem="SBx-2H-E7X" firstAttribute="top" secondItem="SWH-s8-Qpd" secondAttribute="bottom" constant="16" id="y4W-LF-RRf"/>
                                             <constraint firstAttribute="trailing" secondItem="r8b-qT-J72" secondAttribute="trailing" constant="24" id="yr1-OU-LDZ"/>
                                         </constraints>
