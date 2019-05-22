@@ -11,6 +11,9 @@ import RxSwift
 import RxKeyboard
 
 class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    var controller: ChatController?
 
 
     @IBOutlet weak var tfMessage: UITextField!
@@ -26,13 +29,15 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private var bottomSafeArea: CGFloat = 0
     
     
-    var messageArr: [Message] = [Message(text: "Привет!", sender: .penPal, time: Date(), contentType: .text),
-                                 Message(text: "И тебе привет доктор!", sender: .user, time: Date(), contentType: .text),
-                                 Message(text: "fsd", sender: .user, time: Date(), contentType: .photo, image: UIImage(named: "Вход"))]
+    var messageArr: [Message] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        controller = ChatController(view: self)
+        
+        fetchPastMessages()
         
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension
@@ -47,6 +52,11 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     func scrollToBottom() {
         let indexPath = IndexPath(row: messageArr.count - 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
+    
+    func fetchPastMessages() {
+        
+        messageArr = controller!.fetchMessages()
     }
     
     
@@ -129,10 +139,10 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     private func visualiseSendingMessage(text: String, time: Date, contentType: MessageContentType, image: UIImage? = nil) {
         
-            messageArr.append(Message(text: text, sender: .user, time: time, contentType: contentType, image: image))
-            tfMessage.text = ""
-            tableView.reloadData()
-            scrollToBottom()
+        messageArr.append(Message(text: text, sender: .user, time: time, contentType: contentType, image: image))
+        tfMessage.text = ""
+        tableView.reloadData()
+        scrollToBottom()
         
     }
     
