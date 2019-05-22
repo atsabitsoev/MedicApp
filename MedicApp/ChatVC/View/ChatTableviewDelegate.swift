@@ -20,18 +20,24 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         
         let message = messageArr[indexPath.row]
         
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.locale = Locale.current
+        
         switch (message.sender, message.contentType) {
             
         case (.user, .text):
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserMessageCell") as! UserMessageCell
             cell.labText.text = message.text
+            cell.labTime.text = formatter.string(from: message.time)
             return cell
             
         case (.penPal, .text):
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "PenPalMessageCell") as! PenPalMessageCell
             cell.labText.text = message.text
+            cell.labTime.text = formatter.string(from: message.time)
             return cell
             
         case (.user, .photo):
@@ -40,6 +46,7 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
             let image = messageArr[indexPath.row].image
             cell.imageMain.image = image
             cell.set(image: image!)
+            cell.labTime.text = formatter.string(from: message.time)
             return cell
         
         default:

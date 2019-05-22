@@ -27,7 +27,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     var messageArr: [Message] = [Message(text: "Привет!", sender: .penPal, time: Date(), contentType: .text),
-                                 Message(text: "И тебе привет собака!", sender: .user, time: Date(), contentType: .text),
+                                 Message(text: "И тебе привет доктор!", sender: .user, time: Date(), contentType: .text),
                                  Message(text: "fsd", sender: .user, time: Date(), contentType: .photo, image: UIImage(named: "Вход"))]
     
     
