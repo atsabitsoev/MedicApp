@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecordVC: UIViewController {
+class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,6 +21,12 @@ class RecordVC: UIViewController {
         
         
     }
-
+    
+    
+    
+    @IBAction func butRecordTapped(_ sender: ButtonGradient) {
+        
+    }
+    
     
 }

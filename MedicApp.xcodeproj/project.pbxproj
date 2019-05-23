@@ -214,12 +214,12 @@
 			path = ChatImageVC;
 			sourceTree = "<group>";
 		};
-		AC7BF2BF2296A2850007AE31 /* CalendarVC */ = {
+		AC7BF2BF2296A2850007AE31 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
 				AC7BF2C02296A29D0007AE31 /* CalendarVC.swift */,
 			);
-			path = CalendarVC;
+			path = CalendarView;
 			sourceTree = "<group>";
 		};
 		AC7F4C94227CAEED002A42AF = {
@@ -248,7 +248,7 @@
 				ACD64732228AF1090091257E /* GlobalEntities */,
 				ACF76ADD227CD39C00FE7648 /* Registration+Enter */,
 				AC6B9175229536280079CF1F /* RecordVC */,
-				AC7BF2BF2296A2850007AE31 /* CalendarVC */,
+				AC7BF2BF2296A2850007AE31 /* CalendarView */,
 				ACC41D2A2292D3360042B200 /* ChatVC */,
 				AC6B9198229584B50079CF1F /* ChatImageVC */,
 				ACFC9B88228DACC1009F5798 /* ExcercisesVC */,
