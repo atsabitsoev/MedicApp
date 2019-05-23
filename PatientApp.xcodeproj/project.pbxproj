@@ -78,7 +78,7 @@
 		AC6B91942295747A0079CF1F /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		AC6B91962295759D0079CF1F /* MessageHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHistoryService.swift; sourceTree = "<group>"; };
 		AC6B9199229584CE0079CF1F /* ChatImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatImageVC.swift; sourceTree = "<group>"; };
-		AC7F4C9D227CAEEE002A42AF /* MedicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7F4C9D227CAEEE002A42AF /* PatientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7F4CA0227CAEEE002A42AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC7F4CA2227CAEEE002A42AF /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		AC7F4CA5227CAEEE002A42AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Registration+Enter.storyboard"; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		AC7F4C9E227CAEEE002A42AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC7F4C9D227CAEEE002A42AF /* MedicApp.app */,
+				AC7F4C9D227CAEEE002A42AF /* PatientApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,9 +442,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC7F4C9C227CAEEE002A42AF /* MedicApp */ = {
+		AC7F4C9C227CAEEE002A42AF /* PatientApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC7F4CAF227CAEF0002A42AF /* Build configuration list for PBXNativeTarget "MedicApp" */;
+			buildConfigurationList = AC7F4CAF227CAEF0002A42AF /* Build configuration list for PBXNativeTarget "PatientApp" */;
 			buildPhases = (
 				451F283A015B8CC49FB1290E /* [CP] Check Pods Manifest.lock */,
 				AC7F4C99227CAEEE002A42AF /* Sources */,
@@ -456,9 +456,9 @@
 			);
 			dependencies = (
 			);
-			name = MedicApp;
+			name = PatientApp;
 			productName = MedicApp;
-			productReference = AC7F4C9D227CAEEE002A42AF /* MedicApp.app */;
+			productReference = AC7F4C9D227CAEEE002A42AF /* PatientApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -476,7 +476,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC7F4C98227CAEED002A42AF /* Build configuration list for PBXProject "MedicApp" */;
+			buildConfigurationList = AC7F4C98227CAEED002A42AF /* Build configuration list for PBXProject "PatientApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -489,7 +489,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC7F4C9C227CAEEE002A42AF /* MedicApp */,
+				AC7F4C9C227CAEEE002A42AF /* PatientApp */,
 			);
 		};
 /* End PBXProject section */
@@ -811,7 +811,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC7F4C98227CAEED002A42AF /* Build configuration list for PBXProject "MedicApp" */ = {
+		AC7F4C98227CAEED002A42AF /* Build configuration list for PBXProject "PatientApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC7F4CAD227CAEF0002A42AF /* Debug */,
@@ -820,7 +820,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC7F4CAF227CAEF0002A42AF /* Build configuration list for PBXNativeTarget "MedicApp" */ = {
+		AC7F4CAF227CAEF0002A42AF /* Build configuration list for PBXNativeTarget "PatientApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC7F4CB0227CAEF0002A42AF /* Debug */,
