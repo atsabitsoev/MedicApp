@@ -96,20 +96,25 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-er-vf6" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="320" width="314" height="66"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрать дату" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-Rh-mut">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enw-N7-XNi">
                                                         <rect key="frame" x="22" y="0.0" width="270" height="66"/>
                                                         <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
-                                                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <state key="normal" title="20/10/2019">
+                                                            <color key="titleColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="butChooseDateTapped:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="8vh-u9-WSy"/>
+                                                            <segue destination="xGG-Vh-87Y" kind="modal" identifier="CalendarSegue" id="3xS-bp-k6p"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="VUo-Rh-mut" firstAttribute="leading" secondItem="1qE-er-vf6" secondAttribute="leading" constant="22" id="1tO-d5-tNR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="enw-N7-XNi" secondAttribute="trailing" constant="22" id="4Wq-Oj-qwA"/>
+                                                    <constraint firstItem="enw-N7-XNi" firstAttribute="leading" secondItem="1qE-er-vf6" secondAttribute="leading" constant="22" id="AbD-pd-hvk"/>
                                                     <constraint firstAttribute="height" constant="66" id="Hjr-YO-C6P"/>
-                                                    <constraint firstAttribute="bottom" secondItem="VUo-Rh-mut" secondAttribute="bottom" id="dYO-Xf-xTi"/>
-                                                    <constraint firstAttribute="trailing" secondItem="VUo-Rh-mut" secondAttribute="trailing" constant="22" id="rFk-tN-REt"/>
-                                                    <constraint firstItem="VUo-Rh-mut" firstAttribute="top" secondItem="1qE-er-vf6" secondAttribute="top" id="sGE-mz-WaM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="enw-N7-XNi" secondAttribute="bottom" id="JHK-f1-Nqr"/>
+                                                    <constraint firstItem="enw-N7-XNi" firstAttribute="top" secondItem="1qE-er-vf6" secondAttribute="top" id="SN2-IJ-186"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
@@ -129,7 +134,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="butRecordTapped:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="EIK-NF-8fb"/>
-                                                    <segue destination="xGG-Vh-87Y" kind="presentation" id="m6T-4T-lCF"/>
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kvo-nd-cnj">
@@ -236,12 +240,13 @@
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="butChooseDate" destination="enw-N7-XNi" id="2V0-dp-etc"/>
                         <outlet property="collectionView" destination="Kvo-nd-cnj" id="Gdl-I4-L81"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSf-wo-V5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124.6376811594203" y="143.97321428571428"/>
+            <point key="canvasLocation" x="119" y="134"/>
         </scene>
         <!--CalendarVC-->
         <scene sceneID="CpE-aq-aRp">
@@ -251,6 +256,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CG-lb-1Ih">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53X-3J-klM">
                                 <rect key="frame" x="18" y="149.5" width="378" height="597"/>
                                 <subviews>
@@ -291,13 +300,17 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.49780607876712329" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.70432898116438358" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0CG-lb-1Ih" secondAttribute="bottom" id="D3Y-Qs-F1c"/>
+                            <constraint firstItem="0CG-lb-1Ih" firstAttribute="trailing" secondItem="2nY-CT-ZRe" secondAttribute="trailing" id="LzZ-ex-uQJ"/>
                             <constraint firstItem="53X-3J-klM" firstAttribute="centerX" secondItem="8xn-yE-KLo" secondAttribute="centerX" id="Uo8-eM-sF0"/>
                             <constraint firstItem="2nY-CT-ZRe" firstAttribute="trailing" secondItem="53X-3J-klM" secondAttribute="trailing" constant="18" id="Z7S-cs-cXb"/>
+                            <constraint firstItem="0CG-lb-1Ih" firstAttribute="leading" secondItem="2nY-CT-ZRe" secondAttribute="leading" id="ZML-s2-4KA"/>
                             <constraint firstItem="53X-3J-klM" firstAttribute="centerY" secondItem="8xn-yE-KLo" secondAttribute="centerY" id="dLF-Gz-ivI"/>
                             <constraint firstItem="53X-3J-klM" firstAttribute="height" secondItem="8xn-yE-KLo" secondAttribute="height" multiplier="1:1.5" id="exa-fk-vD8"/>
                             <constraint firstItem="53X-3J-klM" firstAttribute="leading" secondItem="2nY-CT-ZRe" secondAttribute="leading" constant="18" id="oB8-FO-kOb"/>
+                            <constraint firstItem="0CG-lb-1Ih" firstAttribute="top" secondItem="8xn-yE-KLo" secondAttribute="top" id="qvS-aw-5Le"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2nY-CT-ZRe"/>
                     </view>
@@ -306,12 +319,13 @@
                         <outlet property="calendarView" destination="1MY-Xe-Cxu" id="oJI-tx-Ei3"/>
                         <outlet property="labMonth" destination="jQc-r6-Q5X" id="dmI-U4-cTl"/>
                         <outlet property="menuView" destination="qFJ-kO-nZL" id="rSe-Up-RTt"/>
+                        <outlet property="viewBackground" destination="0CG-lb-1Ih" id="5fM-mf-1fW"/>
                         <outlet property="viewBig" destination="53X-3J-klM" id="wFS-on-3im"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6A5-qm-xd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="134.59821428571428"/>
+            <point key="canvasLocation" x="934.78260869565224" y="132.58928571428572"/>
         </scene>
     </scenes>
 </document>

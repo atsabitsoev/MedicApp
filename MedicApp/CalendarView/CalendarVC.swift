@@ -17,6 +17,10 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var labMonth: UILabel!
     @IBOutlet weak var viewBig: UIView!
+    @IBOutlet weak var viewBackground: UIView!
+    
+    
+    var recordVC: RecordVC?
     
     
     private var months: [String] = ["Январь",
@@ -48,7 +52,15 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
     }
     
     func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
-        print(dayView.dayLabel.text)
+        let day = dayView.date.day
+        let month = dayView.date.month
+        let year = dayView.date.year
+        
+        let date = DateComponents(calendar: .current, timeZone: .current, era: 0, year: year, month: month, day: day).date
+        
+        recordVC!.record?.date = date
+        recordVC!.updateButChooseDate()
+        dismissVC()
     }
     
     func earliestSelectableDate() -> Date {
@@ -78,6 +90,10 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
         return true
     }
     
+    func shouldAutoSelectDayOnMonthChange() -> Bool {
+        return false
+    }
+    
     private func updateLabMonth(_ next: Bool) {
         
         if currentMonth == 0 && next == false {
@@ -92,12 +108,19 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
         
     }
     
+    @objc private func dismissVC() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     // Overrides
     override func viewDidLoad() {
         menuView.delegate = self
         calendarView.delegate = self
         currentMonth = Calendar.current.component(.month, from: Date()) - 1
+        
+        let recognizerToDismissVC = UITapGestureRecognizer(target: self, action: #selector(dismissVC))
+        viewBackground.addGestureRecognizer(recognizerToDismissVC)
     }
     
     override func viewDidLayoutSubviews() {
