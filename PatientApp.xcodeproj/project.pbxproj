@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8928B905D03C0711AD20A687 /* Pods_MedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183511A65B18E52E9E57BC4B /* Pods_MedicApp.framework */; };
+		AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */; };
 		AC6B9174229534B30079CF1F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B9173229534B30079CF1F /* MainTabBarController.swift */; };
 		AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B91762295364B0079CF1F /* RecordVC.swift */; };
 		AC6B917A229536850079CF1F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B9179229536850079CF1F /* ProfileVC.swift */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		183511A65B18E52E9E57BC4B /* Pods_MedicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9DE87BDA3D6F60112CC839 /* Pods-MedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.release.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.release.xcconfig"; sourceTree = "<group>"; };
+		AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCollection.swift; sourceTree = "<group>"; };
 		AC6B9173229534B30079CF1F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC6B91762295364B0079CF1F /* RecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
 		AC6B9179229536850079CF1F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6B91762295364B0079CF1F /* RecordVC.swift */,
+				AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */,
 			);
 			path = RecordVC;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */,
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
 				AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */,
+				AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */,
 				AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */,
 				ACCE275E2294271A00E3126E /* PenPalMessageCell.swift in Sources */,
 				AC6B91932295744A0079CF1F /* NotificationManager.swift in Sources */,
