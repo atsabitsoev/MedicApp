@@ -9,11 +9,17 @@
 import UIKit
 
 class RecordVC: UIViewController {
+    
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    var selectedIndexPath: IndexPath?
+    var validTimeArr: [Date] = [Date(), Date(), Date(), Date(), Date()]
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
     }
 
     

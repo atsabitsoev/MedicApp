@@ -9,6 +9,7 @@ target 'MedicApp' do
   pod 'RxKeyboard'
   pod 'Socket.IO-Client-Swift'
   pod 'SwiftyJSON'
+  pod 'CVCalendar'
 
 
 end
