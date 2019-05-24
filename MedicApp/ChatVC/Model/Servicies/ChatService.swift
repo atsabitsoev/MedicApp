@@ -82,6 +82,5 @@ class ChatService {
         socket.off(clientEvent: .connect)
         socket.off("newMessage")
     }
-    
-    
+
 }

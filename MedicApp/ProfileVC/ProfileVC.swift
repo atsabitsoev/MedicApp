@@ -13,6 +13,17 @@ class ProfileVC: UIViewController {
     
     
     @IBOutlet weak var imProfile: UIImageView!
+    @IBOutlet weak var constrTableViewTop: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var viewHeader: ProfileHeaderView!
+    
+    
+    let masTextFieldTitles = ["Рост (см)",
+                              "Вес (кг)",
+                              "Возраст"]
+    let masChooseTitles = ["Выберете ваш пол",
+                           "Занимаетесь ли вы спортом?",
+                           "Сидячая ли у вас работа?"]
     
 
     override func viewDidLoad() {
@@ -22,7 +33,20 @@ class ProfileVC: UIViewController {
     
     override func viewWillLayoutSubviews() {
         self.view.layoutIfNeeded()
+        
+        configureImProfile()
+        setTableViewTop()
+    }
+    
+    
+    private func configureImProfile() {
+        
         imProfile.layer.cornerRadius = imProfile.bounds.height / 2
+    }
+    
+    private func setTableViewTop() {
+        
+        constrTableViewTop.constant = -viewHeader.bounds.height * 0.375
     }
 
     

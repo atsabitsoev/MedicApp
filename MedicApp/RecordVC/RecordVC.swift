@@ -76,7 +76,7 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day, .month, .year], from: record!.date!)
         
-        let dateString = "\(components.day!)/\(components.month!)/\(components.year!)"
+        let dateString = "Ваша дата: \(components.day!)/\(components.month!)/\(components.year!)"
         
         self.viewUnderButChooseDate.mainColor = Colors().greenMain
         self.viewUnderButChooseDate.draw(viewUnderButChooseDate.bounds)

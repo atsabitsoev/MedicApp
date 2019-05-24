@@ -46,6 +46,11 @@
 		ACCE276422943DFB00E3126E /* Вход.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE276322943DFB00E3126E /* Вход.png */; };
 		ACD3BAC12297C861002882D7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BAC02297C861002882D7 /* Colors.swift */; };
 		ACD3BAC42297ECFE002882D7 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BAC32297ECFE002882D7 /* ProfileHeaderView.swift */; };
+		ACD3BAC622981D83002882D7 /* ViewRoundedBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BAC522981D83002882D7 /* ViewRoundedBorders.swift */; };
+		ACD3BAC82298220E002882D7 /* ProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BAC72298220E002882D7 /* ProfileTableView.swift */; };
+		ACD3BACA22982BA4002882D7 /* ViewCheckRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BAC922982BA4002882D7 /* ViewCheckRound.swift */; };
+		ACD3BACC22983229002882D7 /* ProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BACB22983229002882D7 /* ProfileTextFieldCell.swift */; };
+		ACD3BACE2298324A002882D7 /* ProfileSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BACD2298324A002882D7 /* ProfileSelectCell.swift */; };
 		ACD64734228AF11C0091257E /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64733228AF11C0091257E /* Gradient.swift */; };
 		ACD64736228B016C0091257E /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64735228B016C0091257E /* EnterView.swift */; };
 		ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */; };
@@ -114,6 +119,11 @@
 		ACCE276322943DFB00E3126E /* Вход.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Вход.png"; sourceTree = "<group>"; };
 		ACD3BAC02297C861002882D7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ACD3BAC32297ECFE002882D7 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		ACD3BAC522981D83002882D7 /* ViewRoundedBorders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRoundedBorders.swift; sourceTree = "<group>"; };
+		ACD3BAC72298220E002882D7 /* ProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableView.swift; sourceTree = "<group>"; };
+		ACD3BAC922982BA4002882D7 /* ViewCheckRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCheckRound.swift; sourceTree = "<group>"; };
+		ACD3BACB22983229002882D7 /* ProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextFieldCell.swift; sourceTree = "<group>"; };
+		ACD3BACD2298324A002882D7 /* ProfileSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectCell.swift; sourceTree = "<group>"; };
 		ACD64733228AF11C0091257E /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		ACD64735228B016C0091257E /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterView.swift; path = MedicApp/GlobalEntities/EnterView.swift; sourceTree = SOURCE_ROOT; };
 		ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesTableVIew.swift; sourceTree = "<group>"; };
@@ -192,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				AC6B9179229536850079CF1F /* ProfileVC.swift */,
+				ACD3BAC72298220E002882D7 /* ProfileTableView.swift */,
+				ACD3BACF2298324F002882D7 /* Cells */,
 				ACD3BAC22297ECE9002882D7 /* Entities */,
 			);
 			path = ProfileVC;
@@ -350,8 +362,19 @@
 			isa = PBXGroup;
 			children = (
 				ACD3BAC32297ECFE002882D7 /* ProfileHeaderView.swift */,
+				ACD3BAC522981D83002882D7 /* ViewRoundedBorders.swift */,
+				ACD3BAC922982BA4002882D7 /* ViewCheckRound.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		ACD3BACF2298324F002882D7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ACD3BACB22983229002882D7 /* ProfileTextFieldCell.swift */,
+				ACD3BACD2298324A002882D7 /* ProfileSelectCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		ACD64732228AF1090091257E /* GlobalEntities */ = {
@@ -626,10 +649,13 @@
 				ACCE27502294168A00E3126E /* ChatTableviewDelegate.swift in Sources */,
 				ACC41D362292EAED0042B200 /* ChatTFDelegate.swift in Sources */,
 				ACC41D322292D8C10042B200 /* SimpleGradientView.swift in Sources */,
+				ACD3BACA22982BA4002882D7 /* ViewCheckRound.swift in Sources */,
+				ACD3BAC82298220E002882D7 /* ProfileTableView.swift in Sources */,
 				ACCE275C2294270700E3126E /* UserMessageCell.swift in Sources */,
 				ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */,
 				ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */,
 				AC6B919A229584CE0079CF1F /* ChatImageVC.swift in Sources */,
+				ACD3BAC622981D83002882D7 /* ViewRoundedBorders.swift in Sources */,
 				ACCE27602294309E00E3126E /* UserImageCell.swift in Sources */,
 				ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */,
 				AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */,
@@ -638,7 +664,9 @@
 				ACCE2758229424EE00E3126E /* Sender.swift in Sources */,
 				AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */,
 				ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */,
+				ACD3BACE2298324A002882D7 /* ProfileSelectCell.swift in Sources */,
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
+				ACD3BACC22983229002882D7 /* ProfileTextFieldCell.swift in Sources */,
 				AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */,
 				AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */,
 				AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */,
