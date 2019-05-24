@@ -18,7 +18,6 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     @IBOutlet weak var tfLastName: UITextField!
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfFathersName: UITextField!
-    @IBOutlet weak var tfPhoneOrEmail: UITextField!
     
     
     
@@ -51,7 +50,6 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         tfLastName.delegate = self
         tfName.delegate = self
         tfFathersName.delegate = self
-        tfPhoneOrEmail.delegate = self
     }
     
     

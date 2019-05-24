@@ -165,7 +165,9 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         messageArr.append(Message(text: text, sender: .user, time: time, contentType: contentType, image: image))
         tfMessage.text = ""
-        tableView.reloadData()
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: messageArr.count - 1, section: 0)], with: .automatic)
+        tableView.endUpdates()
         scrollToBottom()
         
     }
@@ -173,7 +175,9 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private func visualiseRecievingMessage(text: String, time: Date, contentType: MessageContentType, image: UIImage? = nil) {
         
         messageArr.append(Message(text: text, sender: .penPal, time: time, contentType: contentType, image: image))
-        tableView.reloadData()
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: messageArr.count - 1, section: 0)], with: .automatic)
+        tableView.endUpdates()
         scrollToBottom()
         
     }

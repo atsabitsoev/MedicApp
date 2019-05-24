@@ -81,35 +81,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-2H-E7X" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="238" width="464" height="66"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-Mail или телефон" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDT-Bn-gXN">
-                                                        <rect key="frame" x="66" y="8" width="280" height="50"/>
-                                                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="dDT-Bn-gXN" secondAttribute="bottom" constant="8" id="G1m-DF-fiM"/>
-                                                    <constraint firstItem="dDT-Bn-gXN" firstAttribute="leading" secondItem="SBx-2H-E7X" secondAttribute="leading" constant="66" id="Omw-cQ-P40"/>
-                                                    <constraint firstItem="dDT-Bn-gXN" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="top" constant="8" id="kLk-iw-l2m"/>
-                                                    <constraint firstAttribute="height" constant="66" id="zed-pV-lkE"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.29999999999999999"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-er-vf6" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="320" width="314" height="66"/>
+                                                <rect key="frame" x="50" y="246" width="314" height="66"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enw-N7-XNi">
                                                         <rect key="frame" x="22" y="0.0" width="270" height="66"/>
@@ -177,7 +150,7 @@
                                                 </connections>
                                             </button>
                                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kvo-nd-cnj">
-                                                <rect key="frame" x="0.0" y="410" width="414" height="120"/>
+                                                <rect key="frame" x="0.0" y="336" width="414" height="120"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="DPa-1O-LP0"/>
@@ -247,7 +220,6 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="SWH-s8-Qpd" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-210" id="0ef-yK-AWk"/>
-                                            <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="bottom" constant="16" id="9tY-gu-7QU"/>
                                             <constraint firstAttribute="trailing" secondItem="1qE-er-vf6" secondAttribute="trailing" constant="50" id="DmL-tN-3h2"/>
                                             <constraint firstItem="6lM-Tf-2Gx" firstAttribute="trailing" secondItem="r8b-qT-J72" secondAttribute="trailing" id="K39-0X-xxe"/>
                                             <constraint firstItem="r8b-qT-J72" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="24" id="N9R-2i-8a6"/>
@@ -256,16 +228,14 @@
                                             <constraint firstItem="SWH-s8-Qpd" firstAttribute="top" secondItem="6em-v3-HYr" secondAttribute="top" constant="24" id="Qhp-no-aSb"/>
                                             <constraint firstItem="6lM-Tf-2Gx" firstAttribute="bottom" secondItem="r8b-qT-J72" secondAttribute="bottom" id="S3G-Bn-uGR"/>
                                             <constraint firstItem="1qE-er-vf6" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ZJx-eR-zfB"/>
-                                            <constraint firstAttribute="trailing" secondItem="SBx-2H-E7X" secondAttribute="trailing" constant="-100" id="aqi-BG-GCW"/>
                                             <constraint firstItem="r8b-qT-J72" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Kvo-nd-cnj" secondAttribute="bottom" constant="24" id="ase-eY-Umx"/>
                                             <constraint firstAttribute="bottom" secondItem="r8b-qT-J72" secondAttribute="bottom" constant="12" id="b9V-Zo-WVH"/>
                                             <constraint firstAttribute="trailing" secondItem="SWH-s8-Qpd" secondAttribute="trailing" constant="50" id="hny-zg-X5O"/>
                                             <constraint firstItem="6lM-Tf-2Gx" firstAttribute="top" secondItem="r8b-qT-J72" secondAttribute="top" id="lof-Wn-7yr"/>
                                             <constraint firstAttribute="trailing" secondItem="Kvo-nd-cnj" secondAttribute="trailing" id="p0e-lS-h2f"/>
+                                            <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="SWH-s8-Qpd" secondAttribute="bottom" constant="24" id="qkj-58-ozD"/>
                                             <constraint firstItem="Kvo-nd-cnj" firstAttribute="top" secondItem="1qE-er-vf6" secondAttribute="bottom" constant="24" id="rdv-G6-1dv"/>
-                                            <constraint firstItem="SBx-2H-E7X" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ukl-PE-I2m"/>
                                             <constraint firstItem="Kvo-nd-cnj" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" id="wfq-WL-ibp"/>
-                                            <constraint firstItem="SBx-2H-E7X" firstAttribute="top" secondItem="SWH-s8-Qpd" secondAttribute="bottom" constant="16" id="y4W-LF-RRf"/>
                                             <constraint firstAttribute="trailing" secondItem="r8b-qT-J72" secondAttribute="trailing" constant="24" id="yr1-OU-LDZ"/>
                                         </constraints>
                                     </view>
@@ -299,7 +269,6 @@
                             <constraint firstItem="7Kz-fZ-plR" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="eWd-Rr-gbp"/>
                             <constraint firstAttribute="bottom" secondItem="0ZL-9c-tmF" secondAttribute="bottom" id="g9I-gN-eUl"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="jea-u5-xy4"/>
-                            <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="dDT-Bn-gXN" secondAttribute="trailing" constant="18" id="rAr-S8-rz3"/>
                             <constraint firstItem="CX5-ga-ySb" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" constant="18" id="rBX-Ey-O48"/>
                             <constraint firstItem="7Kz-fZ-plR" firstAttribute="top" secondItem="oFa-3e-RrU" secondAttribute="topMargin" constant="18" id="sro-Zv-sIG"/>
                         </constraints>
@@ -312,7 +281,6 @@
                         <outlet property="tfFathersName" destination="beC-zx-WdV" id="Gq4-fu-G1c"/>
                         <outlet property="tfLastName" destination="Yfs-SA-OhN" id="SMh-Fy-i1L"/>
                         <outlet property="tfName" destination="Pze-Op-psA" id="cB5-OH-GEg"/>
-                        <outlet property="tfPhoneOrEmail" destination="dDT-Bn-gXN" id="PEE-ua-KA2"/>
                         <outlet property="viewUnderButChooseDate" destination="1qE-er-vf6" id="h5S-V1-j9z"/>
                     </connections>
                 </viewController>
