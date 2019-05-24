@@ -11,7 +11,7 @@ import UIKit
 
 struct Colors {
     
-    let greenMain: UIColor = #colorLiteral(red: 0, green: 0.8751577735, blue: 0.76799649, alpha: 1)
+    let greenMain: UIColor = #colorLiteral(red: 0.1058823529, green: 0.8588235294, blue: 0.7176470588, alpha: 1)
     let greenGradient1: UIColor = #colorLiteral(red: 0.07450980392, green: 0.8, blue: 0.7843137255, alpha: 1)
     let greenGradient2: UIColor = #colorLiteral(red: 0.1294117647, green: 0.9137254902, blue: 0.6470588235, alpha: 1)
     

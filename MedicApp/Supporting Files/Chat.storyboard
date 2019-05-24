@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserMessageCell" rowHeight="108" id="CDE-CO-i7N" customClass="UserMessageCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserMessageCell" rowHeight="108" id="CDE-CO-i7N" customClass="UserMessageCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDE-CO-i7N" id="Wic-bI-G5P">
@@ -73,7 +73,7 @@
                                             <outlet property="labTime" destination="6W7-U6-zQB" id="fm9-tV-zhW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PenPalMessageCell" rowHeight="108" id="19v-0H-fB6" customClass="PenPalMessageCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PenPalMessageCell" rowHeight="108" id="19v-0H-fB6" customClass="PenPalMessageCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="136" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19v-0H-fB6" id="eql-Lr-MwZ">
@@ -169,7 +169,7 @@
                                             <outlet property="labTime" destination="xoi-Ic-Wpc" id="F2n-A9-a5i"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserImageCell" rowHeight="108" id="xcd-lj-F9u" customClass="UserImageCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserImageCell" rowHeight="108" id="xcd-lj-F9u" customClass="UserImageCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="352" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xcd-lj-F9u" id="jG0-nE-YHB">
@@ -218,16 +218,16 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чат с терапевтом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Xkq-gB-YD5">
-                                <rect key="frame" x="106.5" y="52" width="201.5" height="29"/>
+                                <rect key="frame" x="102.5" y="52" width="209.5" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="XyU-my-FoV"/>
+                                    <constraint firstAttribute="height" constant="30" id="XyU-my-FoV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Терапевт фото" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-PB-siz">
-                                <rect key="frame" x="183.5" y="89" width="47" height="47"/>
+                                <rect key="frame" x="184" y="90" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xdl-PB-siz" secondAttribute="height" multiplier="1:1" id="dU8-ut-wzM"/>
                                 </constraints>

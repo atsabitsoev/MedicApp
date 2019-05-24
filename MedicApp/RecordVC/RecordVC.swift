@@ -8,12 +8,18 @@
 
 import UIKit
 
-class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
+class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITextFieldDelegate {
     
     
     @IBOutlet weak var viewUnderButChooseDate: ViewUnderTextFields!
     @IBOutlet weak var butChooseDate: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var tfLastName: UITextField!
+    @IBOutlet weak var tfName: UITextField!
+    @IBOutlet weak var tfFathersName: UITextField!
+    @IBOutlet weak var tfPhoneOrEmail: UITextField!
+    
     
     
     var selectedIndexPath: IndexPath?
@@ -27,7 +33,7 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addGestureRecognizers()
+        setTfDelegates()
         
         record = Record(name: "",
                         lastName: "",
@@ -40,34 +46,12 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
     }
     
     
-    private func addGestureRecognizers() {
+    private func setTfDelegates() {
         
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        self.view.addGestureRecognizer(recognizer)
-    }
-    
-    @objc private func hideKeyboard() {
-        
-        self.view.endEditing(true)
-    }
-    
-    
-    @IBAction func butChooseDateTapped(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func butRecordTapped(_ sender: ButtonGradient) {
-        
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "CalendarSegue" {
-            
-            let destination = segue.destination as! CalendarVC
-            destination.recordVC = self
-        }
+        tfLastName.delegate = self
+        tfName.delegate = self
+        tfFathersName.delegate = self
+        tfPhoneOrEmail.delegate = self
     }
     
     
@@ -92,6 +76,32 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
         UIView.animate(withDuration: 0.3) {
             self.collectionView.alpha = 1
         }
+    }
+    
+    
+    @IBAction func butChooseDateTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func butRecordTapped(_ sender: ButtonGradient) {
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "CalendarSegue" {
+            
+            let destination = segue.destination as! CalendarVC
+            destination.recordVC = self
+        }
+    }
+    
+    
+    //Textfield Delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
 }

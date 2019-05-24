@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
         <array key="SF-Compact-Rounded-Medium.otf">
             <string>SFCompactRounded-Medium</string>
         </array>
@@ -281,8 +284,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="fNl-OR-j79"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="32"/>
-                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
+                                <color key="textColor" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -306,6 +309,10 @@
                     <connections>
                         <outlet property="butChooseDate" destination="enw-N7-XNi" id="2V0-dp-etc"/>
                         <outlet property="collectionView" destination="Kvo-nd-cnj" id="Gdl-I4-L81"/>
+                        <outlet property="tfFathersName" destination="beC-zx-WdV" id="Gq4-fu-G1c"/>
+                        <outlet property="tfLastName" destination="Yfs-SA-OhN" id="SMh-Fy-i1L"/>
+                        <outlet property="tfName" destination="Pze-Op-psA" id="cB5-OH-GEg"/>
+                        <outlet property="tfPhoneOrEmail" destination="dDT-Bn-gXN" id="PEE-ua-KA2"/>
                         <outlet property="viewUnderButChooseDate" destination="1qE-er-vf6" id="h5S-V1-j9z"/>
                     </connections>
                 </viewController>
