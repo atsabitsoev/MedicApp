@@ -110,12 +110,16 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
     }
     
     @objc private func dismissVC() {
+        NotificationManager.post(.calendarClosed)
         dismiss(animated: true, completion: nil)
     }
     
     
     // Overrides
     override func viewDidLoad() {
+        
+        NotificationManager.post(.calendarOpened)
+        
         menuView.delegate = self
         calendarView.delegate = self
         calendarView.calendarDelegate = self

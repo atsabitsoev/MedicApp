@@ -14,4 +14,7 @@ enum NotificationNames: String {
     case newMessage = "new message"
     case socketConnected = "socket connected"
     case messagesFetched = "messagesFetched"
+    
+    case calendarOpened = "CalendarOpened"
+    case calendarClosed = "CalendarClosed"
 }

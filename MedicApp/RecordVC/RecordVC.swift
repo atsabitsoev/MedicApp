@@ -32,6 +32,7 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addObservers()
         setTfDelegates()
         
         record = Record(name: "",
@@ -42,6 +43,23 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         collectionView.alpha = 0
         
         
+    }
+    
+    
+    private func addObservers() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(activateTabBar), name: NSNotification.Name(rawValue: NotificationNames.calendarClosed.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deactivateTabBar), name: NSNotification.Name(rawValue: NotificationNames.calendarOpened.rawValue), object: nil)
+    }
+    
+    @objc private func activateTabBar() {
+        
+        self.tabBarController!.tabBar.isUserInteractionEnabled = true
+    }
+    
+    @objc private func deactivateTabBar() {
+        
+        self.tabBarController!.tabBar.isUserInteractionEnabled = false
     }
     
     

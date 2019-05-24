@@ -155,7 +155,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="DPa-1O-LP0"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="8" id="W7I-Wn-uEb">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="W7I-Wn-uEb">
                                                     <size key="itemSize" width="137" height="44"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
