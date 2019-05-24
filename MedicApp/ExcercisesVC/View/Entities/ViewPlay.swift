@@ -12,7 +12,7 @@ import UIKit
 class ViewPlay: UIView {
     
     
-    @IBInspectable var color: UIColor = #colorLiteral(red: 0, green: 0.8751577735, blue: 0.76799649, alpha: 1)
+    @IBInspectable var color: UIColor = Colors().greenMain
 
     
     override func draw(_ rect: CGRect) {

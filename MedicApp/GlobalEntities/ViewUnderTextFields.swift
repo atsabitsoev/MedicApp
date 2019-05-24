@@ -11,7 +11,8 @@ import UIKit
 @IBDesignable
 class ViewUnderTextFields: UIView {
     
-    
+   
+    @IBInspectable var mainColor: UIColor = UIColor.white
     @IBInspectable var isSmall: Bool = false
     var cornerRadius: CGFloat {
         if isSmall {
@@ -53,7 +54,7 @@ class ViewUnderTextFields: UIView {
         shadowView.layer.shadowOpacity = shadowOpacity
         shadowView.layer.shadowColor = shadowColor.cgColor
         shadowView.layer.shadowRadius = shadowRadius
-        shadowView.backgroundColor = UIColor.white
+        shadowView.backgroundColor = mainColor
         superview!.insertSubview(shadowView, belowSubview: self)
     }
     

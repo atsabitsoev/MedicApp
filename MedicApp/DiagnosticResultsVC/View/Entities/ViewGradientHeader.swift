@@ -13,8 +13,8 @@ class ViewGradientHeader: UIView {
     
     
     @IBInspectable var radius: CGFloat = 8
-    @IBInspectable var color1: UIColor = #colorLiteral(red: 0.07450980392, green: 0.8, blue: 0.7843137255, alpha: 1)
-    @IBInspectable var color2: UIColor = #colorLiteral(red: 0.1294117647, green: 0.9137254902, blue: 0.6470588235, alpha: 1)
+    @IBInspectable var color1: UIColor = Colors().greenGradient1
+    @IBInspectable var color2: UIColor = Colors().greenGradient2
 
     
     override func draw(_ rect: CGRect) {

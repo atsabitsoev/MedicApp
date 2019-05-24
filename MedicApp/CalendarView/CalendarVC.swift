@@ -94,6 +94,7 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
         return false
     }
     
+    
     private func updateLabMonth(_ next: Bool) {
         
         if currentMonth == 0 && next == false {
@@ -117,6 +118,7 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
     override func viewDidLoad() {
         menuView.delegate = self
         calendarView.delegate = self
+        calendarView.calendarDelegate = self
         currentMonth = Calendar.current.component(.month, from: Date()) - 1
         
         let recognizerToDismissVC = UITapGestureRecognizer(target: self, action: #selector(dismissVC))

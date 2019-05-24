@@ -12,6 +12,7 @@ class RecordTimeCell: UICollectionViewCell {
     
     
     @IBOutlet weak var labTime: UILabel!
+    @IBOutlet weak var viewUnderLabTime: ViewUnderTextFields!
     
     
     override var isSelected: Bool {
@@ -28,7 +29,6 @@ class RecordTimeCell: UICollectionViewCell {
         
         labTime.layer.cornerRadius = labTime.bounds.height / 2
         labTime.layer.borderColor = UIColor.black.cgColor
-        labTime.layer.borderWidth = isSelected ? 0 : 1
     }
     
     
@@ -36,15 +36,15 @@ class RecordTimeCell: UICollectionViewCell {
         
         if selected {
             
-            labTime.backgroundColor = #colorLiteral(red: 0, green: 0.8751577735, blue: 0.76799649, alpha: 1)
+            viewUnderLabTime.mainColor = Colors().greenMain
             labTime.textColor = .white
-            labTime.layer.borderColor = UIColor.clear.cgColor
         } else {
             
-            labTime.backgroundColor = .white
+            viewUnderLabTime.mainColor = .white
             labTime.textColor = .black
-            labTime.layer.borderColor = UIColor.black.cgColor
         }
+        
+        viewUnderLabTime.draw(viewUnderLabTime.bounds)
         
     }
     

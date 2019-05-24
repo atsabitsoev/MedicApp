@@ -70,6 +70,12 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="lineCount">
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.29999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-2H-E7X" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
@@ -91,6 +97,12 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.29999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-er-vf6" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
@@ -99,7 +111,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enw-N7-XNi">
                                                         <rect key="frame" x="22" y="0.0" width="270" height="66"/>
                                                         <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="20"/>
-                                                        <state key="normal" title="20/10/2019">
+                                                        <state key="normal" title="Выбрать дату">
                                                             <color key="titleColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -118,6 +130,31 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.29999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lM-Tf-2Gx" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="724" width="366" height="58"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.29999999999999999"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                                        <color key="value" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8b-qT-J72" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
@@ -136,42 +173,65 @@
                                                     <action selector="butRecordTapped:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="EIK-NF-8fb"/>
                                                 </connections>
                                             </button>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kvo-nd-cnj">
-                                                <rect key="frame" x="0.0" y="410" width="414" height="100"/>
+                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kvo-nd-cnj">
+                                                <rect key="frame" x="0.0" y="410" width="414" height="120"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="DPa-1O-LP0"/>
+                                                    <constraint firstAttribute="height" constant="120" id="DPa-1O-LP0"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="W7I-Wn-uEb">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="8" id="W7I-Wn-uEb">
                                                     <size key="itemSize" width="137" height="44"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecordTimeCell" id="d8M-Hi-VRw" customClass="RecordTimeCell" customModule="MedicApp" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecordTimeCell" id="d8M-Hi-VRw" customClass="RecordTimeCell" customModule="MedicApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="137" height="44"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="137" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-UD-JtN">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-uh-n51" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="137" height="44"/>
-                                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="18"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                    <subviews>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-UD-JtN">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="137" height="44"/>
+                                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="18"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="x4f-UD-JtN" secondAttribute="bottom" id="D6B-2V-l8k"/>
+                                                                        <constraint firstItem="x4f-UD-JtN" firstAttribute="leading" secondItem="u9h-uh-n51" secondAttribute="leading" id="DjY-dH-0vP"/>
+                                                                        <constraint firstItem="x4f-UD-JtN" firstAttribute="top" secondItem="u9h-uh-n51" secondAttribute="top" id="EqZ-4X-KfR"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="x4f-UD-JtN" secondAttribute="trailing" id="Kg1-0j-tjH"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                            <real key="value" value="3"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                            <real key="value" value="0.29999999999999999"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
                                                             </subviews>
                                                         </view>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="x4f-UD-JtN" firstAttribute="leading" secondItem="d8M-Hi-VRw" secondAttribute="leading" id="1Fl-9v-Xh2"/>
-                                                            <constraint firstItem="x4f-UD-JtN" firstAttribute="top" secondItem="d8M-Hi-VRw" secondAttribute="top" id="5Uz-ga-rS4"/>
-                                                            <constraint firstAttribute="trailing" secondItem="x4f-UD-JtN" secondAttribute="trailing" id="A7W-E3-nEx"/>
-                                                            <constraint firstAttribute="bottom" secondItem="x4f-UD-JtN" secondAttribute="bottom" id="r6L-Wy-tVc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="u9h-uh-n51" secondAttribute="trailing" id="awo-EE-BjK"/>
+                                                            <constraint firstItem="u9h-uh-n51" firstAttribute="leading" secondItem="d8M-Hi-VRw" secondAttribute="leading" id="iPz-OA-BPp"/>
+                                                            <constraint firstItem="u9h-uh-n51" firstAttribute="top" secondItem="d8M-Hi-VRw" secondAttribute="top" id="s0w-Qh-724"/>
+                                                            <constraint firstAttribute="bottom" secondItem="u9h-uh-n51" secondAttribute="bottom" id="vnG-x4-Ohm"/>
                                                         </constraints>
                                                         <connections>
                                                             <outlet property="labTime" destination="x4f-UD-JtN" id="iaR-6b-Y1a"/>
+                                                            <outlet property="viewUnderLabTime" destination="u9h-uh-n51" id="TCV-cz-CXn"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -186,14 +246,18 @@
                                             <constraint firstItem="SWH-s8-Qpd" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="-210" id="0ef-yK-AWk"/>
                                             <constraint firstItem="1qE-er-vf6" firstAttribute="top" secondItem="SBx-2H-E7X" secondAttribute="bottom" constant="16" id="9tY-gu-7QU"/>
                                             <constraint firstAttribute="trailing" secondItem="1qE-er-vf6" secondAttribute="trailing" constant="50" id="DmL-tN-3h2"/>
+                                            <constraint firstItem="6lM-Tf-2Gx" firstAttribute="trailing" secondItem="r8b-qT-J72" secondAttribute="trailing" id="K39-0X-xxe"/>
                                             <constraint firstItem="r8b-qT-J72" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="24" id="N9R-2i-8a6"/>
                                             <constraint firstItem="1qE-er-vf6" firstAttribute="centerX" secondItem="6em-v3-HYr" secondAttribute="centerX" id="NKg-vY-wOF"/>
+                                            <constraint firstItem="6lM-Tf-2Gx" firstAttribute="leading" secondItem="r8b-qT-J72" secondAttribute="leading" id="NwE-TS-7Js"/>
                                             <constraint firstItem="SWH-s8-Qpd" firstAttribute="top" secondItem="6em-v3-HYr" secondAttribute="top" constant="24" id="Qhp-no-aSb"/>
+                                            <constraint firstItem="6lM-Tf-2Gx" firstAttribute="bottom" secondItem="r8b-qT-J72" secondAttribute="bottom" id="S3G-Bn-uGR"/>
                                             <constraint firstItem="1qE-er-vf6" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ZJx-eR-zfB"/>
                                             <constraint firstAttribute="trailing" secondItem="SBx-2H-E7X" secondAttribute="trailing" constant="-100" id="aqi-BG-GCW"/>
                                             <constraint firstItem="r8b-qT-J72" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Kvo-nd-cnj" secondAttribute="bottom" constant="24" id="ase-eY-Umx"/>
                                             <constraint firstAttribute="bottom" secondItem="r8b-qT-J72" secondAttribute="bottom" constant="12" id="b9V-Zo-WVH"/>
                                             <constraint firstAttribute="trailing" secondItem="SWH-s8-Qpd" secondAttribute="trailing" constant="50" id="hny-zg-X5O"/>
+                                            <constraint firstItem="6lM-Tf-2Gx" firstAttribute="top" secondItem="r8b-qT-J72" secondAttribute="top" id="lof-Wn-7yr"/>
                                             <constraint firstAttribute="trailing" secondItem="Kvo-nd-cnj" secondAttribute="trailing" id="p0e-lS-h2f"/>
                                             <constraint firstItem="Kvo-nd-cnj" firstAttribute="top" secondItem="1qE-er-vf6" secondAttribute="bottom" constant="24" id="rdv-G6-1dv"/>
                                             <constraint firstItem="SBx-2H-E7X" firstAttribute="leading" secondItem="6em-v3-HYr" secondAttribute="leading" constant="50" id="ukl-PE-I2m"/>
@@ -242,11 +306,12 @@
                     <connections>
                         <outlet property="butChooseDate" destination="enw-N7-XNi" id="2V0-dp-etc"/>
                         <outlet property="collectionView" destination="Kvo-nd-cnj" id="Gdl-I4-L81"/>
+                        <outlet property="viewUnderButChooseDate" destination="1qE-er-vf6" id="h5S-V1-j9z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSf-wo-V5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="134"/>
+            <point key="canvasLocation" x="118.84057971014494" y="133.92857142857142"/>
         </scene>
         <!--CalendarVC-->
         <scene sceneID="CpE-aq-aRp">

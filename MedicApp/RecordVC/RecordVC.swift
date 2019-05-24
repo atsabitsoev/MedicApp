@@ -11,6 +11,7 @@ import UIKit
 class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
     
     
+    @IBOutlet weak var viewUnderButChooseDate: ViewUnderTextFields!
     @IBOutlet weak var butChooseDate: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -26,16 +27,29 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addGestureRecognizers()
+        
         record = Record(name: "",
                         lastName: "",
                         fathersName: "",
                         phoneOrEmail: "",
                         date: nil)
+        collectionView.alpha = 0
         
         
     }
     
     
+    private func addGestureRecognizers() {
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc private func hideKeyboard() {
+        
+        self.view.endEditing(true)
+    }
     
     
     @IBAction func butChooseDateTapped(_ sender: UIButton) {
@@ -64,9 +78,20 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate {
         
         let dateString = "\(components.day!)/\(components.month!)/\(components.year!)"
         
-        
+        self.viewUnderButChooseDate.mainColor = Colors().greenMain
+        self.viewUnderButChooseDate.draw(viewUnderButChooseDate.bounds)
+        butChooseDate.setTitleColor(.white, for: .normal)
         
         butChooseDate.setTitle(dateString, for: .normal)
+        
+        showTimeCollectionView()
+    }
+    
+    private func showTimeCollectionView() {
+        
+        UIView.animate(withDuration: 0.3) {
+            self.collectionView.alpha = 1
+        }
     }
     
 }

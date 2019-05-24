@@ -11,8 +11,9 @@ import UIKit
 @IBDesignable
 class ButtonGradient: UIButton {
     
-    @IBInspectable var color2: UIColor = #colorLiteral(red: 0.9725490196, green: 0.3803921569, blue: 0.3568627451, alpha: 1)
-    @IBInspectable var color1: UIColor = #colorLiteral(red: 0.9843137255, green: 0.6862745098, blue: 0.3764705882, alpha: 1)
+    
+    @IBInspectable var color2: UIColor = Colors().orangeGradient2
+    @IBInspectable var color1: UIColor = Colors().orangeGradient1
     
     let myImageView = UIImageView()
 

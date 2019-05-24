@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="222" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-en-iae">
-                                <rect key="frame" x="0.0" y="99" width="414" height="797"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="807"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticResultsCell" rowHeight="222" id="WDj-h1-72C" customClass="DiagnosticResultsCell" customModule="MedicApp" customModuleProvider="target">
@@ -134,7 +134,7 @@
                             <constraint firstItem="bZA-WI-sbE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aam-uQ-eZW" secondAttribute="trailing" constant="18" id="Hci-1x-0df"/>
                             <constraint firstItem="VmU-en-iae" firstAttribute="leading" secondItem="bZA-WI-sbE" secondAttribute="leading" id="KHw-rS-nkw"/>
                             <constraint firstItem="aam-uQ-eZW" firstAttribute="top" secondItem="bZA-WI-sbE" secondAttribute="top" constant="8" id="ZhB-5A-yTQ"/>
-                            <constraint firstItem="VmU-en-iae" firstAttribute="top" secondItem="aam-uQ-eZW" secondAttribute="bottom" constant="18" id="av4-Pu-bNl"/>
+                            <constraint firstItem="VmU-en-iae" firstAttribute="top" secondItem="aam-uQ-eZW" secondAttribute="bottom" constant="8" id="av4-Pu-bNl"/>
                             <constraint firstAttribute="bottom" secondItem="VmU-en-iae" secondAttribute="bottom" id="bEs-Kr-LCD"/>
                             <constraint firstItem="aam-uQ-eZW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bZA-WI-sbE" secondAttribute="leading" constant="18" id="pTc-Dy-b4W"/>
                             <constraint firstItem="VmU-en-iae" firstAttribute="trailing" secondItem="bZA-WI-sbE" secondAttribute="trailing" id="u8M-wo-czV"/>

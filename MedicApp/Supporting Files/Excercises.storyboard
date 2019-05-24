@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="204" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mBt-tG-JxD">
-                                <rect key="frame" x="0.0" y="125" width="414" height="771"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="775"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExcercisesCell" customModule="MedicApp" customModuleProvider="target">
@@ -80,6 +80,22 @@
                                     <outlet property="delegate" destination="bsH-ZN-Wb1" id="pyj-zg-GKD"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-yC-Lky" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="104.5" y="93" width="205" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                        <color key="value" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TuC-H6-SbU">
                                 <rect key="frame" x="104.5" y="93" width="205" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,12 +118,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TuC-H6-SbU" firstAttribute="top" secondItem="V14-4q-GId" secondAttribute="bottom" constant="12" id="Clx-Uy-DVW"/>
-                            <constraint firstItem="mBt-tG-JxD" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="bottom" constant="12" id="DNs-WQ-aC5"/>
+                            <constraint firstItem="mBt-tG-JxD" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="bottom" constant="8" id="DNs-WQ-aC5"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="bottom" secondItem="TuC-H6-SbU" secondAttribute="bottom" id="I0l-eA-ocP"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="trailing" secondItem="n78-v5-CLM" secondAttribute="trailing" id="Oo5-9v-nqJ"/>
                             <constraint firstAttribute="bottom" secondItem="mBt-tG-JxD" secondAttribute="bottom" id="VVU-ZQ-zCO"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="leading" secondItem="TuC-H6-SbU" secondAttribute="leading" id="YKV-qO-Lrx"/>
                             <constraint firstItem="TuC-H6-SbU" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="aHL-hl-f0L"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="leading" secondItem="n78-v5-CLM" secondAttribute="leading" id="cCX-QH-Nyx"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="trailing" secondItem="TuC-H6-SbU" secondAttribute="trailing" id="cOi-DN-gNb"/>
                             <constraint firstItem="V14-4q-GId" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="gAo-Ye-498"/>
+                            <constraint firstItem="7L1-yC-Lky" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="top" id="ohc-Q5-Uhc"/>
                             <constraint firstItem="V14-4q-GId" firstAttribute="top" secondItem="n78-v5-CLM" secondAttribute="top" constant="8" id="vae-pU-6iT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n78-v5-CLM"/>

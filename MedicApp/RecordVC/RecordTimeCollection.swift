@@ -35,7 +35,7 @@ extension RecordVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = collectionView.bounds.width / 2.5
-        let height = collectionView.bounds.height / 2 - 2
+        let height = collectionView.bounds.height / 2 - 4
         let size = CGSize(width: width, height: height)
         
         return size

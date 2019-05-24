@@ -34,15 +34,6 @@ class ExcercisesVC: UIViewController {
         segmentedControl.layer.borderColor = segmentedControl.tintColor.cgColor
         segmentedControl.layer.borderWidth = 1.0
         segmentedControl.layer.masksToBounds = true
-        
-//        segmentedControlShadow.frame = segmentedControl.frame
-//        segmentedControlShadow.layer.cornerRadius = segmentedControl.layer.cornerRadius
-//        segmentedControlShadow.backgroundColor = segmentedControl.tintColor
-//        segmentedControlShadow.layer.shadowColor = UIColor.black.cgColor
-//        segmentedControlShadow.layer.shadowOpacity = 0.2
-//        segmentedControlShadow.layer.shadowRadius = 2
-//        segmentedControlShadow.layer.shadowOffset = CGSize(width: 0, height: 4)
-//        self.view.insertSubview(segmentedControlShadow, at: 0)
     }
     
     
