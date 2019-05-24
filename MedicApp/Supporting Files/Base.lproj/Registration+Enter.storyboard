@@ -535,7 +535,7 @@
             <objects>
                 <navigationController id="jLb-Wc-gc7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Профиль" image="Профиль иконка" id="CQ0-vy-AK3"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pnK-MJ-Rww">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="pnK-MJ-Rww">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

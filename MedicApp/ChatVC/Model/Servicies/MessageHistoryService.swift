@@ -17,9 +17,7 @@ class MessageHistoryService {
     
     static func fetchMessages() {
         
-        let messageArr: [Message] = [Message(text: "Привет!", sender: .penPal, time: Date(), contentType: .text),
-                                     Message(text: "И тебе привет доктор!", sender: .user, time: Date(), contentType: .text),
-                                     Message(text: "fsd", sender:  .penPal, time: Date(), contentType: .photo, image: UIImage(named: "Вход"))]
+        let messageArr: [Message] = [Message(text: "Здравствуйте, что вас беспокоит?", sender: .penPal, time: Date(), contentType: .text)]
         
         messages = messageArr
         NotificationManager.post(.messagesFetched)

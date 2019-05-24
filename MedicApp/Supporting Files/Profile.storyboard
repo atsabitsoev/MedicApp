@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,18 +15,36 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="73Q-CR-pnZ" customClass="ProfileVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9nL-jQ-eI0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rms-t8-B8M" customClass="ProfileHeaderView" customModule="MedicApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rms-t8-B8M" customClass="ProfileHeaderView" customModule="MedicApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5SK-ZO-3aW">
+                                <rect key="frame" x="236" y="52" width="133" height="133"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.019607843140000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5SK-ZO-3aW" secondAttribute="height" multiplier="1:1" id="wU1-N6-zH9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5SK-ZO-3aW" firstAttribute="top" secondItem="cKJ-Xo-QXe" secondAttribute="top" constant="8" id="6ga-Z7-KFb"/>
+                            <constraint firstItem="5SK-ZO-3aW" firstAttribute="width" secondItem="Rms-t8-B8M" secondAttribute="height" multiplier="1:2" id="CaD-v7-Rjo"/>
+                            <constraint firstItem="cKJ-Xo-QXe" firstAttribute="trailing" secondItem="5SK-ZO-3aW" secondAttribute="trailing" constant="45" id="JkY-Vc-k1X"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="height" secondItem="9nL-jQ-eI0" secondAttribute="height" multiplier="241:812" id="Pmk-lO-QwF"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="top" secondItem="9nL-jQ-eI0" secondAttribute="top" id="Shd-44-uqf"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="trailing" secondItem="cKJ-Xo-QXe" secondAttribute="trailing" id="aHu-49-REo"/>
+                            <constraint firstItem="Rms-t8-B8M" firstAttribute="leading" secondItem="cKJ-Xo-QXe" secondAttribute="leading" id="avg-Mn-8UD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cKJ-Xo-QXe"/>
                     </view>
+                    <connections>
+                        <outlet property="imProfile" destination="5SK-ZO-3aW" id="REZ-L3-GEQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDc-hU-3d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
