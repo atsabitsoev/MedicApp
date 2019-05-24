@@ -45,6 +45,7 @@
 		ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE2761229430AE00E3126E /* PenPalImageCell.swift */; };
 		ACCE276422943DFB00E3126E /* Вход.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE276322943DFB00E3126E /* Вход.png */; };
 		ACD3BAC12297C861002882D7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BAC02297C861002882D7 /* Colors.swift */; };
+		ACD3BAC42297ECFE002882D7 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BAC32297ECFE002882D7 /* ProfileHeaderView.swift */; };
 		ACD64734228AF11C0091257E /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64733228AF11C0091257E /* Gradient.swift */; };
 		ACD64736228B016C0091257E /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64735228B016C0091257E /* EnterView.swift */; };
 		ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */; };
@@ -112,6 +113,7 @@
 		ACCE2761229430AE00E3126E /* PenPalImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenPalImageCell.swift; sourceTree = "<group>"; };
 		ACCE276322943DFB00E3126E /* Вход.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Вход.png"; sourceTree = "<group>"; };
 		ACD3BAC02297C861002882D7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ACD3BAC32297ECFE002882D7 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		ACD64733228AF11C0091257E /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		ACD64735228B016C0091257E /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterView.swift; path = MedicApp/GlobalEntities/EnterView.swift; sourceTree = SOURCE_ROOT; };
 		ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesTableVIew.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6B9179229536850079CF1F /* ProfileVC.swift */,
+				ACD3BAC22297ECE9002882D7 /* Entities */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -341,6 +344,14 @@
 				ACCE2761229430AE00E3126E /* PenPalImageCell.swift */,
 			);
 			path = ChatCells;
+			sourceTree = "<group>";
+		};
+		ACD3BAC22297ECE9002882D7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ACD3BAC32297ECFE002882D7 /* ProfileHeaderView.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		ACD64732228AF1090091257E /* GlobalEntities */ = {
@@ -653,6 +664,7 @@
 				ACE43F2F228EDFCC007BCBC0 /* ViewPlay.swift in Sources */,
 				AC6B918322953E380079CF1F /* ChatService.swift in Sources */,
 				AC7BF2C52296E88F0007AE31 /* Record.swift in Sources */,
+				ACD3BAC42297ECFE002882D7 /* ProfileHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
