@@ -56,11 +56,13 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row <= masTextFieldTitles.count {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTextFieldCell") as! ProfileTextFieldCell
+            cell.labTitle.text = masTextFieldTitles[indexPath.row - 1]
             return cell
             
         } else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSelectCell") as! ProfileSelectCell
+            cell.labTitle.text = masChooseTitles[indexPath.row - masTextFieldTitles.count - 1]
             return cell
             
         }

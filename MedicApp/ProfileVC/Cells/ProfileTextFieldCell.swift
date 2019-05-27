@@ -9,7 +9,12 @@
 import UIKit
 
 class ProfileTextFieldCell: UITableViewCell {
-
+    
+    
+    
+    @IBOutlet weak var labTitle: UILabel!
+    @IBOutlet weak var tfMain: ViewRoundedBorders!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -71,6 +71,10 @@
                                                 <constraint firstItem="nYL-SJ-Iyb" firstAttribute="width" secondItem="dWc-vb-Kff" secondAttribute="width" multiplier="237:420" id="vM5-re-ddq"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labTitle" destination="c9b-yy-I2m" id="Nn8-MV-rjI"/>
+                                            <outlet property="tfMain" destination="nYL-SJ-Iyb" id="WV2-8p-rgX"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileSelectCell" rowHeight="124" id="72R-yY-DbZ" customClass="ProfileSelectCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="83" width="414" height="124"/>
@@ -164,6 +168,9 @@
                                                 <constraint firstItem="c6a-Oe-tw5" firstAttribute="top" secondItem="jxv-Or-TT5" secondAttribute="top" constant="9" id="gDP-c4-kpu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labTitle" destination="c6a-Oe-tw5" id="WkX-WV-3Zf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

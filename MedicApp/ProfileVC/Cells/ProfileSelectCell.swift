@@ -9,6 +9,10 @@
 import UIKit
 
 class ProfileSelectCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var labTitle: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
