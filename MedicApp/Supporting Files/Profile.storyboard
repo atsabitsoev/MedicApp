@@ -170,6 +170,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labTitle" destination="c6a-Oe-tw5" id="WkX-WV-3Zf"/>
+                                            <outlet property="viewCheck0" destination="Le4-UE-Cqm" id="5NJ-L3-YiL"/>
+                                            <outlet property="viewCheck1" destination="g55-bY-TSM" id="mhG-hz-G2p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -247,7 +249,7 @@
                     <connections>
                         <outlet property="constrTableViewTop" destination="Iag-sb-1aG" id="hRB-Xj-Y2c"/>
                         <outlet property="imProfile" destination="5SK-ZO-3aW" id="REZ-L3-GEQ"/>
-                        <outlet property="tableView" destination="fqX-oV-bQs" id="hwg-dZ-bd9"/>
+                        <outlet property="tableView" destination="fqX-oV-bQs" id="mHH-8H-oIv"/>
                         <outlet property="viewHeader" destination="Rms-t8-B8M" id="7JN-rt-geY"/>
                     </connections>
                 </viewController>

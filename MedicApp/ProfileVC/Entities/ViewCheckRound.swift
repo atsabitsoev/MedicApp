@@ -5,11 +5,14 @@ class ViewCheckRound: UIView {
     
     
     @IBInspectable var color: UIColor = #colorLiteral(red: 0.337254902, green: 0.7529411765, blue: 0.9921568627, alpha: 1)
-    @IBInspectable var isActive: Bool = false {
-        didSet {
-            setNeedsDisplay()
-        }
+    
+    var inPath: IndexPath?
+    private func post() {
+        print(inPath!)
+        NotificationCenter.default.post(name: NSNotification.Name("\(inPath!) changedValue"), object: nil)
     }
+    private var firstLoad = true
+    @IBInspectable var isActive: Bool = false
     
     private var recognizerAdded = false
     
@@ -69,7 +72,12 @@ class ViewCheckRound: UIView {
     }
     
     @objc private func turnOnOff() {
-        isActive = !isActive
+        if !firstLoad {
+            setNeedsDisplay()
+            post()
+        } else {
+            firstLoad = false
+        }
     }
     
     

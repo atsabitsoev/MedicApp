@@ -63,6 +63,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSelectCell") as! ProfileSelectCell
             cell.labTitle.text = masChooseTitles[indexPath.row - masTextFieldTitles.count - 1]
+            cell.set(indexPath)
             return cell
             
         }
