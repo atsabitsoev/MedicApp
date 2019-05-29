@@ -35,9 +35,6 @@ class ViewCheckRound: UIView {
         if isActive {
             drawFilledCircle()
         }
-        if !recognizerAdded {
-            addRecognizer()
-        }
     }
     
     
@@ -64,14 +61,7 @@ class ViewCheckRound: UIView {
         circle.fill()
     }
     
-    private func addRecognizer() {
-        
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(turnOnOff))
-        addGestureRecognizer(recognizer)
-        recognizerAdded = true
-    }
-    
-    @objc private func turnOnOff() {
+    @objc func turnOnOff() {
         if !firstLoad {
             setNeedsDisplay()
             post()

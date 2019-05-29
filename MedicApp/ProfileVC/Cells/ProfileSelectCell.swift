@@ -42,7 +42,7 @@ class ProfileSelectCell: UITableViewCell {
     }
     
     
-    @objc private func changeCheck() {
+    @objc func changeCheck() {
         
         viewCheck0.isActive = !viewCheck0.isActive
         viewCheck1.isActive = !viewCheck1.isActive
