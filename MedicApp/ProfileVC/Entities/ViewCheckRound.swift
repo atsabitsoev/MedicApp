@@ -62,12 +62,9 @@ class ViewCheckRound: UIView {
     }
     
     @objc func turnOnOff() {
-        if !firstLoad {
+        
             setNeedsDisplay()
             post()
-        } else {
-            firstLoad = false
-        }
     }
     
     

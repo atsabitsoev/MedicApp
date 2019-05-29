@@ -29,6 +29,7 @@
 		AC7F4CAB227CAEF0002A42AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */; };
 		AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */; };
 		AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */; };
+		ACB543F3229E672200CC2FBA /* MyProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */; };
 		ACC41D292292D2DF0042B200 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC41D282292D2DF0042B200 /* Chat.storyboard */; };
 		ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2C2292D35B0042B200 /* ChatVC.swift */; };
 		ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */; };
@@ -102,6 +103,7 @@
 		AC7F4CAC227CAEF0002A42AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveGradientView.swift; sourceTree = "<group>"; };
 		AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUnderTextFields.swift; sourceTree = "<group>"; };
+		ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableView.swift; sourceTree = "<group>"; };
 		ACC41D282292D2DF0042B200 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		ACC41D2C2292D35B0042B200 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderVIew.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6B9179229536850079CF1F /* ProfileVC.swift */,
+				ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */,
 				ACD3BAC72298220E002882D7 /* ProfileTableView.swift */,
 				ACD3BACF2298324F002882D7 /* Cells */,
 				ACD3BAC22297ECE9002882D7 /* Entities */,
@@ -646,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6B9174229534B30079CF1F /* MainTabBarController.swift in Sources */,
+				ACB543F3229E672200CC2FBA /* MyProfileTableView.swift in Sources */,
 				ACCE27502294168A00E3126E /* ChatTableviewDelegate.swift in Sources */,
 				ACC41D362292EAED0042B200 /* ChatTFDelegate.swift in Sources */,
 				ACC41D322292D8C10042B200 /* SimpleGradientView.swift in Sources */,

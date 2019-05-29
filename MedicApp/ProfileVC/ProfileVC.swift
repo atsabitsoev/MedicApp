@@ -28,8 +28,6 @@ class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addRecognizer()
     }
     
     override func viewWillLayoutSubviews() {
@@ -48,20 +46,6 @@ class ProfileVC: UIViewController {
     private func setTableViewTop() {
         
         constrTableViewTop.constant = -viewHeader.bounds.height * 0.375
-    }
-    
-    private func addRecognizer() {
-        
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(turnOnOff(_:)))
-        tableView.addGestureRecognizer(recognizer)
-    }
-    
-    
-    @objc func turnOnOff(_ recognizer: UITapGestureRecognizer) {
-        
-        guard let cell = tableView.cellForRow(at: tableView.indexPathForRow(at: recognizer.location(in: tableView))!) as? ProfileSelectCell else { return }
-        
-        cell.viewCheck0.turnOnOff()
     }
     
 }
