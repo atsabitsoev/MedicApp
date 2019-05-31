@@ -13,12 +13,15 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     
     @IBOutlet weak var viewUnderButChooseDate: ViewUnderTextFields!
     @IBOutlet weak var butChooseDate: UIButton!
+    @IBOutlet weak var butRecord: ButtonGradient!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var viewUnderButRecord: ViewUnderTextFields!
     
     @IBOutlet weak var tfLastName: UITextField!
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfFathersName: UITextField!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     var selectedIndexPath: IndexPath?
@@ -42,7 +45,8 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
                         date: nil)
         collectionView.alpha = 0
         
-        
+        self.scrollView.delaysContentTouches = false
+
     }
     
     
@@ -61,7 +65,6 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         
         self.tabBarController!.tabBar.isUserInteractionEnabled = false
     }
-    
     
     private func setTfDelegates() {
         
@@ -91,6 +94,61 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         
         UIView.animate(withDuration: 0.3) {
             self.collectionView.alpha = 1
+        }
+    }
+    
+    
+    
+    
+    @IBAction func butChooseDateTouchDown(_ sender: UIButton) {
+        butChooseDateTouchDown()
+    }
+    @IBAction func butChooseDateTouchUpInside(_ sender: UIButton) {
+        butChooseDateTouchUp()
+    }
+    @IBAction func butChooseDateTouchUpOutside(_ sender: UIButton) {
+        butChooseDateTouchUp()
+    }
+    
+    private func butChooseDateTouchDown() {
+        UIView.animate(withDuration: 0.1) {
+            self.viewUnderButChooseDate.shadowView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.butChooseDate.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }
+    }
+    
+    private func butChooseDateTouchUp() {
+        UIView.animate(withDuration: 0.1) {
+            self.viewUnderButChooseDate.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.butChooseDate.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
+    
+    
+    @IBAction func butRecordTouchDown(_ sender: UIButton) {
+        butRecordTouchDown()
+    }
+    
+    @IBAction func butRecordTouchUpInside(_ sender: UIButton) {
+        butRecordTouchUp()
+    }
+    
+    @IBAction func butRecordTouchUpOutside(_ sender: UIButton) {
+        butRecordTouchUp()
+    }
+    
+    private func butRecordTouchDown() {
+        UIView.animate(withDuration: 0.1) {
+            self.butRecord.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.viewUnderButRecord.shadowView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }
+    }
+    
+    private func butRecordTouchUp() {
+        UIView.animate(withDuration: 0.1) {
+            self.butRecord.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.viewUnderButRecord.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
     }
     

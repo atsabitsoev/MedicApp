@@ -92,6 +92,9 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="butChooseDateTapped:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="8vh-u9-WSy"/>
+                                                            <action selector="butChooseDateTouchDown:" destination="qWw-wQ-jbq" eventType="touchDown" id="GkL-Ou-8g9"/>
+                                                            <action selector="butChooseDateTouchUpInside:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="7nH-hx-4rJ"/>
+                                                            <action selector="butChooseDateTouchUpOutside:" destination="qWw-wQ-jbq" eventType="touchUpOutside" id="T9h-WB-zZT"/>
                                                             <segue destination="xGG-Vh-87Y" kind="modal" identifier="CalendarSegue" id="3xS-bp-k6p"/>
                                                         </connections>
                                                     </button>
@@ -147,6 +150,9 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="butRecordTapped:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="EIK-NF-8fb"/>
+                                                    <action selector="butRecordTouchDown:" destination="qWw-wQ-jbq" eventType="touchDown" id="ra2-ZJ-aaE"/>
+                                                    <action selector="butRecordTouchUpInside:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="aCX-WB-sjw"/>
+                                                    <action selector="butRecordTouchUpOutside:" destination="qWw-wQ-jbq" eventType="touchUpOutside" id="x0a-hA-WES"/>
                                                 </connections>
                                             </button>
                                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kvo-nd-cnj">
@@ -277,11 +283,14 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="butChooseDate" destination="enw-N7-XNi" id="2V0-dp-etc"/>
+                        <outlet property="butRecord" destination="r8b-qT-J72" id="TTp-DW-7EF"/>
                         <outlet property="collectionView" destination="Kvo-nd-cnj" id="Gdl-I4-L81"/>
+                        <outlet property="scrollView" destination="0ZL-9c-tmF" id="VUu-9k-3d5"/>
                         <outlet property="tfFathersName" destination="beC-zx-WdV" id="Gq4-fu-G1c"/>
                         <outlet property="tfLastName" destination="Yfs-SA-OhN" id="SMh-Fy-i1L"/>
                         <outlet property="tfName" destination="Pze-Op-psA" id="cB5-OH-GEg"/>
                         <outlet property="viewUnderButChooseDate" destination="1qE-er-vf6" id="h5S-V1-j9z"/>
+                        <outlet property="viewUnderButRecord" destination="6lM-Tf-2Gx" id="g9v-QG-FmD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSf-wo-V5y" userLabel="First Responder" sceneMemberID="firstResponder"/>

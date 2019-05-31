@@ -151,17 +151,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OH-r2-OeL" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="-150" y="609.33333333333337" width="267.66666666666669" height="65.333333333333371"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nu-jU-EIO">
-                                        <rect key="frame" x="150" y="21.666666666666629" width="117.66666666666669" height="21.666666666666671"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2W-me-5f4">
+                                        <rect key="frame" x="150" y="0.0" width="117.66666666666669" height="65.333333333333329"/>
                                         <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="18"/>
-                                        <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Вход">
+                                            <color key="titleColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="butEnterTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="GAt-rc-nLm"/>
+                                            <action selector="butEnterTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMA-OW-Osu"/>
+                                            <action selector="butEnterTouchUpOutside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JvE-YH-IYv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="8nu-jU-EIO" secondAttribute="trailing" id="760-QU-beg"/>
-                                    <constraint firstItem="8nu-jU-EIO" firstAttribute="centerY" secondItem="1OH-r2-OeL" secondAttribute="centerY" id="l1Y-vF-vhs"/>
+                                    <constraint firstAttribute="trailing" secondItem="O2W-me-5f4" secondAttribute="trailing" id="0el-pV-D7m"/>
+                                    <constraint firstAttribute="bottom" secondItem="O2W-me-5f4" secondAttribute="bottom" id="IBO-Oc-wkR"/>
+                                    <constraint firstItem="O2W-me-5f4" firstAttribute="top" secondItem="1OH-r2-OeL" secondAttribute="top" id="pEK-qf-q6f"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -178,12 +185,18 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="butGoTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="rme-fF-S1B"/>
+                                    <action selector="butGoTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="km3-gv-dUa"/>
+                                    <action selector="butGoTouchUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="5RJ-vO-4zA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O3S-hs-RGc" secondAttribute="trailing" constant="70" id="1ti-Mo-rxg"/>
                             <constraint firstItem="1OH-r2-OeL" firstAttribute="width" secondItem="O3S-hs-RGc" secondAttribute="width" multiplier="1:1.7" id="2el-ue-yRc"/>
+                            <constraint firstItem="O2W-me-5f4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4I4-GJ-ak5"/>
                             <constraint firstItem="xL1-8U-AQQ" firstAttribute="top" secondItem="Tb8-oQ-P2u" secondAttribute="bottom" constant="-50" id="5LW-aO-qs8"/>
                             <constraint firstItem="1OH-r2-OeL" firstAttribute="leading" secondItem="O3S-hs-RGc" secondAttribute="leading" id="6Y5-SF-Yfb"/>
                             <constraint firstItem="uJf-2Z-hnS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:1.15" id="AGD-hi-6yc"/>
@@ -205,7 +218,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="CRE-9T-dAP" secondAttribute="leading" constant="-16" id="iDZ-bJ-3nc"/>
                             <constraint firstItem="wT4-Em-WSZ" firstAttribute="centerY" secondItem="O3S-hs-RGc" secondAttribute="centerY" id="m31-Cu-bOF"/>
                             <constraint firstItem="wT4-Em-WSZ" firstAttribute="height" secondItem="O3S-hs-RGc" secondAttribute="height" multiplier="65:265" id="n3O-tR-At3"/>
-                            <constraint firstItem="8nu-jU-EIO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oWQ-dx-xpe"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rsV-5e-K1r"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3.4" id="tpE-IV-kDl"/>
                             <constraint firstAttribute="bottom" secondItem="0Vg-se-tgt" secondAttribute="bottom" id="u0V-dN-cDL"/>
@@ -219,6 +231,7 @@
                     </view>
                     <connections>
                         <outlet property="butGo" destination="wT4-Em-WSZ" id="f8Z-6L-5SY"/>
+                        <outlet property="viewUnderButEnter" destination="1OH-r2-OeL" id="cc5-UQ-j27"/>
                         <outlet property="viewUnderTextFields" destination="O3S-hs-RGc" id="MSG-Qg-G6j"/>
                         <outletCollection property="viewWaveBottomMas" destination="0Vg-se-tgt" collectionClass="NSMutableArray" id="fXq-s1-ga9"/>
                         <outletCollection property="viewWaveBottomMas" destination="sDQ-s8-0kt" collectionClass="NSMutableArray" id="zPB-6a-Bhs"/>
@@ -357,21 +370,33 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="butGoTouchDown:" destination="KFu-kE-94v" eventType="touchDown" id="WJE-vV-t91"/>
+                                    <action selector="butGoTouchUpInside:" destination="KFu-kE-94v" eventType="touchUpInside" id="F4f-gE-ekJ"/>
+                                    <action selector="butGoTouchUpOutside:" destination="KFu-kE-94v" eventType="touchUpOutside" id="ckx-D1-CRA"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gH-yJ-leL" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="207.33333333333334" y="152" width="267.66666666666663" height="66.666666666666686"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xe-Sd-ZIo">
-                                        <rect key="frame" x="0.0" y="22.666666666666657" width="167.66666666666666" height="21.666666666666671"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-ER-OO8">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="66.666666666666671"/>
                                         <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="18"/>
-                                        <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Регистрация">
+                                            <color key="titleColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="butRegistrationTouchDown:" destination="KFu-kE-94v" eventType="touchDown" id="qRI-NT-8Gt"/>
+                                            <action selector="butRegistrationTouchUpInside:" destination="KFu-kE-94v" eventType="touchUpInside" id="IC6-Wa-b8G"/>
+                                            <action selector="butRegistrationTouchUpOutside:" destination="KFu-kE-94v" eventType="touchUpOutside" id="FVW-jl-TwV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="0Xe-Sd-ZIo" firstAttribute="centerY" secondItem="4gH-yJ-leL" secondAttribute="centerY" id="g5H-n9-sry"/>
-                                    <constraint firstItem="0Xe-Sd-ZIo" firstAttribute="leading" secondItem="4gH-yJ-leL" secondAttribute="leading" id="lMg-fk-TFe"/>
+                                    <constraint firstItem="Xsw-ER-OO8" firstAttribute="leading" secondItem="4gH-yJ-leL" secondAttribute="leading" id="5S1-d5-2ca"/>
+                                    <constraint firstItem="Xsw-ER-OO8" firstAttribute="top" secondItem="4gH-yJ-leL" secondAttribute="top" id="Nut-7F-wgk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xsw-ER-OO8" secondAttribute="bottom" id="fiK-wG-QUt"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -412,7 +437,7 @@
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="gIY-xt-SV4" secondAttribute="trailing" id="rcl-HP-7K4"/>
                             <constraint firstItem="nNF-cu-YmV" firstAttribute="top" secondItem="3dn-Fb-SlW" secondAttribute="top" id="txW-uE-3S9"/>
                             <constraint firstItem="4gH-yJ-leL" firstAttribute="height" secondItem="4jy-jQ-0Yv" secondAttribute="height" multiplier="1:3.5" id="uYC-0o-gkt"/>
-                            <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="0Xe-Sd-ZIo" secondAttribute="trailing" id="xjM-w7-Qnp"/>
+                            <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="Xsw-ER-OO8" secondAttribute="trailing" id="vIW-mw-H9N"/>
                             <constraint firstItem="13A-Xl-wg9" firstAttribute="top" secondItem="3dn-Fb-SlW" secondAttribute="top" id="xoS-oG-Bnb"/>
                             <constraint firstItem="nNF-cu-YmV" firstAttribute="width" secondItem="3dn-Fb-SlW" secondAttribute="width" multiplier="1:1.1" id="yTC-zG-CLb"/>
                         </constraints>
@@ -420,6 +445,7 @@
                     </view>
                     <connections>
                         <outlet property="butGo" destination="BgO-ur-dTC" id="kpf-QL-pBj"/>
+                        <outlet property="viewUnderButRegistration" destination="4gH-yJ-leL" id="b5m-md-hXq"/>
                         <outlet property="viewUnderTextFields" destination="4jy-jQ-0Yv" id="YuK-6R-Zv8"/>
                         <outletCollection property="viewWaveBottomMas" destination="KvT-6N-oAU" collectionClass="NSMutableArray" id="SSf-qL-LAT"/>
                         <outletCollection property="viewWaveBottomMas" destination="gIY-xt-SV4" collectionClass="NSMutableArray" id="OyP-2X-F58"/>
