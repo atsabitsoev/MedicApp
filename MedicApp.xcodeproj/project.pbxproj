@@ -33,6 +33,8 @@
 		ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95022A525A2008DEFCB /* EnterService.swift */; };
 		ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95222A5271F008DEFCB /* ApiInfo.swift */; };
 		ACBCC95922A548AB008DEFCB /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95822A548AB008DEFCB /* TokenService.swift */; };
+		ACBCC95B22A562F3008DEFCB /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95A22A562F3008DEFCB /* RegistrationService.swift */; };
+		ACBCC96022A56C3A008DEFCB /* TypeCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95F22A56C3A008DEFCB /* TypeCodeVC.swift */; };
 		ACC41D292292D2DF0042B200 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC41D282292D2DF0042B200 /* Chat.storyboard */; };
 		ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2C2292D35B0042B200 /* ChatVC.swift */; };
 		ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */; };
@@ -110,6 +112,8 @@
 		ACBCC95022A525A2008DEFCB /* EnterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterService.swift; path = MedicApp/GlobalEntities/EnterService.swift; sourceTree = SOURCE_ROOT; };
 		ACBCC95222A5271F008DEFCB /* ApiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiInfo.swift; sourceTree = "<group>"; };
 		ACBCC95822A548AB008DEFCB /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
+		ACBCC95A22A562F3008DEFCB /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationService.swift; path = MedicApp/GlobalServices/API/RegistrationService.swift; sourceTree = SOURCE_ROOT; };
+		ACBCC95F22A56C3A008DEFCB /* TypeCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCodeVC.swift; sourceTree = "<group>"; };
 		ACC41D282292D2DF0042B200 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		ACC41D2C2292D35B0042B200 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderVIew.swift; sourceTree = "<group>"; };
@@ -323,6 +327,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		ACBCC95C22A56C15008DEFCB /* TypeCodeVC */ = {
+			isa = PBXGroup;
+			children = (
+				ACBCC95F22A56C3A008DEFCB /* TypeCodeVC.swift */,
+			);
+			path = TypeCodeVC;
+			sourceTree = "<group>";
+		};
 		ACC41D2A2292D3360042B200 /* ChatVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +483,7 @@
 				ACF76AE1227CD3E100FE7648 /* Servicies */,
 				ACF76ADE227CD3AB00FE7648 /* RegistrationVC */,
 				ACF76ADF227CD3B500FE7648 /* EnterVC */,
+				ACBCC95C22A56C15008DEFCB /* TypeCodeVC */,
 			);
 			path = "Registration+Enter";
 			sourceTree = "<group>";
@@ -504,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				ACBCC95022A525A2008DEFCB /* EnterService.swift */,
+				ACBCC95A22A562F3008DEFCB /* RegistrationService.swift */,
 			);
 			path = Servicies;
 			sourceTree = "<group>";
@@ -688,6 +702,7 @@
 				AC6B919A229584CE0079CF1F /* ChatImageVC.swift in Sources */,
 				ACD3BAC622981D83002882D7 /* ViewRoundedBorders.swift in Sources */,
 				ACCE27602294309E00E3126E /* UserImageCell.swift in Sources */,
+				ACBCC95B22A562F3008DEFCB /* RegistrationService.swift in Sources */,
 				ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */,
 				AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */,
 				ACE43F39228EED8C007BCBC0 /* ViewGradientHeader.swift in Sources */,
@@ -711,6 +726,7 @@
 				ACFC9B8D228DAE33009F5798 /* ExcercisesVC.swift in Sources */,
 				AC6B918022953BC20079CF1F /* OpeningChatVC.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
+				ACBCC96022A56C3A008DEFCB /* TypeCodeVC.swift in Sources */,
 				AC6B91972295759D0079CF1F /* MessageHistoryService.swift in Sources */,
 				ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */,
 				AC7BF2C12296A29D0007AE31 /* CalendarVC.swift in Sources */,
