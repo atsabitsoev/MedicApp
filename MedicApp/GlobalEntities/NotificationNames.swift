@@ -17,4 +17,7 @@ enum NotificationNames: String {
     
     case calendarOpened = "CalendarOpened"
     case calendarClosed = "CalendarClosed"
+    
+    
+    case enterRequestAnswered = "enterRequestAnswered"
 }

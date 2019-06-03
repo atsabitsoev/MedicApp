@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="26N-m6-lpr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KFu-kE-94v">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,6 +12,9 @@
     <customFonts key="customFonts">
         <array key="SF-Compact-Rounded-Medium.otf">
             <string>SFCompactRounded-Medium</string>
+        </array>
+        <array key="SF-Compact-Rounded-Regular.otf">
+            <string>SFCompactRounded-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -306,13 +309,13 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Телефон или E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bHG-a5-Hfi">
                                                 <rect key="frame" x="0.0" y="0.0" width="205" height="77.333333333333329"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJU-qK-OWa">
                                                 <rect key="frame" x="0.0" y="117.33333333333331" width="205" height="77.333333333333314"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -405,6 +408,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nsp-ax-1Zn">
+                                <rect key="frame" x="269.66666666666669" y="420.66666666666669" width="70.666666666666686" height="70.666666666666686"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -423,19 +429,23 @@
                             <constraint firstItem="4gH-yJ-leL" firstAttribute="width" secondItem="4jy-jQ-0Yv" secondAttribute="width" multiplier="1:1.7" id="QSA-xD-LE8"/>
                             <constraint firstAttribute="trailing" secondItem="4gH-yJ-leL" secondAttribute="trailing" constant="-100" id="Qof-mi-uHs"/>
                             <constraint firstItem="KvT-6N-oAU" firstAttribute="height" secondItem="13A-Xl-wg9" secondAttribute="height" id="RUe-eT-Sn8"/>
+                            <constraint firstItem="nsp-ax-1Zn" firstAttribute="bottom" secondItem="BgO-ur-dTC" secondAttribute="bottom" id="RdO-67-LYJ"/>
                             <constraint firstItem="13A-Xl-wg9" firstAttribute="height" secondItem="3dn-Fb-SlW" secondAttribute="height" multiplier="1:3.7" id="WUE-6M-mYc"/>
                             <constraint firstItem="q3b-d0-mQP" firstAttribute="leading" secondItem="HDI-1H-ij4" secondAttribute="leading" constant="50" id="aZj-ua-vCd"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="leading" secondItem="3Jc-dE-mF7" secondAttribute="leading" constant="-16" id="bjW-on-mm2"/>
                             <constraint firstItem="gIY-xt-SV4" firstAttribute="height" secondItem="nNF-cu-YmV" secondAttribute="height" id="cXH-QN-SqU"/>
                             <constraint firstItem="KvT-6N-oAU" firstAttribute="width" secondItem="13A-Xl-wg9" secondAttribute="width" id="cw7-6d-jVT"/>
+                            <constraint firstItem="nsp-ax-1Zn" firstAttribute="trailing" secondItem="BgO-ur-dTC" secondAttribute="trailing" id="duU-Tx-fBD"/>
                             <constraint firstItem="BgO-ur-dTC" firstAttribute="centerY" secondItem="4jy-jQ-0Yv" secondAttribute="centerY" id="eMW-Qu-qNu"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="KvT-6N-oAU" secondAttribute="trailing" id="ePd-Gu-EQU"/>
                             <constraint firstAttribute="bottom" secondItem="gIY-xt-SV4" secondAttribute="bottom" id="fDY-nf-3sr"/>
+                            <constraint firstItem="nsp-ax-1Zn" firstAttribute="leading" secondItem="BgO-ur-dTC" secondAttribute="leading" id="fkc-gg-lTY"/>
                             <constraint firstItem="B30-ba-azH" firstAttribute="centerX" secondItem="3dn-Fb-SlW" secondAttribute="centerX" id="gBs-qt-QUO"/>
                             <constraint firstItem="13A-Xl-wg9" firstAttribute="width" secondItem="3dn-Fb-SlW" secondAttribute="width" multiplier="1:1.15" id="jnF-Yp-vy6"/>
                             <constraint firstItem="B30-ba-azH" firstAttribute="top" secondItem="nNF-cu-YmV" secondAttribute="bottom" id="lfV-dX-ddW"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="gIY-xt-SV4" secondAttribute="trailing" id="rcl-HP-7K4"/>
                             <constraint firstItem="nNF-cu-YmV" firstAttribute="top" secondItem="3dn-Fb-SlW" secondAttribute="top" id="txW-uE-3S9"/>
+                            <constraint firstItem="nsp-ax-1Zn" firstAttribute="top" secondItem="BgO-ur-dTC" secondAttribute="top" id="uGh-Ug-cTQ"/>
                             <constraint firstItem="4gH-yJ-leL" firstAttribute="height" secondItem="4jy-jQ-0Yv" secondAttribute="height" multiplier="1:3.5" id="uYC-0o-gkt"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="Xsw-ER-OO8" secondAttribute="trailing" id="vIW-mw-H9N"/>
                             <constraint firstItem="13A-Xl-wg9" firstAttribute="top" secondItem="3dn-Fb-SlW" secondAttribute="top" id="xoS-oG-Bnb"/>
@@ -444,7 +454,10 @@
                         <viewLayoutGuide key="safeArea" id="HDI-1H-ij4"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="nsp-ax-1Zn" id="tsn-JT-Tmb"/>
                         <outlet property="butGo" destination="BgO-ur-dTC" id="kpf-QL-pBj"/>
+                        <outlet property="tfLogin" destination="bHG-a5-Hfi" id="dHF-3e-3oW"/>
+                        <outlet property="tfPassword" destination="vJU-qK-OWa" id="tzq-kp-u5f"/>
                         <outlet property="viewUnderButRegistration" destination="4gH-yJ-leL" id="b5m-md-hXq"/>
                         <outlet property="viewUnderTextFields" destination="4jy-jQ-0Yv" id="YuK-6R-Zv8"/>
                         <outletCollection property="viewWaveBottomMas" destination="KvT-6N-oAU" collectionClass="NSMutableArray" id="SSf-qL-LAT"/>

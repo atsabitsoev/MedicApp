@@ -30,6 +30,9 @@
 		AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */; };
 		AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */; };
 		ACB543F3229E672200CC2FBA /* MyProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */; };
+		ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95022A525A2008DEFCB /* EnterService.swift */; };
+		ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95222A5271F008DEFCB /* ApiInfo.swift */; };
+		ACBCC95922A548AB008DEFCB /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95822A548AB008DEFCB /* TokenService.swift */; };
 		ACC41D292292D2DF0042B200 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC41D282292D2DF0042B200 /* Chat.storyboard */; };
 		ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2C2292D35B0042B200 /* ChatVC.swift */; };
 		ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */; };
@@ -104,6 +107,9 @@
 		AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveGradientView.swift; sourceTree = "<group>"; };
 		AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUnderTextFields.swift; sourceTree = "<group>"; };
 		ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableView.swift; sourceTree = "<group>"; };
+		ACBCC95022A525A2008DEFCB /* EnterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterService.swift; path = MedicApp/GlobalEntities/EnterService.swift; sourceTree = SOURCE_ROOT; };
+		ACBCC95222A5271F008DEFCB /* ApiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiInfo.swift; sourceTree = "<group>"; };
+		ACBCC95822A548AB008DEFCB /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		ACC41D282292D2DF0042B200 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		ACC41D2C2292D35B0042B200 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderVIew.swift; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6B91922295744A0079CF1F /* NotificationManager.swift */,
+				ACBCC95722A5489C008DEFCB /* API */,
 			);
 			path = GlobalServices;
 			sourceTree = "<group>";
@@ -298,6 +305,22 @@
 				ACF76AD0227CCE7D00FE7648 /* SF-Compact-Rounded-Ultralight.otf */,
 			);
 			path = "Шрифты";
+			sourceTree = "<group>";
+		};
+		ACBCC95422A54610008DEFCB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ACBCC95222A5271F008DEFCB /* ApiInfo.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ACBCC95722A5489C008DEFCB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ACBCC95822A548AB008DEFCB /* TokenService.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		ACC41D2A2292D3360042B200 /* ChatVC */ = {
@@ -389,6 +412,7 @@
 				AC6B917F22953BC20079CF1F /* OpeningChatVC.swift */,
 				AC6B91942295747A0079CF1F /* NotificationNames.swift */,
 				ACD3BAC02297C861002882D7 /* Colors.swift */,
+				ACBCC95422A54610008DEFCB /* API */,
 			);
 			path = GlobalEntities;
 			sourceTree = "<group>";
@@ -479,6 +503,7 @@
 		ACF76AE1227CD3E100FE7648 /* Servicies */ = {
 			isa = PBXGroup;
 			children = (
+				ACBCC95022A525A2008DEFCB /* EnterService.swift */,
 			);
 			path = Servicies;
 			sourceTree = "<group>";
@@ -614,6 +639,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MedicApp/Pods-MedicApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CVCalendar/CVCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -627,6 +653,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CVCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -670,6 +697,7 @@
 				ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */,
 				ACD3BACE2298324A002882D7 /* ProfileSelectCell.swift in Sources */,
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
+				ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */,
 				ACD3BACC22983229002882D7 /* ProfileTextFieldCell.swift in Sources */,
 				AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */,
 				AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */,
@@ -684,11 +712,13 @@
 				AC6B918022953BC20079CF1F /* OpeningChatVC.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
 				AC6B91972295759D0079CF1F /* MessageHistoryService.swift in Sources */,
+				ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */,
 				AC7BF2C12296A29D0007AE31 /* CalendarVC.swift in Sources */,
 				ACD3BAC12297C861002882D7 /* Colors.swift in Sources */,
 				ACCE27562294245D00E3126E /* Message.swift in Sources */,
 				AC6B917A229536850079CF1F /* ProfileVC.swift in Sources */,
 				AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */,
+				ACBCC95922A548AB008DEFCB /* TokenService.swift in Sources */,
 				ACD64734228AF11C0091257E /* Gradient.swift in Sources */,
 				ACCE275A229425ED00E3126E /* MessageContentType.swift in Sources */,
 				ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */,

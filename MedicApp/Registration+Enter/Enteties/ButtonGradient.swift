@@ -31,7 +31,9 @@ class ButtonGradient: UIButton {
     override func draw(_ rect: CGRect) {
 
         if !imageSet && needImage {
-            setMyImage(bounds)
+            setMyImage()
+        } else {
+            removeImage()
         }
         
         if useShadow {
@@ -65,10 +67,10 @@ class ButtonGradient: UIButton {
         clipsToBounds = true
     }
 
-    private func setMyImage(_ rect: CGRect) {
+    func setMyImage() {
         
         let inset = bounds.width / 5
-        myImageView.frame = rect.inset(by: UIEdgeInsets(top: inset,
+        myImageView.frame = bounds.inset(by: UIEdgeInsets(top: inset,
                                                         left: inset,
                                                         bottom: inset,
                                                         right: inset))
@@ -77,5 +79,10 @@ class ButtonGradient: UIButton {
         addSubview(myImageView)
 
         imageSet = true
+    }
+    
+    func removeImage() {
+        
+        myImageView.image = UIImage()
     }
 }

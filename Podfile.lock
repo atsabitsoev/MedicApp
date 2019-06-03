@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.0.0-beta.6)
   - CVCalendar (1.6.2)
   - RxAtomic (4.4.2)
   - RxCocoa (4.4.2):
@@ -14,6 +15,7 @@ PODS:
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
   - CVCalendar
   - RxKeyboard
   - Socket.IO-Client-Swift
@@ -21,6 +23,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - CVCalendar
     - RxAtomic
     - RxCocoa
@@ -31,6 +34,7 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   CVCalendar: 515092247b9c5059855643c2a2220f259bd5417f
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
@@ -40,6 +44,6 @@ SPEC CHECKSUMS:
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: b8d5cc64ed4352554a2b84d77f33b34fb9748972
+PODFILE CHECKSUM: 2573aae5709c0218b52871b18acc795c862bde24
 
 COCOAPODS: 1.6.1

@@ -15,14 +15,85 @@ class EnterView: UIViewController {
     @IBOutlet weak var viewUnderTextFields: ViewUnderTextFields!
     @IBOutlet weak var butGo: ButtonGradient!
     @IBOutlet weak var viewUnderButRegistration: ViewUnderTextFields!
+    @IBOutlet weak var tfLogin: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
+    let enterService = EnterService.standard
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         turnViewsUpsideDown(viewWaveBottomMas)
+    }
+    
+    
+    private func addObservers() {
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(checkEnter),
+                                               name: NSNotification.Name(rawValue: NotificationNames.enterRequestAnswered.rawValue),
+                                               object: nil)
+    }
+    
+    @objc private func checkEnter() {
+        
+        stopLoadingAnimation()
+        
+        guard enterService.token != nil else {
+            showErrorAlert(message: enterService.errorString)
+            return
+        }
+        
+        openApp()
+    }
+    
+    private func openApp() {
+        
+        let storyboard = UIStoryboard(name: "Registration+Enter", bundle: nil)
+        let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+        self.present(mainTabBarController, animated: true, completion: nil)
+    }
+    
+    private func showErrorAlert(message: String?) {
+        
+        let alert = UIAlertController(title: "Ошибка", message: message ?? "Возникла неизвестная ошибка", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    private func sendEnterRequest() {
+        
+        guard let login = tfLogin.text, let password = tfPassword.text else {
+            showErrorAlert(message: "Заполните все поля")
+            return
+        }
+        
+        enterService.sendLoginRequest(login: login, password: password)
+        startLoadingAnimation()
+        
+    }
+    
+    private func startLoadingAnimation() {
+        
+        butGo.removeImage()
+        activityIndicator.startAnimating()
+        
+    }
+    
+    private func stopLoadingAnimation() {
+        
+        butGo.setMyImage()
+        activityIndicator.stopAnimating()
+        
     }
     
     
@@ -70,6 +141,7 @@ class EnterView: UIViewController {
     
     @IBAction func butGoTouchUpInside(_ sender: UIButton) {
         animateButGo(pressed: false)
+        sendEnterRequest()
     }
     
     @IBAction func butGoTouchUpOutside(_ sender: UIButton) {

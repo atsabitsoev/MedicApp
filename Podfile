@@ -10,6 +10,7 @@ target 'MedicApp' do
   pod 'Socket.IO-Client-Swift'
   pod 'SwiftyJSON'
   pod 'CVCalendar'
-
+  pod 'Alamofire', '~> 5.0.0-beta.5'
+  pod 'SwiftyJSON'
 
 end
