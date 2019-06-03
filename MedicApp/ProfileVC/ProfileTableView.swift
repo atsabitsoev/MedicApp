@@ -13,23 +13,25 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return masTextFieldTitles.count + masChooseTitles.count + 1
+        return 1 + masTextFieldTitles.count + masChooseTitles.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
         
-            return UIScreen.main.bounds.height * (241/812) * 0.375
+            return UIScreen.main.bounds.height * (280/812) * 0.375
         
         } else if indexPath.row <= masTextFieldTitles.count {
             
             return 55
             
-        } else {
+        } else if indexPath.row <= masChooseTitles.count + masTextFieldTitles.count {
             
             return 124
             
+        } else {
+            return 80
         }
     }
     
@@ -38,7 +40,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             
             let cell = UITableViewCell()
-            let headerHeight = UIScreen.main.bounds.height * (241/812) * 0.375
+            let headerHeight = UIScreen.main.bounds.height * (280/812) * 0.375
             let header = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: headerHeight))
             let label = UILabel(frame: header.bounds.inset(by: UIEdgeInsets(top: 25, left: 18, bottom: 0, right: 18)))
             
@@ -59,13 +61,17 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             cell.labTitle.text = masTextFieldTitles[indexPath.row - 1]
             return cell
             
-        } else {
+        } else if indexPath.row <= masTextFieldTitles.count + masChooseTitles.count{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSelectCell") as! ProfileSelectCell
             cell.labTitle.text = masChooseTitles[indexPath.row - masTextFieldTitles.count - 1]
             cell.set(indexPath)
             return cell
             
+        } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSaveCell")
+            return cell!
         }
         
     }

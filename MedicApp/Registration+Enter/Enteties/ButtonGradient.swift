@@ -14,6 +14,7 @@ class ButtonGradient: UIButton {
     
     @IBInspectable var color2: UIColor = Colors().orangeGradient2
     @IBInspectable var color1: UIColor = Colors().orangeGradient1
+    @IBInspectable var useShadow: Bool = true
     
     let myImageView = UIImageView()
 
@@ -32,19 +33,22 @@ class ButtonGradient: UIButton {
         if !imageSet && needImage {
             setMyImage(bounds)
         }
-        configureButNext()
         
-    }
-    
-    
-    func configureButNext() {
-        print("Рамка кнопки некст: \(bounds)")
+        if useShadow {
+            setShadow()
+        }
+        
         layer.cornerRadius = bounds.height/2
         addGradient(colors: [color1.cgColor,
                              color2.cgColor],
                     coordinatesX: [1,0],
                     coordinatesY: [0,0],
                     cornerRadius: layer.cornerRadius)
+        
+    }
+    
+    
+    func setShadow() {
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.5

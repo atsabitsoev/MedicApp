@@ -28,6 +28,8 @@ class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delaysContentTouches = false
     }
     
     override func viewWillLayoutSubviews() {

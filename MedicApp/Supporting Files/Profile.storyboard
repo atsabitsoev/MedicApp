@@ -174,6 +174,50 @@
                                             <outlet property="viewCheck1" destination="g55-bY-TSM" id="mhG-hz-G2p"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileSaveCell" rowHeight="80" id="41Q-fP-4FP" customClass="ProfileSelectCell" customModule="MedicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="207" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="41Q-fP-4FP" id="lCb-04-v8v">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sH-n1-abB" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                    <rect key="frame" x="45" y="18" width="324" height="44"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-xb-SYy" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
+                                                    <rect key="frame" x="45" y="18" width="324" height="44"/>
+                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="18"/>
+                                                    <state key="normal" title="Сохранить">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="useShadow" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="needImage" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4sH-n1-abB" firstAttribute="trailing" secondItem="PNb-xb-SYy" secondAttribute="trailing" id="8eS-HT-SwU"/>
+                                                <constraint firstItem="4sH-n1-abB" firstAttribute="top" secondItem="PNb-xb-SYy" secondAttribute="top" id="BFg-jn-32c"/>
+                                                <constraint firstItem="4sH-n1-abB" firstAttribute="bottom" secondItem="PNb-xb-SYy" secondAttribute="bottom" id="C8a-mD-ebs"/>
+                                                <constraint firstAttribute="trailing" secondItem="PNb-xb-SYy" secondAttribute="trailing" constant="45" id="Htb-2W-dJo"/>
+                                                <constraint firstItem="PNb-xb-SYy" firstAttribute="top" secondItem="lCb-04-v8v" secondAttribute="top" constant="18" id="Tug-Qa-PDQ"/>
+                                                <constraint firstItem="4sH-n1-abB" firstAttribute="leading" secondItem="PNb-xb-SYy" secondAttribute="leading" id="d5Y-nL-6qe"/>
+                                                <constraint firstItem="PNb-xb-SYy" firstAttribute="leading" secondItem="lCb-04-v8v" secondAttribute="leading" constant="45" id="pfW-Yp-nTP"/>
+                                                <constraint firstAttribute="bottom" secondItem="PNb-xb-SYy" secondAttribute="bottom" constant="18" id="sVW-Lf-dS6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="73Q-CR-pnZ" id="0KC-YP-Lvq"/>
