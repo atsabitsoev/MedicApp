@@ -19,7 +19,6 @@ class ProfileSelectCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,14 +30,22 @@ class ProfileSelectCell: UITableViewCell {
     
     func set(_ inPath: IndexPath) {
         
+        removeObservers(inPath)
+        
         viewCheck0.inPath = inPath
         viewCheck1.inPath = inPath
+        
         addObservers(inPath)
     }
     
     private func addObservers(_ inPath: IndexPath) {
         
         NotificationCenter.default.addObserver(self, selector: #selector(changeCheck), name: NSNotification.Name("\(inPath) changedValue"), object: nil)
+    }
+    
+    private func removeObservers(_ inPath: IndexPath) {
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("\(inPath) changedValue"), object: nil)
     }
     
     

@@ -15,5 +15,6 @@ class TokenService {
     static let standard = TokenService()
     
     var token: String?
+    var id: String?
     
 }

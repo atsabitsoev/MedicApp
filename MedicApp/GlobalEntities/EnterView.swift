@@ -46,7 +46,7 @@ class EnterView: UIViewController {
         
         stopLoadingAnimation()
         
-        guard enterService.token != nil else {
+        guard TokenService.standard.token != nil else {
             showErrorAlert(message: enterService.errorString)
             return
         }

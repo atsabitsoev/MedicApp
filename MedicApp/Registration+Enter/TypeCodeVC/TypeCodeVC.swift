@@ -13,6 +13,7 @@ class TypeCodeVC: UIViewController {
     
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var tfCode: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     let registrationService = RegistrationService.standard
@@ -38,11 +39,11 @@ class TypeCodeVC: UIViewController {
     }
     
     
-    //MARK: Подтверждение кода
-    
     private func sendConfirmRequest(login: String, code: String) {
         
         RegistrationService.standard.confirmLogin(login: login, code: code)
+        
+        startLoadingAnimation()
     }
     
     @objc private func confirmationRequestAnswered() {
@@ -50,10 +51,29 @@ class TypeCodeVC: UIViewController {
         let success = registrationService.confirmationCodeSucceed
         
         if success {
-            print("Регистрация прошла успешно")
+            alertSuccess()
         } else {
             tfCode.text = ""
         }
+        
+        stopLoadingAnimation()
+    }
+    
+    private func alertSuccess() {
+        
+        let alert = UIAlertController(title: "Успех!", message: "Вы успешно зарегистрированы!", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
+            timer.invalidate()
+            alert.dismiss(animated: true, completion: nil)
+            self.goToEnterVC()
+        }
+    }
+    
+    private func goToEnterVC() {
+        
+        let enterVC = UIStoryboard(name: "Registration+Enter", bundle: nil).instantiateViewController(withIdentifier: "EnterVC")
+        self.present(enterVC, animated: true, completion: nil)
     }
     
     
@@ -62,6 +82,20 @@ class TypeCodeVC: UIViewController {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(backgroundTapped))
         viewBackground.addGestureRecognizer(recognizer)
     }
+    
+    
+    private func startLoadingAnimation() {
+        
+        activityIndicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
+    }
+    
+    private func stopLoadingAnimation() {
+        
+        activityIndicator.stopAnimating()
+        self.view.isUserInteractionEnabled = true
+    }
+    
     
     @objc private func backgroundTapped() {
         
@@ -76,5 +110,7 @@ class TypeCodeVC: UIViewController {
         sendConfirmRequest(login: userLogin!, code: code)
     }
     
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 
 }

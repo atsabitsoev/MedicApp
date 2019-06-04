@@ -19,14 +19,6 @@ class EnterService {
     
     
     var errorString: String?
-    var token: String? {
-        get {
-            return TokenService.standard.token
-        }
-        set {
-            TokenService.standard.token = newValue
-        }
-    }
     
     
     func sendLoginRequest(login: String, password: String) {
@@ -47,7 +39,7 @@ class EnterService {
                     let responseValue = try response.result.get()
                     let json = JSON(responseValue)
                     
-                    self.token = json["data"]["token"].stringValue
+                    TokenService.standard.token = json["data"]["token"].stringValue
                     
                     NotificationManager.post(.enterRequestAnswered)
                     

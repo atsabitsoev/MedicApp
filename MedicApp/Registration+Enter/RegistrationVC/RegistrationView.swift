@@ -18,6 +18,7 @@ class RegistrationView: UIViewController {
     @IBOutlet weak var tfLogin: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfConfirmPassword: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     let registrationService = RegistrationService.standard
@@ -50,7 +51,7 @@ class RegistrationView: UIViewController {
     }
     
     
-    // Регистрация
+    //MARK: Регистрация
     
     private func checkCredentialsAndMakeRegistrationRequest() {
         
@@ -64,6 +65,22 @@ class RegistrationView: UIViewController {
         } else {
             showErrorAlert(message: "Пароли не совпадают")
         }
+        
+        startLoadingAnimation()
+    }
+    
+    private func startLoadingAnimation() {
+        
+        butGo.removeImage()
+        activityIndicator.startAnimating()
+        
+    }
+    
+    private func stopLoadingAnimation() {
+        
+        butGo.setMyImage()
+        activityIndicator.stopAnimating()
+        
     }
     
     private func trueCredentials() -> Bool {
@@ -81,10 +98,12 @@ class RegistrationView: UIViewController {
         } else {
             showErrorAlert(message: registrationService.errorRegistrationString)
         }
+        
+        stopLoadingAnimation()
     }
     
     
-    // Показать ошибку
+    //MARK: Показать ошибку
     
     private func showErrorAlert(message: String?) {
         

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KFu-kE-94v">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +22,7 @@
         <!--Registration View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegistrationView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="RegistrationView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,6 +165,7 @@
                                             <action selector="butEnterTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="GAt-rc-nLm"/>
                                             <action selector="butEnterTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMA-OW-Osu"/>
                                             <action selector="butEnterTouchUpOutside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JvE-YH-IYv"/>
+                                            <segue destination="KFu-kE-94v" kind="show" id="h2V-E0-zSC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -243,6 +242,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="eUY-l0-5jw" id="eZA-cI-Iqt"/>
                         <outlet property="butGo" destination="wT4-Em-WSZ" id="f8Z-6L-5SY"/>
                         <outlet property="tfConfirmPassword" destination="X3X-fW-Rec" id="tSN-Yd-37x"/>
                         <outlet property="tfLogin" destination="wvz-Mh-Dw7" id="oqQ-2t-WeZ"/>
@@ -256,31 +256,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="-16"/>
+            <point key="canvasLocation" x="-351" y="-16"/>
         </scene>
         <!--Type CodeVC-->
         <scene sceneID="zOd-wd-cNT">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="xmH-07-bD6" customClass="TypeCodeVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jQk-31-HFB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="va1-e3-OWQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C6V-nA-bQ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-VY-VWx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXc-eT-YSi">
-                                            <rect key="frame" x="18" y="203" width="339" height="406"/>
+                                            <rect key="frame" x="18" y="189.66666666666663" width="339" height="379"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxE-YR-6rS" customClass="SimpleGradientView" customModule="MedicApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="218" width="339" height="50"/>
+                                                    <rect key="frame" x="0.0" y="204.33333333333334" width="339" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="kaS-g7-iG5"/>
@@ -288,11 +288,14 @@
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код из смс" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9F8-9m-4pF">
                                                     <rect key="frame" x="18" y="45" width="303" height="33.666666666666657"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33.670000000000002" id="1kA-Zr-8Nu"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="28"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*****" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8E-Pj-Gak">
-                                                    <rect key="frame" x="119.66666666666666" y="218" width="100" height="50"/>
+                                                    <rect key="frame" x="119.66666666666666" y="204.33333333333334" width="100" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="7Ve-rL-vBr"/>
                                                         <constraint firstAttribute="height" constant="50" id="Tga-pD-g8Q"/>
@@ -305,7 +308,7 @@
                                                     </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrW-re-dpV">
-                                                    <rect key="frame" x="163" y="286" width="158" height="34"/>
+                                                    <rect key="frame" x="163" y="272.33333333333337" width="158" height="34"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                     <state key="normal" title="Отправить еще раз">
                                                         <color key="titleColor" white="0.0" alpha="0.38158176369863012" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -332,15 +335,22 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Be7-LI-q1w">
+                                            <rect key="frame" x="169" y="276.33333333333331" width="37" height="109.66666666666669"/>
+                                            <color key="color" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="TXc-eT-YSi" firstAttribute="leading" secondItem="C6V-nA-bQ8" secondAttribute="leading" constant="18" id="0o1-Uu-Dks"/>
+                                        <constraint firstItem="X8E-Pj-Gak" firstAttribute="top" secondItem="Be7-LI-q1w" secondAttribute="bottom" constant="8" id="Da0-wk-NVO"/>
+                                        <constraint firstItem="Be7-LI-q1w" firstAttribute="centerX" secondItem="C6V-nA-bQ8" secondAttribute="centerX" id="Gc1-Kb-yLt"/>
                                         <constraint firstItem="TXc-eT-YSi" firstAttribute="centerY" secondItem="C6V-nA-bQ8" secondAttribute="centerY" id="Nff-2R-YTY"/>
                                         <constraint firstItem="xCd-VY-VWx" firstAttribute="centerX" secondItem="C6V-nA-bQ8" secondAttribute="centerX" id="Ofi-Ce-uQv"/>
                                         <constraint firstItem="xCd-VY-VWx" firstAttribute="centerY" secondItem="C6V-nA-bQ8" secondAttribute="centerY" id="UKZ-cf-csa"/>
                                         <constraint firstItem="TXc-eT-YSi" firstAttribute="height" secondItem="C6V-nA-bQ8" secondAttribute="height" multiplier="1:2" id="dJD-sI-7E3"/>
                                         <constraint firstItem="xCd-VY-VWx" firstAttribute="width" secondItem="C6V-nA-bQ8" secondAttribute="width" id="iIO-z6-0hr"/>
                                         <constraint firstItem="xCd-VY-VWx" firstAttribute="height" secondItem="C6V-nA-bQ8" secondAttribute="height" id="pLy-4K-803"/>
+                                        <constraint firstItem="Be7-LI-q1w" firstAttribute="top" secondItem="9F8-9m-4pF" secondAttribute="bottom" constant="8" id="pmk-7O-4ZU"/>
                                         <constraint firstAttribute="trailing" secondItem="TXc-eT-YSi" secondAttribute="trailing" constant="18" id="txM-uD-0Ub"/>
                                         <constraint firstItem="TXc-eT-YSi" firstAttribute="centerX" secondItem="C6V-nA-bQ8" secondAttribute="centerX" id="vfD-uv-0tL"/>
                                     </constraints>
@@ -358,6 +368,7 @@
                         <viewLayoutGuide key="safeArea" id="j2z-zy-8TK"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Be7-LI-q1w" id="VGd-vG-Uww"/>
                         <outlet property="tfCode" destination="X8E-Pj-Gak" id="BoZ-Yq-NaC"/>
                         <outlet property="viewBackground" destination="xCd-VY-VWx" id="Xmx-Br-AOh"/>
                     </connections>
@@ -369,7 +380,7 @@
         <!--Enter View-->
         <scene sceneID="eh7-sg-Byc">
             <objects>
-                <viewController id="KFu-kE-94v" customClass="EnterView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="KFu-kE-94v" customClass="EnterView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3dn-Fb-SlW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -514,6 +525,7 @@
                                             <action selector="butRegistrationTouchDown:" destination="KFu-kE-94v" eventType="touchDown" id="qRI-NT-8Gt"/>
                                             <action selector="butRegistrationTouchUpInside:" destination="KFu-kE-94v" eventType="touchUpInside" id="IC6-Wa-b8G"/>
                                             <action selector="butRegistrationTouchUpOutside:" destination="KFu-kE-94v" eventType="touchUpOutside" id="FVW-jl-TwV"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="LmV-lC-JiR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -593,7 +605,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="She-kK-l3N">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="26N-m6-lpr" customClass="MainTabBarController" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" modalPresentationStyle="fullScreen" id="26N-m6-lpr" customClass="MainTabBarController" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="w2r-dE-aS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -632,7 +644,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ky2-nb-IeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1004" y="1448"/>
+            <point key="canvasLocation" x="-946" y="1448"/>
         </scene>
         <!--DiagnosticResultsVC-->
         <scene sceneID="dlu-c4-kQY">
@@ -672,7 +684,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFU-bM-uK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1005" y="1866"/>
+            <point key="canvasLocation" x="-947" y="1866"/>
         </scene>
         <!--Анализы-->
         <scene sceneID="dmA-Iz-9hM">
@@ -706,7 +718,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlv-54-YmL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="1448"/>
+            <point key="canvasLocation" x="1961" y="1448"/>
         </scene>
         <!--Чат-->
         <scene sceneID="xCq-TC-cai">
@@ -722,7 +734,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VG-tj-tX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="1448"/>
+            <point key="canvasLocation" x="-193" y="1448"/>
         </scene>
         <!--Упражнения-->
         <scene sceneID="XGI-8d-jrF">
