@@ -20,4 +20,6 @@ enum NotificationNames: String {
     
     
     case enterRequestAnswered = "enterRequestAnswered"
+    case registrationRequestAnswered = "registrationRequestAnswered"
+    case confirmationRequestAnswered = "confirmationRequestAnswered"
 }

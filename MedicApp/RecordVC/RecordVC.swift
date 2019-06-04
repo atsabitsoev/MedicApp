@@ -111,14 +111,14 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     }
     
     private func butChooseDateTouchDown() {
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0.05) {
             self.viewUnderButChooseDate.shadowView.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
             self.butChooseDate.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }
     }
     
     private func butChooseDateTouchUp() {
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0.05) {
             self.viewUnderButChooseDate.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.butChooseDate.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
@@ -139,14 +139,14 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     }
     
     private func butRecordTouchDown() {
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0.05) {
             self.butRecord.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
             self.viewUnderButRecord.shadowView.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }
     }
     
     private func butRecordTouchUp() {
-        UIView.animate(withDuration: 0.1) {
+        UIView.animate(withDuration: 0.05) {
             self.butRecord.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.viewUnderButRecord.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }

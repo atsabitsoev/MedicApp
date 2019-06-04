@@ -31,7 +31,7 @@ class EnterService {
     
     func sendLoginRequest(login: String, password: String) {
         
-        let url = "\(ApiInfo().baseUrl)auth/signin"
+        let url = "\(ApiInfo().baseUrl)/auth/signin"
         
         let parameters: Parameters = ["login": login,
                                       "password": password]

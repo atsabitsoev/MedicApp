@@ -121,13 +121,13 @@ class EnterView: UIViewController {
         switch pressed {
         case true:
             
-            UIView.animate(withDuration: 0.1) {
+            UIView.animate(withDuration: 0.05) {
                 self.viewUnderButRegistration.shadowView.transform = CGAffineTransform(scaleX: 1, y: 0.9)
             }
             
         case false:
             
-            UIView.animate(withDuration: 0.1) {
+            UIView.animate(withDuration: 0.05) {
                 self.viewUnderButRegistration.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
             }
             
@@ -153,13 +153,13 @@ class EnterView: UIViewController {
         switch pressed {
         case true:
             
-            UIView.animate(withDuration: 0.1) {
-                self.butGo.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            UIView.animate(withDuration: 0.05) {
+                self.butGo.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
             }
             
         case false:
             
-            UIView.animate(withDuration: 0.1) {
+            UIView.animate(withDuration: 0.05) {
                 self.butGo.transform = CGAffineTransform(scaleX: 1, y: 1)
             }
             

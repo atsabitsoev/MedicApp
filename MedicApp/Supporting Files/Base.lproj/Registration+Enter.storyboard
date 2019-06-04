@@ -195,7 +195,6 @@
                                     <action selector="butGoTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="rme-fF-S1B"/>
                                     <action selector="butGoTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="km3-gv-dUa"/>
                                     <action selector="butGoTouchUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="5RJ-vO-4zA"/>
-                                    <segue destination="xmH-07-bD6" kind="modal" id="A71-Hc-Z5G"/>
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-l0-5jw">
@@ -245,10 +244,14 @@
                     </view>
                     <connections>
                         <outlet property="butGo" destination="wT4-Em-WSZ" id="f8Z-6L-5SY"/>
+                        <outlet property="tfConfirmPassword" destination="X3X-fW-Rec" id="tSN-Yd-37x"/>
+                        <outlet property="tfLogin" destination="wvz-Mh-Dw7" id="oqQ-2t-WeZ"/>
+                        <outlet property="tfPassword" destination="h6d-Es-rs1" id="9Mq-Hv-hvN"/>
                         <outlet property="viewUnderButEnter" destination="1OH-r2-OeL" id="cc5-UQ-j27"/>
                         <outlet property="viewUnderTextFields" destination="O3S-hs-RGc" id="MSG-Qg-G6j"/>
                         <outletCollection property="viewWaveBottomMas" destination="0Vg-se-tgt" collectionClass="NSMutableArray" id="fXq-s1-ga9"/>
                         <outletCollection property="viewWaveBottomMas" destination="sDQ-s8-0kt" collectionClass="NSMutableArray" id="zPB-6a-Bhs"/>
+                        <segue destination="xmH-07-bD6" kind="modal" identifier="RegistrationToCode" id="mGD-rI-6oa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -297,6 +300,9 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="28"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="tfCodeTextChanged:" destination="xmH-07-bD6" eventType="editingChanged" id="6Gd-gd-Jl3"/>
+                                                    </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrW-re-dpV">
                                                     <rect key="frame" x="163" y="286" width="158" height="34"/>
@@ -352,12 +358,13 @@
                         <viewLayoutGuide key="safeArea" id="j2z-zy-8TK"/>
                     </view>
                     <connections>
+                        <outlet property="tfCode" destination="X8E-Pj-Gak" id="BoZ-Yq-NaC"/>
                         <outlet property="viewBackground" destination="xCd-VY-VWx" id="Xmx-Br-AOh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjT-Wc-twO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="533.60000000000002" y="-16.256157635467982"/>
+            <point key="canvasLocation" x="322" y="-16"/>
         </scene>
         <!--Enter View-->
         <scene sceneID="eh7-sg-Byc">
@@ -581,7 +588,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEf-qe-ZaJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="-16"/>
+            <point key="canvasLocation" x="1209" y="-16"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="She-kK-l3N">

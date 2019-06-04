@@ -11,6 +11,6 @@ import Foundation
 
 struct ApiInfo {
     
-    let baseUrl: URL = URL(string: "http://killaps1.fvds.ru/")!
+    let baseUrl = "http://killaps1.fvds.ru"
     
 }
