@@ -40,6 +40,7 @@ class EnterService {
                     let json = JSON(responseValue)
                     
                     TokenService.standard.token = json["data"]["token"].stringValue
+                    TokenService.standard.id = json["data"]["id"].stringValue
                     
                     NotificationManager.post(.enterRequestAnswered)
                     

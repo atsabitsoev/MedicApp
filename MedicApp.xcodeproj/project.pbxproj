@@ -59,6 +59,7 @@
 		ACD3BACE2298324A002882D7 /* ProfileSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3BACD2298324A002882D7 /* ProfileSelectCell.swift */; };
 		ACD64734228AF11C0091257E /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64733228AF11C0091257E /* Gradient.swift */; };
 		ACD64736228B016C0091257E /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64735228B016C0091257E /* EnterView.swift */; };
+		ACDF8E2822A6B97B000D6A8A /* GetExercisesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF8E2722A6B97B000D6A8A /* GetExercisesService.swift */; };
 		ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */; };
 		ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F2B228ED2B7007BCBC0 /* ExcercisesCell.swift */; };
 		ACE43F2F228EDFCC007BCBC0 /* ViewPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */; };
@@ -138,6 +139,7 @@
 		ACD3BACD2298324A002882D7 /* ProfileSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectCell.swift; sourceTree = "<group>"; };
 		ACD64733228AF11C0091257E /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		ACD64735228B016C0091257E /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterView.swift; path = MedicApp/GlobalEntities/EnterView.swift; sourceTree = SOURCE_ROOT; };
+		ACDF8E2722A6B97B000D6A8A /* GetExercisesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExercisesService.swift; sourceTree = "<group>"; };
 		ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesTableVIew.swift; sourceTree = "<group>"; };
 		ACE43F2B228ED2B7007BCBC0 /* ExcercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesCell.swift; sourceTree = "<group>"; };
 		ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPlay.swift; sourceTree = "<group>"; };
@@ -429,6 +431,21 @@
 			path = GlobalEntities;
 			sourceTree = "<group>";
 		};
+		ACDF8E2222A6B76C000D6A8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACDF8E2422A6B7B0000D6A8A /* Servicies */ = {
+			isa = PBXGroup;
+			children = (
+				ACDF8E2722A6B97B000D6A8A /* GetExercisesService.swift */,
+			);
+			path = Servicies;
+			sourceTree = "<group>";
+		};
 		ACE43F2A228ED27E007BCBC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +542,8 @@
 		ACFC9B88228DACC1009F5798 /* ExcercisesVC */ = {
 			isa = PBXGroup;
 			children = (
+				ACDF8E2422A6B7B0000D6A8A /* Servicies */,
+				ACDF8E2222A6B76C000D6A8A /* Model */,
 				ACE43F2A228ED27E007BCBC0 /* View */,
 			);
 			path = ExcercisesVC;
@@ -706,6 +725,7 @@
 				ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */,
 				AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */,
 				ACE43F39228EED8C007BCBC0 /* ViewGradientHeader.swift in Sources */,
+				ACDF8E2822A6B97B000D6A8A /* GetExercisesService.swift in Sources */,
 				ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */,
 				ACCE2758229424EE00E3126E /* Sender.swift in Sources */,
 				AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */,

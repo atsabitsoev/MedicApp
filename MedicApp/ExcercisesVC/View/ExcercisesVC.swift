@@ -17,7 +17,8 @@ class ExcercisesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        GetExercisesService.standard.sendGetAllExercisesRequest()
     }
     
     
