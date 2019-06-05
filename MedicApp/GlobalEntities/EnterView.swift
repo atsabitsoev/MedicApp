@@ -137,6 +137,12 @@ class EnterView: UIViewController {
     }
     
     
+    @IBAction func butForgotTapped(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "EnterToCode", sender: nil)
+    }
+    
+    
     //MARK: Анимации кнопок
     
     @IBAction func butRegistrationTouchDown(_ sender: UIButton) {
