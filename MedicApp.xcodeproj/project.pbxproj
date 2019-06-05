@@ -10,6 +10,8 @@
 		8928B905D03C0711AD20A687 /* Pods_MedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183511A65B18E52E9E57BC4B /* Pods_MedicApp.framework */; };
 		AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */; };
 		AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */; };
+		AC5502ED22A79DC400EB0A30 /* EnterTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */; };
+		AC5502EF22A7A26800EB0A30 /* RegistrationTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */; };
 		AC6B9174229534B30079CF1F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B9173229534B30079CF1F /* MainTabBarController.swift */; };
 		AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B91762295364B0079CF1F /* RecordVC.swift */; };
 		AC6B917A229536850079CF1F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B9179229536850079CF1F /* ProfileVC.swift */; };
@@ -88,6 +90,8 @@
 		3C9DE87BDA3D6F60112CC839 /* Pods-MedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.release.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.release.xcconfig"; sourceTree = "<group>"; };
 		AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCollection.swift; sourceTree = "<group>"; };
 		AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCell.swift; sourceTree = "<group>"; };
+		AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterTFDelegate.swift; path = MedicApp/ExcercisesVC/Servicies/EnterTFDelegate.swift; sourceTree = SOURCE_ROOT; };
+		AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTFDelegate.swift; sourceTree = "<group>"; };
 		AC6B9173229534B30079CF1F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC6B91762295364B0079CF1F /* RecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
 		AC6B9179229536850079CF1F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -509,6 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7F4CA2227CAEEE002A42AF /* RegistrationView.swift */,
+				AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */,
 			);
 			path = RegistrationVC;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD64735228B016C0091257E /* EnterView.swift */,
+				AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */,
 			);
 			path = EnterVC;
 			sourceTree = "<group>";
@@ -746,11 +752,13 @@
 				ACFC9B8D228DAE33009F5798 /* ExcercisesVC.swift in Sources */,
 				AC6B918022953BC20079CF1F /* OpeningChatVC.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
+				AC5502EF22A7A26800EB0A30 /* RegistrationTFDelegate.swift in Sources */,
 				ACBCC96022A56C3A008DEFCB /* TypeCodeVC.swift in Sources */,
 				AC6B91972295759D0079CF1F /* MessageHistoryService.swift in Sources */,
 				ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */,
 				AC7BF2C12296A29D0007AE31 /* CalendarVC.swift in Sources */,
 				ACD3BAC12297C861002882D7 /* Colors.swift in Sources */,
+				AC5502ED22A79DC400EB0A30 /* EnterTFDelegate.swift in Sources */,
 				ACCE27562294245D00E3126E /* Message.swift in Sources */,
 				AC6B917A229536850079CF1F /* ProfileVC.swift in Sources */,
 				AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */,

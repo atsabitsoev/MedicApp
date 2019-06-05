@@ -28,6 +28,7 @@ class RegistrationView: UIViewController {
         super.viewDidLoad()
         
         addObservers()
+        setTFDelegates()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +48,38 @@ class RegistrationView: UIViewController {
     private func turnViewsUpsideDown(_ views: [UIView]) {
         for view in views {
             view.transform = CGAffineTransform(rotationAngle: .pi)
+        }
+    }
+    
+    
+    private func setTFDelegates() {
+        
+        tfLogin.delegate = self
+        tfPassword.delegate = self
+        tfConfirmPassword.delegate = self
+    }
+    
+    func pullUp() {
+        
+        let origin = CGPoint(x: view.frame.minX,
+                             y: view.frame.minY - 100)
+        let size = view.frame.size
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame = CGRect(origin: origin, size: size)
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func pullDown() {
+        
+        let origin = CGPoint(x: view.frame.minX,
+                             y: view.frame.minY + 100)
+        let size = view.frame.size
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame = CGRect(origin: origin, size: size)
+            self.view.layoutIfNeeded()
         }
     }
     

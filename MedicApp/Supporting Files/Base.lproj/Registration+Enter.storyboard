@@ -22,7 +22,7 @@
         <!--Registration View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="RegistrationView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="RegistrationView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,10 +288,12 @@
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите код из смс" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9F8-9m-4pF">
                                                     <rect key="frame" x="18" y="45" width="303" height="33.666666666666657"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="33.670000000000002" id="1kA-Zr-8Nu"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="28"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*****" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8E-Pj-Gak">
@@ -380,7 +382,7 @@
         <!--Enter View-->
         <scene sceneID="eh7-sg-Byc">
             <objects>
-                <viewController storyboardIdentifier="EnterVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="KFu-kE-94v" customClass="EnterView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterVC" definesPresentationContext="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="KFu-kE-94v" customClass="EnterView" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3dn-Fb-SlW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -434,7 +436,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jy-jQ-0Yv" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                <rect key="frame" x="-150" y="338.66666666666669" width="455" height="234.66666666666669"/>
+                                <rect key="frame" x="-150" y="308.66666666666669" width="455" height="234.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="q3b-d0-mQP">
                                         <rect key="frame" x="200" y="20" width="205" height="194.66666666666666"/>
@@ -499,7 +501,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-ur-dTC" customClass="ButtonGradient" customModule="MedicApp" customModuleProvider="target">
-                                <rect key="frame" x="269.66666666666669" y="420.66666666666669" width="70.666666666666686" height="70.666666666666686"/>
+                                <rect key="frame" x="269.66666666666669" y="390.66666666666669" width="70.666666666666686" height="70.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BgO-ur-dTC" secondAttribute="height" multiplier="1:1" id="ShA-1v-KqZ"/>
                                 </constraints>
@@ -543,8 +545,15 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nsp-ax-1Zn">
-                                <rect key="frame" x="269.66666666666669" y="420.66666666666669" width="70.666666666666686" height="70.666666666666686"/>
+                                <rect key="frame" x="269.66666666666669" y="390.66666666666669" width="70.666666666666686" height="70.666666666666686"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyq-FC-c6Y">
+                                <rect key="frame" x="208" y="579.33333333333337" width="149" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" red="0.7803921568627451" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -552,19 +561,21 @@
                             <constraint firstItem="4gH-yJ-leL" firstAttribute="bottom" secondItem="nNF-cu-YmV" secondAttribute="bottom" constant="-20" id="21N-bo-QUs"/>
                             <constraint firstAttribute="bottom" secondItem="KvT-6N-oAU" secondAttribute="bottom" id="2Nz-la-4lh"/>
                             <constraint firstItem="4jy-jQ-0Yv" firstAttribute="leading" secondItem="3dn-Fb-SlW" secondAttribute="leading" constant="-150" id="39a-KR-avO"/>
-                            <constraint firstItem="4jy-jQ-0Yv" firstAttribute="top" secondItem="nNF-cu-YmV" secondAttribute="bottom" constant="100" id="5a7-Lp-9C2"/>
+                            <constraint firstItem="4jy-jQ-0Yv" firstAttribute="top" secondItem="nNF-cu-YmV" secondAttribute="bottom" constant="70" id="5a7-Lp-9C2"/>
                             <constraint firstItem="nNF-cu-YmV" firstAttribute="width" secondItem="gIY-xt-SV4" secondAttribute="width" id="8aQ-7E-utT"/>
+                            <constraint firstItem="vyq-FC-c6Y" firstAttribute="top" secondItem="4jy-jQ-0Yv" secondAttribute="bottom" constant="36" id="FaQ-MZ-dMt"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="4jy-jQ-0Yv" secondAttribute="trailing" constant="70" id="JSH-Bq-jll"/>
-                            <constraint firstItem="BgO-ur-dTC" firstAttribute="height" secondItem="4jy-jQ-0Yv" secondAttribute="height" multiplier="80:265" id="NHq-YU-RIb"/>
+                            <constraint firstItem="BgO-ur-dTC" firstAttribute="height" secondItem="4jy-jQ-0Yv" secondAttribute="height" multiplier="100:265" id="NHq-YU-RIb"/>
                             <constraint firstItem="BgO-ur-dTC" firstAttribute="centerX" secondItem="4jy-jQ-0Yv" secondAttribute="trailing" id="NjS-US-DE0"/>
                             <constraint firstItem="nNF-cu-YmV" firstAttribute="leading" secondItem="HDI-1H-ij4" secondAttribute="leading" id="ODY-e9-kIP"/>
                             <constraint firstItem="13A-Xl-wg9" firstAttribute="leading" secondItem="HDI-1H-ij4" secondAttribute="leading" id="Oga-3a-m8q"/>
-                            <constraint firstItem="4jy-jQ-0Yv" firstAttribute="centerY" secondItem="3dn-Fb-SlW" secondAttribute="centerY" constant="50" id="Ogo-j5-k6r"/>
+                            <constraint firstItem="4jy-jQ-0Yv" firstAttribute="centerY" secondItem="3dn-Fb-SlW" secondAttribute="centerY" constant="20" id="Ogo-j5-k6r"/>
                             <constraint firstItem="4gH-yJ-leL" firstAttribute="width" secondItem="4jy-jQ-0Yv" secondAttribute="width" multiplier="1:1.7" id="QSA-xD-LE8"/>
                             <constraint firstAttribute="trailing" secondItem="4gH-yJ-leL" secondAttribute="trailing" constant="-100" id="Qof-mi-uHs"/>
                             <constraint firstItem="KvT-6N-oAU" firstAttribute="height" secondItem="13A-Xl-wg9" secondAttribute="height" id="RUe-eT-Sn8"/>
                             <constraint firstItem="nsp-ax-1Zn" firstAttribute="bottom" secondItem="BgO-ur-dTC" secondAttribute="bottom" id="RdO-67-LYJ"/>
                             <constraint firstItem="13A-Xl-wg9" firstAttribute="height" secondItem="3dn-Fb-SlW" secondAttribute="height" multiplier="1:3.7" id="WUE-6M-mYc"/>
+                            <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="vyq-FC-c6Y" secondAttribute="trailing" constant="18" id="Z6E-NP-E5m"/>
                             <constraint firstItem="q3b-d0-mQP" firstAttribute="leading" secondItem="HDI-1H-ij4" secondAttribute="leading" constant="50" id="aZj-ua-vCd"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="leading" secondItem="3Jc-dE-mF7" secondAttribute="leading" constant="-16" id="bjW-on-mm2"/>
                             <constraint firstItem="gIY-xt-SV4" firstAttribute="height" secondItem="nNF-cu-YmV" secondAttribute="height" id="cXH-QN-SqU"/>

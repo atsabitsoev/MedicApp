@@ -27,6 +27,7 @@ class EnterView: UIViewController {
         super.viewDidLoad()
         
         addObservers()
+        setTFDelegates()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +83,38 @@ class EnterView: UIViewController {
         
     }
     
+    
+    private func setTFDelegates() {
+        
+        tfLogin.delegate = self
+        tfPassword.delegate = self
+    }
+    
+    func pullUp() {
+        
+        let origin = CGPoint(x: view.frame.minX,
+                             y: view.frame.minY - 100)
+        let size = view.frame.size
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame = CGRect(origin: origin, size: size)
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func pullDown() {
+        
+        let origin = CGPoint(x: view.frame.minX,
+                             y: view.frame.minY + 100)
+        let size = view.frame.size
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame = CGRect(origin: origin, size: size)
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
     private func startLoadingAnimation() {
         
         butGo.removeImage()
@@ -103,6 +136,8 @@ class EnterView: UIViewController {
         }
     }
     
+    
+    //MARK: Анимации кнопок
     
     @IBAction func butRegistrationTouchDown(_ sender: UIButton) {
         animateButRegistration(pressed: true)
