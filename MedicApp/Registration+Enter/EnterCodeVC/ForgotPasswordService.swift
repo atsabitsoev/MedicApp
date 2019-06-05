@@ -50,7 +50,7 @@ class ForgotPasswordService {
                         
                     default:
                         
-                        self.sendCodeToUserError = json.stringValue
+                        self.sendCodeToUserError = json["data"]["error"].stringValue
                     }
                     
                 } catch {
@@ -95,7 +95,7 @@ class ForgotPasswordService {
                         
                     default:
                         
-                       self.confirmationError = json.stringValue
+                       self.confirmationError = json["data"]["error"].stringValue
                     }
                     
                 } catch {

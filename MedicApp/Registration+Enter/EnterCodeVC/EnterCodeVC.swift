@@ -140,6 +140,7 @@ class EnterCodeVC: UIViewController {
         labTitle.text = "Введите новый пароль и код подтверждения"
         tfLogin.placeholder = "Новый пароль"
         tfLogin.isSecureTextEntry = true
+        tfLogin.text = ""
         
         tfCodeShown = true
     }

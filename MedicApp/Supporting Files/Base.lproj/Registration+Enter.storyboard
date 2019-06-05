@@ -93,13 +93,13 @@
                                                 <rect key="frame" x="0.0" y="98.333333333333314" width="205" height="58"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Подтвердите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3X-fW-Rec">
                                                 <rect key="frame" x="0.0" y="196.33333333333331" width="205" height="58.333333333333343"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -456,7 +456,7 @@
                                                 <rect key="frame" x="0.0" y="117.33333333333331" width="205" height="77.333333333333314"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -688,14 +688,20 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="one-time-code"/>
                                     </textField>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pIM-Nv-WkY">
+                                        <rect key="frame" x="151" y="242" width="37" height="37"/>
+                                        <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="pIM-Nv-WkY" firstAttribute="top" secondItem="Tt3-Sl-p8r" secondAttribute="bottom" constant="8" id="0tL-TI-bbF"/>
                                     <constraint firstItem="uT9-bg-Ydj" firstAttribute="top" secondItem="hKk-Td-XOw" secondAttribute="top" constant="36" id="2rR-VZ-jYH"/>
                                     <constraint firstAttribute="height" constant="350" id="DOb-8Z-H8d"/>
                                     <constraint firstAttribute="trailing" secondItem="uT9-bg-Ydj" secondAttribute="trailing" constant="18" id="Ih6-Dt-FU8"/>
+                                    <constraint firstItem="pIM-Nv-WkY" firstAttribute="centerX" secondItem="hKk-Td-XOw" secondAttribute="centerX" id="Iuj-em-bkh"/>
                                     <constraint firstItem="5Jh-kv-RKw" firstAttribute="centerY" secondItem="bsa-UP-AlA" secondAttribute="centerY" id="K60-qu-279"/>
                                     <constraint firstAttribute="trailing" secondItem="bsa-UP-AlA" secondAttribute="trailing" id="L9i-Zm-i2E"/>
                                     <constraint firstItem="bsa-UP-AlA" firstAttribute="leading" secondItem="hKk-Td-XOw" secondAttribute="leading" id="M9v-ev-y2X"/>
@@ -730,9 +736,6 @@
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pIM-Nv-WkY">
-                                <rect key="frame" x="169" y="0.0" width="37" height="231"/>
-                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vd3-EZ-MD9" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="36" y="518" width="303" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -775,7 +778,6 @@
                             <constraint firstItem="NI8-De-UM9" firstAttribute="top" secondItem="Dwh-yF-3QE" secondAttribute="top" id="2hh-M8-Fru"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="leading" secondItem="hKk-Td-XOw" secondAttribute="leading" constant="18" id="3wH-sN-RMF"/>
                             <constraint firstItem="NI8-De-UM9" firstAttribute="leading" secondItem="rvE-Xm-LIp" secondAttribute="leading" id="77c-vO-otn"/>
-                            <constraint firstItem="pIM-Nv-WkY" firstAttribute="top" secondItem="elM-ex-Orq" secondAttribute="top" id="Cdy-3m-i76"/>
                             <constraint firstItem="elM-ex-Orq" firstAttribute="top" secondItem="Dwh-yF-3QE" secondAttribute="top" id="Fco-W8-7Kj"/>
                             <constraint firstAttribute="bottom" secondItem="NI8-De-UM9" secondAttribute="bottom" id="K3L-jC-RYP"/>
                             <constraint firstItem="Vd3-EZ-MD9" firstAttribute="bottom" secondItem="e1I-TA-Qfy" secondAttribute="bottom" id="Lxi-jh-YM5"/>
@@ -784,12 +786,11 @@
                             <constraint firstAttribute="bottom" secondItem="elM-ex-Orq" secondAttribute="bottom" id="UcV-5N-guz"/>
                             <constraint firstItem="NI8-De-UM9" firstAttribute="leading" secondItem="rvE-Xm-LIp" secondAttribute="leading" id="Xac-cn-Idp"/>
                             <constraint firstItem="rvE-Xm-LIp" firstAttribute="trailing" secondItem="hKk-Td-XOw" secondAttribute="trailing" constant="18" id="cMI-pN-JW8"/>
-                            <constraint firstItem="pIM-Nv-WkY" firstAttribute="centerX" secondItem="Dwh-yF-3QE" secondAttribute="centerX" id="cvZ-tF-H3x"/>
                             <constraint firstItem="Vd3-EZ-MD9" firstAttribute="leading" secondItem="e1I-TA-Qfy" secondAttribute="leading" id="eUQ-xX-fFS"/>
                             <constraint firstItem="NI8-De-UM9" firstAttribute="trailing" secondItem="rvE-Xm-LIp" secondAttribute="trailing" id="ho6-yZ-igL"/>
+                            <constraint firstItem="e1I-TA-Qfy" firstAttribute="top" secondItem="pIM-Nv-WkY" secondAttribute="bottom" constant="8" id="iuf-44-cCe"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="bottom" secondItem="hKk-Td-XOw" secondAttribute="bottom" constant="-18" id="jGC-Yd-O8D"/>
                             <constraint firstItem="Vd3-EZ-MD9" firstAttribute="top" secondItem="e1I-TA-Qfy" secondAttribute="top" id="lwi-8D-T9Y"/>
-                            <constraint firstItem="hKk-Td-XOw" firstAttribute="top" secondItem="pIM-Nv-WkY" secondAttribute="bottom" id="mSd-7N-IR6"/>
                             <constraint firstItem="elM-ex-Orq" firstAttribute="leading" secondItem="rvE-Xm-LIp" secondAttribute="leading" id="ng1-XO-KKZ"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="trailing" secondItem="hKk-Td-XOw" secondAttribute="trailing" constant="-18" id="v2p-nm-leM"/>
                             <constraint firstItem="hKk-Td-XOw" firstAttribute="centerY" secondItem="Dwh-yF-3QE" secondAttribute="centerY" id="xGz-ph-0J8"/>
