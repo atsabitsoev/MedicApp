@@ -137,8 +137,17 @@ class EnterView: UIViewController {
     }
     
     
+    private func checkEditing() {
+        
+        if tfLogin.isEditing || tfPassword.isEditing {
+            self.view.endEditing(true)
+        }
+    }
+    
+    
     @IBAction func butForgotTapped(_ sender: UIButton) {
         
+        checkEditing()
         performSegue(withIdentifier: "EnterToCode", sender: nil)
     }
     
