@@ -216,7 +216,7 @@ class RegistrationView: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RegistrationToCode" {
             
-            let codeVC = segue.destination as! TypeCodeVC
+            let codeVC = segue.destination as! RegistrationCodeVC
             codeVC.userLogin = tfLogin.text
         }
     }

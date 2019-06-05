@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TypeCodeVC: UIViewController {
+class RegistrationCodeVC: UIViewController {
     
     
     @IBOutlet weak var viewBackground: UIView!

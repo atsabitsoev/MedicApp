@@ -10,6 +10,8 @@
 		8928B905D03C0711AD20A687 /* Pods_MedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183511A65B18E52E9E57BC4B /* Pods_MedicApp.framework */; };
 		AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */; };
 		AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */; };
+		AC50F12D22A7BDED000B78AF /* EnterCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */; };
+		AC50F12F22A7BE16000B78AF /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */; };
 		AC5502ED22A79DC400EB0A30 /* EnterTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */; };
 		AC5502EF22A7A26800EB0A30 /* RegistrationTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */; };
 		AC6B9174229534B30079CF1F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B9173229534B30079CF1F /* MainTabBarController.swift */; };
@@ -36,7 +38,7 @@
 		ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95222A5271F008DEFCB /* ApiInfo.swift */; };
 		ACBCC95922A548AB008DEFCB /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95822A548AB008DEFCB /* TokenService.swift */; };
 		ACBCC95B22A562F3008DEFCB /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95A22A562F3008DEFCB /* RegistrationService.swift */; };
-		ACBCC96022A56C3A008DEFCB /* TypeCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95F22A56C3A008DEFCB /* TypeCodeVC.swift */; };
+		ACBCC96022A56C3A008DEFCB /* RegistrationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95F22A56C3A008DEFCB /* RegistrationCodeVC.swift */; };
 		ACC41D292292D2DF0042B200 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC41D282292D2DF0042B200 /* Chat.storyboard */; };
 		ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2C2292D35B0042B200 /* ChatVC.swift */; };
 		ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */; };
@@ -90,6 +92,8 @@
 		3C9DE87BDA3D6F60112CC839 /* Pods-MedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.release.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.release.xcconfig"; sourceTree = "<group>"; };
 		AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCollection.swift; sourceTree = "<group>"; };
 		AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCell.swift; sourceTree = "<group>"; };
+		AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeVC.swift; sourceTree = "<group>"; };
+		AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordService.swift; path = "MedicApp/Registration+Enter/EnterCodeVC/ForgotPasswordService.swift"; sourceTree = SOURCE_ROOT; };
 		AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterTFDelegate.swift; path = MedicApp/ExcercisesVC/Servicies/EnterTFDelegate.swift; sourceTree = SOURCE_ROOT; };
 		AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTFDelegate.swift; sourceTree = "<group>"; };
 		AC6B9173229534B30079CF1F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -118,7 +122,7 @@
 		ACBCC95222A5271F008DEFCB /* ApiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiInfo.swift; sourceTree = "<group>"; };
 		ACBCC95822A548AB008DEFCB /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		ACBCC95A22A562F3008DEFCB /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationService.swift; path = MedicApp/GlobalServices/API/RegistrationService.swift; sourceTree = SOURCE_ROOT; };
-		ACBCC95F22A56C3A008DEFCB /* TypeCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCodeVC.swift; sourceTree = "<group>"; };
+		ACBCC95F22A56C3A008DEFCB /* RegistrationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCodeVC.swift; sourceTree = "<group>"; };
 		ACC41D282292D2DF0042B200 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		ACC41D2C2292D35B0042B200 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		ACC41D2F2292D4060042B200 /* ChatHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderVIew.swift; sourceTree = "<group>"; };
@@ -187,6 +191,14 @@
 				3C9DE87BDA3D6F60112CC839 /* Pods-MedicApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC50F12B22A7BD7B000B78AF /* EnterCodeVC */ = {
+			isa = PBXGroup;
+			children = (
+				AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */,
+			);
+			path = EnterCodeVC;
 			sourceTree = "<group>";
 		};
 		AC5B540D227CFB8600C2001A /* Supporting Files */ = {
@@ -333,12 +345,12 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		ACBCC95C22A56C15008DEFCB /* TypeCodeVC */ = {
+		ACBCC95C22A56C15008DEFCB /* RegistrationCodeVC */ = {
 			isa = PBXGroup;
 			children = (
-				ACBCC95F22A56C3A008DEFCB /* TypeCodeVC.swift */,
+				ACBCC95F22A56C3A008DEFCB /* RegistrationCodeVC.swift */,
 			);
-			path = TypeCodeVC;
+			path = RegistrationCodeVC;
 			sourceTree = "<group>";
 		};
 		ACC41D2A2292D3360042B200 /* ChatVC */ = {
@@ -503,8 +515,9 @@
 				ACF76AE0227CD3D300FE7648 /* Enteties */,
 				ACF76AE1227CD3E100FE7648 /* Servicies */,
 				ACF76ADE227CD3AB00FE7648 /* RegistrationVC */,
+				ACBCC95C22A56C15008DEFCB /* RegistrationCodeVC */,
 				ACF76ADF227CD3B500FE7648 /* EnterVC */,
-				ACBCC95C22A56C15008DEFCB /* TypeCodeVC */,
+				AC50F12B22A7BD7B000B78AF /* EnterCodeVC */,
 			);
 			path = "Registration+Enter";
 			sourceTree = "<group>";
@@ -541,6 +554,7 @@
 			children = (
 				ACBCC95022A525A2008DEFCB /* EnterService.swift */,
 				ACBCC95A22A562F3008DEFCB /* RegistrationService.swift */,
+				AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */,
 			);
 			path = Servicies;
 			sourceTree = "<group>";
@@ -730,6 +744,7 @@
 				ACBCC95B22A562F3008DEFCB /* RegistrationService.swift in Sources */,
 				ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */,
 				AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */,
+				AC50F12F22A7BE16000B78AF /* ForgotPasswordService.swift in Sources */,
 				ACE43F39228EED8C007BCBC0 /* ViewGradientHeader.swift in Sources */,
 				ACDF8E2822A6B97B000D6A8A /* GetExercisesService.swift in Sources */,
 				ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */,
@@ -746,6 +761,7 @@
 				ACCE275E2294271A00E3126E /* PenPalMessageCell.swift in Sources */,
 				AC6B91932295744A0079CF1F /* NotificationManager.swift in Sources */,
 				AC7F4CA1227CAEEE002A42AF /* AppDelegate.swift in Sources */,
+				AC50F12D22A7BDED000B78AF /* EnterCodeVC.swift in Sources */,
 				ACCE275222941BC800E3126E /* MessageLabel.swift in Sources */,
 				ACE43F33228EEAC2007BCBC0 /* DiagnosticResultsVC.swift in Sources */,
 				ACD64736228B016C0091257E /* EnterView.swift in Sources */,
@@ -753,7 +769,7 @@
 				AC6B918022953BC20079CF1F /* OpeningChatVC.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
 				AC5502EF22A7A26800EB0A30 /* RegistrationTFDelegate.swift in Sources */,
-				ACBCC96022A56C3A008DEFCB /* TypeCodeVC.swift in Sources */,
+				ACBCC96022A56C3A008DEFCB /* RegistrationCodeVC.swift in Sources */,
 				AC6B91972295759D0079CF1F /* MessageHistoryService.swift in Sources */,
 				ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */,
 				AC7BF2C12296A29D0007AE31 /* CalendarVC.swift in Sources */,
