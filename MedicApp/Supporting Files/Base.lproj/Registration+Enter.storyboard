@@ -77,6 +77,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3D-TW-7Nu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3S-hs-RGc" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="-150" y="278.66666666666663" width="455" height="294.66666666666663"/>
                                 <subviews>
@@ -220,17 +224,21 @@
                             <constraint firstAttribute="bottom" secondItem="sDQ-s8-0kt" secondAttribute="bottom" id="Oj7-S9-TOq"/>
                             <constraint firstItem="O3S-hs-RGc" firstAttribute="top" secondItem="Tb8-oQ-P2u" secondAttribute="bottom" constant="40" id="Okh-aH-fk9"/>
                             <constraint firstItem="uJf-2Z-hnS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pse-tU-y2c"/>
+                            <constraint firstItem="w3D-TW-7Nu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sgi-PJ-B2b"/>
                             <constraint firstItem="sDQ-s8-0kt" firstAttribute="height" secondItem="Tb8-oQ-P2u" secondAttribute="height" id="VzD-Pb-6nH"/>
                             <constraint firstItem="eUY-l0-5jw" firstAttribute="leading" secondItem="wT4-Em-WSZ" secondAttribute="leading" id="YPR-aw-zgU"/>
                             <constraint firstItem="eUY-l0-5jw" firstAttribute="top" secondItem="wT4-Em-WSZ" secondAttribute="top" id="ZY7-Cj-9b9"/>
                             <constraint firstItem="O3S-hs-RGc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="bt4-Yw-LYP"/>
+                            <constraint firstAttribute="bottom" secondItem="w3D-TW-7Nu" secondAttribute="bottom" id="btW-J0-iry"/>
                             <constraint firstItem="wT4-Em-WSZ" firstAttribute="centerX" secondItem="O3S-hs-RGc" secondAttribute="trailing" id="btX-q9-pia"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDQ-s8-0kt" secondAttribute="trailing" id="d60-HJ-z8U"/>
                             <constraint firstItem="uJf-2Z-hnS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dI5-uS-Aqe"/>
                             <constraint firstItem="0Vg-se-tgt" firstAttribute="height" secondItem="uJf-2Z-hnS" secondAttribute="height" id="frK-6L-L6z"/>
                             <constraint firstItem="eUY-l0-5jw" firstAttribute="trailing" secondItem="wT4-Em-WSZ" secondAttribute="trailing" id="gJC-KR-zvg"/>
                             <constraint firstItem="1OH-r2-OeL" firstAttribute="height" secondItem="O3S-hs-RGc" secondAttribute="height" multiplier="1:4.5" id="gMM-5d-0Qf"/>
+                            <constraint firstItem="w3D-TW-7Nu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hnz-b2-K34"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="CRE-9T-dAP" secondAttribute="leading" constant="-16" id="iDZ-bJ-3nc"/>
+                            <constraint firstItem="w3D-TW-7Nu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lgT-Uj-SQY"/>
                             <constraint firstItem="wT4-Em-WSZ" firstAttribute="centerY" secondItem="O3S-hs-RGc" secondAttribute="centerY" id="m31-Cu-bOF"/>
                             <constraint firstItem="wT4-Em-WSZ" firstAttribute="height" secondItem="O3S-hs-RGc" secondAttribute="height" multiplier="65:265" id="n3O-tR-At3"/>
                             <constraint firstItem="Tb8-oQ-P2u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rsV-5e-K1r"/>
@@ -253,6 +261,7 @@
                         <outlet property="tfConfirmPassword" destination="X3X-fW-Rec" id="tSN-Yd-37x"/>
                         <outlet property="tfLogin" destination="wvz-Mh-Dw7" id="oqQ-2t-WeZ"/>
                         <outlet property="tfPassword" destination="h6d-Es-rs1" id="9Mq-Hv-hvN"/>
+                        <outlet property="viewBackground" destination="w3D-TW-7Nu" id="wBg-D8-5mo"/>
                         <outlet property="viewUnderButEnter" destination="1OH-r2-OeL" id="cc5-UQ-j27"/>
                         <outlet property="viewUnderTextFields" destination="O3S-hs-RGc" id="MSG-Qg-G6j"/>
                         <outletCollection property="viewWaveBottomMas" destination="0Vg-se-tgt" collectionClass="NSMutableArray" id="fXq-s1-ga9"/>
@@ -262,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-351" y="-16"/>
+            <point key="canvasLocation" x="-351.19999999999999" y="-16.256157635467982"/>
         </scene>
         <!--Registration CodeVC-->
         <scene sceneID="zOd-wd-cNT">
@@ -440,6 +449,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25A-43-AJj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jy-jQ-0Yv" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="-150" y="308.66666666666669" width="455" height="234.66666666666669"/>
                                 <subviews>
@@ -572,6 +585,8 @@
                             <constraint firstItem="4jy-jQ-0Yv" firstAttribute="leading" secondItem="3dn-Fb-SlW" secondAttribute="leading" constant="-150" id="39a-KR-avO"/>
                             <constraint firstItem="4jy-jQ-0Yv" firstAttribute="top" secondItem="nNF-cu-YmV" secondAttribute="bottom" constant="70" id="5a7-Lp-9C2"/>
                             <constraint firstItem="nNF-cu-YmV" firstAttribute="width" secondItem="gIY-xt-SV4" secondAttribute="width" id="8aQ-7E-utT"/>
+                            <constraint firstItem="25A-43-AJj" firstAttribute="leading" secondItem="HDI-1H-ij4" secondAttribute="leading" id="8mu-t3-eYU"/>
+                            <constraint firstItem="25A-43-AJj" firstAttribute="trailing" secondItem="HDI-1H-ij4" secondAttribute="trailing" id="9mb-Gs-qae"/>
                             <constraint firstItem="vyq-FC-c6Y" firstAttribute="top" secondItem="4jy-jQ-0Yv" secondAttribute="bottom" constant="36" id="FaQ-MZ-dMt"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="4jy-jQ-0Yv" secondAttribute="trailing" constant="70" id="JSH-Bq-jll"/>
                             <constraint firstItem="BgO-ur-dTC" firstAttribute="height" secondItem="4jy-jQ-0Yv" secondAttribute="height" multiplier="90:265" id="NHq-YU-RIb"/>
@@ -597,6 +612,8 @@
                             <constraint firstItem="B30-ba-azH" firstAttribute="centerX" secondItem="3dn-Fb-SlW" secondAttribute="centerX" id="gBs-qt-QUO"/>
                             <constraint firstItem="13A-Xl-wg9" firstAttribute="width" secondItem="3dn-Fb-SlW" secondAttribute="width" multiplier="1:1.15" id="jnF-Yp-vy6"/>
                             <constraint firstItem="B30-ba-azH" firstAttribute="top" secondItem="nNF-cu-YmV" secondAttribute="bottom" id="lfV-dX-ddW"/>
+                            <constraint firstItem="25A-43-AJj" firstAttribute="top" secondItem="3dn-Fb-SlW" secondAttribute="top" id="mih-lk-7zb"/>
+                            <constraint firstAttribute="bottom" secondItem="25A-43-AJj" secondAttribute="bottom" id="oQV-Pw-Sdl"/>
                             <constraint firstItem="HDI-1H-ij4" firstAttribute="trailing" secondItem="gIY-xt-SV4" secondAttribute="trailing" id="rcl-HP-7K4"/>
                             <constraint firstItem="nNF-cu-YmV" firstAttribute="top" secondItem="3dn-Fb-SlW" secondAttribute="top" id="txW-uE-3S9"/>
                             <constraint firstItem="nsp-ax-1Zn" firstAttribute="top" secondItem="BgO-ur-dTC" secondAttribute="top" id="uGh-Ug-cTQ"/>
@@ -615,6 +632,7 @@
                         <outlet property="butGo" destination="BgO-ur-dTC" id="kpf-QL-pBj"/>
                         <outlet property="tfLogin" destination="bHG-a5-Hfi" id="dHF-3e-3oW"/>
                         <outlet property="tfPassword" destination="vJU-qK-OWa" id="tzq-kp-u5f"/>
+                        <outlet property="viewBackground" destination="25A-43-AJj" id="0oy-dX-2C4"/>
                         <outlet property="viewUnderButRegistration" destination="4gH-yJ-leL" id="b5m-md-hXq"/>
                         <outlet property="viewUnderTextFields" destination="4jy-jQ-0Yv" id="YuK-6R-Zv8"/>
                         <outletCollection property="viewWaveBottomMas" destination="KvT-6N-oAU" collectionClass="NSMutableArray" id="SSf-qL-LAT"/>
@@ -624,7 +642,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEf-qe-ZaJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="-16"/>
+            <point key="canvasLocation" x="1208.8" y="-16.256157635467982"/>
         </scene>
         <!--Enter CodeVC-->
         <scene sceneID="oFH-pN-RkI">

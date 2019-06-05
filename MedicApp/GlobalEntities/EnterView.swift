@@ -18,6 +18,7 @@ class EnterView: UIViewController {
     @IBOutlet weak var tfLogin: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var viewBackground: UIView!
     
     
     let enterService = EnterService.standard
@@ -27,6 +28,7 @@ class EnterView: UIViewController {
         super.viewDidLoad()
         
         addObservers()
+        addTapRecognizer()
         setTFDelegates()
     }
     
@@ -54,6 +56,20 @@ class EnterView: UIViewController {
         
         openApp()
     }
+    
+    
+    private func addTapRecognizer() {
+        
+        let recognizer = UITapGestureRecognizer(target: self,
+                                                action: #selector(backgroundTapped))
+        viewBackground.addGestureRecognizer(recognizer)
+    }
+    
+    @objc private func backgroundTapped() {
+        
+        self.view.endEditing(true)
+    }
+    
     
     private func openApp() {
         

@@ -19,6 +19,7 @@ class RegistrationView: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfConfirmPassword: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var viewBackground: UIView!
     
     
     let registrationService = RegistrationService.standard
@@ -28,6 +29,7 @@ class RegistrationView: UIViewController {
         super.viewDidLoad()
         
         addObservers()
+        addTapRecognizer()
         setTFDelegates()
     }
     
@@ -42,6 +44,18 @@ class RegistrationView: UIViewController {
                                                selector: #selector(registrationRequestAnswered),
                                                name: NSNotification.Name(NotificationNames.registrationRequestAnswered.rawValue),
                                                object: nil)
+    }
+    
+    private func addTapRecognizer() {
+        
+        let recognizer = UITapGestureRecognizer(target: self,
+                                                action: #selector(backgroundTapped))
+        viewBackground.addGestureRecognizer(recognizer)
+    }
+    
+    @objc private func backgroundTapped() {
+        
+        self.view.endEditing(true)
     }
     
     
