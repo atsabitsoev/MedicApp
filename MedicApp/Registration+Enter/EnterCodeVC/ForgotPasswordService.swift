@@ -102,8 +102,9 @@ class ForgotPasswordService {
                     
                     print(error.localizedDescription)
                     self.confirmationError = error.localizedDescription
-                    
                 }
+                
+                NotificationManager.post(.confirmForgotPasswordRequestAnswered)
         }
     }
     

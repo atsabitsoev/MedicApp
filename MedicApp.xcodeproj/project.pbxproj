@@ -33,6 +33,7 @@
 		AC7F4CAB227CAEF0002A42AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */; };
 		AC7F4CB5227CAF68002A42AF /* WaveGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */; };
 		AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */; };
+		AC8EB8F222A7EA66003050DC /* EnterCodeTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EB8F122A7EA66003050DC /* EnterCodeTFDelegate.swift */; };
 		ACB543F3229E672200CC2FBA /* MyProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */; };
 		ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95022A525A2008DEFCB /* EnterService.swift */; };
 		ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95222A5271F008DEFCB /* ApiInfo.swift */; };
@@ -117,6 +118,7 @@
 		AC7F4CAC227CAEF0002A42AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC7F4CB4227CAF68002A42AF /* WaveGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveGradientView.swift; sourceTree = "<group>"; };
 		AC7F4CB6227CB6CA002A42AF /* ViewUnderTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUnderTextFields.swift; sourceTree = "<group>"; };
+		AC8EB8F122A7EA66003050DC /* EnterCodeTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeTFDelegate.swift; sourceTree = "<group>"; };
 		ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableView.swift; sourceTree = "<group>"; };
 		ACBCC95022A525A2008DEFCB /* EnterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterService.swift; path = MedicApp/GlobalEntities/EnterService.swift; sourceTree = SOURCE_ROOT; };
 		ACBCC95222A5271F008DEFCB /* ApiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiInfo.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */,
+				AC8EB8F122A7EA66003050DC /* EnterCodeTFDelegate.swift */,
 			);
 			path = EnterCodeVC;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */,
 				ACCE2758229424EE00E3126E /* Sender.swift in Sources */,
 				AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */,
+				AC8EB8F222A7EA66003050DC /* EnterCodeTFDelegate.swift in Sources */,
 				ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */,
 				ACD3BACE2298324A002882D7 /* ProfileSelectCell.swift in Sources */,
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
