@@ -59,13 +59,67 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTextFieldCell") as! ProfileTextFieldCell
             cell.labTitle.text = masTextFieldTitles[indexPath.row - 1]
+            
+            guard let profile = ProfileAPIService.standard.patientProfile else { return cell }
+            
+            switch indexPath.row {
+                
+            case 1:
+                
+                cell.tfMain.text = String(profile.growth)
+                
+            case 2:
+                
+                cell.tfMain.text = String(profile.weight)
+                
+            case 3:
+                
+                cell.tfMain.text = String(profile.age)
+                
+            default:
+                
+                print("error")
+            }
+            
+            cell.tfMain.tag = indexPath.row
+            
             return cell
             
-        } else if indexPath.row <= masTextFieldTitles.count + masChooseTitles.count{
+        } else if indexPath.row <= masTextFieldTitles.count + masChooseTitles.count {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSelectCell") as! ProfileSelectCell
             cell.labTitle.text = masChooseTitles[indexPath.row - masTextFieldTitles.count - 1]
+            cell.labVariant0.text = masVariants[indexPath.row - masTextFieldTitles.count - 1][0]
+            cell.labVariant1.text = masVariants[indexPath.row - masTextFieldTitles.count - 1][1]
             cell.set(indexPath)
+            
+            guard let profile = ProfileAPIService.standard.patientProfile else { return cell }
+            
+            switch indexPath.row {
+                
+            case 4:
+                
+                let selectedIndex = profile.sex == Sex.male.rawValue ? true : false
+                cell.viewCheck0.isActive != selectedIndex ? cell.changeCheck() : print("good")
+                cell.tag = 1
+                
+            case 5:
+                
+                let selectedIndex = profile.sport
+                cell.viewCheck0.isActive != selectedIndex ? cell.changeCheck() : print("good")
+                cell.tag = 2
+                
+            case 6:
+                
+                let selectedIndex = profile.workType == WorkType.active.rawValue ? true : false
+                cell.viewCheck0.isActive != selectedIndex ? cell.changeCheck() : print("good")
+                cell.tag = 3
+                
+            default:
+                
+                print("error")
+            }
+            
             return cell
             
         } else {

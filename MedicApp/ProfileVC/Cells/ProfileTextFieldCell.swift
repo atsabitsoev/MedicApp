@@ -13,7 +13,8 @@ class ProfileTextFieldCell: UITableViewCell {
     
     
     @IBOutlet weak var labTitle: UILabel!
-    @IBOutlet weak var tfMain: ViewRoundedBorders!
+    @IBOutlet weak var viewTFMain: ViewRoundedBorders!
+    @IBOutlet weak var tfMain: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,5 +26,22 @@ class ProfileTextFieldCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    
+    @IBAction func textChanged(_ sender: UITextField) {
+        
+        let profile = ProfileAPIService.standard.patientProfile
+        
+        switch sender.tag {
+        case 1:
+            profile?.growth = NSString(string: sender.text!).floatValue
+        case 2:
+            profile?.weight = NSString(string: sender.text!).floatValue
+        case 3:
+            profile?.age = Int(NSString(string: sender.text!).intValue)
+        default:
+            print("Error")
+        }
+    }
+    
 }

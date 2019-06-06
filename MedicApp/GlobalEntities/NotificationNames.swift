@@ -24,4 +24,7 @@ enum NotificationNames: String {
     case confirmationRequestAnswered = "confirmationRequestAnswered"
     case sendCodeForgotPasswordRequestAnswered = "sendCodeForgotPasswordRequestAnswered"
     case confirmForgotPasswordRequestAnswered = "confirmForgotPasswordRequestAnswered"
+    
+    case getProfileRequestAnswered = "getProfileRequestAnswered"
+    case postProfileRequestAnswered = "postProfileRequestAnswered"
 }

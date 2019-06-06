@@ -19,7 +19,8 @@ class ProfileAPIService {
     
     
     var patientProfile: PatientProfile?
-    var errorString: String?
+    var getErrorString: String?
+    var postErrorString: String?
     
     
     func getProfileRequest() {
@@ -46,7 +47,7 @@ class ProfileAPIService {
                         
                     case 200:
                         
-                        self.errorString = nil
+                        self.getErrorString = nil
                         
                         let id = json["patient"]["id"].stringValue
                         let role = json["patient"]["role"].stringValue
@@ -76,16 +77,75 @@ class ProfileAPIService {
                         
                     default:
                         
-                        self.errorString = json["data"]["error"].stringValue
+                        self.getErrorString = json["data"]["error"].stringValue
                         
                     }
                     
                 } catch {
                     
                     let errorString = error.localizedDescription
-                    self.errorString = errorString
+                    self.getErrorString = errorString
                     print(errorString)
                 }
+                
+                NotificationManager.post(.getProfileRequestAnswered)
+        }
+    }
+    
+    
+    func postProfileRequest(patientProfile: PatientProfile) {
+        
+        let url = "\(ApiInfo().baseUrl)/patient/\(TokenService.standard.id!)/profile/update"
+        
+        let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
+        
+        let parameters: Parameters = ["id": patientProfile.id,
+                                      "role": patientProfile.role,
+                                      "created": patientProfile.created,
+                                      "name": patientProfile.name,
+                                      "surname": patientProfile.surname,
+                                      "sex": patientProfile.sex,
+                                      "growth": patientProfile.growth,
+                                      "weight": patientProfile.weight,
+                                      "age": patientProfile.age,
+                                      "sport": patientProfile.sport,
+                                      "workType": patientProfile.workType]
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: parameters,
+                   encoding: JSONEncoding.default,
+                   headers: headers,
+                   interceptor: nil)
+            .responseJSON { (response) in
+                
+                do {
+                    
+                    let responseValue = try response.result.get()
+                    let json = JSON(responseValue)
+                    print(json)
+                    
+                    switch response.response?.statusCode {
+                        
+                    case 200:
+                        
+                        self.postErrorString = nil
+                        
+                    default:
+                        
+                        self.postErrorString = json["data"]["error"].stringValue
+                        
+                    }
+                    
+                } catch {
+                    
+                    let errorString = error.localizedDescription
+                    self.postErrorString = errorString
+                    print(errorString)
+                    
+                }
+                
+                NotificationManager.post(.postProfileRequestAnswered)
         }
     }
 }
