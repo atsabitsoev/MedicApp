@@ -20,5 +20,11 @@ class ProfileSaveCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
+    @IBAction func saveTapped(_ sender: UIButton) {
+        
+        ProfileAPIService.standard.postProfileRequest()
+        NotificationManager.post(.profileSavingBegan)
+    }
 }

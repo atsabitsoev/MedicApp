@@ -18,7 +18,7 @@ class ProfileAPIService {
     static let standard = ProfileAPIService()
     
     
-    var patientProfile: PatientProfile?
+    var patientProfile: PatientProfile!
     var getErrorString: String?
     var postErrorString: String?
     
@@ -40,7 +40,7 @@ class ProfileAPIService {
                 do {
                     
                     let responseValue = try response.result.get()
-                    let json = JSON(responseValue)
+                    let json = JSON(responseValue)["data"]
                     print(json)
                     
                     switch response.response?.statusCode {
@@ -54,12 +54,12 @@ class ProfileAPIService {
                         let created = json["patient"]["created"].intValue
                         let name = json["patient"]["name"].stringValue
                         let surname = json["patient"]["surname"].stringValue
-                        let sex = json["patient"]["sex"].stringValue
+                        let sex = json["patient"]["sex"].string ?? Sex.male.rawValue
                         let growth = json["patient"]["growth"].floatValue
                         let weight = json["patient"]["weight"].floatValue
                         let age = json["patient"]["age"].intValue
-                        let sport = json["patient"]["sport"].boolValue
-                        let workType = json["patient"]["workType"].stringValue
+                        let sport = json["patient"]["sport"].bool ?? true
+                        let workType = json["patient"]["workType"].string ?? WorkType.active.rawValue
                         
                         let patientProfile = PatientProfile(id: id,
                                                             role: role,
@@ -93,23 +93,23 @@ class ProfileAPIService {
     }
     
     
-    func postProfileRequest(patientProfile: PatientProfile) {
+    func postProfileRequest() {
         
         let url = "\(ApiInfo().baseUrl)/patient/\(TokenService.standard.id!)/profile/update"
         
         let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
         
-        let parameters: Parameters = ["id": patientProfile.id,
-                                      "role": patientProfile.role,
-                                      "created": patientProfile.created,
-                                      "name": patientProfile.name,
-                                      "surname": patientProfile.surname,
-                                      "sex": patientProfile.sex,
-                                      "growth": patientProfile.growth,
-                                      "weight": patientProfile.weight,
-                                      "age": patientProfile.age,
-                                      "sport": patientProfile.sport,
-                                      "workType": patientProfile.workType]
+        let parameters: Parameters = ["profile":["id": self.patientProfile.id,
+                                                 "role": self.patientProfile.role,
+                                                 "created": self.patientProfile.created,
+                                                 "name": self.patientProfile.name,
+                                                 "surname": self.patientProfile.surname,
+                                                 "sex": self.patientProfile.sex,
+                                                 "growth": self.patientProfile.growth,
+                                                 "weight": self.patientProfile.weight,
+                                                 "age": self.patientProfile.age,
+                                                 "sport": self.patientProfile.sport,
+                                                 "workType": self.patientProfile.workType]]
         
         AF.request(url,
                    method: .post,

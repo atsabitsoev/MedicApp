@@ -66,11 +66,11 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
                 
             case 1:
                 
-                cell.tfMain.text = String(profile.growth)
+                cell.tfMain.text = String(Int(profile.growth))
                 
             case 2:
                 
-                cell.tfMain.text = String(profile.weight)
+                cell.tfMain.text = String(Int(profile.weight))
                 
             case 3:
                 

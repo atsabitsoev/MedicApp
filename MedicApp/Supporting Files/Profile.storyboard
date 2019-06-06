@@ -44,7 +44,7 @@
                                                             <rect key="frame" x="18" y="0.0" width="197.5" height="47"/>
                                                             <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="18"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="tel"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             <connections>
                                                                 <action selector="textChanged:" destination="78h-tN-S71" eventType="editingChanged" id="wqK-R1-Qxt"/>
                                                             </connections>
@@ -212,6 +212,9 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="useShadow" value="NO"/>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="needImage" value="NO"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="saveTapped:" destination="41Q-fP-4FP" eventType="touchUpInside" id="5k2-6G-bSA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

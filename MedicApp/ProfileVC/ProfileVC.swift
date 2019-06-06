@@ -60,9 +60,18 @@ class ProfileVC: UIViewController {
                                                selector: #selector(postProfileRequestAnswered),
                                                name: NSNotification.Name(rawValue: NotificationNames.postProfileRequestAnswered.rawValue),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(profileSavingBegan),
+                                               name: NSNotification.Name(rawValue: NotificationNames.profileSavingBegan.rawValue),
+                                               object: nil)
+        
         
     }
     
+    
+    @objc private func profileSavingBegan() {
+        startLoadingAnimation()
+    }
     
     @objc private func getProfileRequestAnswered() {
         stopLoadingAnimation()
@@ -82,7 +91,7 @@ class ProfileVC: UIViewController {
     @objc private func postProfileRequestAnswered() {
         stopLoadingAnimation()
         
-        guard ProfileAPIService.standard.getErrorString == nil else {
+        guard ProfileAPIService.standard.postErrorString == nil else {
             
             errorAlert(ProfileAPIService.standard.getErrorString!)
             return
