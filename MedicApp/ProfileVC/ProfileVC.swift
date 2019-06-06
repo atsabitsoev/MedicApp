@@ -30,6 +30,8 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         
         tableView.delaysContentTouches = false
+        
+        ProfileAPIService.standard.getProfileRequest()
     }
     
     override func viewWillLayoutSubviews() {
