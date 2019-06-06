@@ -377,6 +377,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Be7-LI-q1w" id="VGd-vG-Uww"/>
                         <outlet property="tfCode" destination="X8E-Pj-Gak" id="BoZ-Yq-NaC"/>
+                        <outlet property="viewAlert" destination="TXc-eT-YSi" id="8EK-Of-6ai"/>
                         <outlet property="viewBackground" destination="xCd-VY-VWx" id="Xmx-Br-AOh"/>
                     </connections>
                 </viewController>

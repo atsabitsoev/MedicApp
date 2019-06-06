@@ -14,6 +14,7 @@ class RegistrationCodeVC: UIViewController {
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var tfCode: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var viewAlert: UIView!
     
     
     let registrationService = RegistrationService.standard
@@ -26,6 +27,7 @@ class RegistrationCodeVC: UIViewController {
         super.viewDidLoad()
         
         addObservers()
+        tfCode.delegate = self
         configureBackground()
     }
     
@@ -84,6 +86,23 @@ class RegistrationCodeVC: UIViewController {
     }
     
     
+    func pullUp() {
+        
+        let offset: CGFloat = 120
+        UIView.animate(withDuration: 0.3) {
+            self.viewAlert.frame.origin.y -= offset
+        }
+    }
+    
+    func pullDown() {
+        
+        let offset: CGFloat = 120
+        UIView.animate(withDuration: 0.3) {
+            self.viewAlert.frame.origin.y += offset
+        }
+    }
+    
+    
     private func startLoadingAnimation() {
         
         activityIndicator.startAnimating()
@@ -108,6 +127,7 @@ class RegistrationCodeVC: UIViewController {
         guard let code = sender.text, code.count == 5 else { return }
         
         sendConfirmRequest(login: userLogin!, code: code)
+        self.view.endEditing(true)
     }
     
     

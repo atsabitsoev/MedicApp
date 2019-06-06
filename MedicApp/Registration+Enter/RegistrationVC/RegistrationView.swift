@@ -107,13 +107,14 @@ class RegistrationView: UIViewController {
             return
         }
         
+        startLoadingAnimation()
+        
         if trueCredentials() {
             registrationService.sendRegistrationRequest(login: login, password: password)
         } else {
             showErrorAlert(message: "Пароли не совпадают")
+            stopLoadingAnimation()
         }
-        
-        startLoadingAnimation()
     }
     
     private func startLoadingAnimation() {
@@ -137,6 +138,7 @@ class RegistrationView: UIViewController {
     }
     
     @objc private func registrationRequestAnswered() {
+        stopLoadingAnimation()
         
         let success = registrationService.registrationRequestSucceed
         
@@ -145,8 +147,6 @@ class RegistrationView: UIViewController {
         } else {
             showErrorAlert(message: registrationService.errorRegistrationString)
         }
-        
-        stopLoadingAnimation()
     }
     
     
