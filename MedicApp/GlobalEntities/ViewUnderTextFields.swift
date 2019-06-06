@@ -39,7 +39,7 @@ class ViewUnderTextFields: UIView {
     }
     
     
-    private func setupShadow() {
+    func setupShadow() {
         shadowView.frame = frame
         if myCornerRadius < 0 {
             shadowView.layer.cornerRadius = cornerRadius

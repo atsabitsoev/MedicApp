@@ -376,6 +376,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="Be7-LI-q1w" id="VGd-vG-Uww"/>
+                        <outlet property="constAlertCenter" destination="Nff-2R-YTY" id="bEe-Zx-HmB"/>
                         <outlet property="tfCode" destination="X8E-Pj-Gak" id="BoZ-Yq-NaC"/>
                         <outlet property="viewAlert" destination="TXc-eT-YSi" id="8EK-Of-6ai"/>
                         <outlet property="viewBackground" destination="xCd-VY-VWx" id="Xmx-Br-AOh"/>
@@ -736,16 +737,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nsx-C1-kgu">
-                                <rect key="frame" x="137.66666666666666" y="8" width="100" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ebn-JJ-o1R"/>
-                                    <constraint firstAttribute="width" constant="100" id="xf5-GO-8o6"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="28"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vd3-EZ-MD9" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
                                 <rect key="frame" x="36" y="518" width="303" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -788,6 +779,7 @@
                             <constraint firstItem="NI8-De-UM9" firstAttribute="top" secondItem="Dwh-yF-3QE" secondAttribute="top" id="2hh-M8-Fru"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="leading" secondItem="hKk-Td-XOw" secondAttribute="leading" constant="18" id="3wH-sN-RMF"/>
                             <constraint firstItem="NI8-De-UM9" firstAttribute="leading" secondItem="rvE-Xm-LIp" secondAttribute="leading" id="77c-vO-otn"/>
+                            <constraint firstItem="Vd3-EZ-MD9" firstAttribute="top" secondItem="e1I-TA-Qfy" secondAttribute="top" id="E1U-63-hz9"/>
                             <constraint firstItem="elM-ex-Orq" firstAttribute="top" secondItem="Dwh-yF-3QE" secondAttribute="top" id="Fco-W8-7Kj"/>
                             <constraint firstAttribute="bottom" secondItem="NI8-De-UM9" secondAttribute="bottom" id="K3L-jC-RYP"/>
                             <constraint firstItem="Vd3-EZ-MD9" firstAttribute="bottom" secondItem="e1I-TA-Qfy" secondAttribute="bottom" id="Lxi-jh-YM5"/>
@@ -797,7 +789,6 @@
                             <constraint firstItem="NI8-De-UM9" firstAttribute="leading" secondItem="rvE-Xm-LIp" secondAttribute="leading" id="Xac-cn-Idp"/>
                             <constraint firstItem="rvE-Xm-LIp" firstAttribute="trailing" secondItem="hKk-Td-XOw" secondAttribute="trailing" constant="18" id="cMI-pN-JW8"/>
                             <constraint firstItem="Vd3-EZ-MD9" firstAttribute="leading" secondItem="e1I-TA-Qfy" secondAttribute="leading" id="eUQ-xX-fFS"/>
-                            <constraint firstItem="Vd3-EZ-MD9" firstAttribute="top" secondItem="pIM-Nv-WkY" secondAttribute="bottom" constant="8" id="fMw-8M-Onv"/>
                             <constraint firstItem="NI8-De-UM9" firstAttribute="trailing" secondItem="rvE-Xm-LIp" secondAttribute="trailing" id="ho6-yZ-igL"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="top" secondItem="pIM-Nv-WkY" secondAttribute="bottom" constant="8" id="iuf-44-cCe"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="bottom" secondItem="hKk-Td-XOw" secondAttribute="bottom" constant="-18" id="jGC-Yd-O8D"/>

@@ -162,25 +162,27 @@ class EnterCodeVC: UIViewController {
     
     func pullUp() {
         
+        let offset: CGFloat = -120
+        
+        self.constWhiteViewCenter.constant += offset
+        
         UIView.animate(withDuration: 0.3) {
             
-            let offset: CGFloat = 120
-            
-            self.viewAlert.frame.origin.y -= offset
-            self.butSend.frame.origin.y -= offset
-            self.viewShadowButSend.shadowView.frame.origin.y -= offset
+            self.view.layoutIfNeeded()
+            self.viewShadowButSend.setupShadow()
         }
     }
     
     func pullDown() {
         
+        let offset: CGFloat = 120
+        
+        self.constWhiteViewCenter.constant += offset
+        
         UIView.animate(withDuration: 0.3) {
             
-            let offset: CGFloat = 120
-            
-            self.viewAlert.frame.origin.y += offset
-            self.butSend.frame.origin.y += offset
-            self.viewShadowButSend.shadowView.frame.origin.y += offset
+            self.view.layoutIfNeeded()
+            self.viewShadowButSend.setupShadow()
         }
     }
     
