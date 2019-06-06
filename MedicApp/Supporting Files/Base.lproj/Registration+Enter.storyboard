@@ -323,13 +323,6 @@
                                                         <action selector="tfCodeTextChanged:" destination="xmH-07-bD6" eventType="editingChanged" id="6Gd-gd-Jl3"/>
                                                     </connections>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrW-re-dpV">
-                                                    <rect key="frame" x="163" y="286" width="158" height="34"/>
-                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
-                                                    <state key="normal" title="Отправить еще раз">
-                                                        <color key="titleColor" white="0.0" alpha="0.38158176369863012" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -339,8 +332,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="OxE-YR-6rS" secondAttribute="trailing" id="G0K-Se-Djq"/>
                                                 <constraint firstItem="OxE-YR-6rS" firstAttribute="centerY" secondItem="TXc-eT-YSi" secondAttribute="centerY" constant="40" id="av9-ng-FWZ"/>
                                                 <constraint firstItem="X8E-Pj-Gak" firstAttribute="centerY" secondItem="OxE-YR-6rS" secondAttribute="centerY" id="gwF-ON-aq9"/>
-                                                <constraint firstAttribute="trailing" secondItem="QrW-re-dpV" secondAttribute="trailing" constant="18" id="hfw-0O-bk2"/>
-                                                <constraint firstItem="QrW-re-dpV" firstAttribute="top" secondItem="OxE-YR-6rS" secondAttribute="bottom" constant="18" id="jRm-2d-n6F"/>
                                                 <constraint firstItem="X8E-Pj-Gak" firstAttribute="centerX" secondItem="OxE-YR-6rS" secondAttribute="centerX" id="rFY-7X-jRd"/>
                                                 <constraint firstItem="OxE-YR-6rS" firstAttribute="leading" secondItem="TXc-eT-YSi" secondAttribute="leading" id="tTt-Pj-YkD"/>
                                                 <constraint firstAttribute="trailing" secondItem="9F8-9m-4pF" secondAttribute="trailing" constant="18" id="zG7-Q6-cQg"/>
@@ -805,10 +796,10 @@
                             <constraint firstItem="NI8-De-UM9" firstAttribute="leading" secondItem="rvE-Xm-LIp" secondAttribute="leading" id="Xac-cn-Idp"/>
                             <constraint firstItem="rvE-Xm-LIp" firstAttribute="trailing" secondItem="hKk-Td-XOw" secondAttribute="trailing" constant="18" id="cMI-pN-JW8"/>
                             <constraint firstItem="Vd3-EZ-MD9" firstAttribute="leading" secondItem="e1I-TA-Qfy" secondAttribute="leading" id="eUQ-xX-fFS"/>
+                            <constraint firstItem="Vd3-EZ-MD9" firstAttribute="top" secondItem="pIM-Nv-WkY" secondAttribute="bottom" constant="8" id="fMw-8M-Onv"/>
                             <constraint firstItem="NI8-De-UM9" firstAttribute="trailing" secondItem="rvE-Xm-LIp" secondAttribute="trailing" id="ho6-yZ-igL"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="top" secondItem="pIM-Nv-WkY" secondAttribute="bottom" constant="8" id="iuf-44-cCe"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="bottom" secondItem="hKk-Td-XOw" secondAttribute="bottom" constant="-18" id="jGC-Yd-O8D"/>
-                            <constraint firstItem="Vd3-EZ-MD9" firstAttribute="top" secondItem="e1I-TA-Qfy" secondAttribute="top" id="lwi-8D-T9Y"/>
                             <constraint firstItem="elM-ex-Orq" firstAttribute="leading" secondItem="rvE-Xm-LIp" secondAttribute="leading" id="ng1-XO-KKZ"/>
                             <constraint firstItem="e1I-TA-Qfy" firstAttribute="trailing" secondItem="hKk-Td-XOw" secondAttribute="trailing" constant="-18" id="v2p-nm-leM"/>
                             <constraint firstItem="hKk-Td-XOw" firstAttribute="centerY" secondItem="Dwh-yF-3QE" secondAttribute="centerY" id="xGz-ph-0J8"/>
@@ -818,10 +809,13 @@
                     <navigationItem key="navigationItem" id="3wt-ik-50c"/>
                     <connections>
                         <outlet property="activityIndicator" destination="pIM-Nv-WkY" id="UVE-bk-LSh"/>
+                        <outlet property="blurView" destination="elM-ex-Orq" id="Bsi-hJ-upn"/>
                         <outlet property="butSend" destination="e1I-TA-Qfy" id="ZVV-Np-jKC"/>
+                        <outlet property="constWhiteViewCenter" destination="xGz-ph-0J8" id="GzH-HU-Bbh"/>
                         <outlet property="labTitle" destination="uT9-bg-Ydj" id="EUm-dn-d2G"/>
                         <outlet property="tfCode" destination="Tt3-Sl-p8r" id="Pf8-ca-z1Z"/>
                         <outlet property="tfLogin" destination="5Jh-kv-RKw" id="2ee-Bh-VY3"/>
+                        <outlet property="viewAlert" destination="hKk-Td-XOw" id="DhN-aK-wfM"/>
                         <outlet property="viewBackground" destination="NI8-De-UM9" id="cpR-uk-BhZ"/>
                         <outlet property="viewShadowButSend" destination="Vd3-EZ-MD9" id="sPl-Oe-tIf"/>
                         <outlet property="viewUnderTfCode" destination="Xgb-BJ-fR1" id="vNh-XB-CFA"/>

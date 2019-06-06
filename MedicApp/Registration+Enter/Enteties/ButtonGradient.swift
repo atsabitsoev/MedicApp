@@ -29,6 +29,7 @@ class ButtonGradient: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
+        print("imageSet = \(imageSet)")
 
         if !imageSet && needImage {
             setMyImage()
@@ -77,8 +78,7 @@ class ButtonGradient: UIButton {
         myImageView.image = UIImage(named: "Стрелка вправо")
         myImageView.contentMode = .scaleAspectFit
         addSubview(myImageView)
-
-        imageSet = true
+ 
     }
     
     func removeImage() {

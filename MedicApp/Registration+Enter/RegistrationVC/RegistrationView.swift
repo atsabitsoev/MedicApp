@@ -202,6 +202,7 @@ class RegistrationView: UIViewController {
     @IBAction func butGoTouchUpInside(_ sender: UIButton) {
         animateButGo(pressed: false)
         checkCredentialsAndMakeRegistrationRequest()
+        self.view.endEditing(true)
     }
     
     @IBAction func butGoTouchUpOutside(_ sender: UIButton) {

@@ -19,6 +19,9 @@ class EnterCodeVC: UIViewController {
     @IBOutlet weak var viewShadowButSend: ViewUnderTextFields!
     @IBOutlet weak var butSend: ButtonGradient!
     @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var constWhiteViewCenter: NSLayoutConstraint!
+    @IBOutlet weak var viewAlert: UIView!
     
     
     let forgotPassService = ForgotPasswordService.standard
@@ -159,25 +162,25 @@ class EnterCodeVC: UIViewController {
     
     func pullUp() {
         
-        let origin = CGPoint(x: view.frame.minX,
-                             y: view.frame.minY - 120)
-        let size = view.frame.size
-        
         UIView.animate(withDuration: 0.3) {
-            self.view.frame = CGRect(origin: origin, size: size)
-            self.view.layoutIfNeeded()
+            
+            let offset: CGFloat = 120
+            
+            self.viewAlert.frame.origin.y -= offset
+            self.butSend.frame.origin.y -= offset
+            self.viewShadowButSend.shadowView.frame.origin.y -= offset
         }
     }
     
     func pullDown() {
         
-        let origin = CGPoint(x: view.frame.minX,
-                             y: view.frame.minY + 120)
-        let size = view.frame.size
-        
         UIView.animate(withDuration: 0.3) {
-            self.view.frame = CGRect(origin: origin, size: size)
-            self.view.layoutIfNeeded()
+            
+            let offset: CGFloat = 120
+            
+            self.viewAlert.frame.origin.y += offset
+            self.butSend.frame.origin.y += offset
+            self.viewShadowButSend.shadowView.frame.origin.y += offset
         }
     }
     
