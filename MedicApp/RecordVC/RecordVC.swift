@@ -35,6 +35,8 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        RecordService.standard.getValidHoursRequest(day: "01.07.2019")
+        
         addObservers()
         setTfDelegates()
         
