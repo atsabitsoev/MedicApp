@@ -11,6 +11,9 @@ import UIKit
 class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITextFieldDelegate {
     
     
+    let recordService = RecordService.standard
+    
+    
     @IBOutlet weak var viewUnderButChooseDate: ViewUnderTextFields!
     @IBOutlet weak var butChooseDate: UIButton!
     @IBOutlet weak var butRecord: ButtonGradient!
@@ -22,10 +25,11 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     @IBOutlet weak var tfFathersName: UITextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     var selectedIndexPath: IndexPath?
-    var validTimeArr: [Date] = [Date(), Date(), Date(), Date(), Date()]
+    var validTimeArr: [String] = []
     
     
     var record: Record?
@@ -34,8 +38,6 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        RecordService.standard.getValidHoursRequest(day: "01.07.2019")
         
         addObservers()
         setTfDelegates()
@@ -54,8 +56,19 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     
     private func addObservers() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(activateTabBar), name: NSNotification.Name(rawValue: NotificationNames.calendarClosed.rawValue), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(deactivateTabBar), name: NSNotification.Name(rawValue: NotificationNames.calendarOpened.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(activateTabBar),
+                                               name: NSNotification.Name(rawValue: NotificationNames.calendarClosed.rawValue),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(deactivateTabBar),
+                                               name: NSNotification.Name(rawValue: NotificationNames.calendarOpened.rawValue),
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(timesRequestAnswered),
+                                               name: NSNotification.Name(rawValue: NotificationNames.getValidHoursRequestAnswered.rawValue),
+                                               object: nil)
     }
     
     @objc private func activateTabBar() {
@@ -68,6 +81,20 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         self.tabBarController!.tabBar.isUserInteractionEnabled = false
     }
     
+    @objc private func timesRequestAnswered() {
+        
+        activityIndicator.stopAnimating()
+        
+        guard recordService.getHoursError == nil else {
+            showErrorAlert(message: recordService.getHoursError!)
+            return
+        }
+        
+        validTimeArr = recordService.arrValidHours!
+        showTimeCollectionView()
+    }
+    
+    
     private func setTfDelegates() {
         
         tfLastName.delegate = self
@@ -76,10 +103,11 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     }
     
     
-    func updateButChooseDate() {
+    func updateDate() {
         
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day, .month, .year], from: record!.date!)
+        
         
         let dateString = "Ваша дата: \(components.day!)/\(components.month!)/\(components.year!)"
         
@@ -89,14 +117,38 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         
         butChooseDate.setTitle(dateString, for: .normal)
         
-        showTimeCollectionView()
+        sendGetTimeArrRequest(day: "\(components.day!).\(components.month!).\(components.year!)")
+        activityIndicator.startAnimating()
     }
     
+    
+    //MARK: Показать ошибку
+    
+    private func showErrorAlert(message: String?) {
+        
+        let alert = UIAlertController(title: "Ошибка", message: message ?? "Возникла неизвестная ошибка", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    private func sendGetTimeArrRequest(day: String) {
+        
+        RecordService.standard.getValidHoursRequest(day: day)
+    }
+    
+    
     private func showTimeCollectionView() {
+        collectionView.alpha = 0
+        selectedIndexPath = nil
+        collectionView.reloadData()
         
         UIView.animate(withDuration: 0.3) {
             self.collectionView.alpha = 1
         }
+        
     }
     
     

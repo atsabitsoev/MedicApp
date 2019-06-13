@@ -28,4 +28,6 @@ enum NotificationNames: String {
     case getProfileRequestAnswered = "getProfileRequestAnswered"
     case postProfileRequestAnswered = "postProfileRequestAnswered"
     case profileSavingBegan = "profileSavingBegan"
+    
+    case getValidHoursRequestAnswered = "getValidHoursRequestAnswered"
 }

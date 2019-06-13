@@ -264,13 +264,19 @@
                                 <color key="textColor" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cmj-5P-AQP">
+                                <rect key="frame" x="188.5" y="471.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="7Kz-fZ-plR" secondAttribute="trailing" id="ExB-oe-WRo"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="trailing" secondItem="gAl-AQ-ofO" secondAttribute="trailing" id="J44-uz-FVA"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="centerX" secondItem="oFa-3e-RrU" secondAttribute="centerX" id="JkO-kn-NjQ"/>
+                            <constraint firstItem="cmj-5P-AQP" firstAttribute="centerY" secondItem="Kvo-nd-cnj" secondAttribute="centerY" id="Ne4-NK-MR9"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="Old-kj-caQ"/>
+                            <constraint firstItem="cmj-5P-AQP" firstAttribute="centerX" secondItem="Kvo-nd-cnj" secondAttribute="centerX" id="Vno-Gs-2tm"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="dFn-Jv-tlV"/>
                             <constraint firstItem="7Kz-fZ-plR" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="eWd-Rr-gbp"/>
                             <constraint firstAttribute="bottom" secondItem="0ZL-9c-tmF" secondAttribute="bottom" id="g9I-gN-eUl"/>
@@ -282,6 +288,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="cmj-5P-AQP" id="Q8n-2f-lEC"/>
                         <outlet property="butChooseDate" destination="enw-N7-XNi" id="2V0-dp-etc"/>
                         <outlet property="butRecord" destination="r8b-qT-J72" id="TTp-DW-7EF"/>
                         <outlet property="collectionView" destination="Kvo-nd-cnj" id="Gdl-I4-L81"/>

@@ -13,11 +13,14 @@ extension RecordVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return validTimeArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecordTimeCell", for: indexPath) as! RecordTimeCell
+        
+        cell.labTime.text = validTimeArr[indexPath.row]
         
         if indexPath == selectedIndexPath {
             

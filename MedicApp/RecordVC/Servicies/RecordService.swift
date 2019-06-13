@@ -34,14 +34,30 @@ class RecordService {
                    encoding: JSONEncoding.default,
                    headers: headers,
                    interceptor: nil)
-            .response { (response) in
+            .responseJSON { (response) in
                 
                 do {
                     
-                    self.getHoursError = nil
                     let responseValue = try response.result.get()
                     let json = JSON(responseValue)
                     print(json)
+                    
+                    switch response.response?.statusCode {
+                        
+                    case 200:
+                        
+                        self.getHoursError = nil
+                        let arrayOfRecords = json["data"]["hours"]["times"].arrayValue
+                        let validHours = arrayOfRecords.map({ (json) -> String in
+                            return json["time"].stringValue
+                        })
+                        self.arrValidHours = validHours
+                        
+                    default:
+                        
+                        self.getHoursError = json["data"]["error"].stringValue
+                        
+                    }
                     
                 } catch {
                     
@@ -49,6 +65,8 @@ class RecordService {
                     print(errorString)
                     self.getHoursError = errorString
                 }
+                
+                NotificationManager.post(.getValidHoursRequestAnswered)
         }
         
     }

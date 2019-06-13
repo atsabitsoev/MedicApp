@@ -91,6 +91,7 @@
 		ACFC9B85228D8ECD009F5798 /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFC9B84228D8ECD009F5798 /* Record.storyboard */; };
 		ACFC9B87228DABBD009F5798 /* Excercises.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFC9B86228DABBD009F5798 /* Excercises.storyboard */; };
 		ACFC9B8D228DAE33009F5798 /* ExcercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFC9B8C228DAE33009F5798 /* ExcercisesVC.swift */; };
+		ACFF099822B2EF970033C1F1 /* DiagnosticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF099722B2EF970033C1F1 /* DiagnosticService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +182,7 @@
 		ACFC9B84228D8ECD009F5798 /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		ACFC9B86228DABBD009F5798 /* Excercises.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Excercises.storyboard; sourceTree = "<group>"; };
 		ACFC9B8C228DAE33009F5798 /* ExcercisesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesVC.swift; sourceTree = "<group>"; };
+		ACFF099722B2EF970033C1F1 /* DiagnosticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticService.swift; sourceTree = "<group>"; };
 		C806D980F5719E7C547E60EE /* Pods-MedicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.debug.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -519,6 +521,7 @@
 		ACE43F31228EE9AA007BCBC0 /* DiagnosticResultsVC */ = {
 			isa = PBXGroup;
 			children = (
+				ACFF099622B2EF820033C1F1 /* Servicies */,
 				ACE43F36228EEC9F007BCBC0 /* View */,
 			);
 			path = DiagnosticResultsVC;
@@ -601,6 +604,14 @@
 				ACE43F2A228ED27E007BCBC0 /* View */,
 			);
 			path = ExcercisesVC;
+			sourceTree = "<group>";
+		};
+		ACFF099622B2EF820033C1F1 /* Servicies */ = {
+			isa = PBXGroup;
+			children = (
+				ACFF099722B2EF970033C1F1 /* DiagnosticService.swift */,
+			);
+			path = Servicies;
 			sourceTree = "<group>";
 		};
 		E4739D2809D0826D0474B1B4 /* Frameworks */ = {
@@ -790,6 +801,7 @@
 				AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */,
 				AC8EB8F222A7EA66003050DC /* EnterCodeTFDelegate.swift in Sources */,
 				ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */,
+				ACFF099822B2EF970033C1F1 /* DiagnosticService.swift in Sources */,
 				ACD3BACE2298324A002882D7 /* ProfileSelectCell.swift in Sources */,
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
 				ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */,

@@ -59,7 +59,7 @@ class CalendarVC: UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDe
         let date = DateComponents(calendar: .current, timeZone: .current, era: 0, year: year, month: month, day: day).date
         
         recordVC!.record?.date = date
-        recordVC!.updateButChooseDate()
+        recordVC!.updateDate()
         dismissVC()
     }
     

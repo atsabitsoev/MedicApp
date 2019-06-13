@@ -13,6 +13,7 @@ class DiagnosticResultsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        DiagnosticService.standard.getDiagnosticInfoRequest()
     }
     
 
