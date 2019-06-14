@@ -22,6 +22,29 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! DiagnosticResultsCell
+        
+        UIView.animate(withDuration: 0.05) {
+            cell.viewMainCard.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            cell.viewMainCard.shadowView.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }
+        
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! DiagnosticResultsCell
+        
+        UIView.animate(withDuration: 0.05) {
+            cell.viewMainCard.transform = CGAffineTransform(scaleX: 1, y: 1)
+            cell.viewMainCard.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
+    
     
     
 }

@@ -11,7 +11,7 @@ import UIKit
 class DiagnosticResultsCell: UITableViewCell {
     
     
-    @IBOutlet weak var viewMainCard: UIView!
+    @IBOutlet weak var viewMainCard: ViewUnderTextFields!
     @IBOutlet weak var viewGradientHeader: ViewGradientHeader!
 
 
