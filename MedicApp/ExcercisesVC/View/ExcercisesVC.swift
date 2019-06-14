@@ -12,12 +12,14 @@ class ExcercisesVC: UIViewController {
     
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
     var segmentedControlShadow: UIView = UIView()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delaysContentTouches = false
     }
     
     

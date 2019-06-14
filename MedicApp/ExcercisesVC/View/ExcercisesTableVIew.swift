@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 
 extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
@@ -27,6 +29,41 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! ExcercisesCell
+        
+        UIView.animate(withDuration: 0.05) {
+            cell.viewShadow.shadowView.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            cell.viewPlay.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            cell.imagePreview.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }
+        
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! ExcercisesCell
+        
+        UIView.animate(withDuration: 0.05) {
+            cell.viewShadow.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            cell.viewPlay.transform = CGAffineTransform(scaleX: 1, y: 1)
+            cell.imagePreview.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
     }
     
     

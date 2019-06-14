@@ -91,6 +91,8 @@
                                         <connections>
                                             <outlet property="imagePreview" destination="hhG-oN-Opj" id="xl7-f0-U4B"/>
                                             <outlet property="labTitle" destination="l6N-pP-eNM" id="vcj-yJ-P0y"/>
+                                            <outlet property="viewPlay" destination="fyP-ON-1cM" id="QQP-Lx-zep"/>
+                                            <outlet property="viewShadow" destination="VBg-rD-z0r" id="Pbs-18-Koo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -153,6 +155,7 @@
                     </view>
                     <connections>
                         <outlet property="segmentedControl" destination="TuC-H6-SbU" id="b51-Fb-S5W"/>
+                        <outlet property="tableView" destination="mBt-tG-JxD" id="pxm-gs-dnm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qci-Y3-qko" userLabel="First Responder" sceneMemberID="firstResponder"/>

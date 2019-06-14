@@ -13,6 +13,8 @@ class ExcercisesCell: UITableViewCell {
     
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var labTitle: UILabel!
+    @IBOutlet weak var viewPlay: ViewPlay!
+    @IBOutlet weak var viewShadow: ViewUnderTextFields!
     
     
     override func layoutSubviews() {
