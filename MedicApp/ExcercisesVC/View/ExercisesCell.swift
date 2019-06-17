@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExcercisesCell: UITableViewCell {
+class ExercisesCell: UITableViewCell {
     
     
     @IBOutlet weak var imagePreview: UIImageView!

@@ -15,11 +15,18 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return allExercises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "excercisesCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "excercisesCell") as! ExercisesCell
+        
+        cell.labTitle.text = allExercises[indexPath.row].name
+        
+        let imageUrl = allExercises[indexPath.row].preview
+        let imageData = try! Data(contentsOf: imageUrl)
+        cell.imagePreview.image = UIImage(data: imageData)
+        
         return cell
     }
     
@@ -33,8 +40,8 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        let player = AVPlayer(url: videoURL!)
+        let videoURL = allExercises[indexPath.row].video
+        let player = AVPlayer(url: videoURL)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
         self.present(playerViewController, animated: true) {
@@ -44,7 +51,7 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         
-        let cell = tableView.cellForRow(at: indexPath) as! ExcercisesCell
+        let cell = tableView.cellForRow(at: indexPath) as! ExercisesCell
         
         UIView.animate(withDuration: 0.05) {
             cell.viewShadow.shadowView.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
@@ -57,7 +64,7 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRow(at: indexPath) as! ExcercisesCell
+        let cell = tableView.cellForRow(at: indexPath) as! ExercisesCell
         
         UIView.animate(withDuration: 0.05) {
             cell.viewShadow.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)

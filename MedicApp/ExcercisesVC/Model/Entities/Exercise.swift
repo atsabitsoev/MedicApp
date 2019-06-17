@@ -9,15 +9,18 @@
 import Foundation
 
 
-class Excercise {
+class Exercise {
     
+    var name: String
     var preview: URL
     var video: URL
     
     
-    init(preview: URL,
+    init(name: String,
+         preview: URL,
          video: URL) {
         
+        self.name = name
         self.preview = preview
         self.video = video
     }

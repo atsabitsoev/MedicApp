@@ -17,7 +17,7 @@ class GetExercisesService {
     static let standard = GetExercisesService()
     
     
-    var allExcercises: [Excercise]?
+    var allExercises: [Exercise]?
     var errorAllExcercises: String?
     
     
@@ -40,11 +40,42 @@ class GetExercisesService {
                     let json = JSON(responseValue)
                     print(json)
                     
+                    switch response.response?.statusCode {
+                        
+                    case 200:
+                        
+                        let exercisesJSON = json["data"]["exercises"].arrayValue
+                        print(exercisesJSON)
+                        
+                        let exercises = exercisesJSON.map({ (json) -> Exercise in
+                            print("gdsf")
+                            let previewString = json["videos"].arrayValue[0]["preview"].stringValue
+                            let videoString = json["videos"].arrayValue[0]["video"].stringValue
+                            
+                            let previewUrl = URL(string: "\(ApiInfo().baseUrl)\(previewString)")!
+                            let videoUrl = URL(string: "\(ApiInfo().baseUrl)\(videoString)")!
+                            let name = json["name"].stringValue
+                            
+                            return Exercise(name: name, preview: previewUrl, video: videoUrl)
+                        })
+                        
+                        self.allExercises = exercises
+                        self.errorAllExcercises = nil
+                        
+                    default:
+                        
+                        self.errorAllExcercises = json["data"]["error"].stringValue
+                        
+                    }
                     
                 } catch {
                     
-                    print(error.localizedDescription)
+                    let errorString = error.localizedDescription
+                    print(errorString)
+                    self.errorAllExcercises = errorString
                 }
+                
+                NotificationManager.post(.getAllExercisesRequestAnswered)
         }
     }
     

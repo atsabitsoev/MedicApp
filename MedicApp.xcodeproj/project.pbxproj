@@ -71,14 +71,14 @@
 		ACD64736228B016C0091257E /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD64735228B016C0091257E /* EnterView.swift */; };
 		ACDF8E2822A6B97B000D6A8A /* GetExercisesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF8E2722A6B97B000D6A8A /* GetExercisesService.swift */; };
 		ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */; };
-		ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F2B228ED2B7007BCBC0 /* ExcercisesCell.swift */; };
+		ACE43F2C228ED2B7007BCBC0 /* ExercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F2B228ED2B7007BCBC0 /* ExercisesCell.swift */; };
 		ACE43F2F228EDFCC007BCBC0 /* ViewPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */; };
 		ACE43F33228EEAC2007BCBC0 /* DiagnosticResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F32228EEAC2007BCBC0 /* DiagnosticResultsVC.swift */; };
 		ACE43F35228EEB1B007BCBC0 /* DiagnosticResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE43F34228EEB1B007BCBC0 /* DiagnosticResults.storyboard */; };
 		ACE43F39228EED8C007BCBC0 /* ViewGradientHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F38228EED8C007BCBC0 /* ViewGradientHeader.swift */; };
 		ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */; };
 		ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */; };
-		ACE4E2DC22B76E560062C906 /* Excercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E2DB22B76E560062C906 /* Excercise.swift */; };
+		ACE4E2DC22B76E560062C906 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E2DB22B76E560062C906 /* Exercise.swift */; };
 		ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */; };
 		ACF76AD5227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */; };
 		ACF76AD6227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */; };
@@ -102,7 +102,7 @@
 		AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCell.swift; sourceTree = "<group>"; };
 		AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeVC.swift; sourceTree = "<group>"; };
 		AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordService.swift; path = "MedicApp/Registration+Enter/EnterCodeVC/ForgotPasswordService.swift"; sourceTree = SOURCE_ROOT; };
-		AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterTFDelegate.swift; path = MedicApp/ExcercisesVC/Servicies/EnterTFDelegate.swift; sourceTree = SOURCE_ROOT; };
+		AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterTFDelegate.swift; path = "/Users/atsamaz/Desktop/My/Мед/MedicApp/MedicApp/ExcercisesVC/Model/Servicies/EnterTFDelegate.swift"; sourceTree = "<absolute>"; };
 		AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTFDelegate.swift; sourceTree = "<group>"; };
 		AC6B9173229534B30079CF1F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC6B91762295364B0079CF1F /* RecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
@@ -163,14 +163,14 @@
 		ACD64735228B016C0091257E /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterView.swift; path = MedicApp/GlobalEntities/EnterView.swift; sourceTree = SOURCE_ROOT; };
 		ACDF8E2722A6B97B000D6A8A /* GetExercisesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExercisesService.swift; sourceTree = "<group>"; };
 		ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesTableVIew.swift; sourceTree = "<group>"; };
-		ACE43F2B228ED2B7007BCBC0 /* ExcercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesCell.swift; sourceTree = "<group>"; };
+		ACE43F2B228ED2B7007BCBC0 /* ExercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesCell.swift; sourceTree = "<group>"; };
 		ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewPlay.swift; path = "/Users/atsamaz/Desktop/My/Мед/MedicApp/MedicApp/ExcercisesVC/View/Entities/ViewPlay.swift"; sourceTree = "<absolute>"; };
 		ACE43F32228EEAC2007BCBC0 /* DiagnosticResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsVC.swift; sourceTree = "<group>"; };
 		ACE43F34228EEB1B007BCBC0 /* DiagnosticResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiagnosticResults.storyboard; sourceTree = "<group>"; };
 		ACE43F38228EED8C007BCBC0 /* ViewGradientHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGradientHeader.swift; sourceTree = "<group>"; };
 		ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsTableView.swift; sourceTree = "<group>"; };
 		ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsCell.swift; sourceTree = "<group>"; };
-		ACE4E2DB22B76E560062C906 /* Excercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excercise.swift; sourceTree = "<group>"; };
+		ACE4E2DB22B76E560062C906 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Thin.otf"; sourceTree = "<group>"; };
 		ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Black.otf"; sourceTree = "<group>"; };
 		ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
@@ -508,7 +508,7 @@
 				ACE43F2D228EDFB4007BCBC0 /* Entities */,
 				ACFC9B8C228DAE33009F5798 /* ExcercisesVC.swift */,
 				ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */,
-				ACE43F2B228ED2B7007BCBC0 /* ExcercisesCell.swift */,
+				ACE43F2B228ED2B7007BCBC0 /* ExercisesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -553,7 +553,7 @@
 		ACE4E2DA22B76E390062C906 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				ACE4E2DB22B76E560062C906 /* Excercise.swift */,
+				ACE4E2DB22B76E560062C906 /* Exercise.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -796,7 +796,7 @@
 				ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */,
 				ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */,
 				AC6B919A229584CE0079CF1F /* ChatImageVC.swift in Sources */,
-				ACE4E2DC22B76E560062C906 /* Excercise.swift in Sources */,
+				ACE4E2DC22B76E560062C906 /* Exercise.swift in Sources */,
 				ACD3BAC622981D83002882D7 /* ViewRoundedBorders.swift in Sources */,
 				ACCE27602294309E00E3126E /* UserImageCell.swift in Sources */,
 				ACAC21EA22AC180D001974BD /* RecordService.swift in Sources */,
@@ -812,7 +812,7 @@
 				ACCE2758229424EE00E3126E /* Sender.swift in Sources */,
 				AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */,
 				AC8EB8F222A7EA66003050DC /* EnterCodeTFDelegate.swift in Sources */,
-				ACE43F2C228ED2B7007BCBC0 /* ExcercisesCell.swift in Sources */,
+				ACE43F2C228ED2B7007BCBC0 /* ExercisesCell.swift in Sources */,
 				ACFF099822B2EF970033C1F1 /* DiagnosticService.swift in Sources */,
 				ACD3BACE2298324A002882D7 /* ProfileSelectCell.swift in Sources */,
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,

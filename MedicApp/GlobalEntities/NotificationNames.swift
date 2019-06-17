@@ -30,4 +30,6 @@ enum NotificationNames: String {
     case profileSavingBegan = "profileSavingBegan"
     
     case getValidHoursRequestAnswered = "getValidHoursRequestAnswered"
+    
+    case getAllExercisesRequestAnswered = "getAllExercisesRequestAnswered"
 }
