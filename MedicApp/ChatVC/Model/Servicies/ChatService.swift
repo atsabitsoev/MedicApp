@@ -37,7 +37,7 @@ class ChatService {
     }
     
     
-    private let manager = SocketManager(socketURL: URL(string: "\(ApiInfo().baseUrl)")!, config: [.secure(false), .path("/socstream")])
+    private let manager = SocketManager(socketURL: URL(string: "\(ApiInfo().baseUrl)")!, config: [.secure(false), .path("/socstream"), .log(true)])
     private var socket: SocketIOClient!
     private var name: String?
     private var resetAck: SocketAckEmitter?
@@ -45,22 +45,27 @@ class ChatService {
     
     private func addHandlers() {
         
+        
         socket.on(clientEvent: .connect) { data, ack in
             
             self.connected = true
             print("connect")
             
+            self.socket.emit("authOk",
+                             ["token : \(TokenService.standard.token!), id : \(TokenService.standard.id!)"],
+                             completion: {
+                                
+                                print("emit")
+            })
+            
         }
         
-        socket.on("new message") { (data, ack) in
+        socket.on("auth") { (data, ack) in
             
             let json = JSON(data[0])
-            let userName = json["username"].stringValue
-            let message = json["message"].stringValue
-            let newMessage = Message(text: message, sender: .penPal, time: Date(), contentType: .text)
-            self.lastMessage = newMessage
-            MessageHistoryService.messages.append(newMessage)
+            print(json)
         }
+        
         
     }
     
