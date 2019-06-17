@@ -78,6 +78,7 @@
 		ACE43F39228EED8C007BCBC0 /* ViewGradientHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F38228EED8C007BCBC0 /* ViewGradientHeader.swift */; };
 		ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */; };
 		ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */; };
+		ACE4E2DC22B76E560062C906 /* Excercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E2DB22B76E560062C906 /* Excercise.swift */; };
 		ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */; };
 		ACF76AD5227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */; };
 		ACF76AD6227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */; };
@@ -169,6 +170,7 @@
 		ACE43F38228EED8C007BCBC0 /* ViewGradientHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGradientHeader.swift; sourceTree = "<group>"; };
 		ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsTableView.swift; sourceTree = "<group>"; };
 		ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsCell.swift; sourceTree = "<group>"; };
+		ACE4E2DB22B76E560062C906 /* Excercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excercise.swift; sourceTree = "<group>"; };
 		ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Thin.otf"; sourceTree = "<group>"; };
 		ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Black.otf"; sourceTree = "<group>"; };
 		ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
@@ -463,6 +465,8 @@
 		ACD627AB22A8FC4E00303B05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACE4E2DA22B76E390062C906 /* Entities */,
+				ACDF8E2422A6B7B0000D6A8A /* Servicies */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,6 +550,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		ACE4E2DA22B76E390062C906 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ACE4E2DB22B76E560062C906 /* Excercise.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		ACF76ADD227CD39C00FE7648 /* Registration+Enter */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,7 +611,6 @@
 		ACFC9B88228DACC1009F5798 /* ExcercisesVC */ = {
 			isa = PBXGroup;
 			children = (
-				ACDF8E2422A6B7B0000D6A8A /* Servicies */,
 				ACD627AB22A8FC4E00303B05 /* Model */,
 				ACE43F2A228ED27E007BCBC0 /* View */,
 			);
@@ -785,6 +796,7 @@
 				ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */,
 				ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */,
 				AC6B919A229584CE0079CF1F /* ChatImageVC.swift in Sources */,
+				ACE4E2DC22B76E560062C906 /* Excercise.swift in Sources */,
 				ACD3BAC622981D83002882D7 /* ViewRoundedBorders.swift in Sources */,
 				ACCE27602294309E00E3126E /* UserImageCell.swift in Sources */,
 				ACAC21EA22AC180D001974BD /* RecordService.swift in Sources */,

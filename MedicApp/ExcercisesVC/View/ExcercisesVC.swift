@@ -20,6 +20,7 @@ class ExcercisesVC: UIViewController {
         super.viewDidLoad()
         
         tableView.delaysContentTouches = false
+        GetExercisesService.standard.sendGetAllExercisesRequest()
     }
     
     

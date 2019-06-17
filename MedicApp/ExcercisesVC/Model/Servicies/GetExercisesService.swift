@@ -17,6 +17,9 @@ class GetExercisesService {
     static let standard = GetExercisesService()
     
     
+    var 
+    
+    
     func sendGetAllExercisesRequest() {
         
         let url = "\(ApiInfo().baseUrl)/exercise"
