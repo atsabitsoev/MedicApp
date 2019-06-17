@@ -28,6 +28,9 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
+    var reserveDate: String?
+    var reserveTime: String?
+    
     var selectedIndexPath: IndexPath?
     var validTimeArr: [String] = []
     
@@ -50,7 +53,6 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         collectionView.alpha = 0
         
         self.scrollView.delaysContentTouches = false
-
     }
     
     
@@ -68,6 +70,10 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(timesRequestAnswered),
                                                name: NSNotification.Name(rawValue: NotificationNames.getValidHoursRequestAnswered.rawValue),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(reserveRequestAnswered),
+                                               name: NSNotification.Name(NotificationNames.reserveRequestAnswered.rawValue),
                                                object: nil)
     }
     
@@ -94,6 +100,28 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         showTimeCollectionView()
     }
     
+    @objc private func reserveRequestAnswered() {
+        
+        activityIndicator.stopAnimating()
+        
+        guard recordService.errorReserve == nil else {
+            
+            let errorString = recordService.errorReserve!
+            showErrorAlert(message: errorString)
+            return
+        }
+        
+        showSuccessAlert()
+    }
+    
+    private func showSuccessAlert() {
+        
+        let alert = UIAlertController(title: "Успех!", message: "Вы записаны", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     private func setTfDelegates() {
         
@@ -117,7 +145,20 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         
         butChooseDate.setTitle(dateString, for: .normal)
         
-        sendGetTimeArrRequest(day: "\(components.day!).\(components.month!).\(components.year!)")
+        let reserveDateString = "\(components.day!).\(components.month!).\(components.year!)"
+        self.reserveDate = reserveDateString
+        sendGetTimeArrRequest(day: reserveDateString)
+        activityIndicator.startAnimating()
+    }
+    
+    
+    private func sendReserveRequest() {
+        
+        let name = tfName.text!
+        let surname = tfLastName.text!
+        let date = reserveDate!
+        let time = validTimeArr[selectedIndexPath!.row]
+        recordService.reserve(date: date, time: time, name: name, surname: surname)
         activityIndicator.startAnimating()
     }
     
@@ -204,14 +245,12 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
             self.butRecord.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.viewUnderButRecord.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
+        
+        sendReserveRequest()
     }
     
     
     @IBAction func butChooseDateTapped(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func butRecordTapped(_ sender: ButtonGradient) {
         
     }
     

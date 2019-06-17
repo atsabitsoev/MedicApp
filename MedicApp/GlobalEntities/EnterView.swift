@@ -89,14 +89,32 @@ class EnterView: UIViewController {
     
     private func sendEnterRequest() {
         
-        guard let login = tfLogin.text, let password = tfPassword.text else {
+        guard var login = tfLogin.text, let password = tfPassword.text else {
             showErrorAlert(message: "Заполните все поля")
             return
+        }
+        
+        if hasOnlyNumbers(string: login) {
+            if login.first! == "8" || login.first! == "7" {
+                login.removeFirst()
+                login = "+7\(login)"
+            }
         }
         
         enterService.sendLoginRequest(login: login, password: password)
         startLoadingAnimation()
         
+    }
+    
+    private func hasOnlyNumbers(string: String) -> Bool {
+        
+        let numbers = ["0","1","2","3","4","5","6","7","8","9"]
+        for c in string {
+            if !numbers.contains("\(c)") {
+                return false
+            }
+        }
+        return true
     }
     
     

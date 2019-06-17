@@ -149,7 +149,6 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="needImage" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="butRecordTapped:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="EIK-NF-8fb"/>
                                                     <action selector="butRecordTouchDown:" destination="qWw-wQ-jbq" eventType="touchDown" id="ra2-ZJ-aaE"/>
                                                     <action selector="butRecordTouchUpInside:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="aCX-WB-sjw"/>
                                                     <action selector="butRecordTouchUpOutside:" destination="qWw-wQ-jbq" eventType="touchUpOutside" id="x0a-hA-WES"/>
