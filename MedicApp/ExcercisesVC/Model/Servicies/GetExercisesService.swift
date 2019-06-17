@@ -17,7 +17,8 @@ class GetExercisesService {
     static let standard = GetExercisesService()
     
     
-    var 
+    var allExcercises: [Excercise]?
+    var errorAllExcercises: String?
     
     
     func sendGetAllExercisesRequest() {
