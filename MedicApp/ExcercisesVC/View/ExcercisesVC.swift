@@ -13,19 +13,35 @@ class ExcercisesVC: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var segmentedControlShadow: UIView = UIView()
     
     
-    let getExercisesService = GetExercisesService.standard
-    var allExercises: [Exercise] = []
+    var state = false {
+        didSet {
+            
+            currentExercises = state ? allExercises : myExercises
+            tableView.reloadData()
+        }
+    }
+    var getExercisesService = GetExercisesService.standard
+    private var allExercises: [Exercise] = []
+    private var myExercises: [Exercise] = []
+    var currentExercises: [Exercise] = [] {
+        
+        didSet {
+            loadingAnimation(state: false)
+        }
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addObservers()
+        currentExercises = myExercises
         tableView.delaysContentTouches = false
-        GetExercisesService.standard.sendGetAllExercisesRequest()
+        getExercisesService.sendGetAllExercisesRequest()
     }
     
     
@@ -62,6 +78,16 @@ class ExcercisesVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    private func loadingAnimation(state: Bool) {
+        
+        switch state {
+        case true:
+            activityIndicator.startAnimating()
+        case false:
+            activityIndicator.stopAnimating()
+        }
+    }
+    
     
     @objc func allExercisesRequestAnswered() {
         
@@ -73,8 +99,12 @@ class ExcercisesVC: UIViewController {
         }
         
         allExercises = getExercisesService.allExercises!
-        tableView.reloadData()
     }
     
     
+    @IBAction func stateChanged(_ sender: UISegmentedControl) {
+        
+        loadingAnimation(state: true)
+        state = !state
+    }
 }

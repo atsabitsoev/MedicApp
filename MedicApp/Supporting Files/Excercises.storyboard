@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bsH-ZN-Wb1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,18 +23,18 @@
             <objects>
                 <viewController storyboardIdentifier="ExcercisesVC" id="bsH-ZN-Wb1" customClass="ExcercisesVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GXr-YN-pi6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="204" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mBt-tG-JxD">
-                                <rect key="frame" x="0.0" y="98" width="600" height="502"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExercisesCell" customModule="MedicApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="204"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExercisesCell" customModule="MedicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="204"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXB-Hj-m9r" id="eC7-t3-yqe">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="204"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBg-rD-z0r" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
@@ -98,7 +102,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-yC-Lky" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                <rect key="frame" x="197.5" y="70" width="205" height="20"/>
+                                <rect key="frame" x="104.5" y="94" width="205" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
@@ -114,7 +118,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TuC-H6-SbU">
-                                <rect key="frame" x="197.5" y="70" width="205" height="21"/>
+                                <rect key="frame" x="104.5" y="94" width="205" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="TnU-F9-Met"/>
@@ -124,23 +128,32 @@
                                     <segment title="Все"/>
                                 </segments>
                                 <color key="tintColor" red="0.97254901959999995" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stateChanged:" destination="bsH-ZN-Wb1" eventType="valueChanged" id="5EV-Jj-fb9"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V14-4q-GId">
-                                <rect key="frame" x="227" y="28" width="146" height="30"/>
+                                <rect key="frame" x="131" y="52" width="152.5" height="30"/>
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
                                 <color key="textColor" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-mx-7KF">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TuC-H6-SbU" firstAttribute="top" secondItem="V14-4q-GId" secondAttribute="bottom" constant="12" id="Clx-Uy-DVW"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="bottom" constant="8" id="DNs-WQ-aC5"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="bottom" secondItem="TuC-H6-SbU" secondAttribute="bottom" id="I0l-eA-ocP"/>
+                            <constraint firstItem="U7g-mx-7KF" firstAttribute="centerY" secondItem="GXr-YN-pi6" secondAttribute="centerY" id="LZO-FI-YGh"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="trailing" secondItem="n78-v5-CLM" secondAttribute="trailing" id="Oo5-9v-nqJ"/>
                             <constraint firstAttribute="bottom" secondItem="mBt-tG-JxD" secondAttribute="bottom" id="VVU-ZQ-zCO"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="leading" secondItem="TuC-H6-SbU" secondAttribute="leading" id="YKV-qO-Lrx"/>
                             <constraint firstItem="TuC-H6-SbU" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="aHL-hl-f0L"/>
+                            <constraint firstItem="U7g-mx-7KF" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="b7E-ob-EIC"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="leading" secondItem="n78-v5-CLM" secondAttribute="leading" id="cCX-QH-Nyx"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="trailing" secondItem="TuC-H6-SbU" secondAttribute="trailing" id="cOi-DN-gNb"/>
                             <constraint firstItem="V14-4q-GId" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="gAo-Ye-498"/>
@@ -150,6 +163,7 @@
                         <viewLayoutGuide key="safeArea" id="n78-v5-CLM"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="U7g-mx-7KF" id="6JY-gB-MJY"/>
                         <outlet property="segmentedControl" destination="TuC-H6-SbU" id="b51-Fb-S5W"/>
                         <outlet property="tableView" destination="mBt-tG-JxD" id="pxm-gs-dnm"/>
                     </connections>

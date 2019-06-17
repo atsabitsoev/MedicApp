@@ -15,15 +15,17 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allExercises.count
+        
+        return currentExercises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "excercisesCell") as! ExercisesCell
         
-        cell.labTitle.text = allExercises[indexPath.row].name
+        cell.labTitle.text = currentExercises[indexPath.row].name
         
-        let imageUrl = allExercises[indexPath.row].preview
+        let imageUrl = currentExercises[indexPath.row].preview
         let imageData = try! Data(contentsOf: imageUrl)
         cell.imagePreview.image = UIImage(data: imageData)
         
@@ -40,7 +42,7 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoURL = allExercises[indexPath.row].video
+        let videoURL = currentExercises[indexPath.row].video
         let player = AVPlayer(url: videoURL)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
