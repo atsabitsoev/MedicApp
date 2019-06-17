@@ -37,7 +37,7 @@ class ChatService {
     }
     
     
-    private let manager = SocketManager(socketURL: URL(string: "https://socket-io-chat.now.sh")!, config: [.log(true), .compress])
+    private let manager = SocketManager(socketURL: URL(string: "\(ApiInfo().baseUrl)")!, config: [.secure(false), .path("/socstream")])
     private var socket: SocketIOClient!
     private var name: String?
     private var resetAck: SocketAckEmitter?
@@ -48,10 +48,7 @@ class ChatService {
         socket.on(clientEvent: .connect) { data, ack in
             
             self.connected = true
-            
-            self.socket.emit("add user", "Atsamazus") {
-                print("\n\n\n\n\n\n\n\nlfskjdslkfjdslkfjdslk\n\n\n\n\n")
-            }
+            print("connect")
             
         }
         
