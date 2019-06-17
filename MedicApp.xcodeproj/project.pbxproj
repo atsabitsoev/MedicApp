@@ -164,7 +164,7 @@
 		ACDF8E2722A6B97B000D6A8A /* GetExercisesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExercisesService.swift; sourceTree = "<group>"; };
 		ACE43F28228ECF74007BCBC0 /* ExcercisesTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesTableVIew.swift; sourceTree = "<group>"; };
 		ACE43F2B228ED2B7007BCBC0 /* ExcercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcercisesCell.swift; sourceTree = "<group>"; };
-		ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewPlay.swift; path = /Users/atsamaz/Desktop/MedicApp/MedicApp/ExcercisesVC/View/Entities/ViewPlay.swift; sourceTree = "<absolute>"; };
+		ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewPlay.swift; path = "/Users/atsamaz/Desktop/My/Мед/MedicApp/MedicApp/ExcercisesVC/View/Entities/ViewPlay.swift"; sourceTree = "<absolute>"; };
 		ACE43F32228EEAC2007BCBC0 /* DiagnosticResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsVC.swift; sourceTree = "<group>"; };
 		ACE43F34228EEB1B007BCBC0 /* DiagnosticResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiagnosticResults.storyboard; sourceTree = "<group>"; };
 		ACE43F38228EED8C007BCBC0 /* ViewGradientHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGradientHeader.swift; sourceTree = "<group>"; };

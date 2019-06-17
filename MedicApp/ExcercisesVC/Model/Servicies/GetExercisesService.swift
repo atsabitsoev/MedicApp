@@ -40,6 +40,7 @@ class GetExercisesService {
                     let json = JSON(responseValue)
                     print(json)
                     
+                    
                 } catch {
                     
                     print(error.localizedDescription)
