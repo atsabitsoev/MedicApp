@@ -51,8 +51,9 @@ class ChatService {
             self.connected = true
             print("connect")
             
-            self.socket.emit("authOk",
-                             ["token : \(TokenService.standard.token!), id : \(TokenService.standard.id!)"],
+            
+            self.socket.emit("auth",
+                             ["{\"id\" : \(TokenService.standard.id!), \"token\" : \(TokenService.standard.token!)}"],
                              completion: {
                                 
                                 print("emit")
@@ -60,7 +61,43 @@ class ChatService {
             
         }
         
-        socket.on("auth") { (data, ack) in
+        socket.on("authOk") { (data, ack) in
+            
+            let json = JSON(data[0])
+            print("authOK")
+        }
+        
+        socket.on("enteredDialog") { (data, ack) in
+            
+            let json = JSON(data[0])
+            print(json)
+        }
+        
+        socket.on("messageReceive") { (data, ack) in
+            
+            let json = JSON(data[0])
+            print(json)
+        }
+        
+        socket.on("leavedDialog") { (data, ack) in
+            
+            let json = JSON(data[0])
+            print(json)
+        }
+        
+        socket.on("newMessage") { (data, ack) in
+            
+            let json = JSON(data[0])
+            print(json)
+        }
+        
+        socket.on("messageListReceive") { (data, ack) in
+            
+            let json = JSON(data[0])
+            print(json)
+        }
+        
+        socket.on("error-pipe") { (data, ack) in
             
             let json = JSON(data[0])
             print(json)

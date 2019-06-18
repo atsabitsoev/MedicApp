@@ -154,8 +154,11 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     
     private func sendReserveRequest() {
         
-        let name = tfName.text!
-        let surname = tfLastName.text!
+        guard let name = tfName.text, let surname = tfLastName.text, selectedIndexPath != nil else {
+            showErrorAlert(message: "Заполните все поля")
+            return
+        }
+        
         let date = reserveDate!
         let time = validTimeArr[selectedIndexPath!.row]
         recordService.reserve(date: date, time: time, name: name, surname: surname)
