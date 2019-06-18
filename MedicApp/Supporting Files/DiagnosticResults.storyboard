@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="inj-eR-xnr">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -117,6 +117,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="labDate" destination="XRq-UZ-ZzP" id="pK1-2W-fft"/>
+                                            <outlet property="labTitle" destination="L9C-7B-O8m" id="ZvG-Mj-p9F"/>
                                             <outlet property="viewGradientHeader" destination="aUL-Fy-rRg" id="Wdk-yF-gBh"/>
                                             <outlet property="viewMainCard" destination="NhR-fl-pkH" id="Ze3-Px-t8H"/>
                                         </connections>
@@ -127,13 +129,19 @@
                                     <outlet property="delegate" destination="inj-eR-xnr" id="ndT-2x-yP9"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-s4-H0x">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aam-uQ-eZW" firstAttribute="centerX" secondItem="cGy-g2-zlR" secondAttribute="centerX" id="5Po-mE-wPz"/>
                             <constraint firstItem="bZA-WI-sbE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aam-uQ-eZW" secondAttribute="trailing" constant="18" id="Hci-1x-0df"/>
                             <constraint firstItem="VmU-en-iae" firstAttribute="leading" secondItem="bZA-WI-sbE" secondAttribute="leading" id="KHw-rS-nkw"/>
+                            <constraint firstItem="l6U-s4-H0x" firstAttribute="centerY" secondItem="cGy-g2-zlR" secondAttribute="centerY" id="Mu9-vA-gxj"/>
                             <constraint firstItem="aam-uQ-eZW" firstAttribute="top" secondItem="bZA-WI-sbE" secondAttribute="top" constant="8" id="ZhB-5A-yTQ"/>
+                            <constraint firstItem="l6U-s4-H0x" firstAttribute="centerX" secondItem="cGy-g2-zlR" secondAttribute="centerX" id="ajw-oW-Zg2"/>
                             <constraint firstItem="VmU-en-iae" firstAttribute="top" secondItem="aam-uQ-eZW" secondAttribute="bottom" constant="8" id="av4-Pu-bNl"/>
                             <constraint firstAttribute="bottom" secondItem="VmU-en-iae" secondAttribute="bottom" id="bEs-Kr-LCD"/>
                             <constraint firstItem="aam-uQ-eZW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bZA-WI-sbE" secondAttribute="leading" constant="18" id="pTc-Dy-b4W"/>
@@ -142,12 +150,42 @@
                         <viewLayoutGuide key="safeArea" id="bZA-WI-sbE"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="l6U-s4-H0x" id="nmC-Ff-eiG"/>
                         <outlet property="tableView" destination="VmU-en-iae" id="6GU-zS-Wos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhb-AX-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="148.66071428571428"/>
+        </scene>
+        <!--BackboneVC-->
+        <scene sceneID="dS5-pb-Or0">
+            <objects>
+                <viewController id="6g4-5r-CPg" customClass="BackboneVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJJ-md-QUh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Позвоночник" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-An-pzt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vdS-An-pzt" firstAttribute="top" secondItem="2mE-BJ-M8S" secondAttribute="top" id="ILh-d3-msA"/>
+                            <constraint firstItem="vdS-An-pzt" firstAttribute="leading" secondItem="2mE-BJ-M8S" secondAttribute="leading" id="Mxp-On-sUG"/>
+                            <constraint firstItem="2mE-BJ-M8S" firstAttribute="bottom" secondItem="vdS-An-pzt" secondAttribute="bottom" id="hRp-r0-5r1"/>
+                            <constraint firstItem="2mE-BJ-M8S" firstAttribute="trailing" secondItem="vdS-An-pzt" secondAttribute="trailing" id="wiO-q8-9Cn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2mE-BJ-M8S"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageMain" destination="vdS-An-pzt" id="bzh-1W-Rc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKD-g5-7RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="149"/>
         </scene>
     </scenes>
     <resources>

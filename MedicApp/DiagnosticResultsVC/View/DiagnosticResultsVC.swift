@@ -12,6 +12,13 @@ class DiagnosticResultsVC: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
+    let diagnosticService = DiagnosticService.standard
+    
+    
+    var masDiagnosticInfo: [DiagnosticInfo] = []
     
     
     override func viewDidLoad() {
@@ -19,7 +26,43 @@ class DiagnosticResultsVC: UIViewController {
         
         tableView.delaysContentTouches = false
 
+        addObservers()
+        
         DiagnosticService.standard.getDiagnosticInfoRequest()
+        activityIndicator.startAnimating()
+    }
+    
+    
+    private func addObservers() {
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(getInfoAnswered),
+                                               name: NSNotification.Name(NotificationNames.getDiagnosticInfoRequestAnswered.rawValue),
+                                               object: nil)
+    }
+    
+    
+    @objc private func getInfoAnswered() {
+        
+        activityIndicator.stopAnimating()
+        
+        guard diagnosticService.errorGetInfo == nil else {
+            
+            showErrorAlert(message: diagnosticService.errorGetInfo)
+            return
+        }
+        
+        self.masDiagnosticInfo = diagnosticService.masDiagnosticInfo!
+        tableView.reloadData()
+    }
+    
+    
+    private func showErrorAlert(message: String?) {
+        
+        let alert = UIAlertController(title: "Ошибка", message: message ?? "Возникла неизвестная ошибка", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
 

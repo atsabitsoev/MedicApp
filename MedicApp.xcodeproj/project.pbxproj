@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8928B905D03C0711AD20A687 /* Pods_MedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183511A65B18E52E9E57BC4B /* Pods_MedicApp.framework */; };
+		AC1E5E4522B924BA00B7E09D /* DiagnosticInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E4422B924BA00B7E09D /* DiagnosticInfo.swift */; };
+		AC1E5E4A22B930D100B7E09D /* BackboneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E4922B930D100B7E09D /* BackboneVC.swift */; };
 		AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */; };
 		AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */; };
 		AC50F12D22A7BDED000B78AF /* EnterCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */; };
@@ -98,6 +100,8 @@
 /* Begin PBXFileReference section */
 		183511A65B18E52E9E57BC4B /* Pods_MedicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9DE87BDA3D6F60112CC839 /* Pods-MedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicApp.release.xcconfig"; path = "Target Support Files/Pods-MedicApp/Pods-MedicApp.release.xcconfig"; sourceTree = "<group>"; };
+		AC1E5E4422B924BA00B7E09D /* DiagnosticInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticInfo.swift; sourceTree = "<group>"; };
+		AC1E5E4922B930D100B7E09D /* BackboneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackboneVC.swift; sourceTree = "<group>"; };
 		AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCollection.swift; sourceTree = "<group>"; };
 		AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCell.swift; sourceTree = "<group>"; };
 		AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeVC.swift; sourceTree = "<group>"; };
@@ -207,6 +211,14 @@
 				3C9DE87BDA3D6F60112CC839 /* Pods-MedicApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC1E5E4622B9306600B7E09D /* BackboneVC */ = {
+			isa = PBXGroup;
+			children = (
+				AC1E5E4922B930D100B7E09D /* BackboneVC.swift */,
+			);
+			path = BackboneVC;
 			sourceTree = "<group>";
 		};
 		AC50F12B22A7BD7B000B78AF /* EnterCodeVC */ = {
@@ -325,6 +337,7 @@
 				ACFC9B88228DACC1009F5798 /* ExcercisesVC */,
 				ACE43F31228EE9AA007BCBC0 /* DiagnosticResultsVC */,
 				AC6B91782295365A0079CF1F /* ProfileVC */,
+				AC1E5E4622B9306600B7E09D /* BackboneVC */,
 				AC7F4CAC227CAEF0002A42AF /* Info.plist */,
 				AC5B540D227CFB8600C2001A /* Supporting Files */,
 				AC7F4CB8227CCE4C002A42AF /* Шрифты */,
@@ -525,7 +538,7 @@
 		ACE43F31228EE9AA007BCBC0 /* DiagnosticResultsVC */ = {
 			isa = PBXGroup;
 			children = (
-				ACFF099622B2EF820033C1F1 /* Servicies */,
+				ACFF099622B2EF820033C1F1 /* API */,
 				ACE43F36228EEC9F007BCBC0 /* View */,
 			);
 			path = DiagnosticResultsVC;
@@ -617,12 +630,13 @@
 			path = ExcercisesVC;
 			sourceTree = "<group>";
 		};
-		ACFF099622B2EF820033C1F1 /* Servicies */ = {
+		ACFF099622B2EF820033C1F1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AC1E5E4422B924BA00B7E09D /* DiagnosticInfo.swift */,
 				ACFF099722B2EF970033C1F1 /* DiagnosticService.swift */,
 			);
-			path = Servicies;
+			path = API;
 			sourceTree = "<group>";
 		};
 		E4739D2809D0826D0474B1B4 /* Frameworks */ = {
@@ -792,6 +806,7 @@
 				ACC41D322292D8C10042B200 /* SimpleGradientView.swift in Sources */,
 				ACD3BACA22982BA4002882D7 /* ViewCheckRound.swift in Sources */,
 				ACD3BAC82298220E002882D7 /* ProfileTableView.swift in Sources */,
+				AC1E5E4522B924BA00B7E09D /* DiagnosticInfo.swift in Sources */,
 				ACCE275C2294270700E3126E /* UserMessageCell.swift in Sources */,
 				ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */,
 				ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */,
@@ -834,6 +849,7 @@
 				AC5502EF22A7A26800EB0A30 /* RegistrationTFDelegate.swift in Sources */,
 				ACBCC96022A56C3A008DEFCB /* RegistrationCodeVC.swift in Sources */,
 				AC6B91972295759D0079CF1F /* MessageHistoryService.swift in Sources */,
+				AC1E5E4A22B930D100B7E09D /* BackboneVC.swift in Sources */,
 				ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */,
 				AC7BF2C12296A29D0007AE31 /* CalendarVC.swift in Sources */,
 				ACD3BAC12297C861002882D7 /* Colors.swift in Sources */,

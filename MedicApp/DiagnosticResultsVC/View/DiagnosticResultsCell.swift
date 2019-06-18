@@ -13,6 +13,8 @@ class DiagnosticResultsCell: UITableViewCell {
     
     @IBOutlet weak var viewMainCard: ViewUnderTextFields!
     @IBOutlet weak var viewGradientHeader: ViewGradientHeader!
-
+    @IBOutlet weak var labTitle: UILabel!
+    @IBOutlet weak var labDate: UILabel!
+    
 
 }

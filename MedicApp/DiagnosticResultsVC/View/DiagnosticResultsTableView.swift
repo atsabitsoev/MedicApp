@@ -13,11 +13,38 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        return masDiagnosticInfo[section].otherInfo.count + 2
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return masDiagnosticInfo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiagnosticResultsCell")!
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiagnosticResultsCell") as! DiagnosticResultsCell
+        
+        let currentInfo = masDiagnosticInfo[indexPath.section]
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day, .month, .year], from: currentInfo.date)
+        let dateString = "\(components.day!)/\(components.month!)/\(components.year!)"
+        cell.labDate.text = dateString
+        
+        if indexPath.row == 0 {
+            
+            cell.labTitle.text = "Ваш позвоночник в 3D"
+            
+        } else if indexPath.row == 1 {
+            
+            cell.labTitle.text = "тут будет заключение врача"
+            
+        } else {
+            
+            cell.labTitle.text = currentInfo.otherInfo[indexPath.row - 2].name
+        }
+        
         return cell
     }
     
