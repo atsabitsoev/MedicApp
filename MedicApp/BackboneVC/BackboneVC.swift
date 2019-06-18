@@ -55,8 +55,6 @@ class BackboneVC: UIViewController {
             currentImageIndex -= 1
             previousTouchX = touches.first!.location(in: imageMain).x
         }
-        print(touches.first!.location(in: imageMain).x)
-        print(previousTouchX)
     }
 
 }
