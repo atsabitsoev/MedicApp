@@ -25,6 +25,7 @@ class DiagnosticResultsVC: UIViewController {
         super.viewDidLoad()
         
         tableView.delaysContentTouches = false
+        navigationController?.navigationBar.shadowImage = UIImage()
 
         addObservers()
         

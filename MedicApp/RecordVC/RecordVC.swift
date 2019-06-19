@@ -116,7 +116,10 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     
     private func showSuccessAlert() {
         
-        let alert = UIAlertController(title: "Успех!", message: "Вы записаны", preferredStyle: .alert)
+        let date = reserveDate!
+        let time = validTimeArr[selectedIndexPath!.row]
+        
+        let alert = UIAlertController(title: "Успех!", message: "Вы записаны на \(time), \(date)", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
