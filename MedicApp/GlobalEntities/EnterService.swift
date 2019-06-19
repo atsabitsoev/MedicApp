@@ -38,6 +38,7 @@ class EnterService {
                     
                     let responseValue = try response.result.get()
                     let json = JSON(responseValue)
+                    print(json)
                     
                     TokenService.standard.token = json["data"]["token"].stringValue
                     TokenService.standard.id = json["data"]["id"].stringValue
@@ -48,6 +49,7 @@ class EnterService {
                     
                     let responseValue = try response.result.get()
                     let json = JSON(responseValue)
+                    print(json)
                     
                     self.errorString = json["data"]["error"].stringValue
                     

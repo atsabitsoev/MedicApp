@@ -30,7 +30,7 @@ class RecordService {
     
     func getValidHoursRequest(day: String) {
         
-        let url = "\(ApiInfo().baseUrl)/reservation?date=\(day)"
+        let url = "\(ApiInfo().baseUrl)/reservation?date=\(day)&reserved=false"
         
         let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
         
