@@ -41,10 +41,11 @@ class BackboneVC: UIViewController {
         didSet {
             if currentImageIndex >= masImages.count {
                 currentImageIndex = 0
-            } else if currentImageIndex <= 0 {
+            } else if currentImageIndex < 0 {
                 currentImageIndex = masImages.count - 1
             }
             imageMain.image = masImages[currentImageIndex]
+            print(currentImageIndex)
         }
     }
     

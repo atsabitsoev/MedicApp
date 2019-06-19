@@ -161,7 +161,7 @@
         <!--BackboneVC-->
         <scene sceneID="dS5-pb-Or0">
             <objects>
-                <viewController id="6g4-5r-CPg" customClass="BackboneVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BackboneVC" id="6g4-5r-CPg" customClass="BackboneVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJJ-md-QUh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

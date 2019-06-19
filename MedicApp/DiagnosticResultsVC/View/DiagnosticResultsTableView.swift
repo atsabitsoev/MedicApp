@@ -51,7 +51,7 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         
-        let cell = tableView.cellForRow(at: indexPath) as! DiagnosticResultsCell
+        guard let cell = tableView.cellForRow(at: indexPath) as? DiagnosticResultsCell else { return true }
         
         UIView.animate(withDuration: 0.05) {
             cell.viewMainCard.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
@@ -63,11 +63,37 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRow(at: indexPath) as! DiagnosticResultsCell
+        guard let cell = tableView.cellForRow(at: indexPath) as? DiagnosticResultsCell else { return }
         
         UIView.animate(withDuration: 0.05) {
             cell.viewMainCard.transform = CGAffineTransform(scaleX: 1, y: 1)
             cell.viewMainCard.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            
+            let currentInfo = masDiagnosticInfo[indexPath.section]
+            let masBackBoneUrl = currentInfo.backbone
+            let masImagesData = masBackBoneUrl.map { (url) -> Data in
+                do {
+                    let data = try Data(contentsOf: url)
+                    return data
+                } catch {
+                    print(error.localizedDescription)
+                    return Data()
+                }
+            }
+            
+            let masImages = masImagesData.map { (data) -> UIImage in
+                return UIImage(data: data) ?? UIImage()
+            }
+            
+            let backboneVC = UIStoryboard(name: "DiagnosticResults", bundle: nil).instantiateViewController(withIdentifier: "BackboneVC") as! BackboneVC
+            backboneVC.masImages = masImages
+            self.present(backboneVC, animated: true, completion: nil)
         }
     }
     
