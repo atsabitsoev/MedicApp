@@ -19,6 +19,22 @@ class BackboneVC: UIViewController {
                                 UIImage(named: "Запись иконка")!,
                                 UIImage(named: "Конверт")!,
                                 UIImage(named: "Отправить иконка")!,
+                                UIImage(named: "Позвоночник")!,
+                                UIImage(named: "Девушка фото")!,
+                                UIImage(named: "Замок")!,
+                                UIImage(named: "Запись иконка")!,
+                                UIImage(named: "Конверт")!,
+                                UIImage(named: "Отправить иконка")!,
+                                UIImage(named: "Позвоночник")!,
+                                UIImage(named: "Запись иконка")!,
+                                UIImage(named: "Конверт")!,
+                                UIImage(named: "Отправить иконка")!,
+                                UIImage(named: "Позвоночник")!,
+                                UIImage(named: "Девушка фото")!,
+                                UIImage(named: "Замок")!,
+                                UIImage(named: "Запись иконка")!,
+                                UIImage(named: "Конверт")!,
+                                UIImage(named: "Отправить иконка")!,
                                 UIImage(named: "Позвоночник")!]
     var previousTouchX: CGFloat?
     var currentImageIndex = 0 {
@@ -39,14 +55,13 @@ class BackboneVC: UIViewController {
     }
     
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        previousTouchX = touches.first!.location(in: imageMain).x
+    }
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        guard previousTouchX != nil else {
-            previousTouchX = touches.first!.location(in: imageMain).x
-            return
-        }
-        
-        let step = UIScreen.main.bounds.width / CGFloat(masImages.count)
+        let step = UIScreen.main.bounds.width / CGFloat(masImages.count) / 2
         
         if touches.first!.location(in: imageMain).x - previousTouchX! >= step {
             currentImageIndex += 1
@@ -55,6 +70,10 @@ class BackboneVC: UIViewController {
             currentImageIndex -= 1
             previousTouchX = touches.first!.location(in: imageMain).x
         }
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        previousTouchX = nil
     }
 
 }
