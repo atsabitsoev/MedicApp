@@ -56,7 +56,7 @@ class ChatService {
                              ["userId" : "\(TokenService.standard.id!)", "token" : "\(TokenService.standard.token!)"],
                              completion: {
                                 
-                                print(data[0])
+                                print("authEmited")
             })
             
         }
@@ -65,6 +65,21 @@ class ChatService {
             
             let json = JSON(data[0])
             print(json)
+            
+            let dialogsArr = json["dialogs"].arrayValue
+            
+            guard dialogsArr.count != 0 else {
+                print("Нет доступных диалогов")
+                return
+            }
+            
+            let dialogId = dialogsArr.first?.stringValue
+            
+            self.socket.emit("enterInDialog", ["dialogId" : dialogId!],
+                             completion: {
+                
+                print("enterInDialogEmited")
+            })
         }
         
         socket.on("enteredDialog") { (data, ack) in
@@ -77,6 +92,11 @@ class ChatService {
             
             let json = JSON(data[0])
             print(json)
+            
+            let messageJSON = json["message"]
+            let messageText = messageJSON["message"].stringValue
+            
+            self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: .text)
         }
         
         socket.on("leavedDialog") { (data, ack) in

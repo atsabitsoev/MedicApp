@@ -12,6 +12,10 @@ import UIKit
 class MessageHistoryService {
     
     
+    private init() {}
+    static let standard = MessageHistoryService()
+    
+    
     static var messages: [Message] = []
     
     
