@@ -94,7 +94,15 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
             let backboneVC = UIStoryboard(name: "DiagnosticResults", bundle: nil).instantiateViewController(withIdentifier: "BackboneVC") as! BackboneVC
             backboneVC.masImages = masImages
             self.present(backboneVC, animated: true, completion: nil)
+            
+        } else if indexPath.row != 1 {
+            
+            
+            
         }
+        
+        
+        
     }
     
     

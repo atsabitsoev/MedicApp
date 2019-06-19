@@ -53,6 +53,7 @@ class BackboneVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imageMain.image = masImages.first ?? UIImage()
     }
     
     
