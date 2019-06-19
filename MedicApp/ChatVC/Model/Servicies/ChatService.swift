@@ -37,7 +37,10 @@ class ChatService {
     }
     
     
-    private let manager = SocketManager(socketURL: URL(string: ApiInfo().baseUrl)!, config: [.secure(false), .path("/socstream"), .log(true)])
+    private let manager = SocketManager(socketURL: URL(string: ApiInfo().baseUrl)!,
+                                        config: [.secure(false),
+                                                 .path("/socstream"),
+                                                 .log(true)])
     private var socket: SocketIOClient!
     private var name: String?
     private var resetAck: SocketAckEmitter?
