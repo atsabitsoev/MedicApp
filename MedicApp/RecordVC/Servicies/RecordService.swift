@@ -105,6 +105,7 @@ class RecordService {
                     
                     let responseValue = try response.result.get()
                     let json = JSON(responseValue)
+                    print(json)
                     
                     switch response.response?.statusCode {
                         
@@ -115,7 +116,7 @@ class RecordService {
                         
                     default:
                         
-                        let errorString = json["data"]["error"].stringValue
+                        let errorString = json["message"].stringValue
                         self.errorReserve = errorString
                         
                     }

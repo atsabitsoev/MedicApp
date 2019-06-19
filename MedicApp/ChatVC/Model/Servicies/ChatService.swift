@@ -53,10 +53,10 @@ class ChatService {
             
             
             self.socket.emit("auth",
-                             ["{\"id\" : \(TokenService.standard.id!), \"token\" : \(TokenService.standard.token!)}"],
+                             ["userId" : "\(TokenService.standard.id!)", "token" : "\(TokenService.standard.token!)"],
                              completion: {
                                 
-                                print("emit")
+                                print(data[0])
             })
             
         }
@@ -64,7 +64,7 @@ class ChatService {
         socket.on("authOk") { (data, ack) in
             
             let json = JSON(data[0])
-            print("authOK")
+            print(json)
         }
         
         socket.on("enteredDialog") { (data, ack) in
@@ -109,7 +109,7 @@ class ChatService {
     
     func sendMessage(_ message: Message) {
         
-        socket.emit("new message", message.text) {
+        socket.emit("message", message.text) {
             print("отправлено")
         }
     }
@@ -119,7 +119,14 @@ class ChatService {
         
         socket.disconnect()
         socket.off(clientEvent: .connect)
+        socket.off("authOk")
+        socket.off("enteredDialog")
+        socket.off("messageReceive")
+        socket.off("leavedDialog")
         socket.off("newMessage")
+        socket.off("messageListReceive")
+        socket.off("newMessage")
+        socket.off("error-pipe")
     }
 
 }
