@@ -12,17 +12,20 @@ class DiagnosticItemVC: UIViewController {
     
     
     @IBOutlet weak var imageMain: UIImageView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     
-    var image: UIImage = UIImage()
+    var imageLink: URL!
+    private var image: UIImage = UIImage()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageMain.image = image
         
         setNavigationBar()
+        DispatchQueue.main.async {
+            self.loadImage()
+        }
     }
     
     
@@ -32,8 +35,24 @@ class DiagnosticItemVC: UIViewController {
                                         style: .plain,
                                         target: self,
                                         action: #selector(shareTapped))
+        itemShare.tintColor = #colorLiteral(red: 0.9725490196, green: 0.3803921569, blue: 0.3529411765, alpha: 1)
+        itemShare.image = itemShare.image?.withRenderingMode(.alwaysTemplate)
         self.navigationItem.setRightBarButtonItems([itemShare], animated: false)
     }
+    
+    
+    private func loadImage() {
+        
+        do {
+            let dataImage = try Data(contentsOf: imageLink)
+            let image = UIImage(data: dataImage)
+            self.imageMain.image = image
+            activityView.stopAnimating()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     
     @objc private func shareTapped() {
         

@@ -95,19 +95,9 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
                                                 bundle: nil)
                 .instantiateViewController(withIdentifier: "DiagnosticItemVC") as! DiagnosticItemVC
             
-            do {
-                
-                let imageData = try Data(contentsOf: currentInfo.imageUrl)
-                let image = UIImage(data: imageData) ?? UIImage()
-                diagnosticItemVC.image = image
-                diagnosticItemVC.navigationItem.title = currentInfo.name
-                self.navigationController?.show(diagnosticItemVC, sender: nil)
-                
-            } catch {
-                
-                return
-                
-            }
+            diagnosticItemVC.imageLink = currentInfo.imageUrl
+            diagnosticItemVC.navigationItem.title = currentInfo.name
+            self.navigationController?.show(diagnosticItemVC, sender: nil)
             
             
         }

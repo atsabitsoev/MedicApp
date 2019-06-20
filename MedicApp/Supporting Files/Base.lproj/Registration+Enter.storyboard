@@ -34,7 +34,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                        <color key="value" red="0.12941176470588234" green="0.9137254901960784" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color2">
                                         <color key="value" red="0.074509803921568626" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,7 +154,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-8U-AQQ">
-                                <rect key="frame" x="80" y="188.66666666666666" width="215" height="42"/>
+                                <rect key="frame" x="79.333333333333329" y="188.66666666666666" width="216.66666666666669" height="43"/>
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="36"/>
                                 <color key="textColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -908,7 +908,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ylS-oq-rrH">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.97254901960784312" green="0.38039215686274508" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="22"/>
                             <color key="textColor" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>

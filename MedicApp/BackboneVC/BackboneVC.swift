@@ -12,12 +12,14 @@ class BackboneVC: UIViewController {
     
     
     @IBOutlet weak var imageMain: UIImageView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     
     var loadingFinished = false {
         didSet {
             if loadingFinished {
                 imageMain.image = masImages.first
+                activityView.stopAnimating()
             }
         }
     }
@@ -42,11 +44,10 @@ class BackboneVC: UIViewController {
         super.viewDidLoad()
         
         setNavigationBar()
+        DispatchQueue.main.async {
+            self.loadImages()
+        }
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        loadImages()
     }
     
     
@@ -100,6 +101,8 @@ class BackboneVC: UIViewController {
                                         style: .plain,
                                         target: self,
                                         action: #selector(shareTapped))
+        itemShare.tintColor = #colorLiteral(red: 0.9725490196, green: 0.3803921569, blue: 0.3529411765, alpha: 1)
+        itemShare.image = itemShare.image?.withRenderingMode(.alwaysTemplate)
         self.navigationItem.setRightBarButtonItems([itemShare], animated: false)
     }
     

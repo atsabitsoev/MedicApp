@@ -251,11 +251,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-An-pzt">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-uj-kHp">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dDm-uj-kHp" firstAttribute="centerY" secondItem="zJJ-md-QUh" secondAttribute="centerY" id="1vA-Xa-iG5"/>
                             <constraint firstItem="vdS-An-pzt" firstAttribute="leading" secondItem="2mE-BJ-M8S" secondAttribute="leading" id="Mxp-On-sUG"/>
                             <constraint firstItem="vdS-An-pzt" firstAttribute="top" secondItem="2mE-BJ-M8S" secondAttribute="top" id="NOu-Dh-bxN"/>
+                            <constraint firstItem="dDm-uj-kHp" firstAttribute="centerX" secondItem="zJJ-md-QUh" secondAttribute="centerX" id="T82-78-47b"/>
                             <constraint firstItem="2mE-BJ-M8S" firstAttribute="bottom" secondItem="vdS-An-pzt" secondAttribute="bottom" id="hRp-r0-5r1"/>
                             <constraint firstItem="2mE-BJ-M8S" firstAttribute="trailing" secondItem="vdS-An-pzt" secondAttribute="trailing" id="wiO-q8-9Cn"/>
                         </constraints>
@@ -263,6 +269,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Позвоночник" id="Y65-nM-C6o"/>
                     <connections>
+                        <outlet property="activityView" destination="dDm-uj-kHp" id="hbS-GP-dCd"/>
                         <outlet property="imageMain" destination="vdS-An-pzt" id="bzh-1W-Rc6"/>
                     </connections>
                 </viewController>
@@ -281,18 +288,25 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-Fy-nPL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ugV-rA-4vx">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gQx-Fy-nPL" firstAttribute="leading" secondItem="w8G-TR-p9S" secondAttribute="leading" id="4e5-yC-lbE"/>
                             <constraint firstItem="gQx-Fy-nPL" firstAttribute="top" secondItem="w8G-TR-p9S" secondAttribute="top" id="PzW-0l-mjD"/>
+                            <constraint firstItem="ugV-rA-4vx" firstAttribute="centerY" secondItem="Xyt-ce-UXk" secondAttribute="centerY" id="UZb-Bh-lRe"/>
                             <constraint firstItem="w8G-TR-p9S" firstAttribute="trailing" secondItem="gQx-Fy-nPL" secondAttribute="trailing" id="ib4-fv-TO7"/>
+                            <constraint firstItem="ugV-rA-4vx" firstAttribute="centerX" secondItem="Xyt-ce-UXk" secondAttribute="centerX" id="oRT-q7-esO"/>
                             <constraint firstItem="w8G-TR-p9S" firstAttribute="bottom" secondItem="gQx-Fy-nPL" secondAttribute="bottom" id="xFq-X0-4fY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w8G-TR-p9S"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Pb0-yv-gGl"/>
                     <connections>
+                        <outlet property="activityView" destination="ugV-rA-4vx" id="8h3-tR-Mdc"/>
                         <outlet property="imageMain" destination="gQx-Fy-nPL" id="e9M-b4-yFZ"/>
                     </connections>
                 </viewController>
