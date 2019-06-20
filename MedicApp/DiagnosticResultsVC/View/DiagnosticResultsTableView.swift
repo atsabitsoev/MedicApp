@@ -32,13 +32,16 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
         let dateString = "\(components.day!)/\(components.month!)/\(components.year!)"
         cell.labDate.text = dateString
         
-        if indexPath.row == 0 {
+        if indexPath.row == 1 {
             
             cell.labTitle.text = "Ваш позвоночник в 3D"
             
-        } else if indexPath.row == 1 {
+        } else if indexPath.row == 0 {
             
-            cell.labTitle.text = "тут будет заключение врача"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DiagnosticConclusionCell") as! DiagnosticConclusionCell
+            cell.labDate.text = dateString
+            cell.labConclusion.text = currentInfo.conclusion
+            return cell
             
         } else {
             
@@ -73,7 +76,7 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == 0 {
+        if indexPath.row == 1 {
             
             let currentInfo = masDiagnosticInfo[indexPath.section]
             let masBackBoneUrl = currentInfo.backbone
@@ -95,8 +98,27 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
             backboneVC.masImages = masImages
             self.navigationController?.show(backboneVC, sender: nil)
             
-        } else if indexPath.row != 1 {
+        } else if indexPath.row != 0 {
             
+            let currentInfo = masDiagnosticInfo[indexPath.section].otherInfo[indexPath.row - 2]
+            
+            let diagnosticItemVC = UIStoryboard(name: "DiagnosticResults",
+                                                bundle: nil)
+                .instantiateViewController(withIdentifier: "DiagnosticItemVC") as! DiagnosticItemVC
+            
+            do {
+                
+                let imageData = try Data(contentsOf: currentInfo.imageUrl)
+                let image = UIImage(data: imageData) ?? UIImage()
+                diagnosticItemVC.image = image
+                diagnosticItemVC.navigationItem.title = currentInfo.name
+                self.navigationController?.show(diagnosticItemVC, sender: nil)
+                
+            } catch {
+                
+                return
+                
+            }
             
             
         }

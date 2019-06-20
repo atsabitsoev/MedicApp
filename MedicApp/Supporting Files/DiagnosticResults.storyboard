@@ -117,6 +117,95 @@
                                             <outlet property="viewMainCard" destination="NhR-fl-pkH" id="Ze3-Px-t8H"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticConclusionCell" rowHeight="222" id="y8V-Ye-3iz" customClass="DiagnosticConclusionCell" customModule="MedicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="250" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y8V-Ye-3iz" id="sth-36-JFa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtK-vg-2e4" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="0.0" width="378" height="210"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-yr-4Et" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-AJ-ksS">
+                                                                    <rect key="frame" x="16" y="14" width="83" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="NZn-AJ-ksS" firstAttribute="centerY" secondItem="JDo-yr-4Et" secondAttribute="centerY" id="RBX-pm-uyw"/>
+                                                                <constraint firstItem="NZn-AJ-ksS" firstAttribute="leading" secondItem="JDo-yr-4Et" secondAttribute="leading" constant="16" id="otk-sq-DWu"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заключение врача" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-im-Wu1">
+                                                            <rect key="frame" x="16" y="49.5" width="346" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="snH-bn-vhB"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Заключение" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-IQ-K0H">
+                                                            <rect key="frame" x="16" y="93.5" width="346" height="108.5"/>
+                                                            <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="W0b-im-Wu1" secondAttribute="trailing" constant="16" id="12A-yj-EX5"/>
+                                                        <constraint firstItem="W0b-im-Wu1" firstAttribute="top" secondItem="JDo-yr-4Et" secondAttribute="bottom" id="9b2-om-qjL"/>
+                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="top" secondItem="ZtK-vg-2e4" secondAttribute="top" id="KmB-V0-BRX"/>
+                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="height" secondItem="ZtK-vg-2e4" secondAttribute="height" multiplier="45:190" id="LAG-6E-Gid"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JDo-yr-4Et" secondAttribute="trailing" id="U32-1L-Sb9"/>
+                                                        <constraint firstItem="TpQ-IQ-K0H" firstAttribute="top" secondItem="W0b-im-Wu1" secondAttribute="bottom" constant="8" id="bgl-tu-046"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TpQ-IQ-K0H" secondAttribute="trailing" constant="16" id="bxh-s2-73n"/>
+                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="leading" secondItem="ZtK-vg-2e4" secondAttribute="leading" id="jC3-z7-e5W"/>
+                                                        <constraint firstItem="W0b-im-Wu1" firstAttribute="leading" secondItem="ZtK-vg-2e4" secondAttribute="leading" constant="16" id="mdd-Rq-NWJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TpQ-IQ-K0H" secondAttribute="bottom" constant="8" id="mgF-uv-V8F"/>
+                                                        <constraint firstItem="TpQ-IQ-K0H" firstAttribute="leading" secondItem="W0b-im-Wu1" secondAttribute="leading" id="pmX-yx-MAV"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="myCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZtK-vg-2e4" firstAttribute="top" secondItem="sth-36-JFa" secondAttribute="top" id="6Iw-kS-lla"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZtK-vg-2e4" secondAttribute="trailing" constant="18" id="F82-FI-2wB"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZtK-vg-2e4" secondAttribute="bottom" constant="12" id="NFH-xk-6JN"/>
+                                                <constraint firstItem="ZtK-vg-2e4" firstAttribute="leading" secondItem="sth-36-JFa" secondAttribute="leading" constant="18" id="v71-6r-wG1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labConclusion" destination="TpQ-IQ-K0H" id="PRc-qj-dQH"/>
+                                            <outlet property="labDate" destination="NZn-AJ-ksS" id="q27-cs-qfB"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="inj-eR-xnr" id="UD8-zH-100"/>
@@ -181,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="877" y="149"/>
         </scene>
-        <!--Diagnostic ItemVC-->
+        <!--Title-->
         <scene sceneID="gZq-Z8-SBt">
             <objects>
-                <viewController id="QgV-LR-ZFb" customClass="DiagnosticItemVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiagnosticItemVC" id="QgV-LR-ZFb" customClass="DiagnosticItemVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xyt-ce-UXk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,6 +291,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w8G-TR-p9S"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Pb0-yv-gGl"/>
                     <connections>
                         <outlet property="imageMain" destination="gQx-Fy-nPL" id="e9M-b4-yFZ"/>
                     </connections>
