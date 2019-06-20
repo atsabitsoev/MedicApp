@@ -71,6 +71,7 @@ class ProfileVC: UIViewController {
     
     @objc private func profileSavingBegan() {
         startLoadingAnimation()
+        saveNameSurname()
     }
     
     @objc private func getProfileRequestAnswered() {
@@ -127,6 +128,22 @@ class ProfileVC: UIViewController {
         self.present(alert,
                      animated: true,
                      completion: nil)
+    }
+    
+    
+    private func saveNameSurname() {
+        
+        guard let name = tfName.text, let surname = tfSurname.text else { return }
+        SaveManager.save(value: name, key: .userName)
+        SaveManager.save(value: surname, key: .userSurname)
+    }
+    
+    private func setSavedData() {
+        
+        guard let name = UserDefaults.standard.string(forKey: UserDefaultsKeys.userName.rawValue), let surname = UserDefaults.standard.string(forKey: UserDefaultsKeys.userSurname.rawValue) else { return }
+        
+        tfName.text = name
+        tfSurname.text = surname
     }
     
     

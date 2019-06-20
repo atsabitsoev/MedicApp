@@ -44,6 +44,7 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         
         addObservers()
         setTfDelegates()
+        setSavedData()
         
         record = Record(name: "",
                         lastName: "",
@@ -252,7 +253,23 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
             self.viewUnderButRecord.shadowView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
         
+        saveNameSurname()
         sendReserveRequest()
+    }
+    
+    private func saveNameSurname() {
+        
+        guard let name = tfName.text, let surname = tfLastName.text else { return }
+        SaveManager.save(value: name, key: .userName)
+        SaveManager.save(value: surname, key: .userSurname)
+    }
+    
+    private func setSavedData() {
+        
+        guard let name = UserDefaults.standard.string(forKey: UserDefaultsKeys.userName.rawValue), let surname = UserDefaults.standard.string(forKey: UserDefaultsKeys.userSurname.rawValue) else {  return }
+        
+        tfName.text = name
+        tfLastName.text = surname
     }
     
     

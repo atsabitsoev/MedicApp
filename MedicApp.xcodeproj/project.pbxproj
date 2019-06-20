@@ -39,6 +39,8 @@
 		ACAC21EA22AC180D001974BD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAC21E922AC180D001974BD /* RecordService.swift */; };
 		ACACE1E022BA819100A27B6A /* DiagnosticItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACE1DF22BA819100A27B6A /* DiagnosticItemVC.swift */; };
 		ACB318A822BB6650006FD045 /* DiagnosticConclusionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318A722BB6650006FD045 /* DiagnosticConclusionCell.swift */; };
+		ACB318AA22BB6EC4006FD045 /* UserDefautsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318A922BB6EC4006FD045 /* UserDefautsKeys.swift */; };
+		ACB318AC22BB6EF8006FD045 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318AB22BB6EF8006FD045 /* SaveManager.swift */; };
 		ACB543F3229E672200CC2FBA /* MyProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */; };
 		ACBCC95122A525A2008DEFCB /* EnterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95022A525A2008DEFCB /* EnterService.swift */; };
 		ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCC95222A5271F008DEFCB /* ApiInfo.swift */; };
@@ -135,6 +137,8 @@
 		ACAC21E922AC180D001974BD /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		ACACE1DF22BA819100A27B6A /* DiagnosticItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticItemVC.swift; sourceTree = "<group>"; };
 		ACB318A722BB6650006FD045 /* DiagnosticConclusionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticConclusionCell.swift; sourceTree = "<group>"; };
+		ACB318A922BB6EC4006FD045 /* UserDefautsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefautsKeys.swift; sourceTree = "<group>"; };
+		ACB318AB22BB6EF8006FD045 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
 		ACB543F2229E672200CC2FBA /* MyProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableView.swift; sourceTree = "<group>"; };
 		ACBCC95022A525A2008DEFCB /* EnterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterService.swift; path = MedicApp/GlobalEntities/EnterService.swift; sourceTree = SOURCE_ROOT; };
 		ACBCC95222A5271F008DEFCB /* ApiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiInfo.swift; sourceTree = "<group>"; };
@@ -515,6 +519,8 @@
 				AC6B917F22953BC20079CF1F /* OpeningChatVC.swift */,
 				AC6B91942295747A0079CF1F /* NotificationNames.swift */,
 				ACD3BAC02297C861002882D7 /* Colors.swift */,
+				ACB318A922BB6EC4006FD045 /* UserDefautsKeys.swift */,
+				ACB318AB22BB6EF8006FD045 /* SaveManager.swift */,
 				ACBCC95422A54610008DEFCB /* API */,
 			);
 			path = GlobalEntities;
@@ -815,6 +821,7 @@
 				AC6B9174229534B30079CF1F /* MainTabBarController.swift in Sources */,
 				ACB543F3229E672200CC2FBA /* MyProfileTableView.swift in Sources */,
 				ACCE27502294168A00E3126E /* ChatTableviewDelegate.swift in Sources */,
+				ACB318AC22BB6EF8006FD045 /* SaveManager.swift in Sources */,
 				ACC41D362292EAED0042B200 /* ChatTFDelegate.swift in Sources */,
 				ACD627AE22A8FCDA00303B05 /* ProfileAPIService.swift in Sources */,
 				ACC41D322292D8C10042B200 /* SimpleGradientView.swift in Sources */,
@@ -859,6 +866,7 @@
 				ACB318A822BB6650006FD045 /* DiagnosticConclusionCell.swift in Sources */,
 				ACE43F33228EEAC2007BCBC0 /* DiagnosticResultsVC.swift in Sources */,
 				ACD64736228B016C0091257E /* EnterView.swift in Sources */,
+				ACB318AA22BB6EC4006FD045 /* UserDefautsKeys.swift in Sources */,
 				ACFC9B8D228DAE33009F5798 /* ExcercisesVC.swift in Sources */,
 				AC6B918022953BC20079CF1F /* OpeningChatVC.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
