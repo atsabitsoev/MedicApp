@@ -14,28 +14,16 @@ class BackboneVC: UIViewController {
     @IBOutlet weak var imageMain: UIImageView!
     
     
-    var masImages: [UIImage] = [UIImage(named: "Девушка фото")!,
-                                UIImage(named: "Замок")!,
-                                UIImage(named: "Запись иконка")!,
-                                UIImage(named: "Конверт")!,
-                                UIImage(named: "Отправить иконка")!,
-                                UIImage(named: "Позвоночник")!,
-                                UIImage(named: "Девушка фото")!,
-                                UIImage(named: "Замок")!,
-                                UIImage(named: "Запись иконка")!,
-                                UIImage(named: "Конверт")!,
-                                UIImage(named: "Отправить иконка")!,
-                                UIImage(named: "Позвоночник")!,
-                                UIImage(named: "Запись иконка")!,
-                                UIImage(named: "Конверт")!,
-                                UIImage(named: "Отправить иконка")!,
-                                UIImage(named: "Позвоночник")!,
-                                UIImage(named: "Девушка фото")!,
-                                UIImage(named: "Замок")!,
-                                UIImage(named: "Запись иконка")!,
-                                UIImage(named: "Конверт")!,
-                                UIImage(named: "Отправить иконка")!,
-                                UIImage(named: "Позвоночник")!]
+    var loadingFinished = false {
+        didSet {
+            if loadingFinished {
+                imageMain.image = masImages.first
+            }
+        }
+    }
+    
+    var linksImages = [URL]()
+    private var masImages: [UIImage] = []
     var previousTouchX: CGFloat?
     var currentImageIndex = 0 {
         didSet {
@@ -53,9 +41,32 @@ class BackboneVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageMain.image = masImages.first ?? UIImage()
-        
         setNavigationBar()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadImages()
+    }
+    
+    
+    private func loadImages() {
+        
+        let progressStep: Float = Float(1)/Float(linksImages.count)
+        
+        for link in linksImages {
+            
+            do {
+                let imageData = try Data(contentsOf: link)
+                let image = UIImage(data: imageData)
+                masImages.append(image!)
+                
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+        self.loadingFinished = true
     }
     
     
@@ -64,6 +75,8 @@ class BackboneVC: UIViewController {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        guard self.previousTouchX != nil else { return }
         
         let step = UIScreen.main.bounds.width / CGFloat(masImages.count) / 2
         

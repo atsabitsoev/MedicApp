@@ -31,7 +31,11 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     var reserveDate: String?
     var reserveTime: String?
     
-    var selectedIndexPath: IndexPath?
+    var selectedIndexPath: IndexPath? {
+        didSet {
+            checkButRecord()
+        }
+    }
     var validTimeArr: [String] = []
     
     
@@ -148,6 +152,7 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         butChooseDate.setTitleColor(.white, for: .normal)
         
         butChooseDate.setTitle(dateString, for: .normal)
+        butChooseDate.titleLabel?.adjustsFontSizeToFitWidth = true
         
         let reserveDateString = "\(components.day!).\(components.month!).\(components.year!)"
         self.reserveDate = reserveDateString
@@ -273,8 +278,34 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
     }
     
     
+    private func checkButRecord() {
+        
+        if tfName.text != nil &&
+            tfName.text != "" &&
+            tfLastName.text != nil &&
+            tfLastName.text != "" &&
+            selectedIndexPath != nil {
+            
+            butRecord.alpha = 1
+            butRecord.isUserInteractionEnabled = true
+        } else {
+            butRecord.alpha = 0.5
+            butRecord.isUserInteractionEnabled = false
+        }
+    }
+    
+    
     @IBAction func butChooseDateTapped(_ sender: UIButton) {
         
+    }
+    
+    
+    @IBAction func tfSurnameTextChanged(_ sender: Any) {
+        checkButRecord()
+    }
+    
+    @IBAction func tfNameTextChanged(_ sender: Any) {
+        checkButRecord()
     }
     
     
