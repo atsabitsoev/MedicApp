@@ -54,6 +54,8 @@ class BackboneVC: UIViewController {
         super.viewDidLoad()
         
         imageMain.image = masImages.first ?? UIImage()
+        
+        setNavigationBar()
     }
     
     
@@ -76,6 +78,27 @@ class BackboneVC: UIViewController {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         previousTouchX = nil
+    }
+    
+    
+    private func setNavigationBar() {
+        
+        let itemShare = UIBarButtonItem(image: UIImage(named: "Поделиться"),
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(shareTapped))
+        self.navigationItem.setRightBarButtonItems([itemShare], animated: false)
+    }
+    
+    @objc private func shareTapped() {
+        
+        let imageToShare = [imageMain.image!]
+        let activityVC = UIActivityViewController(activityItems: imageToShare,
+                                                  applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC,
+                     animated: true,
+                     completion: nil)
     }
 
 }
