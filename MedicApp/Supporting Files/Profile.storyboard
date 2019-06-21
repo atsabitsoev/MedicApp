@@ -316,7 +316,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="JmL-62-xPV" id="hQ4-aU-h27"/>
                         <outlet property="constrTableViewTop" destination="Iag-sb-1aG" id="hRB-Xj-Y2c"/>
-                        <outlet property="imProfile" destination="5SK-ZO-3aW" id="REZ-L3-GEQ"/>
+                        <outlet property="imProfile" destination="5SK-ZO-3aW" id="IfR-dt-wMY"/>
                         <outlet property="tableView" destination="fqX-oV-bQs" id="mHH-8H-oIv"/>
                         <outlet property="tfName" destination="pOO-GM-iwy" id="s3k-Jg-f5U"/>
                         <outlet property="tfSurname" destination="CNR-rq-XPs" id="08g-Mt-3Pw"/>
