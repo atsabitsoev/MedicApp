@@ -23,9 +23,7 @@ class DiagnosticItemVC: UIViewController {
         super.viewDidLoad()
         
         setNavigationBar()
-        DispatchQueue.main.async {
-            self.loadImage()
-        }
+        self.loadImage()
     }
     
     
@@ -44,6 +42,7 @@ class DiagnosticItemVC: UIViewController {
     private func loadImage() {
         
         do {
+            DispatchQueue.global(priority: .background)
             let dataImage = try Data(contentsOf: imageLink)
             let image = UIImage(data: dataImage)
             self.imageMain.image = image
