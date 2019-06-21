@@ -76,9 +76,10 @@ class ChatService {
                 return
             }
             
-            let dialogId = dialogsArr.first?.stringValue
+            let dialogId = dialogsArr.first!["id"].stringValue
+            print("dialog id - \(dialogId)")
             
-            self.socket.emit("enterInDialog", ["dialogId" : dialogId!],
+            self.socket.emit("enterInDialog", ["dialogId" : dialogId],
                              completion: {
                 
                 print("enterInDialogEmited")
@@ -89,6 +90,18 @@ class ChatService {
             
             let json = JSON(data[0])
             print(json)
+            
+            let messagesJSON = json["messages"].arrayValue
+            let messages = messagesJSON.map({ (json) -> Message in
+                let message = Message(text: json["message"].string ?? "",
+                                      sender: json["author"].stringValue == TokenService.standard.id! ? .user : .penPal,
+                                      time: Date(timeIntervalSince1970: json["date"].doubleValue / 1000),
+                                      contentType: .text)
+                return message
+            })
+            
+            MessageHistoryService.standard.messages = messages
+            NotificationManager.post(.messagesFetched)
         }
         
         socket.on("messageReceive") { (data, ack) in
@@ -97,6 +110,9 @@ class ChatService {
             print(json)
             
             let messageJSON = json["message"]
+            
+            guard messageJSON["author"].stringValue != TokenService.standard.id! else { return }
+            print("сооьщение из вне")
             let messageText = messageJSON["message"].stringValue
             
             self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: .text)
@@ -132,9 +148,11 @@ class ChatService {
     
     func sendMessage(_ message: Message) {
         
-        socket.emit("message", message.text) {
+        socket.emit("message", ["message": message.text]) {
             print("отправлено")
         }
+        
+        print(["message": message.text])
     }
     
     

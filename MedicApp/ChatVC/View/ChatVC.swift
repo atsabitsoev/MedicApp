@@ -19,6 +19,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBOutlet weak var constrLabTitleTop: NSLayoutConstraint!
     @IBOutlet weak var viewSend: ViewUnderTextFields!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     private var rxFirstCircle = true
@@ -37,15 +38,16 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         addObservers()
         
-        fetchPastMessages()
-        
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension
+        
+        updateVisibleMessages()
+        activityIndicator.stopAnimating()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         observeKeyboard()
-        scrollToBottom()
+        scrollToBottom(animated: false)
     }
     
     
@@ -60,27 +62,28 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                                                selector: #selector(showRecievedMessage), name: NSNotification.Name(NotificationNames.newMessage.rawValue), object: nil)
     }
     
-    func scrollToBottom() {
-        let indexPath = IndexPath(row: messageArr.count - 1, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-    }
-    
-    func fetchPastMessages() {
+    func scrollToBottom(animated: Bool) {
         
-        MessageHistoryService.fetchMessages()
+        let indexPath = IndexPath(row: messageArr.count - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: animated)
     }
     
     @objc private func showHistoryMessages() {
         
-        messageArr = MessageHistoryService.messages
-        tableView.reloadData()
-        scrollToBottom()
+        updateVisibleMessages()
+        scrollToBottom(animated: false)
     }
     
     @objc private func showRecievedMessage() {
         
         guard let newMessage = chatService.lastMessage else { return }
         visualiseRecievingMessage(text: newMessage.text, time: newMessage.time, contentType: newMessage.contentType, image: newMessage.image)
+    }
+    
+    private func updateVisibleMessages() {
+        
+        messageArr = MessageHistoryService.standard.messages
+        tableView.reloadData()
     }
     
     
@@ -132,7 +135,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             self.view.layoutIfNeeded()
         }
         
-        scrollToBottom()
+        scrollToBottom(animated: true)
         
     }
     
@@ -168,7 +171,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: messageArr.count - 1, section: 0)], with: .automatic)
         tableView.endUpdates()
-        scrollToBottom()
+        scrollToBottom(animated: true)
         
     }
     
@@ -178,7 +181,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: messageArr.count - 1, section: 0)], with: .automatic)
         tableView.endUpdates()
-        scrollToBottom()
+        scrollToBottom(animated: true)
         
     }
     
@@ -201,7 +204,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     //MARK: IBActions
     @IBAction func butSendTapped(_ sender: UIButton) {
         
-        guard let text = tfMessage.text else { return }
+        guard let text = tfMessage.text, text != "", text != " " else { return }
         
         chatService.sendMessage(Message(text: text, sender: .user, time: Date(), contentType: .text))
         visualiseSendingMessage(text: text, time: Date(), contentType: .text)

@@ -82,9 +82,7 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
             let masBackBoneUrl = currentInfo.backbone
             
             let backboneVC = UIStoryboard(name: "DiagnosticResults", bundle: nil).instantiateViewController(withIdentifier: "BackboneVC") as! BackboneVC
-            backboneVC.linksImages = [URL(string: "https://i.pinimg.com/originals/1e/fa/36/1efa368e017d53a8702f2a3da63de2b5.jpg")!,
-                                      URL(string: "https://wallpapershome.ru/images/wallpapers/oboi-ayfon-8-3840x2160-oboi-ayfon-8-15475.jpg")!,
-                                      URL(string: "http://www.radionetplus.ru/uploads/posts/2015-08/1439144004_12-www.radionetplus.ru.jpg")!]//masBackBoneUrl
+            backboneVC.linksImages = masBackBoneUrl
             self.navigationController?.show(backboneVC, sender: nil)
             
         } else if indexPath.row != 0 {

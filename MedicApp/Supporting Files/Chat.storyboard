@@ -41,7 +41,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здравствуйте!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0w-kb-2Xh" customClass="MessageLabel" customModule="MedicApp" customModuleProvider="target">
-                                                    <rect key="frame" x="285" y="11" width="109" height="86"/>
+                                                    <rect key="frame" x="271" y="11" width="123" height="86"/>
                                                     <color key="backgroundColor" red="0.98431372549019602" green="0.68627450980392157" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Medium" family="SF Compact Rounded" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +53,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W7-U6-zQB">
-                                                    <rect key="frame" x="253.5" y="84" width="23.5" height="13"/>
+                                                    <rect key="frame" x="239.5" y="84" width="23.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="11"/>
                                                     <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -305,6 +305,10 @@
                                     <action selector="butCloseTapped:" destination="h2z-z8-INL" eventType="touchUpInside" id="21i-eh-iIK"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5kj-wq-5La">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -325,7 +329,9 @@
                             <constraint firstItem="KOp-Fc-EJx" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="Knv-BL-vfu"/>
                             <constraint firstItem="BJf-H4-BHY" firstAttribute="leading" secondItem="SwG-Gs-rO8" secondAttribute="trailing" id="LXk-sE-uYM"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="top" secondItem="YOA-dq-XZB" secondAttribute="bottom" id="Lt0-L8-hoI"/>
+                            <constraint firstItem="5kj-wq-5La" firstAttribute="centerX" secondItem="JFO-Ts-wXc" secondAttribute="centerX" id="MM1-a5-cHl"/>
                             <constraint firstItem="mvp-0Y-HTy" firstAttribute="top" secondItem="0v7-6a-shU" secondAttribute="bottom" constant="7" id="Mk6-t5-pci"/>
+                            <constraint firstItem="5kj-wq-5La" firstAttribute="centerY" secondItem="JFO-Ts-wXc" secondAttribute="centerY" id="Msv-kO-r5f"/>
                             <constraint firstItem="SwG-Gs-rO8" firstAttribute="leading" secondItem="rbT-7E-R5A" secondAttribute="leading" id="Q9e-m4-X5M"/>
                             <constraint firstItem="pZ7-X6-xHy" firstAttribute="top" secondItem="Xkq-gB-YD5" secondAttribute="top" constant="-8" id="U8F-X7-ELb"/>
                             <constraint firstItem="yKo-Tq-Bf1" firstAttribute="bottom" secondItem="rbT-7E-R5A" secondAttribute="bottom" id="UNF-bb-wLL"/>
@@ -345,6 +351,7 @@
                         <viewLayoutGuide key="safeArea" id="rbT-7E-R5A"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="5kj-wq-5La" id="3a6-5c-4xC"/>
                         <outlet property="constrHeaderTop" destination="F8c-D9-GuA" id="bAf-Kn-StE"/>
                         <outlet property="constrLabTitleTop" destination="kQl-6g-wXo" id="AKG-1A-ZFl"/>
                         <outlet property="tableView" destination="YOA-dq-XZB" id="dve-dM-4Uc"/>
