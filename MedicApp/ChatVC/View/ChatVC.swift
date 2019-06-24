@@ -64,6 +64,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     func scrollToBottom(animated: Bool) {
         
+        guard messageArr.count != 0 else { return }
         let indexPath = IndexPath(row: messageArr.count - 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: animated)
     }
