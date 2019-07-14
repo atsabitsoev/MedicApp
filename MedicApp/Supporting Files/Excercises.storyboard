@@ -27,10 +27,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="204" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mBt-tG-JxD">
-                                <rect key="frame" x="0.0" y="122" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExercisesCell" customModule="MedicApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="excercisesCell" rowHeight="204" id="UXB-Hj-m9r" customClass="ExercisesCell" customModule="MedicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="204"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXB-Hj-m9r" id="eC7-t3-yqe">
@@ -102,7 +102,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-yC-Lky" customClass="ViewUnderTextFields" customModule="MedicApp" customModuleProvider="target">
-                                <rect key="frame" x="104.5" y="94" width="205" height="20"/>
+                                <rect key="frame" x="104.5" y="96" width="205" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
@@ -118,7 +118,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TuC-H6-SbU">
-                                <rect key="frame" x="104.5" y="94" width="205" height="21"/>
+                                <rect key="frame" x="104.5" y="96" width="205" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="TnU-F9-Met"/>
@@ -133,7 +133,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V14-4q-GId">
-                                <rect key="frame" x="131" y="52" width="152.5" height="30"/>
+                                <rect key="frame" x="131" y="52" width="152.5" height="32"/>
                                 <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
                                 <color key="textColor" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -142,6 +142,10 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" red="0.10588235294117647" green="0.85882352941176465" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zu-jT-l1d">
+                                <rect key="frame" x="364" y="52" width="30" height="32"/>
+                                <state key="normal" image="Лампочка"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -149,14 +153,18 @@
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="bottom" constant="8" id="DNs-WQ-aC5"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="bottom" secondItem="TuC-H6-SbU" secondAttribute="bottom" id="I0l-eA-ocP"/>
                             <constraint firstItem="U7g-mx-7KF" firstAttribute="centerY" secondItem="GXr-YN-pi6" secondAttribute="centerY" id="LZO-FI-YGh"/>
+                            <constraint firstItem="8Zu-jT-l1d" firstAttribute="bottom" secondItem="V14-4q-GId" secondAttribute="bottom" id="Lsk-jT-14I"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="trailing" secondItem="n78-v5-CLM" secondAttribute="trailing" id="Oo5-9v-nqJ"/>
                             <constraint firstAttribute="bottom" secondItem="mBt-tG-JxD" secondAttribute="bottom" id="VVU-ZQ-zCO"/>
+                            <constraint firstItem="8Zu-jT-l1d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V14-4q-GId" secondAttribute="trailing" constant="8" id="Xsc-cS-yqz"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="leading" secondItem="TuC-H6-SbU" secondAttribute="leading" id="YKV-qO-Lrx"/>
                             <constraint firstItem="TuC-H6-SbU" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="aHL-hl-f0L"/>
                             <constraint firstItem="U7g-mx-7KF" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="b7E-ob-EIC"/>
                             <constraint firstItem="mBt-tG-JxD" firstAttribute="leading" secondItem="n78-v5-CLM" secondAttribute="leading" id="cCX-QH-Nyx"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="trailing" secondItem="TuC-H6-SbU" secondAttribute="trailing" id="cOi-DN-gNb"/>
                             <constraint firstItem="V14-4q-GId" firstAttribute="centerX" secondItem="GXr-YN-pi6" secondAttribute="centerX" id="gAo-Ye-498"/>
+                            <constraint firstItem="8Zu-jT-l1d" firstAttribute="top" secondItem="V14-4q-GId" secondAttribute="top" id="iha-e8-no8"/>
+                            <constraint firstItem="n78-v5-CLM" firstAttribute="trailing" secondItem="8Zu-jT-l1d" secondAttribute="trailing" constant="20" id="nE4-MN-yXe"/>
                             <constraint firstItem="7L1-yC-Lky" firstAttribute="top" secondItem="TuC-H6-SbU" secondAttribute="top" id="ohc-Q5-Uhc"/>
                             <constraint firstItem="V14-4q-GId" firstAttribute="top" secondItem="n78-v5-CLM" secondAttribute="top" constant="8" id="vae-pU-6iT"/>
                         </constraints>
@@ -173,4 +181,7 @@
             <point key="canvasLocation" x="379.71014492753625" y="-133.25892857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Лампочка" width="30" height="32"/>
+    </resources>
 </document>

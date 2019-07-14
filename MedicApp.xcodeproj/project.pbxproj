@@ -85,6 +85,7 @@
 		ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */; };
 		ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */; };
 		ACE4E2DC22B76E560062C906 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E2DB22B76E560062C906 /* Exercise.swift */; };
+		ACEB679A22DB6B2F00DE80CD /* Advices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB679922DB6B2F00DE80CD /* Advices.storyboard */; };
 		ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */; };
 		ACF76AD5227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */; };
 		ACF76AD6227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */; };
@@ -183,6 +184,7 @@
 		ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsTableView.swift; sourceTree = "<group>"; };
 		ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsCell.swift; sourceTree = "<group>"; };
 		ACE4E2DB22B76E560062C906 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		ACEB679922DB6B2F00DE80CD /* Advices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Advices.storyboard; sourceTree = "<group>"; };
 		ACF76ACB227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Thin.otf"; sourceTree = "<group>"; };
 		ACF76ACC227CCE7D00FE7648 /* SF-Compact-Rounded-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Black.otf"; sourceTree = "<group>"; };
 		ACF76ACD227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Bold.otf"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				ACFC9B84228D8ECD009F5798 /* Record.storyboard */,
 				ACC41D282292D2DF0042B200 /* Chat.storyboard */,
 				ACFC9B86228DABBD009F5798 /* Excercises.storyboard */,
+				ACEB679922DB6B2F00DE80CD /* Advices.storyboard */,
 				ACE43F34228EEB1B007BCBC0 /* DiagnosticResults.storyboard */,
 				AC6B917B229536910079CF1F /* Profile.storyboard */,
 				AC7F4CA7227CAEF0002A42AF /* Assets.xcassets */,
@@ -732,6 +735,7 @@
 				ACF76ADB227CCE7D00FE7648 /* SF-Compact-Rounded-Regular.otf in Resources */,
 				ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */,
 				ACFC9B87228DABBD009F5798 /* Excercises.storyboard in Resources */,
+				ACEB679A22DB6B2F00DE80CD /* Advices.storyboard in Resources */,
 				ACCE276422943DFB00E3126E /* Вход.png in Resources */,
 				AC6B917C229536910079CF1F /* Profile.storyboard in Resources */,
 				ACFC9B85228D8ECD009F5798 /* Record.storyboard in Resources */,
