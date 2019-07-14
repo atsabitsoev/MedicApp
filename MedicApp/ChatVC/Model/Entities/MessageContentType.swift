@@ -9,8 +9,8 @@
 import Foundation
 
 
-enum MessageContentType {
+enum MessageContentType: String {
     
-    case photo
-    case text
+    case photo = "photo"
+    case text = "text"
 }

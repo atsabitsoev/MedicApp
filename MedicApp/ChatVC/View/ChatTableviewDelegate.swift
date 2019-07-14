@@ -45,7 +45,7 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserImageCell") as! UserImageCell
             let image = messageArr[indexPath.row].image
             cell.imageMain.image = image
-            cell.set(image: image!)
+            cell.set(image: image ?? UIImage())
             cell.labTime.text = formatter.string(from: message.time)
             return cell
         

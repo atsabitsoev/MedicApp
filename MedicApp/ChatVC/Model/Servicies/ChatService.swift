@@ -40,7 +40,7 @@ class ChatService {
     private let manager = SocketManager(socketURL: URL(string: ApiInfo().baseUrl)!,
                                         config: [.secure(false),
                                                  .path("/socstream"),
-                                                 .log(true)])
+                                                 .log(false)])
     private var socket: SocketIOClient!
     private var name: String?
     private var resetAck: SocketAckEmitter?
@@ -93,14 +93,23 @@ class ChatService {
             
             let messagesJSON = json["messages"].arrayValue
             let messages = messagesJSON.map({ (json) -> Message in
+                
+                var image: UIImage?
+                if let url = URL(string: "\(ApiInfo().baseUrl)\(json["message"])"),
+                    let imageData = try? Data(contentsOf: url) {
+                    
+                    image = UIImage(data: imageData)
+                }
+                
                 let message = Message(text: json["message"].string ?? "",
                                       sender: json["author"].stringValue == TokenService.standard.id! ? .user : .penPal,
                                       time: Date(timeIntervalSince1970: json["date"].doubleValue / 1000),
-                                      contentType: .text)
+                                      contentType: MessageContentType(rawValue: json["type"].stringValue) ?? .text,
+                                      image: image)
                 return message
             })
             
-            MessageHistoryService.standard.messages = messages
+            MessageHistoryService.standard.messages = messages.reversed()
             NotificationManager.post(.messagesFetched)
         }
         
@@ -112,16 +121,34 @@ class ChatService {
             let messageJSON = json["message"]
             
             guard messageJSON["author"].stringValue != TokenService.standard.id! else { return }
-            print("сооьщение из вне")
-            let messageText = messageJSON["message"].stringValue
             
-            self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: .text)
+            let contentType = messageJSON["type"].string
+            var messageText = ""
+            var image: UIImage?
+            
+            switch contentType {
+            case MessageContentType.text.rawValue:
+                
+                messageText = messageJSON["message"].stringValue
+                
+            case MessageContentType.photo.rawValue:
+                
+                let imageUrl = messageJSON["message"].stringValue
+                guard let imageData = try? Data(contentsOf: URL(string: "\(ApiInfo().baseUrl)\(imageUrl)")!) else { return }
+                image = UIImage(data: imageData)
+                
+            default:
+                
+                print("error")
+                
+            }
+            
+            self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: .text, image: image)
         }
         
         socket.on("leavedDialog") { (data, ack) in
             
-            let json = JSON(data[0])
-            print(json)
+            print("Вышел из чата")
         }
         
         socket.on("newMessage") { (data, ack) in
@@ -148,7 +175,29 @@ class ChatService {
     
     func sendMessage(_ message: Message) {
         
-        socket.emit("message", ["message": message.text]) {
+        var messageText = ""
+        var type = ""
+        
+        switch message.contentType {
+            
+        case .text:
+            
+            messageText = message.text
+            type = "text"
+            
+        case .photo:
+            
+            let image = message.image
+            let imageData = image?.pngData()
+            let imageBase64 = imageData!.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
+            print(imageBase64)
+            messageText = "data:image/png;base64,\(imageBase64)"
+            type = "photo"
+            
+        }
+        
+        socket.emit("message", ["message": messageText,
+                                "type": type]) {
             print("отправлено")
         }
         

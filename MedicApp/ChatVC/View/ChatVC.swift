@@ -192,6 +192,12 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            let message = Message(text: "",
+                                  sender: .user,
+                                  time: Date(),
+                                  contentType: .photo,
+                                  image: pickedImage)
+            chatService.sendMessage(message)
             visualiseSendingMessage(text: "", time: Date(), contentType: .photo, image: pickedImage)
             self.dismiss(animated: true, completion: nil)
         }
