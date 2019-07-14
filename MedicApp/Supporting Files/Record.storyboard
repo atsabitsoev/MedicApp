@@ -273,15 +273,25 @@
                                 <rect key="frame" x="188.5" y="471.5" width="37" height="37"/>
                                 <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olX-m2-6hF">
+                                <rect key="frame" x="370" y="62" width="24" height="32"/>
+                                <state key="normal" image="Список иконка"/>
+                                <connections>
+                                    <action selector="butReservationsTapped:" destination="qWw-wQ-jbq" eventType="touchUpInside" id="KDr-K0-l5l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="olX-m2-6hF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="top" id="7kJ-CY-Feq"/>
                             <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="7Kz-fZ-plR" secondAttribute="trailing" id="ExB-oe-WRo"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="trailing" secondItem="gAl-AQ-ofO" secondAttribute="trailing" id="J44-uz-FVA"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="centerX" secondItem="oFa-3e-RrU" secondAttribute="centerX" id="JkO-kn-NjQ"/>
                             <constraint firstItem="cmj-5P-AQP" firstAttribute="centerY" secondItem="Kvo-nd-cnj" secondAttribute="centerY" id="Ne4-NK-MR9"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="top" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="Old-kj-caQ"/>
+                            <constraint firstItem="olX-m2-6hF" firstAttribute="bottom" secondItem="7Kz-fZ-plR" secondAttribute="bottom" id="Phl-EV-eHN"/>
                             <constraint firstItem="cmj-5P-AQP" firstAttribute="centerX" secondItem="Kvo-nd-cnj" secondAttribute="centerX" id="Vno-Gs-2tm"/>
+                            <constraint firstItem="gAl-AQ-ofO" firstAttribute="trailing" secondItem="olX-m2-6hF" secondAttribute="trailing" constant="20" id="ZWv-vu-lue"/>
                             <constraint firstItem="0ZL-9c-tmF" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="dFn-Jv-tlV"/>
                             <constraint firstItem="7Kz-fZ-plR" firstAttribute="leading" secondItem="gAl-AQ-ofO" secondAttribute="leading" id="eWd-Rr-gbp"/>
                             <constraint firstAttribute="bottom" secondItem="0ZL-9c-tmF" secondAttribute="bottom" id="g9I-gN-eUl"/>
@@ -389,4 +399,7 @@
             <point key="canvasLocation" x="934.78260869565224" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Список иконка" width="24" height="30"/>
+    </resources>
 </document>

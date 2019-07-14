@@ -19,18 +19,30 @@ class ExcercisesVC: UIViewController {
     
     var state = false {
         didSet {
-            
             currentExercises = state ? allExercises : myExercises
-            tableView.reloadData()
         }
     }
     var getExercisesService = GetExercisesService.standard
-    private var allExercises: [Exercise] = []
-    private var myExercises: [Exercise] = []
-    var currentExercises: [Exercise] = [] {
-        
+    
+    private var allExercises: [Exercise] = [] {
         didSet {
-            loadingAnimation(state: false)
+            if state {
+                currentExercises = allExercises
+            }
+        }
+    }
+    private var myExercises: [Exercise] = [] {
+        didSet {
+            if !state {
+                currentExercises = myExercises
+            }
+        }
+    }
+    var currentExercises: [Exercise] = [] {
+        didSet {
+            let animation = (currentExercises.count == 0) ? true : false
+            loadingAnimation(state: animation)
+            tableView.reloadData()
         }
     }
     
@@ -39,9 +51,8 @@ class ExcercisesVC: UIViewController {
         super.viewDidLoad()
         
         addObservers()
-        currentExercises = myExercises
         tableView.delaysContentTouches = false
-        getExercisesService.sendGetAllExercisesRequest()
+        getExercisesService.sendGetMyExcercisesRequest()
     }
     
     
@@ -57,6 +68,10 @@ class ExcercisesVC: UIViewController {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(allExercisesRequestAnswered),
                                                name: NSNotification.Name(NotificationNames.getAllExercisesRequestAnswered.rawValue),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(myExercisesRequestAnswered),
+                                               name: NSNotification.Name(rawValue: NotificationNames.getMyExercisesRequestAnswered.rawValue),
                                                object: nil)
     }
     
@@ -101,10 +116,26 @@ class ExcercisesVC: UIViewController {
         allExercises = getExercisesService.allExercises!
     }
     
+    @objc func myExercisesRequestAnswered() {
+        
+        guard getExercisesService.errorMyExercises == nil else {
+            
+            let errorString = getExercisesService.errorMyExercises!
+            showErrorAlert(message: errorString)
+            return
+        }
+        
+        myExercises = getExercisesService.myExercises!
+    }
+    
     
     @IBAction func stateChanged(_ sender: UISegmentedControl) {
         
         loadingAnimation(state: true)
         state = !state
+        
+        if allExercises.count == 0 && state {
+            getExercisesService.sendGetAllExercisesRequest()
+        }
     }
 }

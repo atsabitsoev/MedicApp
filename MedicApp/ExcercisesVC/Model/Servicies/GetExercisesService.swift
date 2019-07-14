@@ -20,6 +20,9 @@ class GetExercisesService {
     var allExercises: [Exercise]?
     var errorAllExcercises: String?
     
+    var myExercises: [Exercise]?
+    var errorMyExercises: String?
+    
     
     func sendGetAllExercisesRequest() {
         
@@ -47,17 +50,7 @@ class GetExercisesService {
                         let exercisesJSON = json["data"]["exercises"].arrayValue
                         print(exercisesJSON)
                         
-                        let exercises = exercisesJSON.map({ (json) -> Exercise in
-                            print("gdsf")
-                            let previewString = json["videos"].arrayValue[0]["preview"].stringValue
-                            let videoString = json["videos"].arrayValue[0]["video"].stringValue
-                            
-                            let previewUrl = URL(string: "\(ApiInfo().baseUrl)\(previewString)")!
-                            let videoUrl = URL(string: "\(ApiInfo().baseUrl)\(videoString)")!
-                            let name = json["name"].stringValue
-                            
-                            return Exercise(name: name, preview: previewUrl, video: videoUrl)
-                        })
+                        let exercises = self.parseExercises(exercisesJSON: exercisesJSON)
                         
                         self.allExercises = exercises
                         self.errorAllExcercises = nil
@@ -77,6 +70,72 @@ class GetExercisesService {
                 
                 NotificationManager.post(.getAllExercisesRequestAnswered)
         }
+    }
+    
+    
+    func sendGetMyExcercisesRequest() {
+        
+        let url = "\(ApiInfo().baseUrl)/patient/\(TokenService.standard.id!)/exercise"
+        let headers: HTTPHeaders = ["Cookie": "token=\(TokenService.standard.token!); id=\(TokenService.standard.id!)"]
+        
+        AF.request(url,
+                   method: .get,
+                   parameters: nil,
+                   encoding: JSONEncoding.default,
+                   headers: headers,
+                   interceptor: nil)
+            .responseJSON { (response) in
+                
+                do {
+                    
+                    let responseValue = try response.result.get()
+                    let json = JSON(responseValue)
+                    print(json)
+                    
+                    switch response.response?.statusCode {
+                    case 200:
+                        
+                        let exercisesJSON = json["data"]["exercises"].arrayValue
+                        let exercises = self.parseExercises(exercisesJSON: exercisesJSON)
+                        
+                        self.myExercises = exercises
+                        self.errorMyExercises = nil
+                        
+                    default:
+                        
+                        let errorString = json["data"]["error"].stringValue
+                        self.errorMyExercises = errorString
+                        print(errorString)
+                        
+                    }
+                    
+                } catch {
+                    
+                    let errorString = error.localizedDescription
+                    self.errorMyExercises = errorString
+                    print(errorString)
+                    
+                }
+                NotificationManager.post(.getMyExercisesRequestAnswered)
+        }
+    }
+    
+    
+    private func parseExercises(exercisesJSON: [JSON]) -> [Exercise] {
+        
+        let exercises = exercisesJSON.map({ (json) -> Exercise in
+            print("gdsf")
+            let previewString = json["videos"].arrayValue[0]["preview"].stringValue
+            let videoString = json["videos"].arrayValue[0]["video"].stringValue
+            
+            let previewUrl = URL(string: "\(ApiInfo().baseUrl)\(previewString)")!
+            let videoUrl = URL(string: "\(ApiInfo().baseUrl)\(videoString)")!
+            let name = json["name"].stringValue
+            
+            return Exercise(name: name, preview: previewUrl, video: videoUrl)
+        })
+        
+        return exercises
     }
     
 }

@@ -80,6 +80,10 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
                                                selector: #selector(reserveRequestAnswered),
                                                name: NSNotification.Name(NotificationNames.reserveRequestAnswered.rawValue),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(getReservationsRequestAnswered),
+                                               name: NSNotification.Name(NotificationNames.getReservationsRequestAnswered.rawValue),
+                                               object: nil)
     }
     
     @objc private func activateTabBar() {
@@ -119,6 +123,18 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         showSuccessAlert()
     }
     
+    @objc private func getReservationsRequestAnswered() {
+        
+        guard recordService.errorGetReservations == nil else {
+            let errorString = recordService.errorGetReservations!
+            showErrorAlert(message: errorString)
+            return
+        }
+        
+        showReservations(recordService.reservations!)
+    }
+    
+    
     private func showSuccessAlert() {
         
         let date = reserveDate!
@@ -128,6 +144,26 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showReservations(_ reservations: [String]) {
+        
+        var message = ""
+        
+        for s in reservations {
+            message.append("\(s)\n")
+        }
+        
+        let alert = UIAlertController(title: "Ваши записи",
+                                      message: message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок",
+                                     style: .default,
+                                     handler: nil)
+        alert.addAction(okAction)
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
     }
     
     
@@ -308,6 +344,10 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
         checkButRecord()
     }
     
+    @IBAction func butReservationsTapped(_ sender: Any) {
+        recordService.getReservations()
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -317,6 +357,9 @@ class RecordVC: UIViewController, UIPopoverPresentationControllerDelegate, UITex
             destination.recordVC = self
         }
     }
+    
+    
+    
     
     
     //Textfield Delegate
