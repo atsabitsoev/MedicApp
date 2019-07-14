@@ -97,12 +97,10 @@ class BackboneVC: UIViewController {
     
     private func setNavigationBar() {
         
-        let itemShare = UIBarButtonItem(image: UIImage(named: "Поделиться"),
-                                        style: .plain,
-                                        target: self,
-                                        action: #selector(shareTapped))
+        let itemShare = UIBarButtonItem(barButtonSystemItem: .action,
+                        target: self,
+                        action: #selector(shareTapped))
         itemShare.tintColor = #colorLiteral(red: 0.9725490196, green: 0.3803921569, blue: 0.3529411765, alpha: 1)
-        itemShare.image = itemShare.image?.withRenderingMode(.alwaysTemplate)
         self.navigationItem.setRightBarButtonItems([itemShare], animated: false)
     }
     
