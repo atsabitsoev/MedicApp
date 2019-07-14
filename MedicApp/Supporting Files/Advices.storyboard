@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Rounded-Bold.otf">
+            <string>SFCompactRounded-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="uNM-DA-6nv">
@@ -17,13 +22,43 @@
                     <view key="view" contentMode="scaleToFill" id="VBC-cl-kcF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="204" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="taI-LF-lFx">
+                                <rect key="frame" x="0.0" y="90" width="414" height="806"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HAA-X6-Vl8">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="204"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HAA-X6-Vl8" id="RnI-Zj-KAB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woY-eN-6rs">
+                                <rect key="frame" x="131" y="52" width="152.5" height="30"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
+                                <color key="textColor" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="taI-LF-lFx" firstAttribute="top" secondItem="woY-eN-6rs" secondAttribute="bottom" constant="8" id="0se-Mh-zFf"/>
+                            <constraint firstItem="woY-eN-6rs" firstAttribute="centerX" secondItem="VBC-cl-kcF" secondAttribute="centerX" id="3xU-9N-bmD"/>
+                            <constraint firstItem="taI-LF-lFx" firstAttribute="leading" secondItem="R00-fi-xs0" secondAttribute="leading" id="8Ym-tt-TmN"/>
+                            <constraint firstAttribute="bottom" secondItem="taI-LF-lFx" secondAttribute="bottom" id="Dww-MM-eEJ"/>
+                            <constraint firstItem="woY-eN-6rs" firstAttribute="top" secondItem="R00-fi-xs0" secondAttribute="top" constant="8" id="VO5-df-Lgp"/>
+                            <constraint firstItem="taI-LF-lFx" firstAttribute="trailing" secondItem="R00-fi-xs0" secondAttribute="trailing" id="poH-FJ-Vzs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R00-fi-xs0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkH-Gb-wGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="43"/>
+            <point key="canvasLocation" x="-39.130434782608695" y="42.857142857142854"/>
         </scene>
     </scenes>
 </document>
