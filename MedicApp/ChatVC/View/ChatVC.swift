@@ -89,7 +89,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     func reload(tableView: UITableView) {
         
-        let contentOffsetY = tableView.contentSize.height
         tableView.reloadData()
         tableView.layoutIfNeeded()
         let currentRow = (MessageHistoryService.standard.messages.count % 30 == 0) ? 29 : MessageHistoryService.standard.messages.count % 30 - 1
