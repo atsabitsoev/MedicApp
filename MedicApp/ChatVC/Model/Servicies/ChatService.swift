@@ -89,8 +89,8 @@ class ChatService {
             let json = JSON(data[0])
             print(json)
             
-            let messagesJSON = json["messages"].arrayValue.dropLast(json["messages"].count - 30)
-            let messages = self.parseMessagesFromJSON(messagesJSON: [JSON](messagesJSON))
+            let messagesJSON = json["messages"].arrayValue
+            let messages = self.parseMessagesFromJSON(messagesJSON: messagesJSON)
             
             MessageHistoryService.standard.messages = messages.reversed()
             NotificationManager.post(.messagesFetched)
