@@ -27,6 +27,8 @@ class ChatService {
         }
     }
     
+    private var dialogId: String?
+    
     
     func startConnection() {
         
@@ -79,11 +81,7 @@ class ChatService {
             let dialogId = dialogsArr.first!["id"].stringValue
             print("dialog id - \(dialogId)")
             
-            self.socket.emit("enterInDialog", ["dialogId" : dialogId],
-                             completion: {
-                
-                print("enterInDialogEmited")
-            })
+            self.dialogId = dialogId
         }
         
         socket.on("enteredDialog") { (data, ack) in
@@ -91,23 +89,8 @@ class ChatService {
             let json = JSON(data[0])
             print(json)
             
-            let messagesJSON = json["messages"].arrayValue
-            let messages = messagesJSON.map({ (json) -> Message in
-                
-                var image: UIImage?
-                if let url = URL(string: "\(ApiInfo().baseUrl)\(json["message"])"),
-                    let imageData = try? Data(contentsOf: url) {
-                    
-                    image = UIImage(data: imageData)
-                }
-                
-                let message = Message(text: json["message"].string ?? "",
-                                      sender: json["author"].stringValue == TokenService.standard.id! ? .user : .penPal,
-                                      time: Date(timeIntervalSince1970: json["date"].doubleValue / 1000),
-                                      contentType: MessageContentType(rawValue: json["type"].stringValue) ?? .text,
-                                      image: image)
-                return message
-            })
+            let messagesJSON = json["messages"].arrayValue.dropLast(json["messages"].count - 30)
+            let messages = self.parseMessagesFromJSON(messagesJSON: [JSON](messagesJSON))
             
             MessageHistoryService.standard.messages = messages.reversed()
             NotificationManager.post(.messagesFetched)
@@ -155,6 +138,8 @@ class ChatService {
             
             let json = JSON(data[0])
             print(json)
+            
+            
         }
         
         socket.on("messageListReceive") { (data, ack) in
@@ -167,6 +152,21 @@ class ChatService {
             
             let json = JSON(data[0])
             print(json)
+        }
+        
+        socket.on("messageListReceive") { (data, ack) in
+            
+            let json = JSON(data[0])
+            print(json)
+            
+            if json["messages"].arrayValue.count >= 30 {
+                let jsonMessagesSlice = json["messages"].arrayValue.dropLast(json["messages"].count - 30)
+                let jsonMessages = [JSON](jsonMessagesSlice)
+                let receivedMessages = self.parseMessagesFromJSON(messagesJSON: jsonMessages)
+                MessageHistoryService.standard.messages = receivedMessages.reversed() + MessageHistoryService.standard.messages
+            }
+            
+            NotificationManager.post(.messagesFetched)
         }
         
         
@@ -202,6 +202,49 @@ class ChatService {
         }
         
         print(["message": message.text])
+    }
+    
+    
+    func loadMoreMessages() {
+        
+        socket.emit("getMessageList", ["skip": MessageHistoryService.standard.messages.count,
+                                       "limit": 30])
+    }
+    
+    
+    private func parseMessagesFromJSON(messagesJSON: [JSON]) -> [Message] {
+        
+        let messages = messagesJSON.map({ (json) -> Message in
+            
+            var image: UIImage?
+            if let url = URL(string: "\(ApiInfo().baseUrl)\(json["message"])"),
+                let imageData = try? Data(contentsOf: url) {
+                
+                image = UIImage(data: imageData)
+            }
+            
+            let message = Message(text: json["message"].string ?? "",
+                                  sender: json["author"].stringValue == TokenService.standard.id! ? .user : .penPal,
+                                  time: Date(timeIntervalSince1970: json["date"].doubleValue / 1000),
+                                  contentType: MessageContentType(rawValue: json["type"].stringValue) ?? .text,
+                                  image: image)
+            return message
+        })
+        
+        return messages
+    }
+    
+    
+    func enterChat() {
+        self.socket.emit("enterInDialog", ["dialogId" : dialogId],
+                         completion: {
+                            print("enterInDialogEmited")
+        })
+    }
+    
+    func exitFromChat() {
+        
+        socket.emit("exitFromChat")
     }
     
     

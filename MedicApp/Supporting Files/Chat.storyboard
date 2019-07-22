@@ -32,9 +32,23 @@
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOA-dq-XZB">
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="fDo-fB-WP7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jqm-IS-b86">
+                                            <rect key="frame" x="197" y="12" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="jqm-IS-b86" firstAttribute="centerY" secondItem="fDo-fB-WP7" secondAttribute="centerY" id="1Hb-KE-dtC"/>
+                                        <constraint firstItem="jqm-IS-b86" firstAttribute="centerX" secondItem="fDo-fB-WP7" secondAttribute="centerX" id="moh-rU-3Zx"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserMessageCell" rowHeight="108" id="CDE-CO-i7N" customClass="UserMessageCell" customModule="MedicApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="108"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDE-CO-i7N" id="Wic-bI-G5P">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -74,7 +88,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PenPalMessageCell" rowHeight="108" id="19v-0H-fB6" customClass="PenPalMessageCell" customModule="MedicApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="414" height="108"/>
+                                        <rect key="frame" x="0.0" y="180" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="19v-0H-fB6" id="eql-Lr-MwZ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -132,7 +146,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PenPalImageCell" rowHeight="108" id="k6c-XO-8mq" customClass="PenPalImageCell" customModule="MedicApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="244" width="414" height="108"/>
+                                        <rect key="frame" x="0.0" y="288" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k6c-XO-8mq" id="o2n-uj-luU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
@@ -170,7 +184,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserImageCell" rowHeight="108" id="xcd-lj-F9u" customClass="UserImageCell" customModule="MedicApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="352" width="414" height="108"/>
+                                        <rect key="frame" x="0.0" y="396" width="414" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xcd-lj-F9u" id="jG0-nE-YHB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>

@@ -37,6 +37,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         super.viewDidLoad()
         
         addObservers()
+        chatService.enterChat()
         
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension
@@ -72,7 +73,6 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @objc private func showHistoryMessages() {
         
         updateVisibleMessages()
-        scrollToBottom(animated: false)
     }
     
     @objc private func showRecievedMessage() {
@@ -84,7 +84,22 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private func updateVisibleMessages() {
         
         messageArr = MessageHistoryService.standard.messages
+        reload(tableView: tableView)
+    }
+    
+    func reload(tableView: UITableView) {
+        
+        let contentOffsetY = tableView.contentSize.height
         tableView.reloadData()
+        tableView.layoutIfNeeded()
+        let currentRow = (MessageHistoryService.standard.messages.count % 30 == 0) ? 29 : MessageHistoryService.standard.messages.count % 30 - 1
+        
+        if MessageHistoryService.standard.messages.count != 0 {
+            tableView.scrollToRow(at: IndexPath(row: currentRow,
+                                                section: 0),
+                                  at: .top,
+                                  animated: false)
+        }
     }
     
     
@@ -229,6 +244,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @IBAction func butCloseTapped(_ sender: UIButton) {
         
+        chatService.exitFromChat()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "chatClosed"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
