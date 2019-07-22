@@ -139,7 +139,7 @@ class ChatService {
             let json = JSON(data[0])
             print(json)
             
-            
+            NotificationManager.post(.messageFromSomewhere)
         }
         
         socket.on("messageListReceive") { (data, ack) in
@@ -160,8 +160,7 @@ class ChatService {
             print(json)
             
             if json["messages"].arrayValue.count >= 30 {
-                let jsonMessagesSlice = json["messages"].arrayValue.dropLast(json["messages"].count - 30)
-                let jsonMessages = [JSON](jsonMessagesSlice)
+                let jsonMessages = json["messages"].arrayValue
                 let receivedMessages = self.parseMessagesFromJSON(messagesJSON: jsonMessages)
                 MessageHistoryService.standard.messages = receivedMessages.reversed() + MessageHistoryService.standard.messages
             }

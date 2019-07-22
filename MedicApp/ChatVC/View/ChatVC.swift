@@ -52,6 +52,8 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
     
     
+    
+    
     private func addObservers() {
         
         NotificationCenter.default.addObserver(self,
@@ -61,7 +63,29 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(showRecievedMessage), name: NSNotification.Name(NotificationNames.newMessage.rawValue), object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(goToBackground),
+                                               name: UIApplication.didEnterBackgroundNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(goToForeground),
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
     }
+    
+    
+    @objc private func goToBackground() {
+        
+        chatService.exitFromChat()
+    }
+    
+    @objc private func goToForeground() {
+        
+        chatService.enterChat()
+    }
+    
     
     func scrollToBottom(animated: Bool) {
         
@@ -244,6 +268,8 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBAction func butCloseTapped(_ sender: UIButton) {
         
         chatService.exitFromChat()
+        NotificationCenter.default.removeObserver(self)
+        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "chatClosed"), object: nil)
         self.dismiss(animated: true, completion: nil)
     }

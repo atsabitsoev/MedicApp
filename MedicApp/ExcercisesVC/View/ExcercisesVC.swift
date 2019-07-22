@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ExcercisesVC: UIViewController {
     
@@ -73,6 +74,10 @@ class ExcercisesVC: UIViewController {
                                                selector: #selector(myExercisesRequestAnswered),
                                                name: NSNotification.Name(rawValue: NotificationNames.getMyExercisesRequestAnswered.rawValue),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(newMessageTriggered),
+                                               name: NSNotification.Name(NotificationNames.messageFromSomewhere.rawValue),
+                                               object: nil)
     }
     
 
@@ -126,6 +131,16 @@ class ExcercisesVC: UIViewController {
         }
         
         myExercises = getExercisesService.myExercises!
+    }
+    
+    @objc private func newMessageTriggered() {
+        
+        let currentBadge = self.tabBarController?.tabBar.items![2].badgeValue
+        let newBadge = Int(currentBadge ?? "0")! + 1
+        self.tabBarController?.tabBar.items![2].badgeValue = "\(newBadge)"
+        self.tabBarController?.tabBar.items![2].badgeColor = UIColor.red
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
     
