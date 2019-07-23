@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--AdvicesVC-->
         <scene sceneID="uNM-DA-6nv">
             <objects>
-                <viewController id="Fki-NL-N9v" sceneMemberID="viewController">
+                <viewController id="Fki-NL-N9v" customClass="AdvicesVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VBC-cl-kcF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

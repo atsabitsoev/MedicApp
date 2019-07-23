@@ -38,6 +38,8 @@
 		AC8EB8F222A7EA66003050DC /* EnterCodeTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EB8F122A7EA66003050DC /* EnterCodeTFDelegate.swift */; };
 		ACAC21EA22AC180D001974BD /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAC21E922AC180D001974BD /* RecordService.swift */; };
 		ACACE1E022BA819100A27B6A /* DiagnosticItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACE1DF22BA819100A27B6A /* DiagnosticItemVC.swift */; };
+		ACAF757222E7A4AD007FD96F /* AdvicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757122E7A4AD007FD96F /* AdvicesVC.swift */; };
+		ACAF757422E7A4CD007FD96F /* AdvicesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757322E7A4CD007FD96F /* AdvicesService.swift */; };
 		ACB318A822BB6650006FD045 /* DiagnosticConclusionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318A722BB6650006FD045 /* DiagnosticConclusionCell.swift */; };
 		ACB318AA22BB6EC4006FD045 /* UserDefautsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318A922BB6EC4006FD045 /* UserDefautsKeys.swift */; };
 		ACB318AC22BB6EF8006FD045 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318AB22BB6EF8006FD045 /* SaveManager.swift */; };
@@ -137,6 +139,8 @@
 		AC8EB8F122A7EA66003050DC /* EnterCodeTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeTFDelegate.swift; sourceTree = "<group>"; };
 		ACAC21E922AC180D001974BD /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
 		ACACE1DF22BA819100A27B6A /* DiagnosticItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticItemVC.swift; sourceTree = "<group>"; };
+		ACAF757122E7A4AD007FD96F /* AdvicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesVC.swift; sourceTree = "<group>"; };
+		ACAF757322E7A4CD007FD96F /* AdvicesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesService.swift; sourceTree = "<group>"; };
 		ACB318A722BB6650006FD045 /* DiagnosticConclusionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticConclusionCell.swift; sourceTree = "<group>"; };
 		ACB318A922BB6EC4006FD045 /* UserDefautsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefautsKeys.swift; sourceTree = "<group>"; };
 		ACB318AB22BB6EF8006FD045 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 				ACC41D2A2292D3360042B200 /* ChatVC */,
 				AC6B9198229584B50079CF1F /* ChatImageVC */,
 				ACFC9B88228DACC1009F5798 /* ExcercisesVC */,
+				ACAF756E22E7A439007FD96F /* Advices */,
 				ACE43F31228EE9AA007BCBC0 /* DiagnosticResultsVC */,
 				AC1E5E4622B9306600B7E09D /* BackboneVC */,
 				ACACE1DE22BA816A00A27B6A /* DiagnosticItemVC */,
@@ -387,6 +392,31 @@
 				ACACE1DF22BA819100A27B6A /* DiagnosticItemVC.swift */,
 			);
 			path = DiagnosticItemVC;
+			sourceTree = "<group>";
+		};
+		ACAF756E22E7A439007FD96F /* Advices */ = {
+			isa = PBXGroup;
+			children = (
+				ACAF757022E7A48C007FD96F /* Model */,
+				ACAF756F22E7A487007FD96F /* View */,
+			);
+			path = Advices;
+			sourceTree = "<group>";
+		};
+		ACAF756F22E7A487007FD96F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACAF757122E7A4AD007FD96F /* AdvicesVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACAF757022E7A48C007FD96F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACAF757322E7A4CD007FD96F /* AdvicesService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ACBCC95422A54610008DEFCB /* API */ = {
@@ -850,6 +880,7 @@
 				ACD627AA22A8FAB500303B05 /* RegistrationCodeVCTFDelegate.swift in Sources */,
 				ACDF8E2822A6B97B000D6A8A /* GetExercisesService.swift in Sources */,
 				ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */,
+				ACAF757222E7A4AD007FD96F /* AdvicesVC.swift in Sources */,
 				ACCE2758229424EE00E3126E /* Sender.swift in Sources */,
 				AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */,
 				AC8EB8F222A7EA66003050DC /* EnterCodeTFDelegate.swift in Sources */,
@@ -889,6 +920,7 @@
 				ACBCC95922A548AB008DEFCB /* TokenService.swift in Sources */,
 				ACD64734228AF11C0091257E /* Gradient.swift in Sources */,
 				ACCE275A229425ED00E3126E /* MessageContentType.swift in Sources */,
+				ACAF757422E7A4CD007FD96F /* AdvicesService.swift in Sources */,
 				ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */,
 				AC6B91952295747A0079CF1F /* NotificationNames.swift in Sources */,
 				ACE43F2F228EDFCC007BCBC0 /* ViewPlay.swift in Sources */,

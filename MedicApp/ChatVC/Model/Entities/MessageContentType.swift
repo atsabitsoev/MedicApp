@@ -13,4 +13,5 @@ enum MessageContentType: String {
     
     case photo = "photo"
     case text = "text"
+    case video = "video"
 }

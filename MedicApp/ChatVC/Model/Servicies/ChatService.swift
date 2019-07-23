@@ -105,11 +105,12 @@ class ChatService {
             
             guard messageJSON["author"].stringValue != TokenService.standard.id! else { return }
             
-            let contentType = messageJSON["type"].string
+            let contentTypeString = messageJSON["type"].string
+            var contentType: MessageContentType = .text
             var messageText = ""
             var image: UIImage?
             
-            switch contentType {
+            switch contentTypeString {
             case MessageContentType.text.rawValue:
                 
                 messageText = messageJSON["message"].stringValue
@@ -119,6 +120,14 @@ class ChatService {
                 let imageUrl = messageJSON["message"].stringValue
                 guard let imageData = try? Data(contentsOf: URL(string: "\(ApiInfo().baseUrl)\(imageUrl)")!) else { return }
                 image = UIImage(data: imageData)
+                contentType = .photo
+                
+            case MessageContentType.video.rawValue:
+                
+                let text = messageJSON["message"].stringValue
+                let videoUrl = "\(ApiInfo().baseUrl)\(text)"
+                messageText = videoUrl
+                contentType = .video
                 
             default:
                 
@@ -126,7 +135,7 @@ class ChatService {
                 
             }
             
-            self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: .text, image: image)
+            self.lastMessage = Message(text: messageText, sender: .penPal, time: Date(), contentType: contentType, image: image)
         }
         
         socket.on("leavedDialog") { (data, ack) in
@@ -140,12 +149,6 @@ class ChatService {
             print(json)
             
             NotificationManager.post(.messageFromSomewhere)
-        }
-        
-        socket.on("messageListReceive") { (data, ack) in
-            
-            let json = JSON(data[0])
-            print(json)
         }
         
         socket.on("error-pipe") { (data, ack) in
@@ -187,11 +190,20 @@ class ChatService {
         case .photo:
             
             let image = message.image
-            let imageData = image?.pngData()
+            let imageData = image?.jpegData(compressionQuality: 0.5)
             let imageBase64 = imageData!.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
             print(imageBase64)
-            messageText = "data:image/png;base64,\(imageBase64)"
+            messageText = "data:image/jpg;base64,\(imageBase64)"
             type = "photo"
+            
+        case .video:
+            
+            guard let videoUrl = URL(string: message.text) else { return }
+            guard let videoData = try? Data(contentsOf: videoUrl) else { return }
+            let videoBase64 = videoData.base64EncodedString(options: .lineLength64Characters)
+            messageText = "data:video/mp4;base64,\(videoBase64)"
+            print(videoBase64)
+            type = "video"
             
         }
         

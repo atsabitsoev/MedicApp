@@ -27,6 +27,9 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     private var bottomSafeArea: CGFloat = 0
     
     
+    private var firstInit = true
+    
+    
     private var chatService = ChatService.standard
     
     
@@ -48,7 +51,11 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     override func viewDidAppear(_ animated: Bool) {
         observeKeyboard()
-        scrollToBottom(animated: false)
+        if firstInit {
+            scrollToBottom(animated: false)
+            firstInit = false
+        }
+        
     }
     
     
@@ -238,7 +245,23 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             chatService.sendMessage(message)
             visualiseSendingMessage(text: "", time: Date(), contentType: .photo, image: pickedImage)
             self.dismiss(animated: true, completion: nil)
+            
+        } else if let pickedVideo = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
+            
+            print("Видео")
+            let pickedVideoString = "\(pickedVideo)"
+            let message = Message(text: pickedVideoString,
+                                  sender: .user,
+                                  time: Date(),
+                                  contentType: .video)
+            chatService.sendMessage(message)
+            visualiseSendingMessage(text: pickedVideoString,
+                                    time: Date(),
+                                    contentType: .video)
+            self.dismiss(animated: true,
+                         completion: nil)
         }
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -259,6 +282,8 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBAction func butAddImageTapped(_ sender: UIButton) {
         
         let imagePicker = UIImagePickerController()
+        imagePicker.mediaTypes = ["public.movie",
+                                  "public.image"]
         imagePicker.delegate = self
         self.present(imagePicker, animated: true, completion: nil)
         

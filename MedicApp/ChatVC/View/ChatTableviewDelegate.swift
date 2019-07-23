@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 
 extension ChatVC: UITableViewDelegate, UITableViewDataSource {
@@ -58,6 +60,16 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
             cell.labTime.text = formatter.string(from: message.time)
             return cell
             
+        case (.user, .video):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UserVideoCell")!
+            return cell
+            
+        case (.penPal, .video):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PenPalVideoCell")!
+            return cell
+            
         }
         
     }
@@ -71,6 +83,28 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
             let chatImageVC = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatImageVC") as! ChatImageVC
             chatImageVC.image = image
             self.present(chatImageVC, animated: true, completion: nil)
+        }
+        
+        if messageArr[indexPath.row].contentType == .video {
+            
+            let messageVideo = messageArr[indexPath.row]
+            guard var videoUrl: URL = URL(string: "\(messageVideo.text)") else { return }
+            if !messageVideo.text.hasPrefix("file") {
+                if !"\(videoUrl)".hasPrefix("http") {
+                    videoUrl = URL(string: "\(ApiInfo().baseUrl)\(messageVideo.text)")!
+                } else {
+                    videoUrl = URL(string: "\(messageVideo.text)")!
+                }
+                
+            }
+            
+            print(videoUrl)
+            let player = AVPlayer(url: videoUrl)
+            let playerVC = AVPlayerViewController()
+            playerVC.player = player
+            self.present(playerVC,
+                         animated: true,
+                         completion: nil)
         }
     }
     
