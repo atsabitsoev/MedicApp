@@ -40,6 +40,14 @@
 		ACACE1E022BA819100A27B6A /* DiagnosticItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACACE1DF22BA819100A27B6A /* DiagnosticItemVC.swift */; };
 		ACAF757222E7A4AD007FD96F /* AdvicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757122E7A4AD007FD96F /* AdvicesVC.swift */; };
 		ACAF757422E7A4CD007FD96F /* AdvicesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757322E7A4CD007FD96F /* AdvicesService.swift */; };
+		ACAF757622E7A53C007FD96F /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757522E7A53C007FD96F /* Advice.swift */; };
+		ACAF757822E7A55D007FD96F /* AdviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757722E7A55D007FD96F /* AdviceType.swift */; };
+		ACAF757A22E7B91B007FD96F /* AdvicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757922E7B91B007FD96F /* AdvicesTableView.swift */; };
+		ACAF757F22E7BA60007FD96F /* AdvicesTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF757E22E7BA60007FD96F /* AdvicesTextCell.swift */; };
+		ACAF758122E85F25007FD96F /* AdvicesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF758022E85F25007FD96F /* AdvicesCollectionCell.swift */; };
+		ACAF758522E86CD8007FD96F /* CellCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF758422E86CD8007FD96F /* CellCollectionDelegate.swift */; };
+		ACAF758822E86D3E007FD96F /* AdvicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF758722E86D3E007FD96F /* AdvicesCollectionViewCell.swift */; };
+		ACAF758A22E8702C007FD96F /* ProtocolShowableImageVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAF758922E8702C007FD96F /* ProtocolShowableImageVideo.swift */; };
 		ACB318A822BB6650006FD045 /* DiagnosticConclusionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318A722BB6650006FD045 /* DiagnosticConclusionCell.swift */; };
 		ACB318AA22BB6EC4006FD045 /* UserDefautsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318A922BB6EC4006FD045 /* UserDefautsKeys.swift */; };
 		ACB318AC22BB6EF8006FD045 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB318AB22BB6EF8006FD045 /* SaveManager.swift */; };
@@ -141,6 +149,14 @@
 		ACACE1DF22BA819100A27B6A /* DiagnosticItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticItemVC.swift; sourceTree = "<group>"; };
 		ACAF757122E7A4AD007FD96F /* AdvicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesVC.swift; sourceTree = "<group>"; };
 		ACAF757322E7A4CD007FD96F /* AdvicesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesService.swift; sourceTree = "<group>"; };
+		ACAF757522E7A53C007FD96F /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		ACAF757722E7A55D007FD96F /* AdviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceType.swift; sourceTree = "<group>"; };
+		ACAF757922E7B91B007FD96F /* AdvicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesTableView.swift; sourceTree = "<group>"; };
+		ACAF757E22E7BA60007FD96F /* AdvicesTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesTextCell.swift; sourceTree = "<group>"; };
+		ACAF758022E85F25007FD96F /* AdvicesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesCollectionCell.swift; sourceTree = "<group>"; };
+		ACAF758422E86CD8007FD96F /* CellCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCollectionDelegate.swift; sourceTree = "<group>"; };
+		ACAF758722E86D3E007FD96F /* AdvicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		ACAF758922E8702C007FD96F /* ProtocolShowableImageVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolShowableImageVideo.swift; sourceTree = "<group>"; };
 		ACB318A722BB6650006FD045 /* DiagnosticConclusionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticConclusionCell.swift; sourceTree = "<group>"; };
 		ACB318A922BB6EC4006FD045 /* UserDefautsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefautsKeys.swift; sourceTree = "<group>"; };
 		ACB318AB22BB6EF8006FD045 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
@@ -407,6 +423,9 @@
 			isa = PBXGroup;
 			children = (
 				ACAF757122E7A4AD007FD96F /* AdvicesVC.swift */,
+				ACAF757922E7B91B007FD96F /* AdvicesTableView.swift */,
+				ACAF757B22E7BA33007FD96F /* Cells */,
+				ACAF758922E8702C007FD96F /* ProtocolShowableImageVideo.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,8 +434,29 @@
 			isa = PBXGroup;
 			children = (
 				ACAF757322E7A4CD007FD96F /* AdvicesService.swift */,
+				ACAF757522E7A53C007FD96F /* Advice.swift */,
+				ACAF757722E7A55D007FD96F /* AdviceType.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACAF757B22E7BA33007FD96F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ACAF757E22E7BA60007FD96F /* AdvicesTextCell.swift */,
+				ACAF758022E85F25007FD96F /* AdvicesCollectionCell.swift */,
+				ACAF758622E86D24007FD96F /* CollectionView */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ACAF758622E86D24007FD96F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				ACAF758422E86CD8007FD96F /* CellCollectionDelegate.swift */,
+				ACAF758722E86D3E007FD96F /* AdvicesCollectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		ACBCC95422A54610008DEFCB /* API */ = {
@@ -855,6 +895,7 @@
 				AC6B9174229534B30079CF1F /* MainTabBarController.swift in Sources */,
 				ACB543F3229E672200CC2FBA /* MyProfileTableView.swift in Sources */,
 				ACCE27502294168A00E3126E /* ChatTableviewDelegate.swift in Sources */,
+				ACAF757F22E7BA60007FD96F /* AdvicesTextCell.swift in Sources */,
 				ACB318AC22BB6EF8006FD045 /* SaveManager.swift in Sources */,
 				ACC41D362292EAED0042B200 /* ChatTFDelegate.swift in Sources */,
 				ACD627AE22A8FCDA00303B05 /* ProfileAPIService.swift in Sources */,
@@ -872,6 +913,7 @@
 				ACCE27602294309E00E3126E /* UserImageCell.swift in Sources */,
 				ACAC21EA22AC180D001974BD /* RecordService.swift in Sources */,
 				ACBCC95B22A562F3008DEFCB /* RegistrationService.swift in Sources */,
+				ACAF758A22E8702C007FD96F /* ProtocolShowableImageVideo.swift in Sources */,
 				ACCE2762229430AE00E3126E /* PenPalImageCell.swift in Sources */,
 				ACD627B422A930B700303B05 /* ProfileSaveCell.swift in Sources */,
 				AC7F4CA3227CAEEE002A42AF /* RegistrationView.swift in Sources */,
@@ -890,19 +932,24 @@
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
 				ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */,
 				ACD3BACC22983229002882D7 /* ProfileTextFieldCell.swift in Sources */,
+				ACAF758522E86CD8007FD96F /* CellCollectionDelegate.swift in Sources */,
 				AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */,
+				ACAF757A22E7B91B007FD96F /* AdvicesTableView.swift in Sources */,
 				AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */,
 				AC7F4CB7227CB6CA002A42AF /* ViewUnderTextFields.swift in Sources */,
+				ACAF758822E86D3E007FD96F /* AdvicesCollectionViewCell.swift in Sources */,
 				ACCE275E2294271A00E3126E /* PenPalMessageCell.swift in Sources */,
 				AC6B91932295744A0079CF1F /* NotificationManager.swift in Sources */,
 				AC7F4CA1227CAEEE002A42AF /* AppDelegate.swift in Sources */,
 				AC50F12D22A7BDED000B78AF /* EnterCodeVC.swift in Sources */,
 				ACCE275222941BC800E3126E /* MessageLabel.swift in Sources */,
 				ACB318A822BB6650006FD045 /* DiagnosticConclusionCell.swift in Sources */,
+				ACAF758122E85F25007FD96F /* AdvicesCollectionCell.swift in Sources */,
 				ACE43F33228EEAC2007BCBC0 /* DiagnosticResultsVC.swift in Sources */,
 				ACD64736228B016C0091257E /* EnterView.swift in Sources */,
 				ACB318AA22BB6EC4006FD045 /* UserDefautsKeys.swift in Sources */,
 				ACFC9B8D228DAE33009F5798 /* ExcercisesVC.swift in Sources */,
+				ACAF757622E7A53C007FD96F /* Advice.swift in Sources */,
 				AC6B918022953BC20079CF1F /* OpeningChatVC.swift in Sources */,
 				ACF76AE3227CD50000FE7648 /* ButtonGradient.swift in Sources */,
 				AC5502EF22A7A26800EB0A30 /* RegistrationTFDelegate.swift in Sources */,
@@ -922,6 +969,7 @@
 				ACCE275A229425ED00E3126E /* MessageContentType.swift in Sources */,
 				ACAF757422E7A4CD007FD96F /* AdvicesService.swift in Sources */,
 				ACE43F29228ECF74007BCBC0 /* ExcercisesTableVIew.swift in Sources */,
+				ACAF757822E7A55D007FD96F /* AdviceType.swift in Sources */,
 				AC6B91952295747A0079CF1F /* NotificationNames.swift in Sources */,
 				ACE43F2F228EDFCC007BCBC0 /* ViewPlay.swift in Sources */,
 				AC6B918322953E380079CF1F /* ChatService.swift in Sources */,

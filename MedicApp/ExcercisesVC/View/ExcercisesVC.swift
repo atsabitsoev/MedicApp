@@ -144,6 +144,16 @@ class ExcercisesVC: UIViewController {
     }
     
     
+    @IBAction func advicesButTapped(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Advices", bundle: nil)
+        let advicesVC = storyboard.instantiateViewController(withIdentifier: "AdvicesVC") as! AdvicesVC
+        self.present(advicesVC,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    
     @IBAction func stateChanged(_ sender: UISegmentedControl) {
         
         loadingAnimation(state: true)

@@ -145,6 +145,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zu-jT-l1d">
                                 <rect key="frame" x="364" y="52" width="30" height="32"/>
                                 <state key="normal" image="Лампочка"/>
+                                <connections>
+                                    <action selector="advicesButTapped:" destination="bsH-ZN-Wb1" eventType="touchUpInside" id="gfz-pV-kL0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
