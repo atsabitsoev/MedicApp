@@ -293,6 +293,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBAction func butCloseTapped(_ sender: UIButton) {
         
         chatService.exitFromChat()
+        MessageHistoryService.standard.messages = []
         NotificationCenter.default.removeObserver(self)
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "chatClosed"), object: nil)

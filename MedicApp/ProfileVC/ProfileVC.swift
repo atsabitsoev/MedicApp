@@ -169,6 +169,36 @@ class ProfileVC: UIViewController {
     }
     
     
+    private func showLogOutAlert() {
+        let alert = UIAlertController(title: "Вы уверены?",
+                                      message: "",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Выйти",
+                                     style: .default) { (action) in
+                                        self.logOut()
+        }
+        let cancelAction = UIAlertAction(title: "Отмена",
+                                         style: .cancel,
+                                         handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    private func logOut() {
+        
+        ChatService.standard.stopConnection()
+        UserDefaults.standard.set(false, forKey: "userEntered")
+        let storyboard = UIStoryboard(name: "Registration+Enter", bundle: nil)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "EnterVC")
+        self.present(loginVC,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    
     @IBAction func nameChanged(_ sender: UITextField) {
         
         ProfileAPIService.standard.patientProfile?.name = sender.text ?? ""
@@ -179,5 +209,9 @@ class ProfileVC: UIViewController {
         ProfileAPIService.standard.patientProfile?.surname = sender.text ?? ""
     }
     
+    @IBAction func butLogOutTapped(_ sender: UIButton) {
+        
+        showLogOutAlert()
+    }
     
 }

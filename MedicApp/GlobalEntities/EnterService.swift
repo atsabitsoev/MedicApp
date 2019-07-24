@@ -51,7 +51,7 @@ class EnterService {
                     let json = JSON(responseValue)
                     print(json)
                     
-                    self.errorString = json["data"]["error"].stringValue
+                    self.errorString = json["message"].stringValue
                     
                     NotificationManager.post(.enterRequestAnswered)
                     

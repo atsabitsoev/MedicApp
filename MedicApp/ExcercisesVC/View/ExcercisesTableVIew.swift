@@ -16,6 +16,10 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        return currentExercises[section].count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return currentExercises.count
     }
     
@@ -23,9 +27,9 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "excercisesCell") as! ExercisesCell
         
-        cell.labTitle.text = currentExercises[indexPath.row].name
+        cell.labTitle.text = currentExercises[indexPath.section][indexPath.row].name
         
-        let imageUrl = currentExercises[indexPath.row].preview
+        let imageUrl = currentExercises[indexPath.section][indexPath.row].preview
         let imageData = try! Data(contentsOf: imageUrl)
         cell.imagePreview.image = UIImage(data: imageData)
         
@@ -33,16 +37,26 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 8
+        return 8 + 24
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView()
+        
+        let rect = CGRect(x: 0,
+                          y: 0,
+                          width: UIScreen.main.bounds.width,
+                          height: 8 + 24)
+        let view = UIView(frame: rect)
+        let label = UILabel(frame: rect.inset(by: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)))
+        label.text = currentExercises[section].first!.category
+        label.font = UIFont(name: "SFCompactRounded-Bold", size: 24)!
+        view.addSubview(label)
+        return view
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let videoURL = currentExercises[indexPath.row].video
+        let videoURL = currentExercises[indexPath.section][indexPath.row].video
         let player = AVPlayer(url: videoURL)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player

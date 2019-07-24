@@ -75,8 +75,8 @@ class EnterView: UIViewController {
         
         let storyboard = UIStoryboard(name: "Registration+Enter", bundle: nil)
         let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+        UserDefaults.standard.set(true, forKey: "userEntered")
         self.present(mainTabBarController, animated: true, completion: nil)
-        ChatService.standard
     }
     
     private func showErrorAlert(message: String?) {

@@ -25,21 +25,21 @@ class ExcercisesVC: UIViewController {
     }
     var getExercisesService = GetExercisesService.standard
     
-    private var allExercises: [Exercise] = [] {
+    private var allExercises: [[Exercise]] = [] {
         didSet {
             if state {
                 currentExercises = allExercises
             }
         }
     }
-    private var myExercises: [Exercise] = [] {
+    private var myExercises: [[Exercise]] = [] {
         didSet {
             if !state {
                 currentExercises = myExercises
             }
         }
     }
-    var currentExercises: [Exercise] = [] {
+    var currentExercises: [[Exercise]] = [] {
         didSet {
             let animation = (currentExercises.count == 0) ? true : false
             loadingAnimation(state: animation)
@@ -54,6 +54,7 @@ class ExcercisesVC: UIViewController {
         addObservers()
         tableView.delaysContentTouches = false
         getExercisesService.sendGetMyExcercisesRequest()
+        ChatService.standard
     }
     
     
