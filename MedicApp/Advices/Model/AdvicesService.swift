@@ -17,7 +17,11 @@ class AdvicesService {
     private init() {}
     
     
-    var advices: [Advice] = []
+    var advices: [Advice] = [] {
+        didSet {
+            print(advices.count)
+        }
+    }
     var getAdvicesError: String?
     
     
@@ -45,7 +49,7 @@ class AdvicesService {
                         
                         let advicesJSON = json["data"]["advices"].arrayValue
                         let advices = self.parseAdvices(json: advicesJSON)
-                        self.advices = advices
+                        self.advices = self.advices + advices
                         self.getAdvicesError = nil
                         
                     default:

@@ -12,6 +12,7 @@ class AdvicesCollectionCell: UITableViewCell {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var labName: UILabel!
     
     
     var delegate: ShowableImageVideo!
@@ -37,6 +38,7 @@ class AdvicesCollectionCell: UITableViewCell {
     func configureCell() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
     }
     
     

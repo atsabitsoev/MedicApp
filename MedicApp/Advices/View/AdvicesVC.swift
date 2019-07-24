@@ -26,6 +26,7 @@ class AdvicesVC: UIViewController, ShowableImageVideo {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         tableView.delaysContentTouches = false
         
         addObservers()
@@ -80,7 +81,12 @@ class AdvicesVC: UIViewController, ShowableImageVideo {
     
     
     func openImage(url: URL) {
-        print("openImage")
+        let storyboard = UIStoryboard(name: "Advices", bundle: nil)
+        let adviceImageVC = storyboard.instantiateViewController(withIdentifier: "AdviceImageVC") as! AdviceImageVC
+        adviceImageVC.imageURL = url
+        self.present(adviceImageVC,
+                     animated: true,
+                     completion: nil)
     }
     
     func openVideo(url: URL) {
@@ -91,5 +97,13 @@ class AdvicesVC: UIViewController, ShowableImageVideo {
                      animated: true,
                      completion: nil)
     }
+    
+    
+    @IBAction func butCloseTapped(_ sender: UIButton) {
+        
+        self.dismiss(animated: true,
+                     completion: nil)
+    }
+    
 
 }

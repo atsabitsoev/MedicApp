@@ -10,5 +10,9 @@ import UIKit
 
 class AdvicesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imView: UIImageView!
+    @IBOutlet weak var imView: UIImageView! {
+        didSet {
+            imView.contentMode = .scaleAspectFill
+        }
+    }
 }

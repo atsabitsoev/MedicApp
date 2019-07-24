@@ -22,26 +22,40 @@ extension AdvicesVC: UITableViewDelegate, UITableViewDataSource {
         
         switch currentAdvice.type {
         case .text:
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdvicesTextCell") as! AdvicesTextCell
             cell.labName.text = currentAdvice.name ?? "Совет"
             cell.labText.text = currentAdvice.text ?? ""
             return cell
+            
         case .image:
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdvicesCollectionCell") as! AdvicesCollectionCell
+            cell.labName.text = currentAdvice.name
+            cell.delegate = self
+            cell.configureCell()
             cell.type = .image
             cell.images = currentAdvice.imageUrls
             return cell
+            
         case .video:
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdvicesCollectionCell") as! AdvicesCollectionCell
+            cell.labName.text = currentAdvice.name
+            cell.delegate = self
+            cell.configureCell()
             cell.type = .video
-            cell.images = currentAdvice.videoPreviewUrls
-            cell.videos = currentAdvice.videoUrls
+            
+            let videoPreviewsRightUrls = currentAdvice.videoPreviewUrls?.map({ (url) -> URL in
+                return URL(string: "\(ApiInfo().baseUrl)\(url)")!
+            })
+            let videoRightUrls = currentAdvice.videoUrls?.map({ (url) -> URL in
+                return URL(string: "\(ApiInfo().baseUrl)\(url)")!
+            })
+            cell.images = videoPreviewsRightUrls
+            cell.videos = videoRightUrls
             return cell
         }
-    
-        
-        let cell = UITableViewCell()
-        return cell
     }
     
     

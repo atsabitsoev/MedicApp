@@ -12,6 +12,7 @@
 		AC1E5E4A22B930D100B7E09D /* BackboneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5E4922B930D100B7E09D /* BackboneVC.swift */; };
 		AC3DE1F82296831D001548B4 /* RecordTimeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */; };
 		AC3DE1FC2296909C001548B4 /* RecordTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */; };
+		AC4E21A822E879280034E5D7 /* AdviceImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E21A722E879280034E5D7 /* AdviceImageVC.swift */; };
 		AC50F12D22A7BDED000B78AF /* EnterCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */; };
 		AC50F12F22A7BE16000B78AF /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */; };
 		AC5502ED22A79DC400EB0A30 /* EnterTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */; };
@@ -119,6 +120,7 @@
 		AC1E5E4922B930D100B7E09D /* BackboneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackboneVC.swift; sourceTree = "<group>"; };
 		AC3DE1F72296831D001548B4 /* RecordTimeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCollection.swift; sourceTree = "<group>"; };
 		AC3DE1FB2296909C001548B4 /* RecordTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimeCell.swift; sourceTree = "<group>"; };
+		AC4E21A722E879280034E5D7 /* AdviceImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceImageVC.swift; sourceTree = "<group>"; };
 		AC50F12C22A7BDED000B78AF /* EnterCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeVC.swift; sourceTree = "<group>"; };
 		AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordService.swift; path = "MedicApp/Registration+Enter/EnterCodeVC/ForgotPasswordService.swift"; sourceTree = SOURCE_ROOT; };
 		AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterTFDelegate.swift; path = "/Users/atsamaz/Desktop/MedicApp/MedicApp/Registration+Enter/EnterVC/EnterTFDelegate.swift"; sourceTree = "<absolute>"; };
@@ -415,6 +417,7 @@
 			children = (
 				ACAF757022E7A48C007FD96F /* Model */,
 				ACAF756F22E7A487007FD96F /* View */,
+				AC4E21A722E879280034E5D7 /* AdviceImageVC.swift */,
 			);
 			path = Advices;
 			sourceTree = "<group>";
@@ -902,6 +905,7 @@
 				ACC41D322292D8C10042B200 /* SimpleGradientView.swift in Sources */,
 				ACD3BACA22982BA4002882D7 /* ViewCheckRound.swift in Sources */,
 				ACD3BAC82298220E002882D7 /* ProfileTableView.swift in Sources */,
+				AC4E21A822E879280034E5D7 /* AdviceImageVC.swift in Sources */,
 				AC1E5E4522B924BA00B7E09D /* DiagnosticInfo.swift in Sources */,
 				ACCE275C2294270700E3126E /* UserMessageCell.swift in Sources */,
 				ACC41D2D2292D35B0042B200 /* ChatVC.swift in Sources */,
