@@ -54,7 +54,7 @@ class ExcercisesVC: UIViewController {
         addObservers()
         tableView.delaysContentTouches = false
         getExercisesService.sendGetMyExcercisesRequest()
-        ChatService.standard
+        ChatService.standard = ChatService()
     }
     
     

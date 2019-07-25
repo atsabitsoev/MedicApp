@@ -189,7 +189,7 @@ class ProfileVC: UIViewController {
     
     private func logOut() {
         
-        ChatService.standard.stopConnection()
+        ChatService.standard!.stopConnection()
         UserDefaults.standard.set(false, forKey: "userEntered")
         let storyboard = UIStoryboard(name: "Registration+Enter", bundle: nil)
         let loginVC = storyboard.instantiateViewController(withIdentifier: "EnterVC")

@@ -41,7 +41,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         super.viewDidLoad()
         
         addObservers()
-        chatService.enterChat()
+        chatService!.enterChat()
         
         configureTFMessage()
         tableView.rowHeight = UITableView.automaticDimension
@@ -86,12 +86,12 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @objc private func goToBackground() {
         
-        chatService.exitFromChat()
+        chatService!.exitFromChat()
     }
     
     @objc private func goToForeground() {
         
-        chatService.enterChat()
+        chatService!.enterChat()
     }
     
     
@@ -109,7 +109,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @objc private func showRecievedMessage() {
         
-        guard let newMessage = chatService.lastMessage else { return }
+        guard let newMessage = chatService!.lastMessage else { return }
         visualiseRecievingMessage(text: newMessage.text, time: newMessage.time, contentType: newMessage.contentType, image: newMessage.image)
     }
     
@@ -246,7 +246,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                                   time: Date(),
                                   contentType: .photo,
                                   image: pickedImage)
-            chatService.sendMessage(message)
+            chatService!.sendMessage(message)
             visualiseSendingMessage(text: "", time: Date(), contentType: .photo, image: pickedImage)
             self.dismiss(animated: true, completion: nil)
             
@@ -258,7 +258,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                                   sender: .user,
                                   time: Date(),
                                   contentType: .video)
-            chatService.sendMessage(message)
+            chatService!.sendMessage(message)
             visualiseSendingMessage(text: pickedVideoString,
                                     time: Date(),
                                     contentType: .video)
@@ -278,7 +278,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         guard let text = tfMessage.text, text != "", text != " " else { return }
         
-        chatService.sendMessage(Message(text: text, sender: .user, time: Date(), contentType: .text))
+        chatService!.sendMessage(Message(text: text, sender: .user, time: Date(), contentType: .text))
         visualiseSendingMessage(text: text, time: Date(), contentType: .text)
         
     }
@@ -296,7 +296,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     @IBAction func butCloseTapped(_ sender: UIButton) {
         
-        chatService.exitFromChat()
+        chatService!.exitFromChat()
         MessageHistoryService.standard.messages = []
         NotificationCenter.default.removeObserver(self)
         
