@@ -28,6 +28,7 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     private var firstInit = true
+    var allMessagesGot = false
     
     
     private var chatService = ChatService.standard
@@ -116,6 +117,9 @@ class ChatVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         
         messageArr = MessageHistoryService.standard.messages
         reload(tableView: tableView)
+        if messageArr.count % 30 > 0 {
+            allMessagesGot = true
+        }
     }
     
     func reload(tableView: UITableView) {
