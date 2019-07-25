@@ -16,12 +16,14 @@ class ChatImageVC: UIViewController {
     
     var image: UIImage?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageViewMain.image = image
+        
     }
+    
+    
     
     
     @IBAction func butCloseTapped(_ sender: UIButton) {
