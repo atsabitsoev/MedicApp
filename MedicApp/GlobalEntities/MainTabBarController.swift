@@ -33,6 +33,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         if viewController.isKind(of: OpeningChatVC.self) {
             let chatStoryboard = UIStoryboard(name: "Chat", bundle: nil)
             let chatVC = chatStoryboard.instantiateViewController(withIdentifier: "ChatVC")
+            self.tabBarController?.tabBar.items![2].badgeColor = nil
+            self.tabBarController?.tabBar.items![2].badgeValue = nil
             self.present(chatVC, animated: true, completion: nil)
         }
         return true

@@ -13,8 +13,7 @@ class OpeningChatVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarController?.tabBar.items![2].badgeColor = nil
-        self.tabBarController?.tabBar.items![2].badgeValue = nil
+        
     }
 
 }
