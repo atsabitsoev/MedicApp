@@ -16,7 +16,7 @@ class ChatService {
         print("создал")
         startConnection()
     }
-    static var standard: ChatService? = ChatService()
+    static var standard: ChatService?
     static func destroy() {
         self.standard = nil
     }
@@ -272,7 +272,6 @@ class ChatService {
         socket.off("leavedDialog")
         socket.off("newMessage")
         socket.off("messageListReceive")
-        socket.off("newMessage")
         socket.off("error-pipe")
         ChatService.destroy()
     }
