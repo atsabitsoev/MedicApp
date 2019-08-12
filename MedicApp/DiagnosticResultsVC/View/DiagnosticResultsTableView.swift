@@ -76,7 +76,17 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == 1 {
+        if indexPath.row == 0 {
+            
+            let currentInfo = masDiagnosticInfo[indexPath.section]
+            let conclusion = currentInfo.conclusion
+            
+            let storyboard = UIStoryboard(name: "DiagnosticResults", bundle: nil)
+            let editConclusionVC = storyboard.instantiateViewController(withIdentifier: "EditConclusionVC") as! EditConclusionVC
+            editConclusionVC.conclusion = conclusion
+            self.navigationController?.show(editConclusionVC, sender: nil)
+            
+        } else if indexPath.row == 1 {
             
             let currentInfo = masDiagnosticInfo[indexPath.section]
             let masBackBoneUrl = currentInfo.backbone
@@ -85,7 +95,7 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
             backboneVC.linksImages = masBackBoneUrl
             self.navigationController?.show(backboneVC, sender: nil)
             
-        } else if indexPath.row != 0 {
+        } else {
             
             let currentInfo = masDiagnosticInfo[indexPath.section].otherInfo[indexPath.row - 2]
             
@@ -97,11 +107,7 @@ extension DiagnosticResultsVC: UITableViewDelegate, UITableViewDataSource {
             diagnosticItemVC.navigationItem.title = currentInfo.name
             self.navigationController?.show(diagnosticItemVC, sender: nil)
             
-            
         }
-        
-        
-        
     }
     
     

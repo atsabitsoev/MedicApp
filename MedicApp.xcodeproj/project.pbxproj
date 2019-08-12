@@ -17,6 +17,8 @@
 		AC50F12F22A7BE16000B78AF /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */; };
 		AC5502ED22A79DC400EB0A30 /* EnterTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */; };
 		AC5502EF22A7A26800EB0A30 /* RegistrationTFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */; };
+		AC587D402301508100D765F3 /* EditConclusionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC587D3D2301508000D765F3 /* EditConclusionVC.swift */; };
+		AC587D422301508100D765F3 /* DiagnosticResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC587D3F2301508000D765F3 /* DiagnosticResults.storyboard */; };
 		AC6B9174229534B30079CF1F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B9173229534B30079CF1F /* MainTabBarController.swift */; };
 		AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B91762295364B0079CF1F /* RecordVC.swift */; };
 		AC6B917A229536850079CF1F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6B9179229536850079CF1F /* ProfileVC.swift */; };
@@ -91,7 +93,6 @@
 		ACE43F2C228ED2B7007BCBC0 /* ExercisesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F2B228ED2B7007BCBC0 /* ExercisesCell.swift */; };
 		ACE43F2F228EDFCC007BCBC0 /* ViewPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */; };
 		ACE43F33228EEAC2007BCBC0 /* DiagnosticResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F32228EEAC2007BCBC0 /* DiagnosticResultsVC.swift */; };
-		ACE43F35228EEB1B007BCBC0 /* DiagnosticResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE43F34228EEB1B007BCBC0 /* DiagnosticResults.storyboard */; };
 		ACE43F39228EED8C007BCBC0 /* ViewGradientHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F38228EED8C007BCBC0 /* ViewGradientHeader.swift */; };
 		ACE43F3B228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */; };
 		ACE43F3D228EF43B007BCBC0 /* DiagnosticResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */; };
@@ -125,6 +126,8 @@
 		AC50F12E22A7BE16000B78AF /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordService.swift; path = "MedicApp/Registration+Enter/EnterCodeVC/ForgotPasswordService.swift"; sourceTree = SOURCE_ROOT; };
 		AC5502EC22A79DC400EB0A30 /* EnterTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterTFDelegate.swift; path = "/Users/atsamaz/Desktop/MedicApp/MedicApp/Registration+Enter/EnterVC/EnterTFDelegate.swift"; sourceTree = "<absolute>"; };
 		AC5502EE22A7A26800EB0A30 /* RegistrationTFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTFDelegate.swift; sourceTree = "<group>"; };
+		AC587D3D2301508000D765F3 /* EditConclusionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditConclusionVC.swift; sourceTree = "<group>"; };
+		AC587D3F2301508000D765F3 /* DiagnosticResults.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DiagnosticResults.storyboard; path = ../DiagnosticResults.storyboard; sourceTree = "<group>"; };
 		AC6B9173229534B30079CF1F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC6B91762295364B0079CF1F /* RecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
 		AC6B9179229536850079CF1F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -201,7 +204,6 @@
 		ACE43F2B228ED2B7007BCBC0 /* ExercisesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesCell.swift; sourceTree = "<group>"; };
 		ACE43F2E228EDFCC007BCBC0 /* ViewPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewPlay.swift; path = /Users/atsamaz/Desktop/MedicApp/MedicApp/ExcercisesVC/View/Entities/ViewPlay.swift; sourceTree = "<absolute>"; };
 		ACE43F32228EEAC2007BCBC0 /* DiagnosticResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsVC.swift; sourceTree = "<group>"; };
-		ACE43F34228EEB1B007BCBC0 /* DiagnosticResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiagnosticResults.storyboard; sourceTree = "<group>"; };
 		ACE43F38228EED8C007BCBC0 /* ViewGradientHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGradientHeader.swift; sourceTree = "<group>"; };
 		ACE43F3A228EF3D4007BCBC0 /* DiagnosticResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsTableView.swift; sourceTree = "<group>"; };
 		ACE43F3C228EF43B007BCBC0 /* DiagnosticResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticResultsCell.swift; sourceTree = "<group>"; };
@@ -262,6 +264,14 @@
 			path = EnterCodeVC;
 			sourceTree = "<group>";
 		};
+		AC587D3C2301508000D765F3 /* EditConclusionVC */ = {
+			isa = PBXGroup;
+			children = (
+				AC587D3D2301508000D765F3 /* EditConclusionVC.swift */,
+			);
+			path = EditConclusionVC;
+			sourceTree = "<group>";
+		};
 		AC5B540D227CFB8600C2001A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +281,7 @@
 				ACC41D282292D2DF0042B200 /* Chat.storyboard */,
 				ACFC9B86228DABBD009F5798 /* Excercises.storyboard */,
 				ACEB679922DB6B2F00DE80CD /* Advices.storyboard */,
-				ACE43F34228EEB1B007BCBC0 /* DiagnosticResults.storyboard */,
+				AC587D3F2301508000D765F3 /* DiagnosticResults.storyboard */,
 				AC6B917B229536910079CF1F /* Profile.storyboard */,
 				AC7F4CA7227CAEF0002A42AF /* Assets.xcassets */,
 				AC7F4CA9227CAEF0002A42AF /* LaunchScreen.storyboard */,
@@ -373,6 +383,7 @@
 				AC1E5E4622B9306600B7E09D /* BackboneVC */,
 				ACACE1DE22BA816A00A27B6A /* DiagnosticItemVC */,
 				AC6B91782295365A0079CF1F /* ProfileVC */,
+				AC587D3C2301508000D765F3 /* EditConclusionVC */,
 				AC7F4CAC227CAEF0002A42AF /* Info.plist */,
 				AC5B540D227CFB8600C2001A /* Supporting Files */,
 				AC7F4CB8227CCE4C002A42AF /* Шрифты */,
@@ -809,11 +820,11 @@
 				ACF76AD4227CCE7D00FE7648 /* SF-Compact-Rounded-Thin.otf in Resources */,
 				ACFC9B87228DABBD009F5798 /* Excercises.storyboard in Resources */,
 				ACEB679A22DB6B2F00DE80CD /* Advices.storyboard in Resources */,
+				AC587D422301508100D765F3 /* DiagnosticResults.storyboard in Resources */,
 				ACCE276422943DFB00E3126E /* Вход.png in Resources */,
 				AC6B917C229536910079CF1F /* Profile.storyboard in Resources */,
 				ACFC9B85228D8ECD009F5798 /* Record.storyboard in Resources */,
 				ACC41D292292D2DF0042B200 /* Chat.storyboard in Resources */,
-				ACE43F35228EEB1B007BCBC0 /* DiagnosticResults.storyboard in Resources */,
 				ACF76AD9227CCE7D00FE7648 /* SF-Compact-Rounded-Ultralight.otf in Resources */,
 				AC7F4CA8227CAEF0002A42AF /* Assets.xcassets in Resources */,
 				ACF76AD6227CCE7D00FE7648 /* SF-Compact-Rounded-Bold.otf in Resources */,
@@ -936,6 +947,7 @@
 				ACC41D302292D4060042B200 /* ChatHeaderVIew.swift in Sources */,
 				ACBCC95322A5271F008DEFCB /* ApiInfo.swift in Sources */,
 				ACD3BACC22983229002882D7 /* ProfileTextFieldCell.swift in Sources */,
+				AC587D402301508100D765F3 /* EditConclusionVC.swift in Sources */,
 				ACAF758522E86CD8007FD96F /* CellCollectionDelegate.swift in Sources */,
 				AC6B91772295364B0079CF1F /* RecordVC.swift in Sources */,
 				ACAF757A22E7B91B007FD96F /* AdvicesTableView.swift in Sources */,

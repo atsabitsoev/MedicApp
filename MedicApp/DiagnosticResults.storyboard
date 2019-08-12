@@ -23,11 +23,11 @@
             <objects>
                 <viewController storyboardIdentifier="DiagnosticResultsVC" id="inj-eR-xnr" customClass="DiagnosticResultsVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGy-g2-zlR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="222" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-en-iae">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DiagnosticResultsCell" rowHeight="222" id="WDj-h1-72C" customClass="DiagnosticResultsCell" customModule="MedicApp" customModuleProvider="target">
@@ -41,10 +41,10 @@
                                                     <rect key="frame" x="18" y="0.0" width="378" height="210"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-Fy-rRg" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="45"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRq-UZ-ZzP">
-                                                                    <rect key="frame" x="16" y="14" width="83" height="22"/>
+                                                                    <rect key="frame" x="16" y="11.5" width="83" height="22"/>
                                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -54,18 +54,16 @@
                                                             <constraints>
                                                                 <constraint firstItem="XRq-UZ-ZzP" firstAttribute="centerY" secondItem="aUL-Fy-rRg" secondAttribute="centerY" id="Pay-1m-zDi"/>
                                                                 <constraint firstItem="XRq-UZ-ZzP" firstAttribute="leading" secondItem="aUL-Fy-rRg" secondAttribute="leading" constant="16" id="zci-5M-1dT"/>
+                                                                <constraint firstAttribute="height" constant="45" id="zit-0Q-Y8q"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                     <real key="value" value="12"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Модель позвоночника" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="L9C-7B-O8m">
-                                                            <rect key="frame" x="16" y="49.5" width="221" height="36"/>
+                                                            <rect key="frame" x="16" y="45" width="346" height="36"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="36" id="D7h-C2-Kj0"/>
                                                             </constraints>
@@ -74,7 +72,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Позвоночник" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-GR-hma">
-                                                            <rect key="frame" x="8" y="85.5" width="362" height="116.5"/>
+                                                            <rect key="frame" x="8" y="81" width="362" height="121"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,8 +84,8 @@
                                                         <constraint firstItem="aUL-Fy-rRg" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" id="aOj-bm-i0Y"/>
                                                         <constraint firstItem="aUL-Fy-rRg" firstAttribute="top" secondItem="NhR-fl-pkH" secondAttribute="top" id="atP-a2-jjK"/>
                                                         <constraint firstItem="L9C-7B-O8m" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="16" id="e7w-He-gRc"/>
-                                                        <constraint firstItem="aUL-Fy-rRg" firstAttribute="height" secondItem="NhR-fl-pkH" secondAttribute="height" multiplier="45:190" id="mGM-kK-M5V"/>
                                                         <constraint firstAttribute="trailing" secondItem="aUL-Fy-rRg" secondAttribute="trailing" id="qbR-G5-c5h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="L9C-7B-O8m" secondAttribute="trailing" constant="16" id="rZo-aG-dRP"/>
                                                         <constraint firstItem="aUy-GR-hma" firstAttribute="leading" secondItem="NhR-fl-pkH" secondAttribute="leading" constant="8" id="yfc-le-rG7"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -128,10 +126,10 @@
                                                     <rect key="frame" x="18" y="0.0" width="378" height="210"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-yr-4Et" customClass="ViewGradientHeader" customModule="MedicApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="49.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="45"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/12/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZn-AJ-ksS">
-                                                                    <rect key="frame" x="16" y="14" width="83" height="22"/>
+                                                                    <rect key="frame" x="16" y="11.5" width="83" height="22"/>
                                                                     <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -141,18 +139,16 @@
                                                             <constraints>
                                                                 <constraint firstItem="NZn-AJ-ksS" firstAttribute="centerY" secondItem="JDo-yr-4Et" secondAttribute="centerY" id="RBX-pm-uyw"/>
                                                                 <constraint firstItem="NZn-AJ-ksS" firstAttribute="leading" secondItem="JDo-yr-4Et" secondAttribute="leading" constant="16" id="otk-sq-DWu"/>
+                                                                <constraint firstAttribute="height" constant="45" id="sTS-nl-huQ"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                                                    <color key="value" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                                                     <real key="value" value="12"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заключение врача" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-im-Wu1">
-                                                            <rect key="frame" x="16" y="49.5" width="346" height="36"/>
+                                                            <rect key="frame" x="16" y="45" width="346" height="36"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="36" id="snH-bn-vhB"/>
                                                             </constraints>
@@ -160,8 +156,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Заключение" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-IQ-K0H">
-                                                            <rect key="frame" x="16" y="93.5" width="346" height="108.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Заключение" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-IQ-K0H">
+                                                            <rect key="frame" x="16" y="89" width="346" height="113"/>
                                                             <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -172,7 +168,6 @@
                                                         <constraint firstAttribute="trailing" secondItem="W0b-im-Wu1" secondAttribute="trailing" constant="16" id="12A-yj-EX5"/>
                                                         <constraint firstItem="W0b-im-Wu1" firstAttribute="top" secondItem="JDo-yr-4Et" secondAttribute="bottom" id="9b2-om-qjL"/>
                                                         <constraint firstItem="JDo-yr-4Et" firstAttribute="top" secondItem="ZtK-vg-2e4" secondAttribute="top" id="KmB-V0-BRX"/>
-                                                        <constraint firstItem="JDo-yr-4Et" firstAttribute="height" secondItem="ZtK-vg-2e4" secondAttribute="height" multiplier="45:190" id="LAG-6E-Gid"/>
                                                         <constraint firstAttribute="trailing" secondItem="JDo-yr-4Et" secondAttribute="trailing" id="U32-1L-Sb9"/>
                                                         <constraint firstItem="TpQ-IQ-K0H" firstAttribute="top" secondItem="W0b-im-Wu1" secondAttribute="bottom" constant="8" id="bgl-tu-046"/>
                                                         <constraint firstAttribute="trailing" secondItem="TpQ-IQ-K0H" secondAttribute="trailing" constant="16" id="bxh-s2-73n"/>
@@ -213,7 +208,7 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-s4-H0x">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="385.5" width="37" height="37"/>
                                 <color key="color" red="0.1058823529" green="0.85882352939999995" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
                         </subviews>
@@ -239,6 +234,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhb-AX-F01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="148.66071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dIm-ol-tYf">
+            <objects>
+                <navigationController storyboardIdentifier="diagNavMain" id="Joc-BQ-TyK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Gza-cO-ueB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="inj-eR-xnr" kind="relationship" relationship="rootViewController" id="J2g-Sf-AaA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrI-mh-pLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-563"/>
+        </scene>
+        <!--Изменить заклчение-->
+        <scene sceneID="wV0-Lw-b9w">
+            <objects>
+                <viewController storyboardIdentifier="EditConclusionVC" title="Изменить заклчение" id="7m7-Pt-7dU" customClass="EditConclusionVC" customModule="MedicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5kr-Fn-Yzx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-SW-OsK">
+                                <rect key="frame" x="20" y="64" width="374" height="749"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.10024207746478873" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SFCompactRounded-Regular" family="SF Compact Rounded" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="heX-aT-Fwt">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="heX-aT-Fwt" firstAttribute="centerY" secondItem="5kr-Fn-Yzx" secondAttribute="centerY" id="GaB-jE-QGL"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="bottom" secondItem="IfS-km-LT6" secondAttribute="bottom" id="Gya-hh-1eZ"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="top" secondItem="IfS-km-LT6" secondAttribute="top" constant="20" id="H5g-AA-ghx"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="trailing" secondItem="IfS-km-LT6" secondAttribute="trailing" constant="-20" id="TWG-0m-Lxm"/>
+                            <constraint firstItem="sUc-SW-OsK" firstAttribute="leading" secondItem="IfS-km-LT6" secondAttribute="leading" constant="20" id="onK-gf-WmR"/>
+                            <constraint firstItem="heX-aT-Fwt" firstAttribute="centerX" secondItem="5kr-Fn-Yzx" secondAttribute="centerX" id="uFX-Ob-uTw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IfS-km-LT6"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Изменить заключение" id="KGP-4a-bc6"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="heX-aT-Fwt" id="Gc4-qv-ach"/>
+                        <outlet property="textViewMain" destination="sUc-SW-OsK" id="LKm-xh-rhE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhf-9Z-UwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="148.66071428571428"/>
         </scene>
         <!--Позвоночник-->
         <scene sceneID="dS5-pb-Or0">
@@ -275,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKD-g5-7RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="149"/>
+            <point key="canvasLocation" x="1645" y="149"/>
         </scene>
         <!--Title-->
         <scene sceneID="gZq-Z8-SBt">
