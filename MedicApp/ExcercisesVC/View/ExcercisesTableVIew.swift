@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import SDWebImage
 
 
 extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
@@ -30,8 +31,7 @@ extension ExcercisesVC: UITableViewDelegate, UITableViewDataSource {
         cell.labTitle.text = currentExercises[indexPath.section][indexPath.row].name
         
         let imageUrl = currentExercises[indexPath.section][indexPath.row].preview
-        let imageData = try! Data(contentsOf: imageUrl)
-        cell.imagePreview.image = UIImage(data: imageData)
+        cell.imagePreview.sd_setImage(with: imageUrl, completed: nil)
         
         return cell
     }

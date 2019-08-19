@@ -9,6 +9,9 @@ PODS:
     - RxSwift (>= 4.3.1)
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - Socket.IO-Client-Swift (14.0.0):
     - Starscream (~> 3.0.6)
   - Starscream (3.0.6)
@@ -18,6 +21,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
   - CVCalendar
   - RxKeyboard
+  - SDWebImage (~> 5.0)
   - Socket.IO-Client-Swift
   - SwiftyJSON
 
@@ -29,6 +33,7 @@ SPEC REPOS:
     - RxCocoa
     - RxKeyboard
     - RxSwift
+    - SDWebImage
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftyJSON
@@ -40,10 +45,11 @@ SPEC CHECKSUMS:
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 2573aae5709c0218b52871b18acc795c862bde24
+PODFILE CHECKSUM: 45b22ee2ad405d086e4295b93339c301995a1b95
 
 COCOAPODS: 1.6.1
